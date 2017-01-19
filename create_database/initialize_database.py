@@ -1,0 +1,365 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Thu Jan 19 18:13:25 2017
+
+@author: ajaver
+"""
+
+import pymysql.cursors
+import os
+
+
+
+SIMPLE_TABLES = [
+    'alleles', 
+    'genes',
+    'chromosomes',
+    'trackers', 
+    'sexes', 
+    'developmental_stages', 
+    'ventral_sides',
+    'foods',
+    'arenas',
+    'habituations',
+    'experimenters']
+
+def init_database(DROP_PREV_DB = True):
+    # Connect to the database
+    conn = pymysql.connect(host='localhost')
+    cur = conn.cursor(pymysql.cursors.DictCursor)
+    
+    #create if not exists new database
+    if DROP_PREV_DB:
+        cur.execute('DROP DATABASE IF EXISTS `single_worm_db`;')
+    
+    sql = "CREATE DATABASE IF NOT EXISTS `single_worm_db`;"
+    cur.execute(sql)
+    cur.execute('USE `single_worm_db`;')
+    
+    #create all tables
+    simple_tab_sql_str = \
+    '''
+    CREATE TABLE IF NOT EXISTS `{}`
+    (
+    `id` INT NOT NULL AUTO_INCREMENT,
+    `name` VARCHAR(100) UNIQUE,
+    PRIMARY KEY (id)
+    );
+    '''
+    
+    strains_tab_sql = '''
+    CREATE TABLE IF NOT EXISTS `strains`
+    (
+    `id` int NOT NULL AUTO_INCREMENT,
+    `name` VARCHAR(100) UNIQUE,
+    genotype VARCHAR(200),
+    gene_id INT NOT NULL,
+    allele_id INT NOT NULL,
+    chromosome_id INT NOT NULL,
+    PRIMARY KEY (id),
+    FOREIGN KEY (gene_id) REFERENCES genes(id),
+    FOREIGN KEY (allele_id) REFERENCES alleles(id)
+    );
+    '''
+    
+    experiment_tab_sql = '''
+    CREATE TABLE IF NOT EXISTS `experiments`
+    (
+    `id` int NOT NULL AUTO_INCREMENT,
+    `base_name` VARCHAR(200) UNIQUE,
+    `date` DATETIME,
+    `strain_id` INT,
+    `tracker_id` INT,
+    `sex_id` INT,
+    `developmental_stage_id` INT,
+    `ventral_side_id` INT,
+    `food_id` INT,
+    `arena_id` INT,
+    `habituation_id` INT,
+    `experimenter_id` INT,
+    
+    `original_video` VARCHAR(700) NOT NULL UNIQUE,
+    `original_video_sizeMB` FLOAT,
+    
+    PRIMARY KEY (id),
+    FOREIGN KEY (strain_id) REFERENCES strains(id),
+    FOREIGN KEY (tracker_id) REFERENCES trackers(id),
+    FOREIGN KEY (sex_id) REFERENCES sexes(id),
+    FOREIGN KEY (developmental_stage_id) REFERENCES developmental_stages(id),
+    FOREIGN KEY (ventral_side_id) REFERENCES ventral_sides(id),
+    FOREIGN KEY (food_id) REFERENCES foods(id),
+    FOREIGN KEY (arena_id) REFERENCES arenas(id),
+    FOREIGN KEY (habituation_id) REFERENCES habituations(id),
+    FOREIGN KEY (experimenter_id) REFERENCES experimenters(id)
+    )
+    '''
+    
+    ##### progress table
+    
+    exit_flags_tab_sql = \
+    '''
+    CREATE TABLE IF NOT EXISTS `exit_flags`
+    (
+    `id` INT NOT NULL AUTO_INCREMENT,
+    `checkpoint` VARCHAR(20) UNIQUE,
+    `description` VARCHAR(100),
+    PRIMARY KEY (id)
+    );
+    '''
+    
+    exit_flags_vals = [
+    ('COMPRESS' , 'Create masked video.'), 
+    ('VID_SUBSAMPLE' , 'Create subsampled video.'), 
+    ('COMPRESS_ADD_DATA', 'Add additional data to the video (stage and pixel size).'), 
+    ('TRAJ_CREATE', 'Create trajectories.'),
+    ('TRAJ_JOIN', 'Join trajectories.'),  
+    ('SKE_INIT' , 'Initialize trajectories table.'), 
+    ('SKE_CREATE', 'Create skeletons.'),  
+    ('STAGE_ALIGMENT', 'Strage aligment.'),  
+    ('SKE_FILT', 'Filter skeletons.'), 
+    ('SKE_ORIENT', 'Orient skeletons movement.'),  
+    ('INT_PROFILE', 'Intensity profile.'),  
+    ('INT_SKE_ORIENT', 'Orient skeletons intensity.'),  
+    ('CONTOUR_ORIENT', 'Orient ventral side.'), 
+    ('FEAT_CREATE', 'Obtain features.'),  
+    ('END', 'Finished.'),  
+    ]
+    
+    exit_flags_init = ('INSERT INTO exit_flags (checkpoint, description) VALUES (%s, %s)',
+                       exit_flags_vals)
+    
+    
+    progress_analysis_tab_sql = \
+    '''
+    CREATE TABLE IF NOT EXISTS `progress_analysis`
+    (
+    `experiment_id` INT NOT NULL,
+    `exit_flag_id` INT NOT NULL,
+    `mask_file` VARCHAR(700),
+    `skeletons_file` VARCHAR(700),
+    `features_file` VARCHAR(700),
+    `n_valid_frames` INT,
+    `n_missing_frames` INT,
+    `n_segmented_skeletons` INT,
+    `n_filtered_skeletons` INT,
+    `n_valid_skeletons` INT,
+    `n_timestamps` INT,
+    `first_skel_frame` INT,
+    `last_skel_frame` INT,
+    
+    `fps` FLOAT,
+    `total_time` FLOAT,
+    PRIMARY KEY (experiment_id),
+    FOREIGN KEY (experiment_id) REFERENCES experiments(id),
+    FOREIGN KEY (exit_flag_id) REFERENCES exit_flags(id)
+    );
+    '''
+    
+    segworm_features_tab_sql = \
+    '''
+    CREATE TABLE IF NOT EXISTS `segworm_features`
+    (
+    `id` INT NOT NULL AUTO_INCREMENT,
+    `segworm_file` VARCHAR(700),
+    `experiment_id` INT NOT NULL,
+    `fps` FLOAT,
+    `total_time` FLOAT,
+    `n_segworm_skeletons` INT,
+    `n_timestamps` INT,
+    PRIMARY KEY (id),
+    FOREIGN KEY (experiment_id) REFERENCES experiments(id)
+    )
+    '''
+    
+    segworm_comparisons_tab_sql = \
+    '''
+    CREATE TABLE IF NOT EXISTS `segworm_comparisons`
+    (
+    `id` INT NOT NULL AUTO_INCREMENT,
+    `experiment_id` INT NOT NULL,
+    `segworm_feature_id` INT NOT NULL,
+    `n_mutual_skeletons` INT,
+    `error_05th` FLOAT,
+    `error_50th` FLOAT,
+    `error_95th` FLOAT,
+    PRIMARY KEY (id),
+    FOREIGN KEY (experiment_id) REFERENCES experiments(id),
+    FOREIGN KEY (segworm_feature_id) REFERENCES segworm_features(id)
+    )
+    '''
+    
+    all_tabs_sql = [strains_tab_sql,
+    experiment_tab_sql,
+    exit_flags_tab_sql,
+    progress_analysis_tab_sql,
+    segworm_features_tab_sql, 
+    segworm_comparisons_tab_sql]
+    
+    for s_tab in SIMPLE_TABLES:
+        cur.execute(simple_tab_sql_str.format(s_tab))
+    
+    for sql in all_tabs_sql:
+        cur.execute(sql)
+    
+    cur.executemany(*exit_flags_init)
+        
+    
+    cur.execute('SHOW TABLES')
+    print(cur.fetchall())
+    
+    cur.close()
+    conn.close()
+
+    
+def fill_table(IGNORE_DUPLICATES = True):
+    # Connect to the database
+    conn = pymysql.connect(host='localhost')
+    cur = conn.cursor(pymysql.cursors.DictCursor)
+
+    #load all database
+    cur.execute('USE `single_worm_old`;')
+    cur.execute('SELECT * FROM experiments_full_new;')
+    full_data = cur.fetchall()
+    
+    cur.execute('USE `single_worm_db`;')
+    
+
+    def _get_single_name(x):
+        return  x[:-1] if x != 'sexes' else 'sex'
+    
+    for tab_name in SIMPLE_TABLES:
+        single_name = _get_single_name(tab_name)
+        
+        dat = tuple(set(x[single_name] for x in full_data))
+        
+        init_str = 'INSERT INTO {} (name) VALUES (%s)'.format(tab_name)
+        if IGNORE_DUPLICATES:
+            init_str += ' ON DUPLICATE KEY UPDATE name=name;'
+        cur.executemany(init_str, dat)
+    conn.commit()
+    
+    #get simple tables ids
+    def _get_id_dict(tab_name):
+        cur.execute('SELECT id, name FROM {}'.format(tab_name))
+        tab = cur.fetchall()
+        return {x['name']:x['id'] for x in tab}
+                
+    all_dict = {}
+    for tab_name in SIMPLE_TABLES:
+        single_name = _get_single_name(tab_name)
+        all_dict[single_name] = _get_id_dict(tab_name)
+    
+    # add strains list
+    def fk2(x):
+        DD =  ['gene', 'allele', 'chromosome']
+        output = tuple([x['strain'], x['genotype']] +  [all_dict[fn][x[fn]] for fn in DD])
+        return output
+    
+    strains_dat = set([fk2(x) for x in full_data])
+    strains_init = '''
+    INSERT INTO strains (name, genotype, gene_id, allele_id, chromosome_id) 
+    VALUES (%s, %s, %s, %s, %s)'''
+    if IGNORE_DUPLICATES:
+        strains_init += ' ON DUPLICATE KEY UPDATE genotype=genotype, name=name, gene_id=gene_id, allele_id=allele_id, chromosome_id=chromosome_id;'''
+    
+    cur.executemany(strains_init, strains_dat)
+    conn.commit()
+    
+    
+    tab_name = 'strains'
+    single_name = _get_single_name(tab_name)
+    all_dict[single_name] = _get_id_dict(tab_name)
+    
+    # add strains list
+    def fk2exp(x):
+        col_ids =  ['strain', 
+                   'tracker', 
+                   'sex', 
+                   'developmental_stage', 
+                   'ventral_side',
+                   'food',
+                   'arena',
+                   'habituation',
+                   'experimenter']
+        
+        cols = ['base_name', 
+                'date']
+        
+        output1 = [x[fn] for fn in cols]
+        ori_dir = [os.path.join(x['directory'], x['original_video_name'])]
+        output2 = [all_dict[fn][x[fn]] for fn in col_ids]
+        output = tuple(output1 + ori_dir + output2)
+        
+        return output
+    
+    exp_dat = [fk2exp(x) for x in full_data]
+    
+    exp_init = '''
+    INSERT INTO experiments (base_name, date, original_video, 
+    strain_id, tracker_id, sex_id, developmental_stage_id, 
+    ventral_side_id, food_id, arena_id, habituation_id, experimenter_id) 
+    VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    '''
+    
+    if IGNORE_DUPLICATES:
+        exp_init += ''' 
+        ON DUPLICATE KEY UPDATE 
+        base_name=base_name, 
+        date=date,
+        original_video=original_video,
+        strain_id=strain_id, 
+        tracker_id=tracker_id, 
+        sex_id=sex_id,
+        developmental_stage_id=developmental_stage_id, 
+        ventral_side_id=ventral_side_id, 
+        food_id=food_id,
+        arena_id=arena_id, 
+        habituation_id=habituation_id, 
+        experimenter_id=experimenter_id;
+        '''
+    
+    cur.executemany(exp_init, exp_dat)
+    conn.commit()
+    
+    cur.close()
+    conn.close()
+
+def add_video_sizes():
+    conn = pymysql.connect(host='localhost', database='single_worm_db')
+    cur = conn.cursor()
+    
+    ori_vid_sql = 'SELECT id, original_video FROM experiments'
+    cur.execute(ori_vid_sql)
+    results = cur.fetchall()
+    
+    
+    video_sizes = []
+    for ii, (vid_id, original_video) in enumerate(results):
+        if ii % 100 == 0: 
+            print('Getting original video file size {}/{}'.format(ii,len(results)))
+        
+        size = os.path.getsize(original_video)/(1024*1024.0)
+        video_sizes.append((vid_id, original_video, size))
+    
+    video_sizes_ins = '''
+    INSERT INTO experiments (id, original_video, original_video_sizeMB) 
+    VALUES (%s, %s, %s)
+    ON DUPLICATE KEY UPDATE id=id, original_video_sizeMB=VALUES(original_video_sizeMB)
+    '''
+    
+    
+    cur.executemany(video_sizes_ins, video_sizes)
+    
+    conn.commit()
+    
+    cur.close()
+    conn.close()
+    
+if __name__ == '__main__':
+
+    init_database()
+    fill_table()
+    add_video_sizes()
+    
+    

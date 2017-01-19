@@ -1,0 +1,944 @@
+daf-7 (m62)III on food L_2010_07_29__12_55___3___7_seg.avi
+acr-15 (ok1214) on food L_2011_06_28__12_01_11___6____seg.avi
+dpy-20 (e1282)IV on food L_2011_08_19__12_24_45___7___5_seg.avi
+T14B1.1 (ok1702) on food R_2011_08_11__09_59_29___6___1_seg.avi
+egl-21 (n611)V on food R_2010_05_13__12_34___3___8_seg.avi
+daf-7 (m62)III on food R_2010_07_22__12_24_19___2___6_seg.avi
+T28138.5 (ok1014) on food L_2010_03_31__12_15_39___7___5_seg.avi
+T28f2.7 (ok2657) on food R_2010_03_19__09_36_25___7___3_seg.avi
+egl-27 (ok151)II on food L_2010_08_03__12_36_31___2___8_seg.avi
+eat-16 (sa6091) on food R_2010_07_29__16_18_29___2___12_seg.avi
+egl-43 (n1079)II on food R_2010_08_06__12_37_18__6_seg.avi
+egl-30 (ep271gf) on food R_2010_03_05__12_54_53___6___11_seg.avi
+dop-1 (vs100); dop-2 (vs105)V on food L_2009_11_10__14_55_47___7___8_seg.avi
+egl-1 (n487)V on food R_2010_07_09__11_25_24___4___3_seg.avi
+egl-43 (n1079)IIon food L_2010_08_19__11_57_39___7___5_seg.avi
+cat-4 (e1141)I on food L_2010_07_23__10_35___3___2_seg.avi
+del-1 (ok150) on food L_2010_07_06__12_07_33___6___7_seg.avi
+egl-19 (n2368)IV on food R_2010_05_13__15_22_36___1___12_seg.avi
+egl-30 (ep271gf) on food R_2010_03_05__12_55_24___4___11_seg.avi
+egl-18 (ok290)IV on food L_2010_07_16__12_24_46___1___7_seg.avi
+egl-30 (ep271gf) on food L_2010_03_04__11_24_18___4___8_seg.avi
+acr-18 (ok1285) on food R_2010_02_23__12_34_05___4___11_seg.avi
+C38D9.2 (ok1853) on food R_2011_09_22__15_39___3___9_seg.avi
+eat-16 (sa6091) on food L_2010_07_29__16_20_24___8___12_seg.avi
+daf-7 (m62)III on food L_2010_07_22__12_25_56___4___6_seg.avi
+egl-21 (n476)IV on food R_2010_07_23__15_14___3___11_seg.avi
+egl-32 (n155)I on food R_2010_05_13__15_03_22___1___11_seg.avi
+egl-44 (n1080)II on food L_2010_08_03__10_55_25___4___3_seg.avi
+acr-19 (ad1674) on food L_2010_02_23__11_34_38___7___8_seg.avi
+egl-43 (n1079)II on food L_2010_08_19__11_54_00___1___4_seg.avi
+egl-12 (n602)V on food R_2010_07_09__15_04_32__7_seg.avi
+acr-23 (ok2804)V on food L_2010_02_24__15_02_18___1___13_seg.avi
+R12E2.10 (ok1781)X on food L_2011_09_06__16_09_36___6___8_seg.avi
+egl-43 (n1079)II on food L_2010_08_05__13_06_06___8___8_seg.avi
+egl-30 (ep271gf) on food L_2010_02_26__09_43___3___4_seg.avi
+egl-30 (ep271gf) on food L_2010_03_04__11_25_29___7___8_seg.avi
+acr-3 (ok2049)X on food R_2010_02_24__11_03_47___2___6_seg.avi
+egl-19 (n2368)IV on food L_2010_05_14__11_50___3___6_seg.avi
+cat-2 (e1112) on food R_2009_10_30__14_38_15___2___5_seg.avi
+del-1 (ok150) on food R_2010_07_08__14_56_41___7___8_seg.avi
+egl-14 (n549)X on food R_2010_07_20__14_59_32___1___10_seg.avi
+egl-11 (n587)V on food L_2010_05_11__15_31_14___7___10_seg.avi
+egl-19 (n2368)IV on food L_2010_05_13__15_25_37___7___12_seg.avi
+egl-43 (n1079)II on food L_2010_08_19__11_55_47___4___5_seg.avi
+egl-43 (n1079)II on food R_2010_08_20__15_25_30___2___13_seg.avi
+acr-2 (ok1887) on food L_2010_02_19__14_42___3___13_seg.avi
+acr-2 (ok1887) on food R_2010_02_23__10_54_30___4___6_seg.avi
+egl-43 (n1079)II on food R_2010_09_16__13_06_36___8___6_seg.avi
+egl-43 (n1079)II on food L_2010_08_06__12_34_48___2___6_seg.avi
+egl-30 (n686); goa-1 (n1134) on food R_2010_08_03__12_57_28___7___8_seg.avi
+del-1 (ok150)X on food R_2012_03_08__13_37_02___8___8_seg.avi
+cat-2 on food R_2009_11_05__12_24_42___8___5_seg.avi
+T2854.2 (ok289) on food L_2010_03_25__15_45___3___9_seg.avi
+dat-1 (ok157) on food L_2009_11_10__12_21_02___7___3_seg.avi
+cat-2 on food L_2009_11_03__11_30_26__2_seg.avi
+cat-2 (e1112) on food R_2009_10_30__12_13_33___8___2_seg.avi
+eat-16 (sa6091) on food L_2010_07_22__16_44_47___1___15_seg.avi
+egl-43 (n1079)II on food R_2010_08_20__15_28_00___7___11_seg.avi
+daf-3 (e1376)X on food L_2010_07_29__15_18_55___7___9_seg.avi
+egl-11 (n587)V on food R_2010_05_13__10_56_09___7___3_seg.avi
+egl-19 (n2368)IV on food R_2010_05_11__15_50_05___2___11_seg.avi
+egl-19 (n2368)IV on food L_2010_05_11__15_50_12___6___11_seg.avi
+egl-46 (n1127)V on food R_2010_08_03__11_15___3___4_seg.avi
+del-1 (ok150) on food L_2010_06_15__14_38_41__6_seg.avi
+egl-27 (ok151)II on food L_2010_08_03__12_38_29___8___8_seg.avi
+egl-43 (n1079)II on food L_2010_08_20__15_26_13___4___12_seg.avi
+egl-19 (n2368)IV on food R_2010_05_14__11_51_07___4___6_seg.avi
+egl-19 (n2368)IV on food L_2010_05_11__15_49_07___1___11_seg.avi
+egl-24 (n572)III on food L_2010_05_11__13_02_52___6___7_seg.avi
+daf-3 (e1376)X on food R_2010_07_29__15_16___3___9_seg.avi
+egl-43 (n1079)II on food L_2010_09_16__13_07_09___7___6_seg.avi
+egl-23 (n601)IV on food L_2010_07_15__15_15_04___2___11_seg.avi
+egl-43 (n1079)II on food R_2010_08_06__12_37_16___7___6_seg.avi
+F23B2.2 (ok1226) on food R_2010_03_25__12_37_01___7___7_seg.avi
+C1B2.6 (ok2353) on food L_2010_03_25__11_32_27___1___3_seg.avi
+egl-21 (n476)IV on food L_2010_07_20__12_03_29___1___6_seg.avi
+egl-47 (n1081)V on food L_2010_05_20__12_33_21___1___5_seg.avi
+eat-16 (sa6091) on food L_2010_07_22__16_45_58___2___14_seg.avi
+egl-37 (n742)II on food R_2010_08_06__11_38_07___7___3_seg.avi
+acr-14 (ok1155) on food L_2010_02_19__11_05_04___7___6_seg.avi
+dat-1 (ok157) on food R_2009_11_06__15_28_15___8___10_seg.avi
+egl-43 (n1079)II on food L_2010_07_15__15_55_41___8___12_seg.avi
+egl-20 (mu39)IV on food R_2010_07_16__11_26_30___8___4_seg.avi
+egl-19 (n2368)IV on food R_2010_05_14__11_52_36___7___6_seg.avi
+egl-21 (n611)IV on food R_2010_05_14__15_56_23__13_seg.avi
+acr-14 (ok1155) on food L_2010_02_24__09_44_52___7___2_seg.avi
+egl-19 (n2368)IV on food L_2010_05_14__11_50_30___2___6_seg.avi
+egl-11 (n587)V on food L_2010_05_13__10_54___3___3_seg.avi
+dop-1 (vs100); dop-2 (vs105)V; dop-3 (vs106) on food L_2009_11_10__15_17_54___7___9_seg.avi
+del-1 (ok150)X on food R_2012_03_08__12_55_45___6___5_seg.avi
+egl-19 (n2368)IV on food L_2010_05_14__11_50_40___6___6_seg.avi
+eat-16 (sa6091) on food L_2010_07_22__16_48_23___7___14_seg.avi
+egl-32 (n155)I on food L_2010_05_11__16_48_03___2___13_seg.avi
+egl-42 (n995sd) on food L_2009_12_11__14_57_15___8___6_seg.avi
+cat-2 (e1112) on food L_2009_10_30__14_37_32___1___7_seg.avi
+cat-2 on food R_2009_11_03__12_31_33__5_seg.avi
+T2854.2 (ok289) on food L_2010_03_25__15_46_58___7___10_seg.avi
+egl-6 (n592)X on food R_2010_05_14__12_10___3___7_seg.avi
+egl-23 (n601)IV on food R_2010_07_20__12_26_18___6___6_seg.avi
+egl-31 (n472)I on food R_2010_08_03__12_16_34___1___7_seg.avi
+egl-30 (ep271gf) on food R_2010_03_05__12_56_35___7___11_seg.avi
+cat-2 on food R_2009_11_03__16_00_08___4___11_seg.avi
+cat-2 on food _2009_11_03__15_02_11__8_seg.avi
+egl-27 (ok151)II on food L_2010_07_23__15_33_07___1___12_seg.avi
+acr-14 (ok1155)II on food R_2010_02_24__09_42_20___1___2_seg.avi
+egl-12 (n602)V on food R_2010_07_09__15_02_02___2___7_seg.avi
+egl-14 (n549)X on food R_2010_07_23__14_55_08___6___10_seg.avi
+T14B1.1 (ok1702) on food R_2011_09_13__16_00_13___6___10_seg.avi
+eat-16 (sa6091) on food L_2010_07_22__16_46_55___4___14_seg.avi
+Y69H2.2 (ok1522) on food L_2010_03_25__17_07_31___7___14_seg.avi
+T14B1.1 (ok1702) on food L_2011_09_13__12_58_56___2___6_seg.avi
+egl-32  (n155)I on food L_2010_05_11__16_50_30__13_seg.avi
+C52B9.11 (gk596)V on food L_2011_09_13__13_02_36__6_seg.avi
+egl-36 (n728)X on food L_2010_07_15__15_36_00___7___12_seg.avi
+egl-43 (n1079)II on food L_2010_08_06__12_35_06___6___6_seg.avi
+eat-16 (sa6091) on food R_2010_08_03__14_45_06___2___10_seg.avi
+acr-15 (ok1214) on food R_2011_06_14__11_09_48___6___2_seg.avi
+R12E2.10 (ok1781)X on food R_2011_09_13__16_23_06___8___11_seg.avi
+T28F7.2 (ok2657) on food R_2010_03_31__11_15_58___7___2_seg.avi
+egl-21 (n476)IV on food L_2010_07_20__12_07_04__5_seg.avi
+egl-32 (n155)I on food R_2010_05_14__11_30_55___8___5_seg.avi
+cat-2 on food L_2009_11_05__11_26_31___7___2_seg.avi
+egl-30 (ep271gf) on food L_2010_02_26__09_44_30___8___4_seg.avi
+egl-12 (n602)V on food R_2010_07_16__12_06___3___6_seg.avi
+egl-19 (n2368)IV on food L_2010_05_13__15_23_33___2___11_seg.avi
+C52B9.11 (gk596)V on food L_2011_09_13__15_43_41___7___9_seg.avi
+egl-43 (n1079)II on food L_2010_07_09__11_06_18__2_seg.avi
+egl-5 (n486)III on food L_2010_05_13__11_53___3___6_seg.avi
+unc-8 (e151b145) del-1 (ok150) on food R_2011_10_06__12_36_27___7___6_seg.avi
+acr-7 (tm863)II on food L_2010_02_19__11_43_10___6___8_seg.avi
+egl-24 (n572)III on food R_2010_05_14__14_34_39___2___11_seg.avi
+egl-30 (ep271gf) on food L_2010_02_26__09_43_11___6___4_seg.avi
+egl-27 (ok151)II on food L_2010_09_24__12_57_37___8___6_seg.avi
+egl-37 (n742)II on food R_2010_08_03__10_34_26___1___2_seg.avi
+T14B1.1 (ok1702) on food R_2011_09_06__16_12_28___8___8_seg.avi
+eat-16 (sa6091) on food L_2010_07_22__16_47_53___8___14_seg.avi
+egl-11 (n587)V on food R_2010_05_14__13_07___3___10_seg.avi
+egl-50 (n1086) on food L_2009_12_09__12_14___3___6_seg.avi
+egl-49 (n1107) on food L_2010_05_14__14_55_42___6___12_seg.avi
+T27E9.9 (ok2371)III on food L_2011_09_15__12_17_58___1___4_seg.avi
+egl-43 (n1079)II on food R_2010_07_15__15_56_12___7___13_seg.avi
+acr-21 (ok1314)IIIon food R_2010_02_24__14_44_45___7___12_seg.avi
+T28F2.7 (ok2657) on food R_2010_03_31__11_13_12___1___2_seg.avi
+daf-5 (e1386)II on food R_2010_07_22__14_44_03___2___8_seg.avi
+egl-30 (ep271gf) on food R_2010_03_05__12_54_49___2___11_seg.avi
+C52B9.11 (gk596)V on food R_2011_09_13__13_20_22___6___7_seg.avi
+egl-32 (n155)I on food R_2010_05_14__11_31_20___7___5_seg.avi
+egl-30 (ep271gf) on food L_2010_02_26__09_42_16___1___4_seg.avi
+T2854.2 (ok289) on food L_2010_03_26__10_57_00___8___3_seg.avi
+daf-5 (e1386)II on food R_2010_07_27__15_48_31___7___12_seg.avi
+acr-10 (ok3064) on food L_2010_02_24__11_45_14___8___8_seg.avi
+Y69H2.2 (ok1522) on food L_2010_03_25__17_05_42___2___12_seg.avi
+acr-14 (ok1155) on food R_2010_02_23__15_05_09__14_seg.avi
+eat-16 (sa6091) on food L_2010_08_03__14_47_44__10_seg.avi
+egl-20 (mu39)IV on food L_2010_07_13__15_34_15___6___13_seg.avi
+R12E2.10 (ok1781)X on food R_2011_09_22__11_54_26__3_seg.avi
+C46A5.2 (ok1187) on food L_2010_04_08__14_35_58___4___7_seg.avi
+C52B9.11 (gk596)V on food L_2011_08_19__12_20_31___2___6_seg.avi
+egl-24 (n572)III on food L_2010_05_14__14_36_43___7___11_seg.avi
+C52B9.11 (ok596)V on food L_2011_09_15__13_22_02___8___7_seg.avi
+C24G7.4 (ok1237) on food L_2010_03_30__11_48_25__2_seg.avi
+Y69H2.2 (ok1522) on food L_2010_03_25__17_07_09___8___15_seg.avi
+C3809.2 (ok1853)V on food L_2012_03_15__12_00_02___5___8_seg.avi
+daf-5 (e1386)II on food R_2010_07_29__11_17_11__2_seg.avi
+egl-37 (n742)II on food L_2010_08_05__11_45_56___4___4_seg.avi
+cat-2 (e1112) on food L_2009_11_06__15_48_58__10_seg.avi
+egl-1 (n487)V on food R_2010_07_15__11_47_56___1___4_seg.avi
+Y69H2.2 (ok1522) on food L_2010_04_08__12_23_16___1___4_seg.avi
+daf-3 (e1376)X on food R_2010_07_27__11_04_42___4___3_seg.avi
+dnc-1 (or404ts) on food R_2009_12_09__12_36_07___4___7_seg.avi
+dpy-20 (e1282)IV on food R_2011_08_04__12_51_11___6___6_seg.avi
+egl-36 (n728)X on food R_2010_07_20__11_04_16___1___3_seg.avi
+dop-1 (vs100); dop-2 (vs105); dop-3 (vs106)X on food L_2009_11_06__15_08_51___8___9_seg.avi
+acr-23 (ok2804)V on food R_2010_02_23__10_14_21___1___4_seg.avi
+Y69H2.2 (ok1522) on food R_2010_03_25__17_07_53__13_seg.avi
+bas-1 (ad446) on food R_2009_12_15__11_22_56___6___4_seg.avi
+acr-14 (ok1155)II on food L_2010_02_23__15_02_12___1___15_seg.avi
+acr-18 (ok1205)V on food R_2010_02_23__12_32_41___1___11_seg.avi
+egl-32 (n155)I on food R_2010_05_11__16_49_45___8___13_seg.avi
+cat-2 (e1112) on food L_2009_10_30__16_06_21___2___9_seg.avi
+C38D9.2 (ok1853)V on food L_2011_09_22__11_54_20___8___3_seg.avi
+cat-2 on food R_2009_11_03__16_00_00___6___11_seg.avi
+egl-44 (n1080)II on food L_2010_08_19__15_03_30___1___8_seg.avi
+acr-21 (ok1314)III on food L_2010_02_24__14_43___3___12_seg.avi
+egl-13 (n483)X on food R_2010_07_09__14_42_00___1___6_seg.avi
+egl-27 (ok151)II on food R_2010_07_23__15_34_12___2___12_seg.avi
+acr-10 (ok3064) on food R_2010_02_19__12_03___3___9_seg.avi
+dnc-1 (or404ts) on food L_2009_12_10__15_06_02___4___13_seg.avi
+acr-18 (ok1285) on food R_2010_02_23__12_33___3___12_seg.avi
+egl-23 (n601)IV on food R_2010_07_13__14_55_29___6___11_seg.avi
+T28F2.7 (ok2657) on food R_2010_03_31__11_15_36___8___2_seg.avi
+acr-2 (ok1887) on food R_2010_02_19__14_44_30__12_seg.avi
+acr-6 (ok3117) on food L_2010_02_19__15_23_48___7___15_seg.avi
+daf-3 (e1376)X on food R_2010_07_22__11_47_31___7___3_seg.avi
+egl-32 (N155)I on food L_2010_05_14__11_29_15___2___5_seg.avi
+egl-43 (n1079)II on food R_2010_07_15__15_54___3___13_seg.avi
+acr-2 (ok1887) on food L_2010_02_24__13_03_42___4___11_seg.avi
+egl-28 (n570)II on food L_2010_07_15__12_49_31___6___7_seg.avi
+egl-37 (n742)II on food L_2010_08_06__11_38_09__3_seg.avi
+egl-13 (n483)X on food L_2010_07_13__12_04_56___6___6_seg.avi
+egl-21 (n476)IV on food R_2010_07_15__13_10_04___1___8_seg.avi
+acr-3 (ok2049)X on food R_2010_02_24__11_05_28___7___6_seg.avi
+T2854.2 (ok289) on food R_2010_03_25__15_45_13___6___10_seg.avi
+acr-9 (ok933)X on food R_2010_02_24__12_23___3___10_seg.avi
+egl-42 (n995sd) on food R_2009_12_10__11_03_32___2___3_seg.avi
+acr-6 (ok3117) on food L_2010_02_19__15_24_14__14_seg.avi
+egl-14 (n549)X on food R_2010_07_20__15_00_38___2___10_seg.avi
+T28F2.7 (ok2657) on food L_2010_03_19__09_33_34___1___3_seg.avi
+acr-7 (tm863)II on food l_2010_02_19__11_42_19___1___8_seg.avi
+dop-1 (vs100);dop-2 (vs105)V; dop-3 (vs106)X on food R_2009_11_10__15_17_49___8___8_seg.avi
+C52B9.11 (gk596)V on food R_2011_09_13__11_37_28___1___2_seg.avi
+del-1 (ok150) on food L_2010_07_08__14_53_04___1___8_seg.avi
+acr-6 (ok3117) on food L_2010_02_19__15_22___3___15_seg.avi
+cat-2 on food R_2009_11_03__11_28_38___6___2_seg.avi
+egl-18 (ok290)IV on food L_2010_07_20__11_24___3___4_seg.avi
+dop-4 on food L_2009_11_07__14_39_54___6___7_seg.avi
+egl-49 (n1107) on food R_2010_05_11__11_23_57___2___2_seg.avi
+egl-33 (n151)I on food R_2010_05_14__15_34_51___6___14_seg.avi
+W03B1.2 (ok2433) on food L_2010_04_22__16_00_43___6___15_seg.avi
+egl-11 (n587)V on food R_2010_05_13__10_54_38___4___3_seg.avi
+acr-23 (ok2084)V on food R_2010_02_23__10_15_09___2___4_seg.avi
+dop-3 (vs106) on food R_2009_11_06__12_04_54___6___4_seg.avi
+unc-8 (e151b145) del-1 (ok150) on food R_2011_10_06__15_56_57___1___9_seg.avi
+egl-30 (ep271gf) on food L_2010_03_04__11_22_52___1___8_seg.avi
+cat-2 (e1112)II on food L_2009_11_10__16_10_33___1___8_seg.avi
+acr-2 (ok1887) on food R_2010_02_24__13_03_10___6___11_seg.avi
+egl-12 (n602)V on food R_2010_07_16__12_06_45___4___6_seg.avi
+egl-28 (n570)II on food R_2010_07_16__11_45___3___5_seg.avi
+acr-7 (tm863)II on food R_2010_02_19__11_43_08___2___8_seg.avi
+dat-1 (ok157)III on food R_2009_11_19__15_38_34___1___8_seg.avi
+egl-13 (n483)X on food R_2010_07_15__12_10_53___7___5_seg.avi
+acr-7 (tm863)II on food R_2010_02_24__11_24_19___4___7_seg.avi
+cat-2 (e1112) on food R_2009_10_30__12_13_06___4___2_seg.avi
+dnc-1 (or404ts) on food L_2009_12_09__12_35___3___7_seg.avi
+dop-1 (vs100); dop-3 (vs106)X on food L_2009_11_10__15_34___3___10_seg.avi
+egl-37 (n742)II on food R_2010_08_20__10_35_53___2___2_seg.avi
+egl-18 (ok290)IV on food L_2010_07_20__11_27_07__3_seg.avi
+egl-5 (n486)III on food  R_2010_05_14__15_13_58___1___12_seg.avi
+egl-28 (n570)II on food R_2010_07_15__12_49___3___7_seg.avi
+egl-43 (n1079)II on food L_2010_08_05__13_06_40___7___7_seg.avi
+dop-2 (vs103)V on food L_2009_11_06__11_46_26___2___3_seg.avi
+dop-1; dop-2; dop-3 on food R_2009_11_07__11_48___3___2_seg.avi
+acr-2 (ok1887) on food r_2010_02_19__14_43_43___8___13_seg.avi
+cat-2 on food R_2009_11_04__11_05_04___8___2_seg.avi
+daf-5 (e1386)II on food R_2010_07_22__14_42_58___1___9_seg.avi
+acr-14 (ok1155) on food R_2010_02_24__09_43_42___4___2_seg.avi
+daf-3 (e1376)X on food L_2010_07_22__11_45_47___4___4_seg.avi
+C1B2.6 (ok2353) on food R_2010_03_25__11_34_49___8___4_seg.avi
+C38D9.2 (ok1853)V on food L_2011_09_22__11_09_24___6___1_seg.avi
+egl-20 (mu39)IV on food L_2010_07_15__12_29_23___6___6_seg.avi
+egl-20 (mu39)IV on food L_2010_07_13__15_36_27__13_seg.avi
+C24G7.4 (ok1237) on food R_2010_03_26__11_54_45___8___6_seg.avi
+egl-10 (md176)V on food R_2010_05_14__12_49_53___4___9_seg.avi
+unc-8 (e151b145) del-1 (ok150) on food L_2011_10_04__12_36_06___6___2_seg.avi
+egl-33 (n151)I on food  R_2010_05_14__15_33_44___1___13_seg.avi
+egl-21 (n611)V on food R_2010_05_13__12_34_28___2___7_seg.avi
+daf-7 (m62)III on food L_2010_07_27__12_38_45___8___6_seg.avi
+acr-2 (ok1887)X on food L_2010_02_24__13_02_20___1___11_seg.avi
+egl-42 (n995sd) on food L_2009_12_11__14_56_11___6___6_seg.avi
+egl-12 (n602)V on food L_2010_07_09__15_03_52___8___7_seg.avi
+C11D2.2 (ok1565)IV on food R_2011_08_31__12_33_23___7___4_seg.avi
+egl-21 (n611)IV on food L_2010_05_11__12_44_45___4___6_seg.avi
+dat-1 (ok157) on food L_2009_11_18__11_35_39___2___4_seg.avi
+egl-21 (n476)IV on food R_2010_07_23__15_16_42__11_seg.avi
+dpy-20 (e1282)IV on food L_2011_08_09__10_33_28___7___1_seg.avi
+T28138.5 (ok1014)on food L_2010_03_31__12_13___3___5_seg.avi
+T28f2.7 (ok2657) on food R_2010_03_19__09_34_28___2___3_seg.avi
+egl-37 (n742)II on food L_2010_08_20__10_38_29___7___2_seg.avi
+eat-16 (sa6091) on food R_2010_07_22__16_46___3___15_seg.avi
+egl-47 (n1081)V on food R_2010_05_20__12_36_03___8___4_seg.avi
+C45A6.2 (ok1187) on food R_2010_03_25__12_52_44___1___7_seg.avi
+dat-1 (ok157)III on food L_2009_11_18__11_34_55___1___4_seg.avi
+daf-3 (e1376)X on food L_2010_07_29__15_18_23___8___9_seg.avi
+dop-3 (vs106) on food L_2009_11_10__12_39_21___8___4_seg.avi
+cat-2 on food L_2009_11_04__12_07_11___8___5_seg.avi
+cat-2 on food R_2009_11_05__12_24_07___2___5_seg.avi
+acr-19 (ad1674) on food R_2010_02_23__11_34_19___8___8_seg.avi
+acr-21 (ok1314)III on food L_2010_02_24__14_43_03___2___12_seg.avi
+del-1 (ok150) on food R_2010_07_08__14_56_11___8___8_seg.avi
+egl-27 (ok151)II on food R_2010_07_23__15_34_56___4___12_seg.avi
+dat-1 (ok157) on food L_2009_11_17__15_53_10___7___8_seg.avi
+W03B1.2 (ok2433) on food R_2010_04_23__14_39_26___8___10_seg.avi
+bas-1 (ad446) on food R_2009_12_17__15_52_33___2___9_seg.avi
+egl-28 (n570)II on food L_2010_07_20__15_58_55___4___12_seg.avi
+daf-3 (e1376)X on food L_2010_07_27__11_04_03___2___3_seg.avi
+CIID2.2 (ok1565)IV on food R_2011_08_04__12_26_51___1___6_seg.avi
+acr-23 (ok2084)V on food R_2010_02_23__10_17_18__4_seg.avi
+egl-14 (n549)X on food L_2010_07_23__14_55_31___4___10_seg.avi
+dop-2 (vs103) on food R_2009_11_10__13_14___3___6_seg.avi
+egl-33 (n151)I on food L_2010_05_13__12_16_03___7___7_seg.avi
+C45A6.2 (ok1187) on food R_2010_03_25__12_53_37___2___7_seg.avi
+egl-50 (n1086) on food R_2009_12_09__12_14_18___2___6_seg.avi
+acr-11 (ok1345) on food L_2010_02_19__12_22_05___2___10_seg.avi
+Cat-2 on food R_2009_11_04__14_47_53__9_seg.avi
+acr-6 (ok3117) on food L_2010_02_24__10_25___3___4_seg.avi
+bas-1 (ad446) on food R_2009_12_15__11_22___3___4_seg.avi
+acr-9 (ok933)X on food R_2010_02_19__10_21_52___6___4_seg.avi
+dop-2; dop-3 on food L_2009_11_10__15_53_05___2___11_seg.avi
+T2854.2 (ok289) on food L_2010_03_26__10_57_21___7___3_seg.avi
+dnc-1 (or404ts) on food R_2009_12_09__12_35_00___1___7_seg.avi
+egl-33 (n151)I on food L_2010_05_14__15_34_42___2___14_seg.avi
+daf-3 (e1376)X on food L_2010_07_27__11_04___3___3_seg.avi
+egl-24 (n572)III on food R_2010_05_14__14_34_47___6___11_seg.avi
+acr-21 (ok1314)III on food L_2010_02_24__14_45_13__11_seg.avi
+egl-18 (e290)IV on food L_2010_07_15__11_29___3___3_seg.avi
+egl-50 (n1086) on food R_2009_12_10__10_45_58__2_seg.avi
+AQ2316 on food R_2011_08_02__16_57_36___1___2_seg.avi
+acr-14 (ok1155) on food R_2010_02_24__09_43___3___2_seg.avi
+cat-4 (e1141)I on food R_2010_07_27__16_03_10___1___11_seg.avi
+egl-28 (n570)II on food L_2010_07_15__12_49_51___4___7_seg.avi
+dop-2 (vs105) on food L_2009_11_10__13_15_00___8___6_seg.avi
+acr-7 (tm863)II on food L_2010_02_23__11_53_52___4___9_seg.avi
+egl-20 (mu39)IV on food L_2010_07_20__11_45_05___4___5_seg.avi
+cat-4 (e1141)I on food R_2010_07_27__16_04___3___12_seg.avi
+del-1 (ok150) on food L_2010_07_08__14_54_37___6___9_seg.avi
+egl-20 (mu39)IV on food R_2010_07_16__11_24_32___2___4_seg.avi
+acr-19 (ad1674)I on food R_2010_02_23__11_32_08___1___8_seg.avi
+acr-18 (ok1285) on food L_2010_02_19__15_04_53___8___14_seg.avi
+egl-20 (mu39)IV on food L_2010_07_20__11_46_51___7___4_seg.avi
+egl-50 (n1086) on food L_2009_12_10__10_45_06___8___2_seg.avi
+acr-15 (ok1214)V on food L_2010_02_23__09_32___3___2_seg.avi
+acr-21 (ok1314)III on food R_2010_02_19__09_42_02___2___2_seg.avi
+egl-2 (n693)V on food R_2010_09_16__14_55___3___7_seg.avi
+dop-2; dop-3 on food R_2009_11_10__15_53___3___11_seg.avi
+dop-1 (vs100)X; dop-3 (VS106) on food L_2009_11_06__13_05_29___8___7_seg.avi
+acr-2 (ok1887) on food L_2010_02_23__10_55___3___7_seg.avi
+egl-1 (n487) on food L_2011_08_03__09_32___3___1_seg.avi
+egl-33 (n151)I on food L_2010_05_14__15_34___3___14_seg.avi
+egl-20 (mu39)IV on food R_2010_07_15__12_31_37__6_seg.avi
+egl-12 (n602)V on food R_2010_07_15__11_10_29___8___2_seg.avi
+egl-43 (n1079)II on food L_2010_08_19__11_55_29___6___5_seg.avi
+acr-3 (ok2049)X on food R_2010_02_19__10_44___3___5_seg.avi
+del-1 (ok150) on food L_2010_07_06__12_06_10___1___7_seg.avi
+dop-1; dop-3 on food L_2009_11_07__15_41_00___6___10_seg.avi
+acr-21 (ok1314)III on food R_2010_02_24__14_43_06___6___12_seg.avi
+acr-9 (ok933)X on food R_2010_02_19__10_22_22___4___4_seg.avi
+cat-4 (e1141)I on food L_2010_07_23__10_35_06___2___2_seg.avi
+cat-4 (e1141)I on food R_2010_07_27__16_04_36___6___12_seg.avi
+egl-24 (n572)III on food L_2010_05_13__11_14_54___4___4_seg.avi
+egl-20 (mu39)IV on food L_2010_07_16__11_27_01___7___4_seg.avi
+cat-2 (e1112) on food L_2009_10_30__12_14_28__2_seg.avi
+acr-18 (ok1285) on food L_2010_02_23__12_35_12___7___11_seg.avi
+bas-1 (ad446) on food R_2009_12_14__13_02_07___2___9_seg.avi
+egl-43 (n1079)II on food R_2010_09_16__13_04_54___6___6_seg.avi
+egl-21 (n476)IV on food L_2010_07_23__15_16_34___7___11_seg.avi
+dop-1 (vs100)x; DOP-2 (VS105)v on food r_2009_11_06__12_45___3___6_seg.avi
+asic-1 (ok415) on food L_2010_07_08__11_44_58___4___5_seg.avi
+cat-2 on food L_2009_11_03__15_00___3___8_seg.avi
+egl-37 (n742)II on food L_2010_08_05__11_45_11___2___4_seg.avi
+asic-1 (ok415) on food R_2010_06_15__11_26_55___4___3_seg.avi
+W03B1.2 (ok2433) on food R_2010_04_22__16_00___3___15_seg.avi
+egl-33 (n151)I on food R_2010_05_11__15_07_38___1___9_seg.avi
+acr-19 (ad1674)I on food R_2010_02_19__12_44___3___11_seg.avi
+acr-10 (ok3064) on food L_2010_02_23__12_13_55___6___10_seg.avi
+acr-3 (ok2049) on food R_2010_02_23__15_26_36___2___16_seg.avi
+dop-2; dop-3 on food L_2009_11_06__14_45_07___7___8_seg.avi
+cat-2 on food R_2009_11_04__13_05_13___8___8_seg.avi
+del-1 (ok150)X on food R_2012_03_08__15_44_54___2___8_seg.avi
+asic-1 (ok415) on food L_2010_07_08__11_46_49__5_seg.avi
+bas-1 (ad446)III on food L_2009_12_17__15_51_50___1___9_seg.avi
+egl-18 (ok290)IV on food R_2010_07_16__12_25_51___2___7_seg.avi
+egl-12 (n602)V on food L_2010_07_09__15_04_22___7___7_seg.avi
+dop-3 (vs106) on food R_2009_11_06__12_05_20___2___4_seg.avi
+egl-44 (n1080)II on food L_2010_08_19__15_07_10__9_seg.avi
+AQ2000 on food L_2011_08_02__17_00_00___6___2_seg.avi
+AQ2316 on food L_2011_08_02__17_02_53__2_seg.avi
+dat-1 (ok157)III on food L_2009_11_17__15_51_14___1___8_seg.avi
+egl-12 (n602)V on food R_2010_07_16__12_06_23___6___6_seg.avi
+egl-37 (n742)II on food R_2010_08_20__10_37_56___8___2_seg.avi
+cat-2 on food L_2009_11_05__11_26_17___8___2_seg.avi
+AQ2316 on food R_2011_08_02__10_39___4___1_seg.avi
+acr-6 (ok3117)I on food L_2010_02_23__13_11_55___1___13_seg.avi
+cat-2 on food L_2009_11_04__12_06_14___6___5_seg.avi
+egl-32 (n155)I on food L_2010_05_13__15_05_58___8___11_seg.avi
+acr-14 (ok1155) on food L_2010_02_24__09_43_12___6___2_seg.avi
+acr-9 (ok933)X on food L_2010_02_23__11_15_58___7___7_seg.avi
+del-1 (ok150) on food L_2010_06_15__14_36_26___4___7_seg.avi
+eat-16 (sa6091) on food R_2010_08_03__14_46_02___4___10_seg.avi
+egl-18 (ok290)IV on food L_2010_07_20__11_24_38___2___4_seg.avi
+egl-18 (ok290)IV on food L_2010_07_20__11_25_15___4___4_seg.avi
+acr-11 (ok1345) on food R_2010_02_23__12_53_04___2___12_seg.avi
+dpy-20 (e1282)IV on food L_2011_08_25__11_23_10___8___1_seg.avi
+acr-19 (ad1674) on food R_2010_12_14__16_17_21___2___9_seg.avi
+egl-10 (md176) on food L_2010_05_19__11_44___3___2_seg.avi
+cat-2 on food R_2009_11_04__12_06_11___1___5_seg.avi
+unc-8 (e151b145) del-1 (ok150) on food R_2011_10_13__12_56_09___1___5_seg.avi
+daf-5 (e1386)II on food L_2010_07_22__14_44_56___4___9_seg.avi
+daf-3 (e1376)X on food L_2010_07_22__11_45_07___2___4_seg.avi
+daf-5 (e1386)II on food L_2010_07_27__15_48_37__11_seg.avi
+egl-18 (e290)IV on food R_2010_07_15__11_31_41___7___3_seg.avi
+cat-2 on food R_2009_11_04__11_05_19___7___2_seg.avi
+daf-5 (e1386)II on food R_2010_07_22__14_46_27___7___8_seg.avi
+eat-16 (sa6091) on food R_2010_07_29__16_20_54___7___12_seg.avi
+egl-30 (n686); goa-1 (n1134) on food L_2010_07_29__12_14_13___2___5_seg.avi
+egl-37 (n742)II on food L_2010_08_20__10_38_33__2_seg.avi
+cat-2 (e1112) on food R_2009_11_10__16_12_23___7___12_seg.avi
+dop-1 (vs100)X; dop-2 (vs105)V on food R_2009_11_06__12_46_50___7___6_seg.avi
+dop-1 (vs100)X; dop-3 (vs106) on food R_2009_11_06__13_04_37___2___7_seg.avi
+dop-1 (vs100); dop-2 (vs105)V on food L_2009_11_10__14_54_33___6___9_seg.avi
+egl-24 (n572)III on food L_2010_05_11__13_02___3___7_seg.avi
+dop-4 on food R_2009_11_07__14_40___3___7_seg.avi
+dpy-20 (e1282)IV on food R_2011_08_25__12_18_40___1___4_seg.avi
+egl-12 (n602)V on food R_2010_07_09__15_02_39___4___7_seg.avi
+Cat-2 on food R _2009_11_03__16_02_53__11_seg.avi
+egl-30 (ep271gf) on food R_2010_03_04__11_25_55__8_seg.avi
+egl-37 (n742)II on food L_2010_08_06__11_36_17___4___3_seg.avi
+cat-2 on food L_2009_11_04__12_07_26___7___5_seg.avi
+egl-43 (n1079)II on food L_2010_07_20__12_47_25___2___8_seg.avi
+acr-18 (ok1285) on food L_2010_02_19__15_04_04___4___14_seg.avi
+dop-1 (vs100)X; dop-3 (vs106) on food L_2009_11_06__13_05_43___7___7_seg.avi
+acr-2 (ok1887) on food R_2010_02_24__13_03___3___11_seg.avi
+egl-14 (n549)X on food L_2010_07_20__15_00___3___10_seg.avi
+acr-14 (ok1155) on food L_2010_02_24__09_44_32___8___2_seg.avi
+C24G7.4 (ok1237) on food R_2010_03_30__11_46_46___4___2_seg.avi
+T27E9.9 (ok2371)III on food R_2011_08_11__10_23_19__2_seg.avi
+acr-7 (tm863)II on food R_2010_02_23__11_54_41___8___9_seg.avi
+egl-11 (n587)V on food L_2010_12_14__12_20_06___1___3_seg.avi
+R12E2.10 (ok1781)X on food L_2011_09_06__11_53_44___7___1_seg.avi
+acr-18 (ok1285) on food R_2010_02_23__12_33_30___2___11_seg.avi
+cat-2 on food R_2009_11_03__15_59_34___2___11_seg.avi
+egl-33 (n151)I on food L_2010_05_13__12_13_00___1___7_seg.avi
+dat-1 (ok157) on food R_2009_11_18__11_36_37___8___4_seg.avi
+dnc-1 (or404ts) on food R_2009_12_10__15_04_48___8___12_seg.avi
+egl-13 (n483)X on food R_2010_07_09__14_43_21___6___6_seg.avi
+dop-2 (vs103)V on food L_2009_11_06__11_47_33___7___3_seg.avi
+dop-1 (vs100); dop-3 (vs106)X on food L_2009_11_10__15_34_17___1___6_seg.avi
+F54E4.4 (ok2330)X on food R_2011_08_09__11_28_43___1___4_seg.avi
+C52B9.11 (gk596)V on food L_2011_08_19__13_00___4___8_seg.avi
+cat-2 on food L_2009_11_05__11_25_19___6___2_seg.avi
+egl-44 (n1080)II on food R_2010_08_19__15_06_19___6___9_seg.avi
+acr-9 (ok933)X on food R_2010_02_23__11_16_25__6_seg.avi
+acr-9 (ok933)X on food R_2010_02_23__11_14_16___2___7_seg.avi
+T28138.5 (ok1014) on food L_2010_03_30__15_06_16___2___6_seg.avi
+acr-2 (ok1887) on food L_2010_02_24__13_04_31___8___11_seg.avi
+eat-16 (sa6091) on food R_2010_08_03__14_45___3___10_seg.avi
+dop-4 (tm1392) on food L_2009_11_10__12_01_51__2_seg.avi
+egl-43 (n1079)II on food R_2010_09_16__13_05_23___4___6_seg.avi
+dpy-20 (e1282)IV on food R_2011_08_25__15_40_16___6___9_seg.avi
+del-1 (ok150) on food L_2010_07_08__14_55_11___4___8_seg.avi
+T27E9.9 (ok2371)III on food R_2011_08_11__12_20_07___2___8_seg.avi
+egl-42 (n1081)V on food R_2010_05_20__12_34_21___2___5_seg.avi
+cat-2 on food R_2009_11_03__12_29_44___6___5_seg.avi
+acr-14 (ok1155) on food L_2010_02_23__15_03_34___4___15_seg.avi
+acr-18 (ok1205) on food L_2010_02_19__15_03_34___6___14_seg.avi
+egl-10 (md176)V on food L_2010_12_14__12_22_02___6___4_seg.avi
+acr-11 (ok1345) on food R_2010_02_24__10_44_35___2___5_seg.avi
+egl-31 (n472)I on food L_2010_07_13__13_04_06___6___9_seg.avi
+acr-11 (ok1345) on food L_2010_02_24__10_46_05___8___5_seg.avi
+egl-23 (n601)IV  on food R_2010_07_13__14_57_41__11_seg.avi
+acr-7 (tm863)II on food L_2010_02_24__11_23_11___6___7_seg.avi
+acr-6 (ok3117) on food L_2010_02_23__13_13_17___4___13_seg.avi
+T2854.2 (ok289) on food L_2010_04_08__11_46_09___7___2_seg.avi
+dop-4 (vs1) on food L_2009_11_06__12_26_38___2___5_seg.avi
+acr-15 (ok1214) on food L_2011_06_14__11_49___3___4_seg.avi
+acr-7 (tm863)II on food L_2010_02_24__11_24_32___8___7_seg.avi
+acr-15 (ok1214)X on food L_2010_02_24__15_45_23___7___15_seg.avi
+dop-2; dop-3 on food L_2009_11_10__15_54_17___7___11_seg.avi
+egl-10 (md176) on food L_2010_05_19__11_44_10___6___2_seg.avi
+acr-10 (ok3064)X on food R_2010_02_24__11_43_04___1___8_seg.avi
+dop-1 (vs100)X; dop-2 (vs105)V on food R_2009_11_06__12_47_25__5_seg.avi
+dop-1 (vs101)Xon food R_2009_11_06__11_25_16___7___2_seg.avi
+bas-1 (ad446) on food L_2009_12_15__11_24_17___7___4_seg.avi
+egl-28 (n570)II on food L_2010_07_16__11_45_17___6___5_seg.avi
+daf-7 (m62)III on food R_2010_07_22__12_26_18___8___5_seg.avi
+egl-30 (ep271gf) on food R_2010_03_04__11_23___3___8_seg.avi
+acr-14 (ok1155) on food R_2010_02_19__11_03___3___6_seg.avi
+acr-18 (ok1285)V on food L_2010_02_19__15_02_42___1___14_seg.avi
+acr-7 (tm863)II on food L_2010_02_23__11_53_10___2___9_seg.avi
+egl-43 (n1079)II on food R_2010_08_06__12_36_45___8___6_seg.avi
+cat-2 (e1112) on food L_2009_10_30__12_11_58___1___3_seg.avi
+acr-9 (ok933)X on food R_2010_02_23__11_14___3___8_seg.avi
+egl-28 (n570)II on food R_2010_07_15__12_48_08___1___7_seg.avi
+acr-2 (ok1887)on food R_2010_02_24__13_04_50___7___11_seg.avi
+dnc-1 (or404ts) on food R_2009_12_09__12_35_40___6___7_seg.avi
+acr-15 (ok1412) on food R_2011_06_14__12_29_12___1___6_seg.avi
+egl-30 (n686); goa-1 (n1134) on food L_2010_08_03__12_55___3___9_seg.avi
+egl-30 (ep271gf) on food R_2010_03_05__12_53_58___1___11_seg.avi
+acr-10 (ok3064) on food R_2010_02_23__12_13_51___2___10_seg.avi
+acr-11 (ok1345)I on food R_2010_02_23__12_52_14___1___12_seg.avi
+daf-5 (e1386)II on food L_2010_07_27__15_46___3___11_seg.avi
+egl-43 (n1079)II on food L_2010_08_19__11_55___3___5_seg.avi
+egl-24 (n572)III on food R_2010_05_14__14_37_00__9_seg.avi
+cat-2 on food L_2009_11_03__12_29_45___2___5_seg.avi
+egl-2 (n693)V on food R_2010_09_17__15_45___3___6_seg.avi
+Y69H2.2 (ok1522) on food R_2010_04_08__12_25_44___8___4_seg.avi
+R12E2.10 (ok1781)X on food R_2011_09_06__15_55_26__7_seg.avi
+egl-21 (n611)V on food R_2010_05_13__12_36_51__8_seg.avi
+egl-18 (ok290)IV on food L_2010_07_16__12_26___3___7_seg.avi
+egl-37 (n742)II on food R_2010_08_20__10_36___3___2_seg.avi
+egl-37 (n742)II on food R_2010_08_03__10_36_12___4___2_seg.avi
+egl-18 (e290)IV on food R_2010_07_15__11_29_57___4___3_seg.avi
+egl-10 (md176)V on food R_2010_05_14__12_49___3___9_seg.avi
+egl-27 (ok151)II on food L_2010_08_03__12_37_12___4___8_seg.avi
+acr-21 (ok1314)III on food L_2010_02_23__09_55_59__3_seg.avi
+egl-43 (n1079)II on food R_2010_08_19__11_57_08___8___5_seg.avi
+egl-1 (n487) on food L_2011_08_04__15_43_35___2___1_seg.avi
+cat-2 on food R_2009_11_05__11_24_48___2___2_seg.avi
+del-1 (ok150) on food R_2010_06_15__14_35_03___1___7_seg.avi
+C52B9.11 (gk596)V on food R_2011_09_13__12_19___3___4_seg.avi
+acr-14 (ok1155) on food L_2010_02_23__15_03_02___6___15_seg.avi
+acr-23 (ok2804)V on food R_2010_02_24__15_05_14__12_seg.avi
+daf-5 (e1386)II on food R_2010_07_22__14_44_20___6___8_seg.avi
+egl-5 (n486)III on food L_2010_05_13__11_53_44___6___6_seg.avi
+acr-15 (ok1214)V on food R_2010_02_23__09_34_21___7___2_seg.avi
+del-1 (ok150) on food L_2010_06_15__14_36_30___6___7_seg.avi
+acr-7 (tm863)II on food L_2010_02_19__11_43___3___8_seg.avi
+egl-12 (n602)V on food R_2010_07_15__11_11_00___7___2_seg.avi
+W03B1.2 (ok2433) on food R_2010_04_21__11_50_32___7___5_seg.avi
+egl-30 (ep271gf) on food R_2010_03_04__11_23_48___6___8_seg.avi
+T27E9.9 (ok2371)III on food L_2011_09_13__11_20___4___1_seg.avi
+C46A5.2 (ok1187) on food L_2010_03_26__10_35_06___7___2_seg.avi
+acr-14 (ok1155) on food R_2010_02_24__09_43_09___2___2_seg.avi
+cat-2 on food L_2009_11_04__11_06_01__2_seg.avi
+dop-3 (vs106) on food L_2009_11_10__12_38_01___2___4_seg.avi
+egl-37 (n742)II on food L_2010_08_20__10_36_35___4___2_seg.avi
+egl-49 9n1107) on food R_2010_05_14__14_57_14___8___12_seg.avi
+egl-43 (n1079)II on food L_2010_08_06__12_35_26___4___6_seg.avi
+Y69H2.2 (ok1522) on food L_2010_04_08__12_24_10___2___4_seg.avi
+egl-14 (n549)X on food L_2010_07_15__16_20_33___6___14_seg.avi
+cat-2 on food R_2009_11_04__14_45_51___1___9_seg.avi
+del-1 (ok150)X on food R_2012_03_08__11_54_58___3____seg.avi
+acr-19 (ad1674) on food R_2010_12_14__15_54_49___1___7_seg.avi
+egl-13 (n483)X on food L_2010_07_09__14_43___3___6_seg.avi
+cat-2 on food R_2009_11_03__15_00_02___2___8_seg.avi
+asic-1 (ok415) on food L_2010_07_06__11_05_08___2___4_seg.avi
+egl-12 (n602)V on food R_2010_07_15__11_08_38___2___2_seg.avi
+unc-8 (e151b145) del-1 (ok150) on food R_2011_10_04__16_01___3___6_seg.avi
+C52B9.11 (gk596)V on food L_2011_08_11__09_57_03___1___1_seg.avi
+acr-21 (ok1314)III on food R_2010_02_19__09_42___3___2_seg.avi
+egl-1 (n487) on food L_2011_08_02__10_39_52___6___1_seg.avi
+ced-1 (e1735)I on food R_2011_09_15__11_43_00___8___2_seg.avi
+acr-3 (ok2049)X on food L_2010_02_19__10_43_52___2___5_seg.avi
+T14B1.1 (ok1702) on food L_2011_09_06__12_09_09___2___2_seg.avi
+T14B1.1 (ok1702) on food R_2011_09_13__16_40_50___8___12_seg.avi
+acr-2 (ok1887) on food L_2010_02_24__13_03_08___2___11_seg.avi
+egl-47 (n1081)V on food R_2010_12_14__15_39_04___6___7_seg.avi
+egl-12 (n602)V on food R_2010_07_13__12_26_30__7_seg.avi
+Y69H2.2 (ok1522) on food R_2010_04_08__12_24___3___4_seg.avi
+acr-18 (ok1285) on food L_2010_02_19__15_03_31___2___14_seg.avi
+egl-19 (n2368)IV on food R_2010_05_13__15_28_45___8___12_seg.avi
+egl-50 (n1086) on food R_2009_12_09__12_14_19___6___6_seg.avi
+dnc-1 (or404ts) on food L_2009_12_09__12_36_43___8___8_seg.avi
+egl-24 (n572)III on food L_2010_05_11__13_04_22___8___6_seg.avi
+acr-2 (ok1887) on food R_2010_02_23__10_53_59___6___6_seg.avi
+egl-37 (n742)II on food R_2010_08_06__11_35___3___3_seg.avi
+acr-2 (ok1887) on food R_2010_02_23__10_55_19___8___6_seg.avi
+dop-2 (vs105)V on food L_2009_11_06__11_45_47___1___3_seg.avi
+acr-6 (ok3117) on food L_2010_02_23__13_12_44___2___13_seg.avi
+egl-10 (md176)V on food L_2010_05_11__16_29_43___4___14_seg.avi
+dnc-1 (or404ts) on food L_2009_12_10__15_03_48___2___12_seg.avi
+F54E4.4 (ok2330)X on food R_2011_08_09__10_29_54___6___1_seg.avi
+dat-1 (ok1571) on food L_2009_11_17__15_52_53___8___9_seg.avi
+C45A6.2 (ok1187) on food R_2010_03_25__12_53___3___7_seg.avi
+cat-2 on food L_2009_11_03__15_59___3___11_seg.avi
+egl-21 (n476)IV on food L_2010_07_15__13_11_24___6___8_seg.avi
+T28F2.7 (ok2657) on food L_2010_03_30__12_27_29___6___4_seg.avi
+asic-1 (ok415) on food L_2010_07_08__11_44___3___5_seg.avi
+egl-14 (n549)X on food L_2010_07_23__14_56_45___8___10_seg.avi
+cat-2 on food L_2009_11_03__11_28_03___1___2_seg.avi
+dop-1 (vs100); dop-3 (vs106)X on food L_2009_11_10__15_34_58___2___10_seg.avi
+T28138.5 (ok1014) on food L_2010_04_08__13_03_15___1___6_seg.avi
+acr-11 (ok1345) on food R_2010_02_23__12_53___3___13_seg.avi
+dat-1 (ok157)III on food L_2009_11_06__15_26_03___1___10_seg.avi
+daf-7 (m62)III on food L_2010_07_29__12_56_02___4___8_seg.avi
+F54E4.4 (ok2330) on food R_2011_08_24__12_04___3___7_seg.avi
+acr-11 (ok1345)I on food R_2010_02_19__12_21_15___1___10_seg.avi
+C52B9.11 (gk596)V on food R_2011_08_11__10_19_44___2___2_seg.avi
+dpy-20 (e1282)IV on food R_2011_08_24__11_21_59___6___5_seg.avi
+AQ1062 on food R_2011_08_03__09_35_48___8___1_seg.avi
+cat-2 (e1112) on food R_2009_10_30__14_38___3___6_seg.avi
+egl-49 (n1107) on food  R_2010_05_14__14_54_38___1___11_seg.avi
+egl-37 (n742)II on food R_2010_08_03__10_35_55___6___2_seg.avi
+egl-11 (n587)V on food L_2010_12_14__16_46_10___7___10_seg.avi
+cat-2 on food L_2009_11_03__11_29_50___7___2_seg.avi
+egl-30 (ep271gf) on food L_2010_02_26__09_44_50___7___4_seg.avi
+acr-2 (ok1887) on food R_2010_02_23__10_53_57___2___6_seg.avi
+bas-1 (ad446) on food R_2009_12_14__14_48_46___8___9_seg.avi
+C24G7.4 (ok1237) on food L_2010_03_30__11_46_12___2___2_seg.avi
+egl-19 (n2368)IV on food R_2010_05_14__11_52_11___8___6_seg.avi
+egl-47 (n1081)V on food R_2010_12_14__12_43_54___8___5_seg.avi
+egl-21 (n476)IV on food L_2010_07_23__15_13_03___1___11_seg.avi
+egl-33 (n151)I on food R_2010_05_13__12_14_34___4___7_seg.avi
+cat-4 (e1141)I on food L_2010_07_22__13_08_30__7_seg.avi
+dop-4 (vs1) on food L_2009_11_06__12_26___3___5_seg.avi
+egl-21 (n476)IV on food L_2010_07_15__13_11___3___8_seg.avi
+acr-11 (ok1345) on food L_2010_02_19__12_23_48___7___10_seg.avi
+bas-1 (ad446) on food R_2009_12_17__15_52_32___6___9_seg.avi
+acr-23 (ok2084)V on food R_2010_02_23__10_15___3___4_seg.avi
+egl-43 (n1079)II on food L_2010_07_20__12_47_40___6___7_seg.avi
+egl-37 (n742)II on food R_2010_08_20__10_36_20___6___2_seg.avi
+egl-21 (n476)IV on food R_2010_07_20__12_04___3___6_seg.avi
+egl-21 (n611)IV on food L_2010_05_14__15_54___3___15_seg.avi
+C46A5.2 (ok1187) on food L_2010_04_08__14_34_29___1___7_seg.avi
+dop-1 (vs100)x; dop-3 (vs106) on food L_2009_11_06__13_04___3___7_seg.avi
+dop-1 (vs101)X on food l on food L_2009_11_06__11_24_03___6___2_seg.avi
+dop-2 (vs105)V on food L_2009_11_06__11_48_09__2_seg.avi
+acr-11 (ok1345) on food R_2010_02_23__12_53_37___4___12_seg.avi
+dop-1 (vs100); dop-2 (vs105); dop-3 (vs106) on food L_2009_11_06__15_07_17___1___9_seg.avi
+egl-18 (e290)IV on food R_2010_07_15__11_29_20___2___3_seg.avi
+dop-1 (vs100); dop-2 (vs105)V; dop-3 (vs106)X on food L_2009_11_10__15_16___3___9_seg.avi
+egl-10 (md176)V on ood R_2010_12_16__17_17_49___8___9_seg.avi
+cat-2 on food L_2009_11_04__12_06___3___5_seg.avi
+egl-40 (n606)IV on food L_2010_08_20__10_55_36___6___3_seg.avi
+del-1 (ok150) on food R_2010_07_06__12_09_06___8___7_seg.avi
+cat-2 on food R_2009_11_03__16_00_38___8___11_seg.avi
+acr-9 (ok933)X on food R_2010_02_23__11_15_40___8___7_seg.avi
+cat-2 (e1112) on food L_2009_11_10__16_11_39___4___12_seg.avi
+egl-43 (n1079)II on food R_2010_07_09__11_02_47___1___2_seg.avi
+egl-43 (n1079)II on food R_2010_07_20__12_49_47___7___7_seg.avi
+dop-1; dop-2 on food L_2009_11_07__15_21_31___8___9_seg.avi
+egl-18 (e290)IV on food R_2010_07_15__11_31_48__3_seg.avi
+W03B1.2 (ok2433) on food R_2010_04_21__11_48_35___2___5_seg.avi
+acr-2 (ok1887) on food R_2010_02_19__14_42_14___2___13_seg.avi
+egl-37 (n742)II on food L_2010_08_05__11_47_42___7___3_seg.avi
+egl-14 (n549)X on food L_2010_07_15__16_20___3___14_seg.avi
+egl-30 (n686); goa-1 (n1134) on food L_2010_09_17__16_21_59___1___9_seg.avi
+del-1 (ok150) on food L_2010_07_06__12_07_15___2___7_seg.avi
+T14B1.1 (ok1702) on food R_2011_09_13__16_23_52___7___11_seg.avi
+W03B1.2 (ok2433) on food R_2010_04_22__16_00_39___2___15_seg.avi
+cat-2 on food R_2009_11_04__13_06_05__8_seg.avi
+acr-2 (ok1887) on food L_2010_02_19__14_42_24___6___13_seg.avi
+acr-11 (ok1345) on food R_2010_02_23__12_53_05___6___12_seg.avi
+acr-9 (ok933)X on food R_2010_02_23__11_13_27___1___7_seg.avi
+egl-12 (n602)V on food R_2010_07_09__15_00_58___1___7_seg.avi
+dpy-20 (e1282)IV on food L_2011_08_24__12_59_56___1___10_seg.avi
+dop-2; dop-3 on food R_2009_11_06__14_43___3___8_seg.avi
+acr-9 (ok933)X on food R_2010_02_24__12_24_06___4___10_seg.avi
+egl-20 (mu39)IV on food L_2010_07_16__11_24___3___4_seg.avi
+C45A6.2 (ok1187) on food L_2010_03_25__12_53_42___6___8_seg.avi
+acr-21 (ok1314)III on food L_2010_02_23__09_55_31___7___3_seg.avi
+T14B1.1 (ok1702) on food R_2011_09_13__13_19___3___7_seg.avi
+cat-2 (e1112) on food R_2009_11_10__16_13_07__12_seg.avi
+egl-49 (n1107) on food R_2010_05_11__11_24___3___2_seg.avi
+cat-2 on food R_2009_11_04__12_08_01__5_seg.avi
+cat-4 (e1141)I on food R_2010_07_27__16_06_13___8___12_seg.avi
+acr-10 (ok3064) on food L_2010_02_19__12_03_43___2___9_seg.avi
+acr-10 (ok3064) on food R_2010_02_23__12_14_24___4___10_seg.avi
+egl-44 (n1080)II on food L_2010_08_19__15_06_37___8___9_seg.avi
+daf-5 (e1386)II on food L_2010_07_29__11_17_07___7___2_seg.avi
+f-3 (e1376)X on food L_2010_07_29__14_59_32___8___8_seg.avi
+W03B1.2 (ok2433) on food R_2010_04_22__16_02_34___7___15_seg.avi
+egl-6 (n592)X on food R_2010_05_13__15_47___3___13_seg.avi
+egl-33 (n151)I on food L_2010_05_13__12_14_14___6___7_seg.avi
+acr-10 (ok3064) on food L_2010_02_24__11_44___3___8_seg.avi
+dat-1 (ok157) on food R_2009_11_18__11_35___3___4_seg.avi
+dop-4 (tm1392) on food R_2009_11_10__12_00_30___4___2_seg.avi
+cat-2 on food L_2009_11_04__13_04_42___2___8_seg.avi
+W03B1.3 (ok2433) on food R_2010_04_21__11_48___3___5_seg.avi
+egl-32 (n155)I on food R_2010_05_13__15_06_40__11_seg.avi
+dop-1 (vs100); dop-2 (vs105); dop-3 (vs106)X on food R_2009_11_06__15_09_39__8_seg.avi
+acr-3 (ok2049) on food L_2010_02_23__15_26___3___17_seg.avi
+T28f2.7 (ok2657) on food R_2010_03_19__09_35_02___4___3_seg.avi
+eat-16 (sa6091) on food L_2010_08_03__14_47_07___8___10_seg.avi
+cat-2 on food L_2009_11_04__13_04___3___8_seg.avi
+egl-11 (n587)V on food L_2010_05_14__13_07_33___4___10_seg.avi
+egl-49 (n1107) on food R_2010_05_11__11_25_59___7___2_seg.avi
+T2854.2 (ok289) on food L_2010_04_08__11_45_37___8___2_seg.avi
+T27E9.9 (ok2371)II on food R_2011_08_11__11_58_57___1___7_seg.avi
+egl-2 (n693)V on food L_2010_09_17__15_47_42___7___7_seg.avi
+egl-43 (n1079)II on food L_2010_07_09__11_04_06___6___2_seg.avi
+egl-11 (n587)V on food R_2010_12_14__15_40_58___8___7_seg.avi
+dop-2 (vs105) on food L_2009_11_10__13_15_51__6_seg.avi
+W03B1.2 (ok2433) on food L_2010_04_23__14_36_55___1___10_seg.avi
+daf-5 (e1386)II on food L_2010_07_22__14_46_33__8_seg.avi
+acr-2 (ok1887)X on food R_2010_02_23__10_53_08___1___6_seg.avi
+CAT-2 on food L_2009_11_04__14_46___3___9_seg.avi
+egl-2 (n693)V on food L_2010_09_23__11_17_17___6___2_seg.avi
+egl-10 (md176) on food R_2010_05_19__11_45_42___8___2_seg.avi
+R12E2.10 (ok1781)X on food L_2011_09_13__15_42_56__9_seg.avi
+egl-1 (n487) on food L_2011_08_03__09_36_30___7___1_seg.avi
+dop-2; dop-3 on food L_2009_11_10__15_53_31___4___11_seg.avi
+egl-37 (n742)II on food L_2010_08_06__11_37_36___8___3_seg.avi
+acr-14 (ok1155) on food R_2010_02_19__11_03_56___4___6_seg.avi
+C11D2.2 (ok1565)IV on food L_2011_08_24__10_45_12___8___3_seg.avi
+egl-18 (ok290)IV on food R_2010_07_20__11_27_01___7___3_seg.avi
+egl-32 (n155)I on food L_2010_05_11__16_47_05___1___14_seg.avi
+C46A5.2 (ok1187) on food R_2010_04_08__14_35_23___2___7_seg.avi
+egl-40 (n606)IV on food R_2010_09_16__11_45_03___2___2_seg.avi
+egl-28 (n570)II on food L_2010_07_20__16_00_25__11_seg.avi
+dop-3 (vs106)X on food L_2009_11_06__12_04_41___1___4_seg.avi
+egl-14 (n549)X on food R_2010_07_23__14_57_15___7___10_seg.avi
+egl-30 (ep271gf) on food R_2010_02_26__09_43_06___2___4_seg.avi
+acr-3 (ok2049)X on food R_2010_02_23__15_25_47___1___16_seg.avi
+cat-2 (e1112) on food L_2009_11_06__15_47_11___2___11_seg.avi
+CD112.2 (ok1565)IV on food R_2011_08_24__11_41_04___1___6_seg.avi
+cat-4 (e1141)I on food L_2010_07_27__16_06_49__12_seg.avi
+C3809.2 (OK1853)v on food R_2012_03_15__10_17_48___8___3_seg.avi
+dop-1 (vs100); dop-2 (vs105)V; dop-1 (vs106)X on food R_2009_11_10__15_16_10___1___5_seg.avi
+egl-46 (n1127)V on food L_2010_08_19__11_37_11___2___4_seg.avi
+cat-2 on food L_2009_11_04__14_46_30___2___9_seg.avi
+dop-1 (vs101)X on food R_2009_11_06__11_25_50__1_seg.avi
+egl-2 (n693)V on food L_2010_09_23__11_16___3___2_seg.avi
+dat-1 (ok157)III on food R_2009_11_19__15_39_29___6___9_seg.avi
+dop-2; dop-3 on food R_2009_11_10__15_53_04___6___12_seg.avi
+C11D2.2 (ok1565)IV on food L_2011_08_31__12_09_31___6___3_seg.avi
+dop-2 (vs105)v on food L_2009_11_06__11_47_20___8___3_seg.avi
+acr-2 (ok1887) on food R_2010_02_23__10_55_38___7___6_seg.avi
+dnc-1 (or404ts) on food L_2009_12_09__12_35_42___2___7_seg.avi
+T28138.5 (ok1014) on food R_2010_03_30__15_05_23___1___7_seg.avi
+AQ1062 on food L_2011_08_03__15_44_51___8___2_seg.avi
+CIID2.2 (ok1565)IV on food R_2011_08_04__12_13_02___8___6_seg.avi
+egl-24 (n572)III on food R_2010_05_11__13_05_05__7_seg.avi
+acr-23 (ok2804)III on food L_2010_02_24__15_04_26___2___14_seg.avi
+egl-21 (n476)IV on food L_2010_07_23__15_16_04___8___11_seg.avi
+dat-1 (ok157) on food L_2009_11_06__15_27_01___6___10_seg.avi
+egl-1 (n487) on food R_2011_08_02__10_38_57___2___1_seg.avi
+dpy-20 (e1282)IV on food R_2011_08_25__12_39_28___2___5_seg.avi
+egl-1 (n487)V on food R_2010_07_15__11_51_22___7___4_seg.avi
+bas-1 (ad446) on food R_2009_12_17__15_53_54___7___12_seg.avi
+acr-6 (ok3117) on food L_2010_02_23__13_12_48___6___13_seg.avi
+egl-11 (n587)V on food R_2010_12_16__17_35___3___10_seg.avi
+egl-49 (n1107) on food R_2010_05_13__11_33___3___5_seg.avi
+dpy-20 (e1282)IV on food R_2011_08_04__10_33_56___7___1_seg.avi
+dpy-20 (e1282)IV on food L_2011_08_04__11_50___3___5_seg.avi
+cat-2 on food L_2009_11_05__11_25___3___2_seg.avi
+daf-3 (e1376)X on food R_2010_07_27__11_06_33___7___3_seg.avi
+bas-1 (ad446) on food R_2009_12_14__13_02_05___6___8_seg.avi
+C11D2.2 (ok1565) on food L_2011_08_31__11_29___4___1_seg.avi
+del-1 (ok150)X on food L_2012_03_08__12_11_35___4___2_seg.avi
+egl-10 (md176)V on food R_2010_05_14__12_51_22___7___9_seg.avi
+F54E4.4 (ok2330)X on food L_2011_08_24__12_45_16__8_seg.avi
+egl-13 (n483)X on food R_2010_07_15__12_08___3___5_seg.avi
+C11D2.2 (ok1565)IV on food R_2011_08_31__12_52_41___8___5_seg.avi
+acr-21 (ok1314)III on food L_2010_02_23__09_54_23___4___3_seg.avi
+acr-21 (ok1314)III on food R_2010_02_23__09_53___3___3_seg.avi
+Y69H2.2 (ok1522) on food LR_2010_03_25__17_05___3___13_seg.avi
+egl-27 (ok151)II on food R_2010_09_24__12_54_18___1___6_seg.avi
+egl-20 (mu39)IV on food L_2010_07_20__11_46_20___8___4_seg.avi
+C24G7.4 (ok1237) on food L_2010_03_25__11_13___3___2_seg.avi
+egl-14 (n549)X on food R_2010_07_23__14_53_46___1___10_seg.avi
+egl-49 (n1107) on food R_2010_05_13__11_33_48___6___5_seg.avi
+T27E9.9 (ok2371)III on food L_2011_09_13__16_37___3___12_seg.avi
+acr-15 (ok1214) on food L_2011_06_30__11_18_18___2___5_seg.avi
+W03B1.2 (ok2433) on food L_2010_04_23__14_39_48___7___10_seg.avi
+acr-10 (ok3064)I on food R_2010_02_24__11_43_53___2___8_seg.avi
+acr-3 (ok2049)X on food L_2010_02_19__10_43_02___1___5_seg.avi
+acr-15 (ok1214) on food L_2011_06_30__13_18_52___1___9_seg.avi
+dat-1 on food R_2009_11_07__11_19_38___6___1_seg.avi
+egl-28 (n570)II on food L_2010_07_16__11_43_56___1___5_seg.avi
+acr-3 (ok2049)X on food L_2010_02_19__10_45_38___7___5_seg.avi
+egl-20 (mu39)IV on food R_2010_07_15__12_31_29___7___6_seg.avi
+dnc-1 (or404ts) on food L_2009_12_09__12_37_00___7___7_seg.avi
+bas-1 (ad446)III on food R_2009_12_15__11_22_14___1___4_seg.avi
+T2854.2 (ok289) on food L_2010_03_26__10_55_36___6___3_seg.avi
+C11D2.2 (ok1565)IV on food R_2011_08_24__12_24___3___8_seg.avi
+acr-19 (ad1674)I on food L_2010_02_19__12_43_32___2___11_seg.avi
+acr-10 (ok3064) on food R_2010_02_23__12_16_01__9_seg.avi
+dat-1 (ok157)III on food L_2009_11_19__15_41_20__9_seg.avi
+acr-7 (tm863)II on food R_2010_02_24__11_23_10___2___7_seg.avi
+C52B9.11 (gk596)V on food R_2011_08_11__12_04_54___7___7_seg.avi
+egl-21 (n476)IV on food R_2010_07_15__13_11_09___2___8_seg.avi
+dat-1 (ok157)III on food L_2009_11_19__15_40_26___8___9_seg.avi
+C3809.2 (ok1853)V on food R_2012_03_08__12_36_40___8___4_seg.avi
+egl-37 (n742)II on food R_2010_08_05__11_45___3___4_seg.avi
+egl-49 (n1107) on food R_2010_05_14__14_55___3___12_seg.avi
+egl-24 (n572)III on food R_2010_05_11__13_04_47___7___7_seg.avi
+C24G7.4 (ok1237) on food L_2010_03_26__11_53_16___2___6_seg.avi
+acr-3 (ok2049)X on food L_2010_02_24__11_02_57___1___6_seg.avi
+C11D2.2 (ok1565)IV on food L_2011_08_25__15_03_30__7_seg.avi
+acr-18 (ok1285) on food L_2010_02_19__15_05_12___7___14_seg.avi
+egl-27 (ok151)II on food L_2010_08_05__14_44___3___10_seg.avi
+egl-30 (ep271gf) on food L_2010_03_05__12_54___3___11_seg.avi
+del-1 (ok150) on food R_2010_07_08__14_54___3___8_seg.avi
+egl-30 (ep271gf) on food L_2010_03_04__11_23_43___2___8_seg.avi
+acr-15 (ok1214)X on food L_2010_02_24__15_45_04___8___14_seg.avi
+cat-2 (e1112) on food R_2009_11_10__16_11___3___12_seg.avi
+acr-3 (ok2049)X on food L_2010_02_24__11_03___3___6_seg.avi
+dop-1 (vs100)X; dop-3 (vs106) on food R_2009_11_06__13_06_18__6_seg.avi
+egl-24 (n572)III on food R_2010_05_11__13_01_36___1___7_seg.avi
+acr-23 (ok2084)V on food L_2010_02_19__10_02___3___3_seg.avi
+egl-24 (n572)III on food L_2010_05_11__13_02_37___2___7_seg.avi
+C24G7.4 (ok1237) on food L_2010_03_30__11_45_19___1___2_seg.avi
+egl-20 (mu39)IV on food L_2010_07_15__12_29___3___6_seg.avi
+acr-3 (ok2049)X on food L_2010_02_24__11_05_09___8___6_seg.avi
+daf-5 (e1386)II on food L_2010_07_29__11_14_58___6___2_seg.avi
+C24G7.4 (ok1237) on food R_2010_03_25__11_13_24___6___2_seg.avi
+Y69H2.2 (ok1522) on food R_2010_03_26__11_33_13___2___5_seg.avi
+acr-6 (ok3117)I on food L_2010_02_19__15_21_18___1___15_seg.avi
+dnc-1 (or404ts) on food L_2009_12_10__15_05_05___7___12_seg.avi
+cat-2 on food R_2009_11_03__15_01_05___8___8_seg.avi
+egl-43 (n1079)II on food R_2010_08_05__13_04_54___4___8_seg.avi
+dop-1 (vs100); dop-2 (vs105); dop-3 (vs106) on food L_2009_11_06__15_07_52___6___9_seg.avi
+acr-19 (ad1674)I on food R_2010_02_19__12_45_14___7___11_seg.avi
+egl-21 (n476)IV on food L_2010_07_13__15_17_04___7___12_seg.avi
+T28138.5 (ok1014) on food R_2010_04_08__13_04_08___2___6_seg.avi
+dop-2 on food L_2009_11_07__13_59_10___7___5_seg.avi
+acr-19 (ad1674) on food R_2010_12_14__11_20_42___6___1_seg.avi
+dat-1 on food R_2009_11_07__11_17___3___1_seg.avi
+acr-7 (tm863)II on food L_2010_02_23__11_53_21___6___9_seg.avi
+dnc-1 (or404ts) on food R_2009_12_10__15_03_44___6___12_seg.avi
+dop-1 on food L_2009_11_07__13_37_54___6___4_seg.avi
+acr-15 (ok1214) on food L_2011_06_14__12_34_03___8___6_seg.avi
+egl-2 (n693)V on food R_2010_09_16__14_55_40___6___7_seg.avi
+del-1 (ok150)X on food R_2012_03_08__12_36_35___5___3_seg.avi
+dpy-20 (e1282)IV on food R_2011_08_04__12_10___4___6_seg.avi
+unc-8 (e15b145) del-1 (ok150) on food L _2011_10_04__12_18_31__1_seg.avi
+egl-14 (n549)X on food L_2010_07_23__14_55___3___10_seg.avi
+C11D2.2 (ok1565)IV on food L_2011_08_24__10_24_57___7___2_seg.avi
+cat-2 on food R_2009_11_04__13_04_03___1___8_seg.avi
+egl-43 (n1079)II on food R_2010_09_16__13_07_10__6_seg.avi
+egl-37 (n742)II on food L_2010_08_06__11_34_32___1___3_seg.avi
+egl-30 (n686); goa-1 (n1134) on food L_2010_09_17__16_25_48___7___9_seg.avi
+C38D9.2 (ok1853)V on food L_2011_09_22__13_31_41___2___8_seg.avi
+acr-10 (ok3064)X on food R_2010_02_23__12_13_02___1___10_seg.avi
+acr-6 (ok3117) on food R_2010_02_19__15_22_08___2___15_seg.avi
+acr-15 (ok1214)V on food R_2010_02_23__09_32_40___2___2_seg.avi
+egl-40 (n606)IV on food R_2010_08_05__12_07_51___8___5_seg.avi
+egl-14 (n549)X on food L_2010_07_15__16_22_45__14_seg.avi
+T28F2.7 (ok2657) on food L_2010_03_30__12_28_54___8___5_seg.avi
+egl-49 (n1107) on food L_2010_05_11__11_26_16__2_seg.avi
+cat-2 on food R_2009_11_03__11_29_36___8___2_seg.avi
+acr-9 (ok933)X on food R_2010_02_19__10_23_11___8___4_seg.avi
+C11D2.2 (ok1565)IV on food R_2011_08_31__15_49_17___2___9_seg.avi
+dop-2; dop-3 on food L_2009_11_07__16_00_46___8___11_seg.avi
+egl-46 (n1127)V on food R_2010_08_19__11_39_44__4_seg.avi
+Y69H2.2 (ok1522)on food L_2010_03_26__11_33___3___5_seg.avi
+egl-12 (n549)X on food R_2010_07_09__12_05_35___7___5_seg.avi
+egl-36 (n728)X on food L_2010_07_15__15_33___3___12_seg.avi
+dop-1 (vs101) on food R_2009_11_10__12_57_34__5_seg.avi
+dat-1 (ok157) on food R_2009_11_10__12_19_51___2___3_seg.avi
+cat-2 on food R_2009_11_03__12_30_12___4___5_seg.avi
+dpy-20 (e1282)V on food L_2011_08_19__11_42_29__4_seg.avi
+egl-28 (n570)II on food R_2010_07_15__12_51_36___7___7_seg.avi
+C3809.2 (ok1853)V on food L_2012_03_08__12_15_52___7___2_seg.avi
+dop-1 (vs100); dop-2 (vs105)V on food R_2009_11_06__12_45_37___6___6_seg.avi
+dop-4 (tm1392)X on food R_2009_11_10__11_59_24___1___3_seg.avi
+dop-1 (vs100);dop-2 (vs105)V on food L_2009_11_10__14_55_30___8___7_seg.avi
+egl-11 (n587)V on food L_2010_05_11__15_29___3___10_seg.avi
+dpy-20 (e1282)IV on food R_2011_08_09__10_54_50___8___2_seg.avi
+egl-1 (n487) on food R_2011_08_04__15_44_44___8___11_seg.avi
+egl-18 (ok290)IV on food L_2010_07_20__11_24_55___6___3_seg.avi
+daf-5 (e1386)II on food R_2010_07_27__15_48_01___8___11_seg.avi
+cat-2 (e1112) on food L_2009_10_30__12_13_49___7___2_seg.avi
+egl-6 (n592)X on food  R_2010_05_14__12_09_25___1___7_seg.avi
+egl-37 (n742)II on food L_2010_08_03__10_35___3___2_seg.avi
+egl-10 (md176)V on food L_2010_12_14__11_43_35___8___2_seg.avi
+dpy-20 (e1282)IV on food L_2011_08_24__10_42___4___3_seg.avi
+C38D9.2 (ok1853)V on food L_2011_09_22__16_23_44__11_seg.avi
+egl-43 (n1079)II on food R_2010_08_20__15_25_49___6___12_seg.avi
+R12E2.10 (ok1781)X on food R_2011_09_22__15_58_30___1___10_seg.avi
+acr-10 (ok3064) on food R_2010_02_23__12_15_34___7___10_seg.avi
+dnc-1 (or404ts) on food R_2009_12_10__15_07_07__13_seg.avi
+C46A5.2 (ok1187) on food L_2010_04_08__14_35_29___6___7_seg.avi
+egl-10 (md176)V on food L_2010_05_11__16_29___3___13_seg.avi
+del-1 (ok150) on food L_2010_07_06__12_07_53___4___7_seg.avi
+acr-11 (ok1345) on food L_2010_02_24__10_44___3___5_seg.avi
+asic-1 (ok415) on food L_2010_07_06__11_05___3___4_seg.avi
+dpy-20 (e1282)IV on food L_2011_08_24__12_07_53___8___7_seg.avi
+dop-1 (vs101) on food L_2009_11_10__12_56_58___7___5_seg.avi
+dat-1 (ok157) on food L_2009_11_17__15_52_24___4___7_seg.avi
+dpy-20 (e1282)IV on food L_2011_08_04__11_30_01___2___4_seg.avi
+egl-12 (n602)V on food R_2010_07_15__11_08_56___6___2_seg.avi
+dop-1 (vs100); dop-3 (vs106)X on food L_2009_11_10__15_36_24__10_seg.avi
+acr-14 (ok1155) on food L_2010_02_23__15_03_00___2___15_seg.avi
+acr-6 (ok3117) on food L_2010_02_23__13_14_34___7___13_seg.avi
+acr-7 (tm863)II on food R_2010_02_24__11_22_21___1___7_seg.avi
+cat-2 on food L_2009_11_07__15_03_13___7___8_seg.avi
+egl-43 (n1079)II on food L_2010_08_05__13_06_45__8_seg.avi
+egl-11 (n587)V on food R_2010_05_14__13_06_57___2___10_seg.avi
+acr-10 (OK3064) on food R_2010_02_23__12_15_15___8___10_seg.avi
+cat-4 (e1141)I on food R_2010_07_27__16_04_59___4___12_seg.avi
+cat-2 (e1112) on food L_2009_10_30__14_40_12__6_seg.avi
+C52B9.11 (gk596)V on food R_2011_09_15__12_39_55___6___5_seg.avi
+acr-15 (ok1214)V on food L_2010_02_23__09_33_13___4___2_seg.avi
+F23B2.2 (ok1226) on food L_2010_03_26__11_13_35___1___4_seg.avi
+dop-1 (vs101)X on food L_2009_11_06__11_24___3___2_seg.avi
+dop-1 (vs100); dop-3 (vs106)X on food L_2009_11_10__15_35_23___4___10_seg.avi
+egl-2 (n693)V on  food L_2010_09_23__11_19_33__2_seg.avi
+egl-2 (n693)V on food R_2010_09_16__14_55_15___2___7_seg.avi
+acr-11 (ok1345) on food R_2010_02_19__12_22___3___10_seg.avi
+egl-33 (n151)I on food L_2010_05_14__15_36_47___7___14_seg.avi
+acr-10 (ok3064) on food R_2010_02_19__12_05_23___7___9_seg.avi
+dop-1 (vs100); dop-3 (vs106)X on food R_2009_11_10__15_34_35___6___11_seg.avi
+dop-2 (vs103)V on food L_2009_11_06__11_46___3___3_seg.avi
+T28f2.7 (ok2657) on food L_2010_03_19__09_35_57___8___3_seg.avi
+acr-10 (ok3064) on food R_2010_02_24__11_44_26___4___8_seg.avi
+egl-46 (n1127)V on food R_2010_08_19__11_37_32___6___4_seg.avi
+dop-1 (vs101)X on food R_2009_11_06__11_25_02___8___2_seg.avi
+dop-1 (vs100)X; dop-2 (vs105)V on food L_2009_11_06__12_45_43___2___6_seg.avi
+dop-2; dop-3 on food L_2009_11_06__14_45_43__7_seg.avi
+egl-40 (n606)IV on food R_2010_08_05__12_05___3___5_seg.avi
+acr-9 (ok933)X on food R_2010_02_24__12_24_55___8___10_seg.avi
+dpy-20 (e1282)IV on food R_2011_08_24__11_47_04___7___6_seg.avi
+C52B9.11 (gk596)V on food L_2011_08_19__13_24_59__9_seg.avi
+egl-21 (n611)IV on food L_2010_05_11__12_45_48___8___5_seg.avi
+egl-37 (n742)II on food L_2010_08_06__11_35_57___6___3_seg.avi
+egl-11 (n587)V on food L_2010_05_11__15_30_31___8___9_seg.avi
+T2854.2 (ok289) on food R_2010_04_08__11_44___3___2_seg.avi
+egl-2 (n693)V on food L_2010_09_16__14_56_14___4___7_seg.avi
+daf-5 (e1386)II on food L_2010_07_29__11_13_32___1___2_seg.avi
+cat-2 (e1112) on food L_2009_10_30__16_06_47___4___11_seg.avi
+C24G7.4 (ok1237) on food R_2010_03_25__11_15_33__2_seg.avi
+egl-21 (n476)IV on food R_2010_07_13__15_17_12__12_seg.avi
+acr-23 (ok2804)V on food L_2010_02_24__15_04_46___7___13_seg.avi
+acr-7 (tm863)II on food R_2010_02_24__11_24_51___7___7_seg.avi
+dat-1 (ok157) on food R_2009_11_17__15_51___3___8_seg.avi
+dop-3 (vs106) on food L_2009_11_06__12_05___3___4_seg.avi
+acr-15 (ok1214) on food L_2011_06_14__10_52_51___7___1_seg.avi
+daf-3 (e1376)X on food L_2010_07_22__11_45_24___6___3_seg.avi
+dop-1; dop-2 on food R_2009_11_07__15_18___3___9_seg.avi
+F54E4.4 (ok2330)X on food R_2011_08_24__11_19_34___1___5_seg.avi
+T27E9.9 (ok2371)III on food L_2011_08_11__12_40___3___9_seg.avi
+cat-2 on food R_2009_11_04__11_03_29___1___2_seg.avi
+C3809.2 (ok1853)V on food R_2012_03_08__15_48_57___5___9_seg.avi
+C1B2.6 (ok2353) on food _2010_03_25__11_33___3___3_seg.avi
+acr-15 (ok1214) on food L_2011_06_14__12_08_45___2___5_seg.avi
+egl-33 (n151)I on food R_2010_05_11__15_10_39___7___9_seg.avi
+egl-12 (n602)V on food L_2010_07_15__11_09_15___4___2_seg.avi
+egl-37 (n742)II on food L_2010_08_03__10_37_32___8___2_seg.avi
+unc-8 (e151b145) del-1 (ok150) on food L_2011_10_13__15_19_25___8___9_seg.avi
+C46A5.2 (ok1187) on food L_2010_04_08__14_35___3___7_seg.avi
+del-1 (ok150) on food L_2010_06_15__14_35_51___2___7_seg.avi
+AQ2000 on food L_2011_08_02__10_39___3___1_seg.avi
+T27E9.9 (ok2371)III on food R_2011_09_13__12_43_09___8___5_seg.avi
+asic-1 (ok415) on food R_2010_07_08__11_46_10___8___5_seg.avi
+CIID2.2 (ok1565)IV on food L_2011_08_04__10_29___3___1_seg.avi
+acr-6 (ok3117)I on food L_2010_02_24__10_24_33___1___4_seg.avi
+cat-2 on food R_2009_11_04__13_04_17___6___8_seg.avi
+egl-5 (n486)III on food L_2010_05_13__11_55_15___8___6_seg.avi
+dop-1 (vs100); dop-2 (vs105)V; dop-3 (vs106)X on food L_2009_11_10__15_16_40___6___10_seg.avi
+dop-1 (vs100); dop-2 (vs105); dop-3 (vs106) on food L_2009_11_06__15_09_05___7___9_seg.avi
+acr-18 (ok1205) on food L_2010_02_19__15_03___3___14_seg.avi
+acr-3 (ok2049)X on food R_2010_02_24__11_03_49___6___6_seg.avi
+egl-43 (n1079)II on food L_2010_08_05__13_04___3___8_seg.avi
+acr-7 (tm863)II on food L_2010_02_23__11_55_29__8_seg.avi
+acr-15 (ok1214)V on food R_2010_02_23__09_32_41___6___2_seg.avi
+egl-5 (n486)III on food R_2010_05_11__16_08_26___1___12_seg.avi
+del-1 (ok150) on food R_2010_07_06__12_07___3___7_seg.avi
+egl-43 (n1079)II on food R_2010_08_19__11_55_08___2___5_seg.avi
+dop-3 (vs106) on food L_2009_11_06__12_05_52___8___4_seg.avi
+F54E4.4 (ok2330)X on food L_2011_08_24__11_42_51___2___6_seg.avi
+C52B9.11 (gk596)V on food L_2011_08_19__12_40___3___7_seg.avi
+dop-3 (vs106) on food R_2009_11_10__12_39_55__4_seg.avi
+T2854.2 (ok289) on food R_2010_03_26__10_55___3___3_seg.avi
+bas-1 (ad446)III on food L_2009_12_14__13_03_59__8_seg.avi
+egl-1 (n487) on food L_2011_08_04__15_41_23___6___9_seg.avi
+acr-14 (ok1155) on food R_2010_02_23__15_03___3___16_seg.avi
+acr-21 (ok1314)III on food L_2010_02_23__09_53_01___1___3_seg.avi
+dpy-20 (e1282)V on food L_2011_08_19__10_59___3___2_seg.avi
+egl-30 (n686); goa-1 (n1134) on food R_2010_09_17__16_25_16___8___9_seg.avi
+daf-5 (e1386)II on food L_2010_07_27__15_46_51___4___11_seg.avi
+acr-23 (ok2804)III on food L_2010_02_24__15_03___3___13_seg.avi
+acr-7 (tm863)II on food L_2010_02_23__11_52_21___1___9_seg.avi
+egl-32 (n155)I on food R_2010_05_13__15_04_19___2___10_seg.avi

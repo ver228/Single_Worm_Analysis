@@ -203,7 +203,42 @@ def init_database(DROP_PREV_DB = True):
         cur.execute(sql)
     
     cur.executemany(*exit_flags_init)
-        
+    
+    
+    create_full_view_sql = '''
+    CREATE OR REPLACE VIEW experiments_full AS
+    SELECT 
+    e.id AS id, 
+    e.base_name AS base_name,
+    e.date AS date, 
+    e.original_video as original_video,
+    e.original_video_sizeMB as original_video_sizeMB,
+    s.name AS strain,
+    s.genotype AS genotype,
+    a.name AS allele, 
+    g.name AS gene, 
+    c.name AS chromosome, 
+    t.name AS tracker, 
+    sex.name AS sex, 
+    ds.name AS developmental_stage, 
+    vs.name AS ventral_side, 
+    f.name AS food, 
+    h.name AS habituation, 
+    experimenters.name AS experimenters
+    FROM experiments AS e 
+    LEFT JOIN strains AS s ON e.strain_id = s.id
+    LEFT JOIN alleles AS a ON s.allele_id = a.id
+    LEFT JOIN genes AS g ON s.gene_id = g.id
+    LEFT JOIN chromosomes AS c ON s.chromosome_id = c.id
+    LEFT JOIN trackers AS t ON e.tracker_id = t.id
+    LEFT JOIN sexes AS sex ON e.sex_id = sex.id
+    LEFT JOIN developmental_stages AS ds ON e.developmental_stage_id = ds.id
+    LEFT JOIN ventral_sides AS vs ON e.ventral_side_id = vs.id
+    LEFT JOIN foods AS f ON e.food_id = f.id
+    LEFT JOIN habituations AS h ON e.habituation_id = h.id
+    LEFT JOIN experimenters ON e.experimenter_id = experimenters.id
+    '''
+    cur.execute(create_full_view_sql)
     
     cur.execute('SHOW TABLES')
     print(cur.fetchall())
@@ -361,5 +396,28 @@ if __name__ == '__main__':
     init_database()
     fill_table()
     add_video_sizes()
+    
+    #%%
+    conn = pymysql.connect(host='localhost', database='single_worm_db')
+    cur = conn.cursor()
+    sql = "select original_video from experiments_full where food='OP50'"
+    cur.execute(sql)
+    file_list = cur.fetchall()
+    
+    import random
+    
+    tot_files = len(file_list)
+    mid = tot_files//2
+    random.shuffle(file_list)
+
+    with open('vid_on_food_1.txt', 'w') as fid:
+        for fname, in file_list[:mid]:
+            fid.write(fname + '\n')
+    
+    with open('vid_on_food_2.txt', 'w') as fid:
+        for fname, in file_list[mid:]:
+            fid.write(fname + '\n')
+            
+            
     
     

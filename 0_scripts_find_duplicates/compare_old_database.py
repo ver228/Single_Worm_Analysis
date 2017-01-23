@@ -48,11 +48,78 @@ prefix_old_feats = get_prefix_list(feats_lists_f, '_features.mat')
 prefix_missing = get_prefix_list(missing_addfiles_lists_f, '.avi')
 
 
-notInMovies = prefix_movies-prefix_old_feats
-notInFeats = prefix_old_feats-prefix_movies
+onlyInMovies = prefix_movies-prefix_old_feats
+onlyInFeats = prefix_old_feats-prefix_movies
 
 
 #%%
+lists_dir = '/Users/ajaver/Desktop/shafer_lab_files/'
+prefix_f = 'all_files_wshafer-nas-5.txt'
+f_lists = os.path.join(lists_dir, prefix_f)
+with open(f_lists, 'r') as fid:
+    files_lists = [x for x in fid.read().split('\n') if x.endswith('.avi') and not x.endswith('_seg.avi')]
+    
+    #directories that are from unclear data
+    bad_parts = ['control', 'bad', 'old', 'log_file_naming_issues', 'test', 'unanalysable']
+    files_lists = [x for x in files_lists if not any(bad_pre in x.lower() for bad_pre in bad_parts)]
+ 
+    base_lists = [os.path.splitext(x.rpartition('\\')[-1])[0] for x in files_lists]
+    
+prefix_wshafer = set(base_lists)
+print(prefix_f, len(onlyInFeats - prefix_wshafer))
+
+
+prefix2copy = prefix_wshafer - prefix_movies
+
+#%%
+    
+movies2copy = []
+for fname in files_lists:
+    bn = fname.rpartition('\\')[-1]
+    for bad_e in ['.avi', '.log.csv', '.info.xml']:
+        bn = bn.replace(bad_e, '')
+    if bn in prefix2copy:
+        movies2copy.append(fname)
+            
+    
+    not_in_2009 = [x for x in movies2copy if not '2009' in x]
+
+
+
+#%%
+#for x in sorted(set([x.rpartition('\\')[0] for x in movies2copy])):
+#    print(x)
+#
+#print('%%%%%%%%%%%%%%%%%%%%%%')
+#for x in sorted(set([x.rpartition('\\')[-1] for x in movies2copy])):
+#    print(x)
+
+
+
+#%%
+#360
+
+from collections import Counter
+import re
+
+def print_date_counts(prefixes):
+    prog = re.compile(r'20\d\d_\d\d_\d\d')
+    
+    all_dates = [prog.findall(x)[0] for x in prefixes]
+    
+    for key, val in sorted(Counter(all_dates).items()):
+        print(key, '->' , val)
+
+print_date_counts(prefix2copy)
+print('%%%%%%%%%%%%%%%%%%%%%%')
+print_date_counts(onlyInFeats)
+print('%%%%%%%%%%%%%%%%%%%%%%')
+print_date_counts(prefix_old_feats)
+
+
+
+
+
 
 
 #%%

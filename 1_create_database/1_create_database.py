@@ -109,6 +109,7 @@ def init_database(DROP_PREV_DB = True):
     '''
     
     exit_flags_vals = [
+    ('UNPROCESSED', 'The analysis has not being started'),
     ('COMPRESS' , 'Create masked video.'), 
     ('VID_SUBSAMPLE' , 'Create subsampled video.'), 
     ('COMPRESS_ADD_DATA', 'Add additional data to the video (stage and pixel size).'), 
@@ -224,7 +225,8 @@ def init_database(DROP_PREV_DB = True):
     vs.name AS ventral_side, 
     f.name AS food, 
     h.name AS habituation, 
-    experimenters.name AS experimenters
+    experimenters.name AS experimenter,
+    arenas.name AS arena
     FROM experiments AS e 
     LEFT JOIN strains AS s ON e.strain_id = s.id
     LEFT JOIN alleles AS a ON s.allele_id = a.id
@@ -237,6 +239,7 @@ def init_database(DROP_PREV_DB = True):
     LEFT JOIN foods AS f ON e.food_id = f.id
     LEFT JOIN habituations AS h ON e.habituation_id = h.id
     LEFT JOIN experimenters ON e.experimenter_id = experimenters.id
+    LEFT JOIN arenas ON e.arena_id = arenas.id
     '''
     cur.execute(create_full_view_sql)
     
@@ -247,7 +250,7 @@ def init_database(DROP_PREV_DB = True):
     conn.close()
 
     
-def fill_table(IGNORE_DUPLICATES = True):
+def fill_table(REPLACE_DUPLICATES = True):
     # Connect to the database
     conn = pymysql.connect(host='localhost')
     cur = conn.cursor(pymysql.cursors.DictCursor)
@@ -269,7 +272,7 @@ def fill_table(IGNORE_DUPLICATES = True):
         dat = tuple(set(x[single_name] for x in full_data))
         
         init_str = 'INSERT INTO {} (name) VALUES (%s)'.format(tab_name)
-        if IGNORE_DUPLICATES:
+        if REPLACE_DUPLICATES:
             init_str += ' ON DUPLICATE KEY UPDATE name=name;'
         cur.executemany(init_str, dat)
     conn.commit()
@@ -295,7 +298,7 @@ def fill_table(IGNORE_DUPLICATES = True):
     strains_init = '''
     INSERT INTO strains (name, genotype, gene_id, allele_id, chromosome_id) 
     VALUES (%s, %s, %s, %s, %s)'''
-    if IGNORE_DUPLICATES:
+    if REPLACE_DUPLICATES:
         strains_init += ' ON DUPLICATE KEY UPDATE genotype=genotype, name=name, gene_id=gene_id, allele_id=allele_id, chromosome_id=chromosome_id;'''
     
     cur.executemany(strains_init, strains_dat)
@@ -337,7 +340,7 @@ def fill_table(IGNORE_DUPLICATES = True):
     VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
     '''
     
-    if IGNORE_DUPLICATES:
+    if REPLACE_DUPLICATES:
         exp_init += ''' 
         ON DUPLICATE KEY UPDATE 
         base_name=base_name, 
@@ -392,31 +395,35 @@ def add_video_sizes():
     conn.close()
     
 if __name__ == '__main__':
+    DROP_PREV_DB = True
+    REPLACE_DUPLICATES = True
 
-    init_database()
-    fill_table()
+    init_database(DROP_PREV_DB)
+    fill_table(REPLACE_DUPLICATES)
     add_video_sizes()
     
     #%%
-    conn = pymysql.connect(host='localhost', database='single_worm_db')
-    cur = conn.cursor()
-    sql = "select original_video from experiments_full where food='OP50'"
-    cur.execute(sql)
-    file_list = cur.fetchall()
+    CREATE_RANDOM_SAMPLE = True
+    if CREATE_RANDOM_SAMPLE:
+        conn = pymysql.connect(host='localhost', database='single_worm_db')
+        cur = conn.cursor()
+        sql = "select original_video from experiments_full where arena='35mm petri dish NGM agar low peptone'"
+        cur.execute(sql)
+        file_list = [x for x, in cur.fetchall()]
+        
+        import random
+        
+        tot_files = len(file_list)
+        mid = tot_files//2
+        random.shuffle(file_list)
     
-    import random
-    
-    tot_files = len(file_list)
-    mid = tot_files//2
-    random.shuffle(file_list)
-
-    with open('vid_on_food_1.txt', 'w') as fid:
-        for fname, in file_list[:mid]:
-            fid.write(fname + '\n')
-    
-    with open('vid_on_food_2.txt', 'w') as fid:
-        for fname, in file_list[mid:]:
-            fid.write(fname + '\n')
+        with open('vid_on_food_1.txt', 'w') as fid:
+            for fname in file_list[:mid]:
+                fid.write(fname + '\n')
+        
+        with open('vid_on_food_2.txt', 'w') as fid:
+            for fname in file_list[mid:]:
+                fid.write(fname + '\n')
             
             
     

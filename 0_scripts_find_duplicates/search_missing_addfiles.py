@@ -64,8 +64,8 @@ if __name__ == '__main__':
     notfoundfiles = set(missing_additional_files) - set(foundfiles)
     
     #%%
-    #import shutil
-    #for dstdir, src in files2move:
-    #    shutil.copy(src, dstdir)
+    import shutil
+    for dstdir, src in files2move:
+        shutil.copy(src, dstdir)
 
 

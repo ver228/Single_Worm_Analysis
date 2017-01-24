@@ -49,12 +49,19 @@ def db_row2dict(row):
     experiment_info['ventral_side'] = row['ventral_side']
     
     experiment_info['tracker'] = row['tracker']
-    experiment_info['original_video_name'] = row['original_video_name']
+    experiment_info['original_video_name'] = row['original_video']
     experiment_info['habituation'] = row['habituation']
     
     return experiment_info
 
 #%%
+def add_exp_info(fname, experiment_info_str):
+    with tables.File(fname, 'r+') as fid:
+        if '/experiment_info' in fid:
+            fid.remove_node('/', 'experiment_info')
+        fid.create_array('/', 'experiment_info', obj = experiment_info_str)
+
+
 if __name__ == '__main__':
     video_dir_root = '/Volumes/behavgenom_archive$/single_worm/MaskedVideos'
     valid_files = walkAndFindValidFiles(video_dir_root, pattern_include = '*.hdf5')
@@ -69,14 +76,16 @@ if __name__ == '__main__':
         cur.execute('USE `single_worm_db`;')
         cur.execute("SELECT * FROM experiments_full WHERE base_name='{}';".format(base_name))
         row = cur.fetchone()
-        print(row)
         experiment_info = db_row2dict(row)
         experiment_info_str = bytes(json.dumps(experiment_info), 'utf-8')
-    
-        with tables.File(fname, 'r+') as fid:
-            if '/experiment_info' in fid:
-                fid.remove_node('/', 'experiment_info')
-            fid.create_array('/', 'experiment_info', obj = experiment_info_str)
+        
+        add_exp_info(fname, experiment_info_str)
+        
+        skeletons_file = fname.replace('MaskedVideos', 'Results').replace('.hdf5', '_skeletons.hdf5')
+        if os.path.exists(skeletons_file):
+            add_exp_info(skeletons_file, experiment_info_str)
     
         print('{} of {} : {}'.format(ii+1, len(valid_files), base_name))
+        
+
         

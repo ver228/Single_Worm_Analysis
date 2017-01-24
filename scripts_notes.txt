@@ -1,4 +1,7 @@
-python3 compressMultipleFiles.py /Volumes/behavgenom_archive\$/single_worm/thecus /Volumes/behavgenom_archive\$/single_worm/MaskedVideos --videos_list /Users/ajaver/Documents/GitHub/Single_Worm_Analysis/files_lists/vid_on_food_1.txt --json_file /Users/ajaver/Documents/GitHub/Multiworm_Tracking/MWTracker/misc/param_files/single_worm_on_food.json --max_num_process 25
+python3 processMultipleFiles.py --video_dir_root /Volumes/behavgenom_archive\$/single_worm/thecus --mask_dir_root /Volumes/behavgenom_archive\$/single_worm/MaskedVideos --json_file /Users/Shared/Multiworm_Tracking/MWTracker/misc/param_files/single_worm_on_food.json --videos_list /Users/Shared/Single_Worm_Analysis/files_lists/vid_on_food_1.txt --analysis_type all --end_point STAGE_ALIGMENT --max_num_process 20
 
+python3 processMultipleFiles.py --video_dir_root /Volumes/behavgenom_archive\$/single_worm/thecus --mask_dir_root /Volumes/behavgenom_archive\$/single_worm/MaskedVideos --json_file ~/Documents/GitHub/Multiworm_Tracking/MWTracker/misc/param_files/single_worm_on_food.json --videos_list ~/Documents/GitHub/Single_Worm_Analysis/files_lists/vid_on_food_2.txt --analysis_type all --end_point STAGE_ALIGMENT --max_num_process 15
+
+python3 processMultipleFiles.py --mask_dir_root /Volumes/behavgenom_archive\$/single_worm/MaskedVideos --json_file ~/Documents/GitHub/Multiworm_Tracking/MWTracker/misc/param_files/single_worm_on_food.json --analysis_type all --force_start_point SKE_FILT --max_num_process 32
 
 mount -t cifs //server-name/share-name /mnt/<share_folder> -o username=shareuser,password=sharepassword,domain=nixcraft

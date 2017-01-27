@@ -10,6 +10,7 @@ import tables
 import pandas as pd
 import numpy as np
 import pymysql.cursors
+from collections import OrderedDict
 from MWTracker.processing.AnalysisPoints import AnalysisPoints
 from MWTracker.processing.batchProcHelperFunc import getDefaultSequence
 from MWTracker.analysis.feat_create.obtainFeatures import getFPS
@@ -18,9 +19,17 @@ import MWTracker
 params_dir = os.path.join(os.path.dirname(MWTracker.__file__), 'misc', 'param_files')
 
 
+ALL_POINTS = getDefaultSequence('All', is_single_worm=True)
+PROGRESS_TAB_FIELD = ['experiment_id', 'exit_flag_id', 'mask_file', 
+    'skeletons_file', 'features_file', 'n_valid_frames', 'n_missing_frames', 
+    'n_segmented_skeletons', 'n_filtered_skeletons', 'n_valid_skeletons', 
+    'n_timestamps', 'first_skel_frame', 'last_skel_frame', 'fps', 'total_time']
 
 def get_progress_data(experiment_id, exit_flag_id, ap_obj):
-    out = {}
+    #%%
+    out = OrderedDict()
+    for x in PROGRESS_TAB_FIELD:
+        out[x] = None
     out['experiment_id'] = experiment_id
     out['exit_flag_id'] =exit_flag_id
     
@@ -43,6 +52,8 @@ def get_progress_data(experiment_id, exit_flag_id, ap_obj):
                 out['n_missing_frames'] = int(timestamp_ind[-1] - out['n_valid_frames'] + 1)
                 out['total_time'] = float(timestamp_time[-1])
                 out['fps'] = float(fps)
+        
+                
     
     skeletons_file = ap_obj.file_names['skeletons']
     if os.path.exists(skeletons_file):
@@ -56,81 +67,61 @@ def get_progress_data(experiment_id, exit_flag_id, ap_obj):
                 out['last_skel_frame'] = int(trajectories_data['frame_number'].max())
                 if 'is_good_skel' in trajectories_data:
                     out['n_filtered_skeletons'] = int(trajectories_data['is_good_skel'].sum())
-                
-                
+    
     features_file = ap_obj.file_names['features']
     if os.path.exists(features_file):
         out['features_file'] = features_file
         with tables.File(features_file, 'r') as fid:
-            skel = fid.get_node('/skeletons')[:,0,0] #use it as a proxy of valid skeletons
-            if skel.size > 0:
-                out['n_valid_skeletons'] = int(np.sum(~np.isnan(skel)))
-                out['n_timestamps'] = len(skel)
-            else:
-                out['n_valid_skeletons'] = 0
-                out['n_timestamps'] = 0
+            if '/skeletons' in fid:
+                skel = fid.get_node('/skeletons')[:,0,0] #use it as a proxy of valid skeletons
+                if skel.size > 0:
+                    out['n_valid_skeletons'] = int(np.sum(~np.isnan(skel)))
+                    out['n_timestamps'] = len(skel)
+                else:
+                    out['n_valid_skeletons'] = 0
+                    out['n_timestamps'] = 0
     return out
 
-def update_row(cur, experiment_id, 
-              exit_flag_id, 
-              mask_file=None, 
-              skeletons_file=None, 
-              features_file=None,
-              n_valid_frames=None, 
-              n_missing_frames=None,
-              n_segmented_skeletons=None, 
-              n_filtered_skeletons=None,
-              n_valid_skeletons=None, 
-              n_timestamps=None,
-              first_skel_frame=None, 
-              last_skel_frame=None,
-              fps=None,
-              total_time=None):
+def update_row(cur, row_input):
+    #%%
+    names, values = zip(*list(row_input.items()))
     
-    dat = [experiment_id, exit_flag_id, 
-    mask_file, skeletons_file, features_file, n_valid_frames, 
-    n_missing_frames, n_segmented_skeletons, n_filtered_skeletons, 
-    n_valid_skeletons, n_timestamps, first_skel_frame, last_skel_frame, 
-    fps, total_time]
+    vals_str = []
+    for x in values:
+        if x is None:
+            new_val = 'NULL'
+        elif isinstance(x, str):
+            new_val = '"{}"'.format(x)
+        else:
+            new_val = str(x)
+        vals_str.append(new_val)
+        
+    values_str = ", ".join(vals_str)
+    names_str = ", ".join("`{}`".format(x) for x in names)
+    update_str = ", ".join('{}={}'.format(x, y) for x,y in zip(names,vals_str))
     
-    dat = [x if x is not None else 'NULL' for x in dat]
     
     sql = '''
-    INSERT INTO `progress_analysis` (experiment_id, exit_flag_id, 
-    mask_file, skeletons_file, features_file, n_valid_frames, 
-    n_missing_frames, n_segmented_skeletons, n_filtered_skeletons, 
-    n_valid_skeletons, n_timestamps, first_skel_frame, last_skel_frame, 
-    fps, total_time) 
-    VALUES ({}, {}, "{}", "{}", "{}", {}, {}, {}, {}, {}, {}, {}, {}, {}, {})    
-    ON DUPLICATE KEY UPDATE 
-    experiment_id=experiment_id, 
-    exit_flag_id=exit_flag_id,
-    mask_file=mask_file,
-    skeletons_file=skeletons_file, 
-    features_file=features_file,
-    n_valid_frames=n_valid_frames, 
-    n_missing_frames=n_missing_frames,
-    n_segmented_skeletons=n_segmented_skeletons,
-    n_filtered_skeletons=n_filtered_skeletons, 
-    n_valid_skeletons=n_valid_skeletons,
-    n_timestamps=n_timestamps,
-    first_skel_frame=first_skel_frame,
-    last_skel_frame=last_skel_frame, 
-    fps=fps, 
-    total_time=total_time
-    '''.format(*dat)
+    INSERT INTO `progress_analysis` ({}) 
+    VALUES ({})    
+    ON DUPLICATE KEY UPDATE {}
+    '''.format(names_str, values_str, update_str)
     
     cur.execute(sql)
     
-    pass
+    
 
-def get_last_finished(ap_obj, cur, all_points):
-    unfinished = ap_obj.getUnfinishedPoints(all_points)
-    last_point = 'UNPROCESSED'
-    for point in all_points:
-        if not point in unfinished:
-            last_point = point
-            
+def get_last_finished(ap_obj, cur):
+    unfinished = ap_obj.getUnfinishedPoints(ALL_POINTS)
+    
+    if not unfinished:
+        last_point = 'END'
+    else:
+        last_point = 'UNPROCESSED'
+        for point in ALL_POINTS:
+            if not point in unfinished:
+                last_point = point
+         
     cur.execute("SELECT id FROM exit_flags WHERE checkpoint='{}'".format(last_point))
     exit_flag_id = cur.fetchone()        
     exit_flag_id = exit_flag_id['id']
@@ -138,33 +129,46 @@ def get_last_finished(ap_obj, cur, all_points):
     return exit_flag_id, last_point
 
 if __name__ == '__main__':
+    CHECK_ONLY_UNFINISHED = True
     
     json_file = os.path.join(params_dir, 'single_worm_on_food.json')
-    
-    all_points = getDefaultSequence('All', is_single_worm=True)
     
     conn = pymysql.connect(host='localhost')
     cur = conn.cursor(pymysql.cursors.DictCursor)
     
     cur.execute('USE `single_worm_db`;')
-    cur.execute("SELECT id, original_video, base_name FROM experiments_full;")
+    
+    sql = "SELECT id, original_video, base_name FROM experiments_full"
+ 
+    if CHECK_ONLY_UNFINISHED:
+        sql += '''
+        WHERE id NOT IN 
+        (SELECT experiment_id 
+        FROM progress_analysis 
+        WHERE exit_flag_id = 
+        (SELECT f.id FROM exit_flags as f WHERE checkpoint='END')
+        ) 
+        '''                     
+    cur.execute(sql)
     all_rows = cur.fetchall()
-    
-    
-    
-    for row in all_rows:
+    #%%
+    for irow, row in enumerate(all_rows):
         main_file = os.path.realpath(row['original_video'])
         video_dir = os.path.dirname(main_file)
         masks_dir = video_dir.replace('thecus', 'MaskedVideos')
         results_dir = video_dir.replace('thecus', 'Results')
     
         ap_obj = AnalysisPoints(main_file, masks_dir, results_dir, json_file)
-        exit_flag_id, last_point = get_last_finished(ap_obj, cur, all_points)
+        exit_flag_id, last_point = get_last_finished(ap_obj, cur)
         
-        out = get_progress_data(row['id'],  exit_flag_id, ap_obj)
-        update_row(cur, **out)
+        row_input = get_progress_data(row['id'],  exit_flag_id, ap_obj)
+        update_row(cur, row_input)
         
         print(row['id'], last_point)
-    
+        
+        if (irow+1) % 100 == 0:
+            conn.commit()
+            
+    conn.commit()
     cur.close()
     conn.close()

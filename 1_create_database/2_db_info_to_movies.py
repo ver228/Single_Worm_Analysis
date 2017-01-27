@@ -32,7 +32,22 @@ def db_row2dict(row):
         experiment_info['lab'] = row['lab']
         
     experiment_info['timestamp'] = row['date'].isoformat()
-    experiment_info['arena'] = row['arena']
+    
+    
+    
+    experiment_info['arena'] = {
+            "kind":'petri',
+            "diameter":35,
+            "orient":"imaged through plate"
+            }
+    
+    
+    if 'NGM liquid drop' in row['arena']:
+        media = "NGM liquid drop + NGM agar low peptone"
+    else:
+        media = "NGM agar low peptone"
+    
+    experiment_info['media'] = media
     experiment_info['food'] = row['food']
     experiment_info['strain'] = row['strain']
     experiment_info['gene'] = row['gene']
@@ -48,9 +63,20 @@ def db_row2dict(row):
     
     experiment_info['ventral_side'] = row['ventral_side']
     
+    
+    if row['habituation'] == 'NONE':
+        hab = "no wait before recording starts."
+    else:
+        hab = "worm transferred to arena 30 minutes before recording starts."
+    experiment_info['protocol'] = [
+        "method in E. Yemini et al. doi:10.1038/nmeth.2560",
+        hab
+    ]
+    
+    experiment_info['habituation'] = row['habituation']
     experiment_info['tracker'] = row['tracker']
     experiment_info['original_video_name'] = row['original_video']
-    experiment_info['habituation'] = row['habituation']
+    
     
     return experiment_info
 
@@ -84,6 +110,10 @@ if __name__ == '__main__':
         skeletons_file = fname.replace('MaskedVideos', 'Results').replace('.hdf5', '_skeletons.hdf5')
         if os.path.exists(skeletons_file):
             add_exp_info(skeletons_file, experiment_info_str)
+    
+        features_file = fname.replace('MaskedVideos', 'Results').replace('.hdf5', '_features.hdf5')
+        if os.path.exists(features_file):
+            add_exp_info(features_file, experiment_info_str)
     
         print('{} of {} : {}'.format(ii+1, len(valid_files), base_name))
         

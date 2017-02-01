@@ -8,7 +8,7 @@ Created on Thu Jan 19 18:13:25 2017
 
 import pymysql.cursors
 import os
-
+from scipy.io import loadmat
 
 
 SIMPLE_TABLES = [

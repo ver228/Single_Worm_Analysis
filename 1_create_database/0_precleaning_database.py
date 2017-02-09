@@ -17,7 +17,7 @@ from sqlalchemy import Column, Integer, String, Sequence, DateTime, distinct
 
 ENG_OLD_PATH = r'mysql+pymysql://ajaver:@localhost/single_worm_old'
 MOVIES_LIST_F = os.path.join('..', 'files_lists', 'single_worm.txt')
-INS_STRAINS_F = 'ins strains.csv'
+INS_STRAINS_F = 'ins_strains.csv'
 #%%
 Base = declarative_base()
 
@@ -382,7 +382,7 @@ if __name__ == '__main__':
             p2_strain.gene = gene;
             p2_strain.allele = allele;
             p2_strain.strain = strain;
-            p2_strain.genotype = '%s (%s)' % (gene, allele)
+            p2_strain.genotype = '%s(%s)' % (gene, allele)
         elif 'ins' in strain_str:
             print('B', p2_strain.base_name) #show errors because the ins was not found
     session.commit()

@@ -1,6 +1,8 @@
 
 *.hdf5
 
-*/client_secrets.json
+*client_secrets.json
 
-*/upload_video.py-oauth2.json
+*.pyc
+
+*oauth2.json

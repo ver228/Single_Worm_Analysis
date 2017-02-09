@@ -395,15 +395,16 @@ def add_video_sizes():
     conn.close()
     
 if __name__ == '__main__':
-    DROP_PREV_DB = True
+    DROP_PREV_DB = False
     REPLACE_DUPLICATES = True
-
-    init_database(DROP_PREV_DB)
+    
+    
+    #init_database(DROP_PREV_DB)
     fill_table(REPLACE_DUPLICATES)
     add_video_sizes()
     
     #%%
-    CREATE_RANDOM_SAMPLE = True
+    CREATE_RANDOM_SAMPLE = False
     if CREATE_RANDOM_SAMPLE:
         conn = pymysql.connect(host='localhost', database='single_worm_db')
         cur = conn.cursor()

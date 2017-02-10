@@ -1,7 +1,7 @@
 
 *.hdf5
 
-*client_secrets.json
+*client_secrets*
 
 *.pyc
 

@@ -406,13 +406,14 @@ if __name__ == '__main__':
     #%%
     CREATE_RANDOM_SAMPLE = False
     if CREATE_RANDOM_SAMPLE:
+        import random
+        import pymysql
+        
         conn = pymysql.connect(host='localhost', database='single_worm_db')
         cur = conn.cursor()
         sql = "select original_video from experiments_full where arena='35mm petri dish NGM agar low peptone'"
         cur.execute(sql)
         file_list = [x for x, in cur.fetchall()]
-        
-        import random
         
         tot_files = len(file_list)
         mid = tot_files//2
@@ -425,7 +426,3 @@ if __name__ == '__main__':
         with open('vid_on_food_2.txt', 'w') as fid:
             for fname in file_list[mid:]:
                 fid.write(fname + '\n')
-            
-            
-    
-    

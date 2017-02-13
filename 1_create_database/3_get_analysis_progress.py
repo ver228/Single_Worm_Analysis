@@ -102,7 +102,7 @@ def update_row(cur, row_input):
     
     
     sql = '''
-    INSERT INTO `progress_analysis` ({}) 
+    INSERT INTO `analysis_progress` ({}) 
     VALUES ({})    
     ON DUPLICATE KEY UPDATE {}
     '''.format(names_str, values_str, update_str)
@@ -112,18 +112,20 @@ def update_row(cur, row_input):
     
 
 def get_last_finished(ap_obj, cur):
+    #%%
     unfinished = ap_obj.getUnfinishedPoints(ALL_POINTS)
     
     if not unfinished:
         last_point = 'END'
     else:
-        last_point = 'UNPROCESSED'
         for point in ALL_POINTS:
-            if not point in unfinished:
+            if point in unfinished:
                 last_point = point
-         
+                break
+#%%    
     cur.execute("SELECT id FROM exit_flags WHERE checkpoint='{}'".format(last_point))
-    exit_flag_id = cur.fetchone()        
+    exit_flag_id = cur.fetchone()
+        
     exit_flag_id = exit_flag_id['id']
     
     return exit_flag_id, last_point
@@ -140,25 +142,28 @@ if __name__ == '__main__':
     
     sql = "SELECT id, original_video, base_name FROM experiments_full"
  
+    
     if CHECK_ONLY_UNFINISHED:
+        last_valid = 'STAGE_ALIGMENT' #'END'
+        
         sql += '''
         WHERE id NOT IN 
         (SELECT experiment_id 
-        FROM progress_analysis 
-        WHERE exit_flag_id = 
-        (SELECT f.id FROM exit_flags as f WHERE checkpoint='END')
+        FROM analysis_progress 
+        WHERE exit_flag_id >= (SELECT f.id FROM exit_flags as f WHERE checkpoint='{}')
         ) 
-        '''                     
+        '''.format(last_valid)                     
     cur.execute(sql)
     all_rows = cur.fetchall()
-    #%%
+    
+    
     for irow, row in enumerate(all_rows):
         main_file = os.path.realpath(row['original_video'])
         video_dir = os.path.dirname(main_file)
         masks_dir = video_dir.replace('thecus', 'MaskedVideos')
         results_dir = video_dir.replace('thecus', 'Results')
-    
         ap_obj = AnalysisPoints(main_file, masks_dir, results_dir, json_file)
+        
         exit_flag_id, last_point = get_last_finished(ap_obj, cur)
         
         row_input = get_progress_data(row['id'],  exit_flag_id, ap_obj)

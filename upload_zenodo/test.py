@@ -46,8 +46,13 @@ if __name__ == '__main__':
 
 
     #%%
-    experiment_id, mask_file, skeletons_file, features_file = results[-1]
-    subsampled_file = getSubSampleVidName(mask_file)
-    wcon_file = getWCOName(features_file)
+    f2copy = results[-111:-108]
+    import shutil
+    copy_dir = '/Users/ajaver/OneDrive - Imperial College London/Tests/different_animals/single_worm'
+    for experiment_id, mask_file, skeletons_file, features_file in f2copy:
+        subsampled_file = getSubSampleVidName(mask_file)
+        wcon_file = getWCOName(features_file)
+        for fname in [mask_file, skeletons_file, features_file, subsampled_file, wcon_file]:
+            shutil.copy(fname, copy_dir)
     
     

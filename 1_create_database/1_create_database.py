@@ -24,18 +24,21 @@ SIMPLE_TABLES = [
     'habituations',
     'experimenters']
 
-def init_database(DROP_PREV_DB = True):
+def init_database(DROP_PREV_DB = False):
     # Connect to the database
     conn = pymysql.connect(host='localhost')
     cur = conn.cursor(pymysql.cursors.DictCursor)
     
     #create if not exists new database
     if DROP_PREV_DB:
+        print('Deleting previous database')
         cur.execute('DROP DATABASE IF EXISTS `single_worm_db`;')
+    
     
     sql = "CREATE DATABASE IF NOT EXISTS `single_worm_db`;"
     cur.execute(sql)
     cur.execute('USE `single_worm_db`;')
+    print('>>>>>>>>>>>')
     
     #create all tables
     simple_tab_sql_str = \
@@ -109,7 +112,6 @@ def init_database(DROP_PREV_DB = True):
     '''
     
     exit_flags_vals = [
-    ('UNPROCESSED', 'The analysis has not being started'),
     ('COMPRESS' , 'Create masked video.'), 
     ('VID_SUBSAMPLE' , 'Create subsampled video.'), 
     ('COMPRESS_ADD_DATA', 'Add additional data to the video (stage and pixel size).'), 
@@ -123,7 +125,8 @@ def init_database(DROP_PREV_DB = True):
     ('INT_PROFILE', 'Intensity profile.'),  
     ('INT_SKE_ORIENT', 'Orient skeletons intensity.'),  
     ('CONTOUR_ORIENT', 'Orient ventral side.'), 
-    ('FEAT_CREATE', 'Obtain features.'),  
+    ('FEAT_CREATE', 'Obtain features.'),
+    ('WCON_EXPORT', 'Export data into WCON.'),
     ('END', 'Finished.'),  
     ]
     
@@ -133,7 +136,7 @@ def init_database(DROP_PREV_DB = True):
     
     progress_analysis_tab_sql = \
     '''
-    CREATE TABLE IF NOT EXISTS `progress_analysis`
+    CREATE TABLE IF NOT EXISTS `analysis_progress`
     (
     `experiment_id` INT NOT NULL,
     `exit_flag_id` INT NOT NULL,
@@ -198,13 +201,19 @@ def init_database(DROP_PREV_DB = True):
     segworm_comparisons_tab_sql]
     
     for s_tab in SIMPLE_TABLES:
+        sql = simple_tab_sql_str.format(s_tab)
+        print(sql)
+        print('**********')
         cur.execute(simple_tab_sql_str.format(s_tab))
     
     for sql in all_tabs_sql:
+        print(sql)
+        print('**********')
         cur.execute(sql)
+        conn.commit()
     
+    print('Creating database')
     cur.executemany(*exit_flags_init)
-    
     
     create_full_view_sql = '''
     CREATE OR REPLACE VIEW experiments_full AS
@@ -254,15 +263,14 @@ def fill_table(REPLACE_DUPLICATES = True):
     # Connect to the database
     conn = pymysql.connect(host='localhost')
     cur = conn.cursor(pymysql.cursors.DictCursor)
-
+    
     #load all database
     cur.execute('USE `single_worm_old`;')
     cur.execute('SELECT * FROM experiments_full_new;')
     full_data = cur.fetchall()
-    
     cur.execute('USE `single_worm_db`;')
     
-
+    
     def _get_single_name(x):
         return  x[:-1] if x != 'sexes' else 'sex'
     
@@ -294,6 +302,8 @@ def fill_table(REPLACE_DUPLICATES = True):
         output = tuple([x['strain'], x['genotype']] +  [all_dict[fn][x[fn]] for fn in DD])
         return output
     
+    
+    print('Reading all data')
     strains_dat = set([fk2(x) for x in full_data])
     strains_init = '''
     INSERT INTO strains (name, genotype, gene_id, allele_id, chromosome_id) 
@@ -357,6 +367,7 @@ def fill_table(REPLACE_DUPLICATES = True):
         experimenter_id=experimenter_id;
         '''
     
+    print('Inserting {} experiments'.format(len(exp_dat)))
     cur.executemany(exp_init, exp_dat)
     conn.commit()
     
@@ -399,30 +410,7 @@ if __name__ == '__main__':
     REPLACE_DUPLICATES = True
     
     
-    #init_database(DROP_PREV_DB)
+    init_database(DROP_PREV_DB)
     fill_table(REPLACE_DUPLICATES)
     add_video_sizes()
     
-    #%%
-    CREATE_RANDOM_SAMPLE = False
-    if CREATE_RANDOM_SAMPLE:
-        import random
-        import pymysql
-        
-        conn = pymysql.connect(host='localhost', database='single_worm_db')
-        cur = conn.cursor()
-        sql = "select original_video from experiments_full where arena='35mm petri dish NGM agar low peptone'"
-        cur.execute(sql)
-        file_list = [x for x, in cur.fetchall()]
-        
-        tot_files = len(file_list)
-        mid = tot_files//2
-        random.shuffle(file_list)
-    
-        with open('vid_on_food_1.txt', 'w') as fid:
-            for fname in file_list[:mid]:
-                fid.write(fname + '\n')
-        
-        with open('vid_on_food_2.txt', 'w') as fid:
-            for fname in file_list[mid:]:
-                fid.write(fname + '\n')

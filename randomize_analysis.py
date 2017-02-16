@@ -6,24 +6,27 @@ Created on Mon Feb 13 17:45:43 2017
 @author: ajaver
 """
 
-
 import pymysql
-import random
 
 conn = pymysql.connect(host='localhost', database='single_worm_db')
 cur = conn.cursor()
-sql = "select original_video from experiments_full where arena='35mm petri dish NGM agar low peptone'"
+sql = '''
+select original_video 
+from experiments_full 
+where arena like '%liquid%' order by original_video_sizeMB'''
+
 cur.execute(sql)
-file_list = [x for x, in cur.fetchall()]
+file_list = cur.fetchall()
+file_list = [x for x, in file_list] #flatten
 
-tot_files = len(file_list)
-mid = tot_files//2
-random.shuffle(file_list)
+n_files = 2
+divided_files = [[] for i in range(n_files)]
+            
 
-with open('vid_on_food_1.txt', 'w') as fid:
-    for fname in file_list[:mid]:
-        fid.write(fname + '\n')
+for ii, fname in enumerate(file_list):
+    ind = ii % n_files
+    divided_files[ind].append(fname)
 
-with open('vid_on_food_2.txt', 'w') as fid:
-    for fname in file_list[mid:]:
-        fid.write(fname + '\n')
+for ii, f_list in enumerate(divided_files):
+    with open('vid_swimming_{}.txt'.format(ii+1), 'w') as fid:
+        fid.write('\n'.join(f_list))

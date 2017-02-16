@@ -18,6 +18,8 @@ from sqlalchemy import Column, Integer, String, Sequence, DateTime, distinct
 ENG_OLD_PATH = r'mysql+pymysql://ajaver:@localhost/single_worm_old'
 MOVIES_LIST_F = os.path.join('..', 'files_lists', 'single_worm.txt')
 INS_STRAINS_F = 'ins_strains.csv'
+
+NONE_STR='-N/A-'
 #%%
 Base = declarative_base()
 
@@ -142,24 +144,25 @@ def get_experimenter(directory):
     if 'monika' in d:
         return 'Monika Leubner'
         
-    return None
+    return NONE_STR
 
 def get_tracker(directory):
     d = re.findall('/Tracker \d+/', directory, re.I)
     if len(d) == 1:
         return d[0].lower().replace('/', '').replace(' ', '_')
     else:
-        return None
+        return NONE_STR
 
 def get_ventral_side(side_str):
     #remove everything but L and R
+    
     sub_str = re.sub('[^LRlr]', '', side_str).upper() 
     if sub_str == 'R':
         return'anticlockwise'
     elif sub_str == 'L':
         return 'clockwise'
     else:
-        return None
+        return 'unknown'
 
 def get_sex(base_name):
     if 'male' in base_name.lower():
@@ -181,11 +184,11 @@ def get_develp_stage(base_name, food_str):
 
 def get_habituation(base_name):
     if 'no wait' in base_name:
-        return 'NONE'
+        return 'no wait'
     else:
         return '30 minutes'
 
-def get_food_arena(media_str):
+def get_food_arena(media_str, directory):
     SWIM_MATCH = re.compile('s?wim.*')
     ONFOOD_MATCH = re.compile('^_*((o?(n|m)|all)[ _]*?\w?oo\w?)|(on)$', re.I|re.M)
     FOOD2CHANGE = {'food':'OP50', 'N2-LL2':'N2-L2', 'N2_LL2':'N2-L2',
@@ -193,13 +196,13 @@ def get_food_arena(media_str):
                'mec-4(u253)-L3':'mec-4-L3'}
 
     media_str = media_str.strip()
-    if re.match(SWIM_MATCH, media_str):
+    if re.match(SWIM_MATCH, media_str) or 'swim' in directory:
         arena = 'NGM liquid drop + 35mm petri dish NGM agar low peptone'
         food = 'OP50'
     else:
         arena = '35mm petri dish NGM agar low peptone'
-        if 'off food' in media_str:
-            food = 'NONE'
+        if 'off food' in media_str or 'off food' in directory:
+            food = 'no food'
         elif not media_str or re.match(ONFOOD_MATCH, media_str.strip()):
             food = 'OP50'
         else:
@@ -207,6 +210,9 @@ def get_food_arena(media_str):
             DD = [x[2:].strip() for x in DD]
             DD = [FOOD2CHANGE[x] if x in FOOD2CHANGE else x for x in DD]
             food = '+'.join(DD)
+    
+    
+    
     
     return arena, food
 #%%
@@ -264,19 +270,21 @@ if __name__ == '__main__':
         
         if old_data is None:
             experimenter = get_experimenter(directory);
-            strain, gene, allele, chromosome, genotype = 5*[None]
+            strain, gene, allele, chromosome, genotype = 5*[NONE_STR]
             
             habituation = get_habituation(base_name)
             ventral_side = get_ventral_side(side_str)
             tracker = get_tracker(directory)
             sex = get_sex(base_name)
+            
+            #print(ventral_side, side_str, base_name)
         else:
             _, base_name_old, strain, allele, gene, chromosome, tracker, \
             _, _, ventral_side, food_old, habituation, experimenter, \
             _, genotype, _ = old_data
             
         sex = get_sex(base_name)
-        arena, food = get_food_arena(media_str)
+        arena, food = get_food_arena(media_str, directory)
         developmental_stage = get_develp_stage(base_name, food)
         
         #if food_old != food and not old_data is None:
@@ -292,26 +300,27 @@ if __name__ == '__main__':
                'habituation':habituation, 'date':date, 'experimenter':experimenter}
         
         session.add(ExperimentsFullNew(**row))
-        #new_rows.append(ExperimentsFullNew(**row))
+        
+        new_rows.append(row)
     
     #session.add(new_rows)
     session.commit()
     #%%
     experimenters = session.query(distinct(ExperimentsFullNew.experimenter)).all()
-    if (None,) in experimenters:
+    if (NONE_STR,) in experimenters:
         #select rows with a None as experimenter
         bad_experimenters = session.query(ExperimentsFullNew).filter(ExperimentsFullNew.experimenter == None).all()
         for bexp in bad_experimenters:
             #check the other experimenters of videos in the same the folder
             dd = session.query(ExperimentsFullNew.experimenter).filter(ExperimentsFullNew.directory == bexp.directory).all()
-            valid_experimenter = set(x[0] for x in dd if not x[0] is None);
+            valid_experimenter = set(x[0] for x in dd if x[0] != NONE_STR);
             #if there is only one experiment in the same folder we know the correct experiment
             if len(valid_experimenter) == 1:
                 bexp.experimenter = valid_experimenter.pop()
     #%%
     #dd = session.query(distinct(ExperimentsFullNew.tracker)).all()
     bad_trackers = session.query(ExperimentsFullNew).\
-    filter(ExperimentsFullNew.tracker == None).all()
+    filter(ExperimentsFullNew.tracker == NONE_STR).all()
     for btr in bad_trackers:
         dd = session.query(DataFromNames.tracker_str).\
         filter(DataFromNames.directory == btr.directory).all()
@@ -342,7 +351,7 @@ if __name__ == '__main__':
     #filter(ExperimentsFullNew.genotype == None).\
     #filter(ExperimentsFullNew.directory.contains('Laura-phase2')).all()
     bad_strains = session.query(ExperimentsFullNew).\
-    filter(ExperimentsFullNew.genotype == None).all()
+    filter(ExperimentsFullNew.genotype == NONE_STR).all()
     
     
     str2change = {
@@ -517,11 +526,11 @@ if __name__ == '__main__':
             str2change[bad_s] = key
     #%%
     new_strains_dat = {
-    'N2':('N2', None, None, None, 'Schafer Lab N2 (Bristol, UK)'),
-    'JU343':('JU343', None, None, None, 'C. elegans wild isolate (Merlet, France)'),
-    'AQ3000':('AQ3000', None, None,None, 'Queelim Lab N2 (Bristol, UK)'),
-    'VC40429':('VC40429', None, None,None, 'Million Mutation Project strain'),
-    'AQ2613':('AQ2613',None, None, None, 'ljEx337[podr-1::Cx36*::YFP, punc-122::mCherry]; ljEx336[pttx-3(int2)::Cx36*::mCherry, pelt-2::mCherry]'),
+    'N2':('N2', NONE_STR, NONE_STR, NONE_STR, 'Schafer Lab N2 (Bristol, UK)'),
+    'JU343':('JU343', NONE_STR, NONE_STR, NONE_STR, 'C. elegans wild isolate (Merlet, France)'),
+    'AQ3000':('AQ3000', NONE_STR, NONE_STR,NONE_STR, 'Queelim Lab N2 (Bristol, UK)'),
+    'VC40429':('VC40429', NONE_STR, NONE_STR,NONE_STR, 'Million Mutation Project strain'),
+    'AQ2613':('AQ2613',NONE_STR, NONE_STR, NONE_STR, 'ljEx337[podr-1::Cx36*::YFP, punc-122::mCherry]; ljEx336[pttx-3(int2)::Cx36*::mCherry, pelt-2::mCherry]'),
     ('pink-1', 'tm1779'):('BR4006', 'tm1779', 'pink-1' ,'II', 'pink-1(tm1779) II; byEx655'),
     ('pdr-1', 'gk448'):('VC1024', 'gk448', 'pdr-1','III', 'pdr-1(gk448) III'),
     }
@@ -538,7 +547,7 @@ if __name__ == '__main__':
     problem_base_names = []
     
     bad_strains = session.query(ExperimentsFullNew).\
-    filter(ExperimentsFullNew.genotype == None).all()
+    filter(ExperimentsFullNew.genotype is None or ExperimentsFullNew.genotype=='-N/A-').all()
     for bad_strain in bad_strains:
         
         set_genotype = []
@@ -600,11 +609,20 @@ if __name__ == '__main__':
             problem_strains.append(strain_str)
             problem_base_names.append(bad_strain.base_name)
     #%%
-    session.query(ExperimentsFullNew).filter(ExperimentsFullNew.allele =='-N/A-').update({'allele': None})
-    session.query(ExperimentsFullNew).filter(ExperimentsFullNew.gene =='-N/A-').update({'gene': None})
-    session.query(ExperimentsFullNew).filter(ExperimentsFullNew.chromosome =='-N/A-').update({'chromosome': None})
-    session.query(ExperimentsFullNew).filter(ExperimentsFullNew.ventral_side =='unknown').update({'ventral_side': None})
-    session.query(ExperimentsFullNew).filter(ExperimentsFullNew.habituation =='none').update({'habituation': 'NONE'})
+    #YOU MUST USE  `== None` FOR THE QUERY `is None` will not work
+    
+    session.query(ExperimentsFullNew).filter(ExperimentsFullNew.allele == None).update({'allele': NONE_STR})
+    session.query(ExperimentsFullNew).filter(ExperimentsFullNew.gene == None).update({'gene': NONE_STR})
+    session.query(ExperimentsFullNew).filter(ExperimentsFullNew.chromosome == None).update({'chromosome': NONE_STR})
+    session.query(ExperimentsFullNew).filter(ExperimentsFullNew.genotype == None).update({'genotype': NONE_STR})
+    session.query(ExperimentsFullNew).filter(ExperimentsFullNew.habituation =='none').update({'habituation': 'no waiting'})
+
+
+    bad_rows = session.query(ExperimentsFullNew).filter(ExperimentsFullNew.strain == None)
+    for row in bad_rows.all():
+        problem_strains.append("")
+        problem_base_names.append(row.base_name)
+    bad_rows.delete()
     #%%
     
     session.commit()
@@ -613,6 +631,7 @@ if __name__ == '__main__':
     from collections import Counter
     print('%%%%%%%%%%%')
     DD = Counter(problem_strains).most_common()
+    
     for dd in sorted(DD):
         print(dd)
     #%%

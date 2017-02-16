@@ -1,14 +1,19 @@
-python3 processMultipleFiles.py --video_dir_root /Volumes/behavgenom_archive\$/single_worm/thecus --mask_dir_root /Volumes/behavgenom_archive\$/single_worm/MaskedVideos --json_file /Users/Shared/Multiworm_Tracking/MWTracker/misc/param_files/single_worm_on_food.json --videos_list /Users/Shared/Single_Worm_Analysis/files_lists/vid_on_food_1.txt --analysis_type all --end_point INT_SKE_ORIENT --max_num_process 20
+python3 processMultipleFiles.py --video_dir_root /Volumes/behavgenom_archive\$/single_worm/thecus --mask_dir_root /Volumes/behavgenom_archive\$/single_worm/MaskedVideos --json_file /Users/Shared/tierpsy-tracker/tierpsy/misc/param_files/single_worm_on_food.json --videos_list /Users/Shared/Single_Worm_Analysis/files_lists/vid_on_food_1.txt --analysis_type all --end_point STAGE_ALIGMENT --max_num_process 20
 
-python3 processMultipleFiles.py --video_dir_root /Volumes/behavgenom_archive\$/single_worm/thecus --mask_dir_root /Volumes/behavgenom_archive\$/single_worm/MaskedVideos --json_file ~/Documents/GitHub/Multiworm_Tracking/MWTracker/misc/param_files/single_worm_on_food.json --videos_list ~/Documents/GitHub/Single_Worm_Analysis/files_lists/vid_on_food_2.txt --analysis_type all --end_point INT_SKE_ORIENT --max_num_process 20
+python3 processMultipleFiles.py --video_dir_root /Volumes/behavgenom_archive\$/single_worm/thecus --mask_dir_root /Volumes/behavgenom_archive\$/single_worm/MaskedVideos --json_file ~/Documents/GitHub/tierpsy-tracker/tierpsy/misc/param_files/single_worm_on_food.json --videos_list ~/Documents/GitHub/Single_Worm_Analysis/unfinished.txt --analysis_type all --end_point STAGE_ALIGMENT --max_num_process 20
 
 
 #linux
-python3 processMultipleFiles.py --mask_dir_root /Volumes/behavgenom_archive\$/single_worm/MaskedVideos --json_file ~/Multiworm_Tracking/MWTracker/misc/param_files/single_worm_on_food.json --analysis_type all --force_start_point SKE_FILT --max_num_process 32 --tmp_dir_root /run/media/worm_rig/WormRigData1/Tmp/
+python3 processMultipleFiles.py --mask_dir_root /Volumes/behavgenom_archive\$/single_worm/MaskedVideos --json_file ~/tierpsy-tracker/tierpsy/misc/param_files/single_worm_on_food.json --analysis_type all --force_start_point SKE_FILT --max_num_process 32 --tmp_dir_root /run/media/worm_rig/WormRigData1/Tmp/
 
 sudo mount -t cifs "//netapp3/behavgenom_archive$" "/Volumes/behavgenom_archive$" -o username=ajaver,domain=CSCDOM,uid=1000
 
 
 #windows do not work for the moment
-python processMultipleFiles.py --video_dir_root Y:\single_worm\thecus --mask_dir_root Y:\single_worm\MaskedVideos --json_file C:\Users\wormrig\Documents\GitHub\Multiworm_Tracking\MWTracker\misc\param_files\single_worm_on_food.json --videos_list C:\Users\wormrig\Documents\GitHub\Single_Worm_Analysis\files_lists\test.txt --tmp_dir_root D:\Tmp --analysis_type all --end_point STAGE_ALIGMENT --max_num_process 32
+python processMultipleFiles.py --video_dir_root Y:\single_worm\thecus --mask_dir_root Y:\single_worm\MaskedVideos --json_file C:\Users\wormrig\Documents\GitHub\tierpsy-tracker\tierpsy\misc\param_files\single_worm_on_food.json --videos_list C:\Users\wormrig\Documents\GitHub\Single_Worm_Analysis\files_lists\test.txt --tmp_dir_root D:\Tmp --analysis_type all --end_point STAGE_ALIGMENT --max_num_process 32
 
+
+python3 processMultipleFiles.py --video_dir_root /Volumes/behavgenom_archive\$/single_worm/thecus --mask_dir_root /Volumes/behavgenom_archive\$/single_worm/MaskedVideos --json_file single_worm_swimming.json --videos_list ~/Documents/GitHub/single-worm-analysis/files_lists/vid_swimming_2.txt --analysis_type all --end_point CONTOUR_ORIENT --max_num_process 20
+
+
+python3 processMultipleFiles.py --video_dir_root /Volumes/behavgenom_archive\$/single_worm/thecus --mask_dir_root /Volumes/behavgenom_archive\$/single_worm/MaskedVideos --json_file single_worm_swimming.json --videos_list /Users/Shared/single-worm-analysis/files_lists/vid_swimming_2.txt --analysis_type all --end_point CONTOUR_ORIENT --max_num_process 20

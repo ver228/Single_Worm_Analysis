@@ -11,7 +11,7 @@ import tables
 import pymysql.cursors
 from collections import OrderedDict
 
-from MWTracker.processing.batchProcHelperFunc import walkAndFindValidFiles
+from tierpsy.processing.batchProcHelperFunc import walkAndFindValidFiles
 
 def db_row2dict(row):
     
@@ -88,34 +88,56 @@ def add_exp_info(fname, experiment_info_str):
         fid.create_array('/', 'experiment_info', obj = experiment_info_str)
 
 
+def fetch_exp_info(cur, base_name):
+    
+    cur.execute("SELECT * FROM experiments_full WHERE base_name='{}';".format(base_name))
+    row = cur.fetchone()
+    experiment_info = db_row2dict(row)
+    experiment_info_str = bytes(json.dumps(experiment_info), 'utf-8')
+    return experiment_info_str
+    
+
+
 if __name__ == '__main__':
     video_dir_root = '/Volumes/behavgenom_archive$/single_worm/MaskedVideos'
-    valid_files = walkAndFindValidFiles(video_dir_root, pattern_include = '*.hdf5')
     
+    ONLY_UNFINSHED = False
     
     conn = pymysql.connect(host='localhost')
     cur = conn.cursor(pymysql.cursors.DictCursor)
+    cur.execute('USE `single_worm_db`;')
     
-    for ii, fname in enumerate(valid_files):
-        base_name = os.path.basename(fname).replace('.hdf5', '')
+    if ONLY_UNFINSHED:
+        sql = '''
+        SELECT mask_file 
+        FROM analysis_progress
+        WHERE exit_flag_id <= (SELECT f.id FROM exit_flags as f WHERE checkpoint="CONTOUR_ORIENT")
+        AND exit_flag_id > (SELECT f.id FROM exit_flags as f WHERE checkpoint="COMPRESS")
+        '''
+        cur.execute(sql)
+        valid_files = cur.fetchall()
+        valid_files = [x['mask_file'] for x in valid_files]
+    else:
+        valid_files = walkAndFindValidFiles(video_dir_root, pattern_include = '*.hdf5')
+    
+    
+    for ii, mask_file in enumerate(valid_files):
+        base_name = os.path.basename(mask_file).replace('.hdf5', '')
+        print('{} of {} : {}'.format(ii+1, len(valid_files), base_name))
         
-        cur.execute('USE `single_worm_db`;')
-        cur.execute("SELECT * FROM experiments_full WHERE base_name='{}';".format(base_name))
-        row = cur.fetchone()
-        experiment_info = db_row2dict(row)
-        experiment_info_str = bytes(json.dumps(experiment_info), 'utf-8')
+        experiment_info_str = fetch_exp_info(cur, base_name)
+        add_exp_info(mask_file, experiment_info_str)
         
-        add_exp_info(fname, experiment_info_str)
-        
-        skeletons_file = fname.replace('MaskedVideos', 'Results').replace('.hdf5', '_skeletons.hdf5')
+        skeletons_file = mask_file.replace('MaskedVideos', 'Results').replace('.hdf5', '_skeletons.hdf5')
         if os.path.exists(skeletons_file):
             add_exp_info(skeletons_file, experiment_info_str)
     
-        features_file = fname.replace('MaskedVideos', 'Results').replace('.hdf5', '_features.hdf5')
+        features_file = mask_file.replace('MaskedVideos', 'Results').replace('.hdf5', '_features.hdf5')
         if os.path.exists(features_file):
             add_exp_info(features_file, experiment_info_str)
     
-        print('{} of {} : {}'.format(ii+1, len(valid_files), base_name))
+        
+        
         
 
         

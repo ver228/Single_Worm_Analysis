@@ -8,7 +8,7 @@ Created on Thu Jan 19 18:13:25 2017
 
 import pymysql.cursors
 import os
-from scipy.io import loadmat
+
 
 
 SIMPLE_TABLES = [
@@ -46,7 +46,7 @@ def init_database(DROP_PREV_DB = False):
     CREATE TABLE IF NOT EXISTS `{}`
     (
     `id` INT NOT NULL AUTO_INCREMENT,
-    `name` VARCHAR(100) UNIQUE,
+    `name` VARCHAR(100) UNIQUE NOT NULL,
     PRIMARY KEY (id)
     );
     '''
@@ -55,7 +55,7 @@ def init_database(DROP_PREV_DB = False):
     CREATE TABLE IF NOT EXISTS `strains`
     (
     `id` int NOT NULL AUTO_INCREMENT,
-    `name` VARCHAR(100) UNIQUE,
+    `name` VARCHAR(100) UNIQUE NOT NULL,
     genotype VARCHAR(200),
     gene_id INT NOT NULL,
     allele_id INT NOT NULL,
@@ -70,7 +70,7 @@ def init_database(DROP_PREV_DB = False):
     CREATE TABLE IF NOT EXISTS `experiments`
     (
     `id` int NOT NULL AUTO_INCREMENT,
-    `base_name` VARCHAR(200) UNIQUE,
+    `base_name` VARCHAR(200) UNIQUE NOT NULL,
     `date` DATETIME,
     `strain_id` INT,
     `tracker_id` INT,
@@ -105,7 +105,7 @@ def init_database(DROP_PREV_DB = False):
     CREATE TABLE IF NOT EXISTS `exit_flags`
     (
     `id` INT NOT NULL AUTO_INCREMENT,
-    `checkpoint` VARCHAR(20) UNIQUE,
+    `checkpoint` VARCHAR(20) UNIQUE NOT NULL,
     `description` VARCHAR(100),
     PRIMARY KEY (id)
     );
@@ -113,25 +113,35 @@ def init_database(DROP_PREV_DB = False):
     
     exit_flags_vals = [
     ('COMPRESS' , 'Create masked video.'), 
-    ('VID_SUBSAMPLE' , 'Create subsampled video.'), 
     ('COMPRESS_ADD_DATA', 'Add additional data to the video (stage and pixel size).'), 
+    ('VID_SUBSAMPLE' , 'Create subsampled video.'), 
     ('TRAJ_CREATE', 'Create trajectories.'),
     ('TRAJ_JOIN', 'Join trajectories.'),  
     ('SKE_INIT' , 'Initialize trajectories table.'), 
+    ('BLOB_FEATS', 'Get features from the segmented image.'),  
     ('SKE_CREATE', 'Create skeletons.'),  
-    ('STAGE_ALIGMENT', 'Strage aligment.'),  
     ('SKE_FILT', 'Filter skeletons.'), 
-    ('SKE_ORIENT', 'Orient skeletons movement.'),  
-    ('INT_PROFILE', 'Intensity profile.'),  
-    ('INT_SKE_ORIENT', 'Orient skeletons intensity.'),  
+    ('SKE_ORIENT', 'Orient skeletons by movement.'),  
     ('CONTOUR_ORIENT', 'Orient ventral side.'), 
+    ('INT_PROFILE', 'Intensity profile.'),  
+    ('INT_SKE_ORIENT', 'Orient skeletons by intensity.'),  
+    ('STAGE_ALIGMENT', 'Stage aligment.'),  
     ('FEAT_CREATE', 'Obtain features.'),
     ('WCON_EXPORT', 'Export data into WCON.'),
     ('END', 'Finished.'),  
     ]
     
+    exit_flags_vals_failed = [
+    (101, 'FAIL_STAGE_ALIGMENT' , "Failed. Wrong stage aligment.")     
+    ]
+    
     exit_flags_init = ('INSERT INTO exit_flags (checkpoint, description) VALUES (%s, %s)',
                        exit_flags_vals)
+    
+    exit_flags_init_f = ('INSERT INTO exit_flags (id, checkpoint, description) VALUES (%s, %s, %s)',
+                       exit_flags_vals_failed)
+    
+    
     
     
     progress_analysis_tab_sql = \
@@ -214,6 +224,8 @@ def init_database(DROP_PREV_DB = False):
     
     print('Creating database')
     cur.executemany(*exit_flags_init)
+    cur.executemany(*exit_flags_init_f)
+    
     
     create_full_view_sql = '''
     CREATE OR REPLACE VIEW experiments_full AS
@@ -276,9 +288,12 @@ def fill_table(REPLACE_DUPLICATES = True):
     
     for tab_name in SIMPLE_TABLES:
         single_name = _get_single_name(tab_name)
+        print(single_name)
+        print(full_data[0])
+        dat = sorted(set(x[single_name] for x in full_data))
         
-        dat = tuple(set(x[single_name] for x in full_data))
-        
+        if 'ventral_side':
+            print(dat)
         init_str = 'INSERT INTO {} (name) VALUES (%s)'.format(tab_name)
         if REPLACE_DUPLICATES:
             init_str += ' ON DUPLICATE KEY UPDATE name=name;'
@@ -293,8 +308,14 @@ def fill_table(REPLACE_DUPLICATES = True):
                 
     all_dict = {}
     for tab_name in SIMPLE_TABLES:
+        
         single_name = _get_single_name(tab_name)
+        
         all_dict[single_name] = _get_id_dict(tab_name)
+        print(tab_name, single_name)
+    
+    print(SIMPLE_TABLES)
+    print(all_dict['ventral_side'])
     
     # add strains list
     def fk2(x):
@@ -373,6 +394,7 @@ def fill_table(REPLACE_DUPLICATES = True):
     
     cur.close()
     conn.close()
+    
 
 def add_video_sizes():
     conn = pymysql.connect(host='localhost', database='single_worm_db')
@@ -383,34 +405,26 @@ def add_video_sizes():
     results = cur.fetchall()
     
     
-    video_sizes = []
+    #video_sizes = []
     for ii, (vid_id, original_video) in enumerate(results):
         if ii % 100 == 0: 
             print('Getting original video file size {}/{}'.format(ii,len(results)))
         
         size = os.path.getsize(original_video)/(1024*1024.0)
-        video_sizes.append((vid_id, original_video, size))
-    
-    video_sizes_ins = '''
-    INSERT INTO experiments (id, original_video, original_video_sizeMB) 
-    VALUES (%s, %s, %s)
-    ON DUPLICATE KEY UPDATE id=id, original_video_sizeMB=VALUES(original_video_sizeMB)
-    '''
-    
-    
-    cur.executemany(video_sizes_ins, video_sizes)
-    
+        sql = '''UPDATE experiments  SET original_video_sizeMB={} WHERE id={}'''.format(size, vid_id)
+        cur.execute(sql)
+        
     conn.commit()
     
     cur.close()
     conn.close()
     
 if __name__ == '__main__':
-    DROP_PREV_DB = False
+    DROP_PREV_DB = True
     REPLACE_DUPLICATES = True
     
     
-    init_database(DROP_PREV_DB)
-    fill_table(REPLACE_DUPLICATES)
+    #init_database(DROP_PREV_DB)
+    #fill_table(REPLACE_DUPLICATES)
     add_video_sizes()
     

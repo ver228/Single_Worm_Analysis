@@ -11,12 +11,14 @@ import pandas as pd
 import numpy as np
 import pymysql.cursors
 from collections import OrderedDict
-from MWTracker.processing.AnalysisPoints import AnalysisPoints
-from MWTracker.processing.batchProcHelperFunc import getDefaultSequence
-from MWTracker.analysis.feat_create.obtainFeatures import getFPS
+from tierpsy.processing.AnalysisPoints import AnalysisPoints
+from tierpsy.processing.batchProcHelperFunc import getDefaultSequence
+from tierpsy.analysis.feat_create.obtainFeatures import getFPS
+from tierpsy.analysis.stage_aligment.alignStageMotion import isGoodStageAligment
 
-import MWTracker
-params_dir = os.path.join(os.path.dirname(MWTracker.__file__), 'misc', 'param_files')
+import tierpsy
+params_dir = os.path.join(os.path.dirname(tierpsy.__file__), 'misc', 'param_files')
+ON_FOOD_JSON = os.path.join(params_dir, 'single_worm_on_food.json')
 
 
 ALL_POINTS = getDefaultSequence('All', is_single_worm=True)
@@ -113,16 +115,22 @@ def update_row(cur, row_input):
 
 def get_last_finished(ap_obj, cur):
     #%%
-    unfinished = ap_obj.getUnfinishedPoints(ALL_POINTS)
+    def _get_flag_name(_ap_obj):
+        unfinished = _ap_obj.getUnfinishedPoints(ALL_POINTS)
     
-    if not unfinished:
-        last_point = 'END'
-    else:
-        for point in ALL_POINTS:
-            if point in unfinished:
-                last_point = point
-                break
+        if not unfinished:
+            return 'END'
+        else:
+            if not 'STAGE_ALIGMENT' in unfinished:
+                if not isGoodStageAligment(_ap_obj.file_names['skeletons']):
+                    return 'FAIL_STAGE_ALIGMENT'
+            
+            for point in ALL_POINTS:
+                if point in unfinished:
+                    return point
 #%%    
+    last_point = _get_flag_name(ap_obj)
+    
     cur.execute("SELECT id FROM exit_flags WHERE checkpoint='{}'".format(last_point))
     exit_flag_id = cur.fetchone()
         
@@ -133,7 +141,6 @@ def get_last_finished(ap_obj, cur):
 if __name__ == '__main__':
     CHECK_ONLY_UNFINISHED = True
     
-    json_file = os.path.join(params_dir, 'single_worm_on_food.json')
     
     conn = pymysql.connect(host='localhost')
     cur = conn.cursor(pymysql.cursors.DictCursor)
@@ -144,25 +151,30 @@ if __name__ == '__main__':
  
     
     if CHECK_ONLY_UNFINISHED:
-        last_valid = 'STAGE_ALIGMENT' #'END'
+        last_valid = 'STAGE_ALIGMENT'
+        
+        sql_fin_ind = '''
+        SELECT experiment_id 
+        FROM analysis_progress 
+        WHERE exit_flag_id >= (SELECT f.id FROM exit_flags as f WHERE checkpoint="{}")
+        
+        '''.format(last_valid)
+        #AND exit_flag_id < 100
         
         sql += '''
         WHERE id NOT IN 
-        (SELECT experiment_id 
-        FROM analysis_progress 
-        WHERE exit_flag_id >= (SELECT f.id FROM exit_flags as f WHERE checkpoint='{}')
-        ) 
-        '''.format(last_valid)                     
+        ({}) 
+        '''.format(sql_fin_ind)                     
     cur.execute(sql)
     all_rows = cur.fetchall()
     
-    
+    print('*******', len(all_rows))
     for irow, row in enumerate(all_rows):
         main_file = os.path.realpath(row['original_video'])
         video_dir = os.path.dirname(main_file)
         masks_dir = video_dir.replace('thecus', 'MaskedVideos')
         results_dir = video_dir.replace('thecus', 'Results')
-        ap_obj = AnalysisPoints(main_file, masks_dir, results_dir, json_file)
+        ap_obj = AnalysisPoints(main_file, masks_dir, results_dir, ON_FOOD_JSON)
         
         exit_flag_id, last_point = get_last_finished(ap_obj, cur)
         
@@ -170,9 +182,7 @@ if __name__ == '__main__':
         update_row(cur, row_input)
         
         print(row['id'], last_point)
-        
-        if (irow+1) % 100 == 0:
-            conn.commit()
+        conn.commit()    
             
     conn.commit()
     cur.close()

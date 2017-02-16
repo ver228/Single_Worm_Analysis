@@ -10,10 +10,11 @@ sudo mount -t cifs "//netapp3/behavgenom_archive$" "/Volumes/behavgenom_archive$
 
 
 #windows do not work for the moment
-python processMultipleFiles.py --video_dir_root Y:\single_worm\thecus --mask_dir_root Y:\single_worm\MaskedVideos --json_file C:\Users\wormrig\Documents\GitHub\tierpsy-tracker\tierpsy\misc\param_files\single_worm_on_food.json --videos_list C:\Users\wormrig\Documents\GitHub\Single_Worm_Analysis\files_lists\test.txt --tmp_dir_root D:\Tmp --analysis_type all --end_point STAGE_ALIGMENT --max_num_process 32
+python processMultipleFiles.py --video_dir_root Y:\single_worm\thecus --mask_dir_root Y:\single_worm\MaskedVideos --json_file C:\Users\wormrig\Documents\GitHub\tierpsy-tracker\tierpsy\misc\param_files\single_worm_on_food.json --videos_list C:\Users\wormrig\Documents\GitHub\Single_Worm_Analysis\files_lists\test.txt --tmp_dir_root D:\Tmp --analysis_type all --end_point FEAT_CREATE --max_num_process 32
 
 
+%SWIMMING
 python3 processMultipleFiles.py --video_dir_root /Volumes/behavgenom_archive\$/single_worm/thecus --mask_dir_root /Volumes/behavgenom_archive\$/single_worm/MaskedVideos --json_file single_worm_swimming.json --videos_list ~/Documents/GitHub/single-worm-analysis/files_lists/vid_swimming_2.txt --analysis_type all --end_point CONTOUR_ORIENT --max_num_process 20
 
 
-python3 processMultipleFiles.py --video_dir_root /Volumes/behavgenom_archive\$/single_worm/thecus --mask_dir_root /Volumes/behavgenom_archive\$/single_worm/MaskedVideos --json_file single_worm_swimming.json --videos_list /Users/Shared/single-worm-analysis/files_lists/vid_swimming_2.txt --analysis_type all --end_point CONTOUR_ORIENT --max_num_process 20
+python3 processMultipleFiles.py --video_dir_root /Volumes/behavgenom_archive\$/single_worm/thecus --mask_dir_root /Volumes/behavgenom_archive\$/single_worm/MaskedVideos --json_file single_worm_swimming.json --videos_list /Users/Shared/single-worm-analysis/files_lists/vid_swimming_1.txt --analysis_type all --end_point CONTOUR_ORIENT --max_num_process 20

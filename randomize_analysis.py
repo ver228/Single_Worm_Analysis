@@ -13,7 +13,7 @@ cur = conn.cursor()
 sql = '''
 select original_video 
 from experiments_full 
-where arena like '%liquid%' order by original_video_sizeMB'''
+where arena like '%liquid%' order by original_video_sizeMB DESC'''
 
 cur.execute(sql)
 file_list = cur.fetchall()

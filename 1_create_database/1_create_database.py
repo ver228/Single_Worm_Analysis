@@ -105,7 +105,7 @@ def init_database(DROP_PREV_DB = False):
     CREATE TABLE IF NOT EXISTS `exit_flags`
     (
     `id` INT NOT NULL AUTO_INCREMENT,
-    `checkpoint` VARCHAR(20) UNIQUE NOT NULL,
+    `checkpoint` VARCHAR(30) UNIQUE NOT NULL,
     `description` VARCHAR(100),
     PRIMARY KEY (id)
     );
@@ -122,17 +122,18 @@ def init_database(DROP_PREV_DB = False):
     ('SKE_CREATE', 'Create skeletons.'),  
     ('SKE_FILT', 'Filter skeletons.'), 
     ('SKE_ORIENT', 'Orient skeletons by movement.'),  
+    ('STAGE_ALIGMENT', 'Stage aligment.'),  
     ('CONTOUR_ORIENT', 'Orient ventral side.'), 
     ('INT_PROFILE', 'Intensity profile.'),  
     ('INT_SKE_ORIENT', 'Orient skeletons by intensity.'),  
-    ('STAGE_ALIGMENT', 'Stage aligment.'),  
     ('FEAT_CREATE', 'Obtain features.'),
     ('WCON_EXPORT', 'Export data into WCON.'),
     ('END', 'Finished.'),  
     ]
     
     exit_flags_vals_failed = [
-    (101, 'FAIL_STAGE_ALIGMENT' , "Failed. Wrong stage aligment.")     
+    (101, 'UNKNOWN_CONTOUR_ORIENT', "Failed. Invalid or unknown ventral side label."),
+    (102, 'FAIL_STAGE_ALIGMENT' , "Failed. Wrong stage aligment.")
     ]
     
     exit_flags_init = ('INSERT INTO exit_flags (checkpoint, description) VALUES (%s, %s)',

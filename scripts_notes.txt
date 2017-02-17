@@ -1,11 +1,10 @@
-python3 processMultipleFiles.py --video_dir_root /Volumes/behavgenom_archive\$/single_worm/thecus --mask_dir_root /Volumes/behavgenom_archive\$/single_worm/MaskedVideos --json_file /Users/Shared/tierpsy-tracker/tierpsy/misc/param_files/single_worm_on_food.json --videos_list /Users/Shared/single-worm-analysis/files_lists/all_agar_1.txt --analysis_type all --end_point FEAT_CREATE --max_num_process 20 --copy_unfinished
+python3 processMultipleFiles.py --video_dir_root /Volumes/behavgenom_archive\$/single_worm/thecus --mask_dir_root /Volumes/behavgenom_archive\$/single_worm/MaskedVideos --json_file /Users/Shared/tierpsy-tracker/tierpsy/misc/param_files/single_worm_on_food.json --videos_list /Users/Shared/single-worm-analysis/all_agar_1.txt --analysis_type all --end_point FEAT_CREATE --max_num_process 20 --copy_unfinished
 
 python3 processMultipleFiles.py --video_dir_root /Volumes/behavgenom_archive\$/single_worm/thecus --mask_dir_root /Volumes/behavgenom_archive\$/single_worm/MaskedVideos --json_file ~/Documents/GitHub/tierpsy-tracker/tierpsy/misc/param_files/single_worm_on_food.json --videos_list ~/Documents/GitHub/single-worm-analysis/all_agar_2.txt --analysis_type all --end_point FEAT_CREATE --max_num_process 15 --copy_unfinished
 
 
 #linux
-python3 processMultipleFiles.py --video_dir_root /Volumes/behavgenom_archive\$/single_worm/thecus --mask_dir_root /Volumes/behavgenom_archive\$/single_worm/MaskedVideos --json_file ~/tierpsy-tracker/tierpsy/misc/param_files/single_worm_on_food.json 
- --videos_list ~/single-worm-analysis/all_agar_3.txt --analysis_type all --end_point FEAT_CREATE --max_num_process 28 --copy_unfinished--tmp_dir_root /run/media/worm_rig/WormRigData1/Tmp/
+python3 processMultipleFiles.py --video_dir_root /Volumes/behavgenom_archive\$/single_worm/thecus --mask_dir_root /Volumes/behavgenom_archive\$/single_worm/MaskedVideos --json_file ~/tierpsy-tracker/tierpsy/misc/param_files/single_worm_on_food.json --videos_list ~/single-worm-analysis/all_agar_3.txt --analysis_type all --end_point FEAT_CREATE --max_num_process 28 --copy_unfinished --tmp_dir_root /run/media/worm_rig/WormRigData1/Tmp/
 
 
 sudo mount -t cifs "//netapp3/behavgenom_archive$" "/Volumes/behavgenom_archive$" -o username=ajaver,domain=CSCDOM,uid=1000

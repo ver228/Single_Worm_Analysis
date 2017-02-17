@@ -15,6 +15,7 @@ from tierpsy.processing.AnalysisPoints import AnalysisPoints
 from tierpsy.processing.batchProcHelperFunc import getDefaultSequence
 from tierpsy.analysis.feat_create.obtainFeatures import getFPS
 from tierpsy.analysis.stage_aligment.alignStageMotion import isGoodStageAligment
+from tierpsy.analysis.contour_orient.correctVentralDorsal import isBadVentralOrient
 
 import tierpsy
 params_dir = os.path.join(os.path.dirname(tierpsy.__file__), 'misc', 'param_files')
@@ -124,6 +125,11 @@ def get_last_finished(ap_obj, cur):
             if not 'STAGE_ALIGMENT' in unfinished:
                 if not isGoodStageAligment(_ap_obj.file_names['skeletons']):
                     return 'FAIL_STAGE_ALIGMENT'
+            
+            if not 'CONTOUR_ORIENT' in unfinished:
+                if isBadVentralOrient(_ap_obj.file_names['skeletons']):
+                    return 'UNKNOWN_CONTOUR_ORIENT'
+                    
             
             for point in ALL_POINTS:
                 if point in unfinished:

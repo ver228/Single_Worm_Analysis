@@ -101,7 +101,7 @@ def fetch_exp_info(cur, base_name):
 if __name__ == '__main__':
     video_dir_root = '/Volumes/behavgenom_archive$/single_worm/MaskedVideos'
     
-    ONLY_UNFINSHED = False
+    ONLY_UNFINSHED = True
     
     conn = pymysql.connect(host='localhost')
     cur = conn.cursor(pymysql.cursors.DictCursor)
@@ -135,9 +135,4 @@ if __name__ == '__main__':
         features_file = mask_file.replace('MaskedVideos', 'Results').replace('.hdf5', '_features.hdf5')
         if os.path.exists(features_file):
             add_exp_info(features_file, experiment_info_str)
-    
-        
-        
-        
-
-        
+            

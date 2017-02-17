@@ -9,7 +9,7 @@ import re
 import datetime
 import csv
 
-from sqlalchemy import create_engine, MetaData
+from sqlalchemy import create_engine, MetaData, or_
 from sqlalchemy.schema import Table
 from sqlalchemy.orm import Session
 from sqlalchemy.ext.declarative import declarative_base
@@ -305,11 +305,12 @@ if __name__ == '__main__':
     
     #session.add(new_rows)
     session.commit()
-    #%%
+    
+    #%% FIX EXPERIMENTES BY LOOKING THE DATA FROM VIDEOS IN THE SAME FOLDER
     experimenters = session.query(distinct(ExperimentsFullNew.experimenter)).all()
     if (NONE_STR,) in experimenters:
         #select rows with a None as experimenter
-        bad_experimenters = session.query(ExperimentsFullNew).filter(ExperimentsFullNew.experimenter == None).all()
+        bad_experimenters = session.query(ExperimentsFullNew).filter(ExperimentsFullNew.experimenter == NONE_STR).all()
         for bexp in bad_experimenters:
             #check the other experimenters of videos in the same the folder
             dd = session.query(ExperimentsFullNew.experimenter).filter(ExperimentsFullNew.directory == bexp.directory).all()
@@ -317,7 +318,9 @@ if __name__ == '__main__':
             #if there is only one experiment in the same folder we know the correct experiment
             if len(valid_experimenter) == 1:
                 bexp.experimenter = valid_experimenter.pop()
+    session.commit()
     #%%
+    #FIX TRACKER BY LOOKING INFO IN THE DIRECTORY NAME
     #dd = session.query(distinct(ExperimentsFullNew.tracker)).all()
     bad_trackers = session.query(ExperimentsFullNew).\
     filter(ExperimentsFullNew.tracker == NONE_STR).all()
@@ -330,7 +333,7 @@ if __name__ == '__main__':
         MM = set(MM)
         if len(MM) == 1:
             btr.tracker = 'tracker_' + MM.pop()
-    #%%
+    #%% A QUICK CHECK TO SEE IF THE FOOD VALUES MAKE SENSE
     #dd = session.query(ExperimentsFullNew.base_name).\
     #filter(ExperimentsFullNew.food is None).all()
     dd = session.query(ExperimentsFullNew.food, DataFromNames.media_str).\
@@ -418,8 +421,8 @@ if __name__ == '__main__':
         return best_s, s_diff
 
     #%%
-#    'PLG119': ['PLG 119 1', 'PLG 119 2', 'PLG119 1', 'PLG119 2', 'plg119'],
-#    'PLG120':['PLG 120', 'PLG 120 1', 'PLG120 1', 'plg120', 'Plg120', 'PL;G120'],
+    #'PLG119': ['PLG 119 1', 'PLG 119 2', 'PLG119 1', 'PLG119 2', 'plg119'],
+    #'PLG120':['PLG 120', 'PLG 120 1', 'PLG120 1', 'plg120', 'Plg120', 'PL;G120'],
     #all the miss_spelings I identified in the file names
     miss_spellings = {'Qt825 nca-1 nRHO-1 nNCA-1 Ex[acr-2 mcherry]': ['Qt825 nca-1 nRHO-1 nNCA-1 Ex [acr-2mcherry]',
     'Qt285 nca-1 nRHO-1 nNCA-1 Ex [acr-2 mcherry]', 'Qt285 nca-1 nRHO-1 nNCA-1 Ex [acr-2 mcherry]', 'Qt825 nca-1 nRHO-1 nNCA-1 Ex [acr-2 mcherry]',
@@ -543,23 +546,18 @@ if __name__ == '__main__':
                               experiments_full.c.genotype)
     #%%
 
-    problem_strains = []
-    problem_base_names = []
     
     bad_strains = session.query(ExperimentsFullNew).\
-    filter(ExperimentsFullNew.genotype is None or ExperimentsFullNew.genotype=='-N/A-').all()
-    for bad_strain in bad_strains:
-        
-        set_genotype = []
-        
-        strain_str = session.query(DataFromNames.strain_str).\
-        filter(DataFromNames.file_name == bad_strain.base_name).one_or_none()[0]
-        if strain_str in str2change:
-            strain_str =str2change[strain_str]
-        #%%
+    filter(or_(ExperimentsFullNew.genotype == None, ExperimentsFullNew.genotype=='-N/A-')).all()
+    
+    #%%
+    
+    def _get_genotype(strain_str):
         strain_match = re.match('(\d{2,4} )?(?P<strain>[\-A-Z0-9;a-z]+)( .)?$', strain_str)
         genotype_match = re.match('^(?P<gene>[a-zA-Z\-0-9]+) ?\((?P<allele>[a-zA-Z\-0-9]*?)\)[IXV]{,3}$', strain_str)
         
+
+        set_genotype = []
         if strain_match:
             strain = strain_match.group('strain')
             
@@ -596,11 +594,30 @@ if __name__ == '__main__':
                         set_allele, g_diff = compare_diff(set_alleles, 2, gene)
                         
                         if  a_diff == 1 and g_diff != 1:
-                            genotype = set_gene
+                            set_genotype = set_gene
                         
                         elif g_diff == 1 and a_diff != 1:
-                            genotype = set_allele
-        #%%
+                            set_genotype = set_allele
+        
+        if set_genotype is None:
+            set_genotype = []
+        
+        return set_genotype
+    
+    #%%
+    problem_strains = []
+    problem_base_names = []
+    for bad_strain in bad_strains:
+        
+        strain_str = session.query(DataFromNames.strain_str).\
+        filter(DataFromNames.file_name == bad_strain.base_name).one_or_none()[0]
+        if strain_str in str2change:
+            strain_str =str2change[strain_str]
+        
+        set_genotype = _get_genotype(strain_str)
+        #print(strain_str, set_genotype)
+        
+        
         if len(set_genotype) == 1:
             dat = set_genotype[0]
             bad_strain.strain, bad_strain.allele, bad_strain.gene, \
@@ -615,21 +632,21 @@ if __name__ == '__main__':
     session.query(ExperimentsFullNew).filter(ExperimentsFullNew.gene == None).update({'gene': NONE_STR})
     session.query(ExperimentsFullNew).filter(ExperimentsFullNew.chromosome == None).update({'chromosome': NONE_STR})
     session.query(ExperimentsFullNew).filter(ExperimentsFullNew.genotype == None).update({'genotype': NONE_STR})
+    session.query(ExperimentsFullNew).filter(ExperimentsFullNew.strain == None).update({'strain': NONE_STR})
     session.query(ExperimentsFullNew).filter(ExperimentsFullNew.habituation =='none').update({'habituation': 'no waiting'})
+    session.query(ExperimentsFullNew).filter(ExperimentsFullNew.habituation =='30 minutes').update({'habituation': '30m wait'})
 
 
-    bad_rows = session.query(ExperimentsFullNew).filter(ExperimentsFullNew.strain == None)
-    for row in bad_rows.all():
-        problem_strains.append("")
-        problem_base_names.append(row.base_name)
-    bad_rows.delete()
+    #bad_rows = session.query(ExperimentsFullNew).filter(or_(
+    #        ExperimentsFullNew.strain == None, ExperimentsFullNew.strain == NONE_STR))
+    #bad_rows.delete()
     #%%
     
     session.commit()
     session.close()
     #%%
     from collections import Counter
-    print('%%%%%%%%%%%')
+    print('%%%%%%%%%%% THE FOLLOWING PREFIXES WILL BE GIVEN -N/A- FOR STRAIN')
     DD = Counter(problem_strains).most_common()
     
     for dd in sorted(DD):
@@ -667,5 +684,4 @@ if __name__ == '__main__':
 #    plt.figure()
 #    plt.plot(tt_all, '.')
 #    plt.plot(tt_bad[0], tt_bad[1], 'or')
-
-
+#%%

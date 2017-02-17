@@ -1,0 +1,7 @@
+Notes:
+
+* The strains labeled as '-N/A-' are the ones where I was not able to identify their correct name.
+
+* I chose 131x15 in the worm map (the default). I can get a nicer image with 263x31, but the files are just to big. If I want to use higher textural detail I could come back to this later.
+
+* I accept the label 'unknown' for the ventral_side, but I do not calculate the intensity map neither its features.

@@ -22,11 +22,11 @@ from experiments_full
 where arena not like '%liquid%'
 order by original_video_sizeMB DESC'''
 
-cur.execute(sql_agar)
+cur.execute(sql_liquid)
 file_list = cur.fetchall()
 file_list = [x for x, in file_list] #flatten
 
-n_files = 3
+n_files = 1
 divided_files = [[] for i in range(n_files)]
             
 
@@ -35,5 +35,5 @@ for ii, fname in enumerate(file_list):
     divided_files[ind].append(fname)
 
 for ii, f_list in enumerate(divided_files):
-    with open('all_agar_{}.txt'.format(ii+1), 'w') as fid:
+    with open('all_swim_{}.txt'.format(ii+1), 'w') as fid:
         fid.write('\n'.join(f_list))

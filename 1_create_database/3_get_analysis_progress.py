@@ -145,7 +145,7 @@ def get_last_finished(ap_obj, cur):
     return exit_flag_id, last_point
 
 if __name__ == '__main__':
-    CHECK_ONLY_UNFINISHED = True
+    CHECK_ONLY_UNFINISHED = False
     
     
     conn = pymysql.connect(host='localhost')
@@ -162,10 +162,10 @@ if __name__ == '__main__':
         sql_fin_ind = '''
         SELECT experiment_id 
         FROM analysis_progress 
-        WHERE exit_flag_id >= (SELECT f.id FROM exit_flags as f WHERE checkpoint="{}")
-        
+        WHERE exit_flag_id <= (SELECT f.id FROM exit_flags as f WHERE checkpoint="{}")
+        OR exit_flag_id > 100
         '''.format(last_valid)
-        #AND exit_flag_id < 100
+        #
         
         sql += '''
         WHERE id NOT IN 

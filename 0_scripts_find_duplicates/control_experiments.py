@@ -7,7 +7,7 @@ Created on Tue Mar  1 14:45:16 2016
 #%%
 import os
 from glob import glob
-from MWTracker.analysis.compress_add_data.getAdditionalData import getAdditionalFiles
+from tierpsy.analysis.compress_add_data.getAdditionalData import getAdditionalFiles
 
 F_LISTS_DIR = os.path.join('..', 'files_lists')
 movies_lists_f = os.path.join(F_LISTS_DIR, 'single_worm.txt')

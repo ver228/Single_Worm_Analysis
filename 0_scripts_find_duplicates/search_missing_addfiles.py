@@ -7,7 +7,7 @@ Created on Wed Jan 18 16:23:00 2017
 """
 
 import os
-from MWTracker.analysis.compress_add_data.getAdditionalData import getAdditionalFiles
+from tierpsy.analysis.compress_add_data.getAdditionalData import getAdditionalFiles
 
 from control_experiments import F_LISTS_DIR, movies_lists_f
 

@@ -4,6 +4,8 @@ python3 processMultipleFiles.py --video_dir_root /Volumes/behavgenom_archive\$/s
 
 
 
+python3 processMultipleFiles.py --mask_dir_root /Volumes/behavgenom_archive\$/single_worm/MaskedVideos --json_file ~/Documents/GitHub/tierpsy-tracker/tierpsy/misc/param_files/single_worm_on_food.json --analysis_checkpoints STAGE_ALIGMENT FEAT_CREATE --max_num_process 6 --copy_unfinished
+
 
 #linux
 python3 processMultipleFiles.py --video_dir_root /Volumes/behavgenom_archive\$/single_worm/thecus --mask_dir_root /Volumes/behavgenom_archive\$/single_worm/MaskedVideos --json_file ~/tierpsy-tracker/tierpsy/misc/param_files/single_worm_on_food.json --videos_list ~/single-worm-analysis/all_agar_3.txt --analysis_type all --end_point FEAT_CREATE --max_num_process 28 --copy_unfinished --tmp_dir_root /run/media/worm_rig/WormRigData1/Tmp/

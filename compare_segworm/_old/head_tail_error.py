@@ -7,28 +7,9 @@ Created on Thu May 12 16:14:10 2016
 import tables
 from scipy.io import loadmat
 
-import pandas as pd
-import matplotlib.pylab as plt
 import numpy as np
-import seaborn as sns
-import shutil
 import os
 
-from sqlalchemy import create_engine
-from sqlalchemy.ext.automap import automap_base
-from sqlalchemy.orm import Session
-
-engine_v2 = create_engine(r'mysql+pymysql://ajaver:@localhost/single_worm_db_v2')
-Base = automap_base()
-
-Base.prepare(engine_v2, reflect=True)
-Experiment = Base.classes.experiments;
-Strain = Base.classes.strains;
-SegwormFeature = Base.classes.segworm_features;
-ProgressTrack = Base.classes.progress_tracks;
-SegWormComparison = Base.classes.segworm_comparisons;
-ProgressMask = Base.classes.progress_masks;
-session_v2 = Session(engine_v2)
 
 #%%
 bad_frames_global = {

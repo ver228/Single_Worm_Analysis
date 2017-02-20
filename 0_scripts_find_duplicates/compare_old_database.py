@@ -18,7 +18,7 @@ def names_old_db():
     # Connect to the database
     connection = pymysql.connect(host='localhost',
                                  user='ajaver',
-                                 db='worm_db',
+                                 db='single_worm_old',
                                  charset='utf8mb4',
                                  cursorclass=pymysql.cursors.DictCursor)
     
@@ -28,7 +28,7 @@ def names_old_db():
         cursor.execute(sql_cmd)
         result = cursor.fetchall()
     
-    db_fnames = [x['wormFileName'] for x in result]
+    db_fnames = [x['original_video'] for x in result]
     db_fnames = set(db_fnames)
     return db_fnames
 

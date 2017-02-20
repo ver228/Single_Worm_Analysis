@@ -37,3 +37,4 @@ for ii, fname in enumerate(file_list):
 for ii, f_list in enumerate(divided_files):
     with open('all_swim_{}.txt'.format(ii+1), 'w') as fid:
         fid.write('\n'.join(f_list))
+        

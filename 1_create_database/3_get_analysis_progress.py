@@ -16,6 +16,8 @@ from tierpsy.processing.batchProcHelperFunc import getDefaultSequence
 from tierpsy.analysis.feat_create.obtainFeatures import getFPS
 from tierpsy.analysis.stage_aligment.alignStageMotion import isGoodStageAligment
 from tierpsy.analysis.contour_orient.correctVentralDorsal import isBadVentralOrient
+from tierpsy.analysis.compress.processVideo import isGoodVideo
+from tierpsy.analysis.compress_add_data.getAdditionalData import hasAdditionalFiles
 
 import tierpsy
 params_dir = os.path.join(os.path.dirname(tierpsy.__file__), 'misc', 'param_files')
@@ -118,7 +120,6 @@ def get_last_finished(ap_obj, cur):
     #%%
     def _get_flag_name(_ap_obj):
         unfinished = _ap_obj.getUnfinishedPoints(ALL_POINTS)
-    
         if not unfinished:
             return 'END'
         else:
@@ -129,23 +130,28 @@ def get_last_finished(ap_obj, cur):
             if not 'CONTOUR_ORIENT' in unfinished:
                 if isBadVentralOrient(_ap_obj.file_names['skeletons']):
                     return 'UNKNOWN_CONTOUR_ORIENT'
-                    
+            
+            if 'COMPRESS' in unfinished:
+                if not isGoodVideo(_ap_obj.file_names['original_video']):
+                    return 'INVALID_VIDEO'
+                elif not hasAdditionalFiles(_ap_obj.file_names['original_video']):
+                    return 'MISSING_ADD_FILES'
             
             for point in ALL_POINTS:
                 if point in unfinished:
                     return point
 #%%    
+    
     last_point = _get_flag_name(ap_obj)
     
     cur.execute("SELECT id FROM exit_flags WHERE checkpoint='{}'".format(last_point))
     exit_flag_id = cur.fetchone()
         
     exit_flag_id = exit_flag_id['id']
-    
     return exit_flag_id, last_point
 
 if __name__ == '__main__':
-    CHECK_ONLY_UNFINISHED = False
+    CHECK_ONLY_UNFINISHED = True
     
     
     conn = pymysql.connect(host='localhost')
@@ -157,16 +163,16 @@ if __name__ == '__main__':
  
     
     if CHECK_ONLY_UNFINISHED:
-        last_valid = 'STAGE_ALIGMENT'
+        last_valid = 'WCON_EXPORT'
         
         sql_fin_ind = '''
         SELECT experiment_id 
         FROM analysis_progress 
-        WHERE exit_flag_id <= (SELECT f.id FROM exit_flags as f WHERE checkpoint="{}")
-        OR exit_flag_id > 100
+        WHERE exit_flag_id >= (SELECT f.id FROM exit_flags as f WHERE checkpoint="{}")
+        
         '''.format(last_valid)
         #
-        
+        #OR exit_flag_id < 100
         sql += '''
         WHERE id NOT IN 
         ({}) 
@@ -184,11 +190,17 @@ if __name__ == '__main__':
         
         exit_flag_id, last_point = get_last_finished(ap_obj, cur)
         
-        row_input = get_progress_data(row['id'],  exit_flag_id, ap_obj)
-        update_row(cur, row_input)
+        sql = '''
+        UPDATE `analysis_progress`
+        SET exit_flag_id={} 
+        WHERE experiment_id={}'''.format(exit_flag_id, row['id'])
+        cur.execute(sql)
+        
+        #row_input = get_progress_data(row['id'],  exit_flag_id, ap_obj)
+        #update_row(cur, row_input)
         
         print(row['id'], last_point)
-        conn.commit()    
+        conn.commit()
             
     conn.commit()
     cur.close()

@@ -133,7 +133,9 @@ def init_database(DROP_PREV_DB = False):
     
     exit_flags_vals_failed = [
     (101, 'UNKNOWN_CONTOUR_ORIENT', "Failed. Invalid or unknown ventral side label."),
-    (102, 'FAIL_STAGE_ALIGMENT' , "Failed. Wrong stage aligment.")
+    (102, 'FAIL_STAGE_ALIGMENT' , "Failed. Wrong stage aligment."),
+    (103, 'INVALID_VIDEO', 'Video cannot be read.'),
+    (104, 'MISSING_ADD_FILES', 'The extra files log.csv and/or info.xml are missing.')
     ]
     
     exit_flags_init = ('INSERT INTO exit_flags (checkpoint, description) VALUES (%s, %s)',

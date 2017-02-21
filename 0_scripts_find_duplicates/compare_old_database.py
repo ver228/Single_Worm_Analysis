@@ -53,7 +53,7 @@ onlyInFeats = prefix_old_feats-prefix_movies
 
 
 #%%
-lists_dir = '/Users/ajaver/Desktop/shafer_lab_files/'
+lists_dir = '/Users/ajaver/OneDrive - Imperial College London/single_worm_db/_schaffer_files'
 prefix_f = 'all_files_wshafer-nas-5.txt'
 f_lists = os.path.join(lists_dir, prefix_f)
 with open(f_lists, 'r') as fid:

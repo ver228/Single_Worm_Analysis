@@ -86,10 +86,9 @@ if __name__ == '__main__':
     
     print({x:len(val) for x,val in files_progress.items()})
     #%%
-    #points2save = ['TRAJ_CREATE', 'BLOB_FEATS']
-    points2save = ['INT_PROFILE']
+    points2save = ['FEAT_CREATE']
     files2save = sum([files_progress[x] for x in points2save], [])
-    divide_and_save(files2save, 2, 'intensity')
+    divide_and_save(files2save, 2, 'feats')
     
     #%%
 #    files2save = files_progress['CONTOUR_ORIENT']

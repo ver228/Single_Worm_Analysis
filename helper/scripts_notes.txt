@@ -1,8 +1,6 @@
-python3 processMultipleFiles.py --video_dir_root /Volumes/behavgenom_archive\$/single_worm/thecus --mask_dir_root /Volumes/behavgenom_archive\$/single_worm/MaskedVideos --json_file /Users/Shared/tierpsy-tracker/tierpsy/misc/param_files/single_worm_on_food.json --videos_list /Users/Shared/single-worm-analysis/all_agar_1.txt --analysis_type all --end_point FEAT_CREATE --max_num_process 20 --copy_unfinished
+python3 processMultipleFiles.py --video_dir_root /Volumes/behavgenom_archive\$/single_worm/thecus --mask_dir_root /Volumes/behavgenom_archive\$/single_worm/MaskedVideos --json_file /Users/Shared/tierpsy-tracker/tierpsy/misc/param_files/single_worm_on_food.json --videos_list /Users/Shared/single-worm-analysis/feats_1.txt --analysis_checkpoints FEAT_CREATE --max_num_process 20 --copy_unfinished
 
-python3 processMultipleFiles.py --video_dir_root /Volumes/behavgenom_archive\$/single_worm/thecus --mask_dir_root /Volumes/behavgenom_archive\$/single_worm/MaskedVideos --json_file ~/Documents/GitHub/tierpsy-tracker/tierpsy/misc/param_files/single_worm_on_food.json --videos_list ~/Documents/GitHub/single-worm-analysis/all_agar_2.txt --analysis_type all --end_point FEAT_CREATE --max_num_process 15 --copy_unfinished
-
-
+python3 processMultipleFiles.py --video_dir_root /Volumes/behavgenom_archive\$/single_worm/thecus --mask_dir_root /Volumes/behavgenom_archive\$/single_worm/MaskedVideos --json_file ~/Documents/GitHub/tierpsy-tracker/tierpsy/misc/param_files/single_worm_on_food.json --videos_list ~/Documents/GitHub/single-worm-analysis/feats_2.txt --analysis_checkpoints FEAT_CREATE --max_num_process 15 --copy_unfinished
 
 python3 processMultipleFiles.py --mask_dir_root /Volumes/behavgenom_archive\$/single_worm/MaskedVideos --json_file ~/Documents/GitHub/tierpsy-tracker/tierpsy/misc/param_files/single_worm_on_food.json --analysis_checkpoints STAGE_ALIGMENT FEAT_CREATE --max_num_process 6 --copy_unfinished
 

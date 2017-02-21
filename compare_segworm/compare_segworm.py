@@ -26,8 +26,10 @@ if __name__ == '__main__':
     segworm_basenames = list(key_basenames.keys())
     
     sql_map = '''
-    SELECT id, base_name
-    FROM experiments
+    SELECT  e.id, e.base_name, a.features_file, f.checkpoint
+    FROM experiments AS e
+    JOIN analysis_progress AS a ON e.id = a.experiment_id
+    JOIN exit_flags AS f ON f.id = a.exit_flag_id
     WHERE base_name IN ({})
     '''.format(','.join('"' + x + '"' for x in segworm_basenames))
     cur.execute(sql_map)
@@ -37,19 +39,16 @@ if __name__ == '__main__':
     print('Missing previously analyzed files {}'.format(len(segworm_basenames) - len(results)))
     
     #%%
-    sql_finished = '''
-    SELECT e.id, a.features_file, a.exit_flag_id
-    FROM experiments AS e
-    JOIN analysis_progress AS a ON e.id = a.experiment_id
-    WHERE exit_flag_id >= (SELECT f.id FROM exit_flags as f WHERE checkpoint="WCON_EXPORT")
-    AND exit_flag_id < 100
-    '''
-    cur.execute(sql_finished)
-    results = cur.fetchall()
+    group_by_point = {}
+    for row in results:
+        if not row['checkpoint'] in group_by_point:
+            group_by_point[row['checkpoint']] = []
+        
+        group_by_point[row['checkpoint']].append(row['base_name'])
+    #%%
+    print({x:len(val) for x,val in group_by_point.items()})
     #%%
     
-    feat_files = [(segworm_db_mapper[x['id']], x['features_file']) 
-    for x in results if x['id'] in segworm_db_mapper]
     
     
     

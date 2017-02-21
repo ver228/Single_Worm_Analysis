@@ -163,13 +163,12 @@ if __name__ == '__main__':
  
     
     if CHECK_ONLY_UNFINISHED:
-        last_valid = 'WCON_EXPORT'
+        last_valid = 'WCON_EXPORT' #'FEAT_CREATE'
         
         sql_fin_ind = '''
         SELECT experiment_id 
         FROM analysis_progress 
         WHERE exit_flag_id >= (SELECT f.id FROM exit_flags as f WHERE checkpoint="{}")
-        
         '''.format(last_valid)
         #
         #OR exit_flag_id < 100

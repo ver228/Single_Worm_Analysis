@@ -9,6 +9,37 @@ Created on Mon Feb 20 14:54:04 2017
 import pymysql
 import os
 
+def export_rand_sample(f_list, mat_mapper):
+    import random
+    import shutil
+    
+    save_dir = '/Users/ajaver/OneDrive - Imperial College London/Local_Videos/single_worm/global_sample_v3'
+    sample_bn = random.sample(f_list, 50)
+    
+    sql_sample = '''
+    SELECT  e.id, e.original_video
+    FROM experiments AS e
+    WHERE base_name IN ({})
+    '''.format(','.join('"' + x + '"' for x in sample_bn))
+    
+    cur2= conn.cursor()
+    cur2.execute(sql_sample)
+    results = cur2.fetchall()
+    
+    for exp_id, original_video in results:
+        print(exp_id)
+        
+        mask_file = original_video.replace('thecus', 'MaskedVideos').replace('.avi', '.hdf5')
+        skel_file = original_video.replace('thecus', 'Results').replace('.avi', '_skeletons.hdf5')
+        feat_file = original_video.replace('thecus', 'Results').replace('.avi', '_features.hdf5')
+        
+        fnames = [mask_file, skel_file, feat_file, mat_mapper[exp_id]]
+        
+        for fname in fnames:
+            assert os.path.exists(fname)
+            print(fname)
+            shutil.copy(fname, save_dir)
+
 SEGWORM_FEAT_LIST = '../files_lists/segworm_feat_files.txt'
 
 if __name__ == '__main__':
@@ -48,26 +79,13 @@ if __name__ == '__main__':
     #%%
     print({x:len(val) for x,val in group_by_point.items()})
     #%%
+    export_rand_sample(group_by_point['WCON_EXPORT'], segworm_db_mapper)
     
     
     
     
-    #%%
     
     
-
     
-
-
-
-#sql_liquid = '''
-#select original_video 
-#from experiments_full 
-#where arena like '%liquid%' order by original_video_sizeMB DESC'''
-#
-#
-#sql_agar = '''
-#select original_video 
-#from experiments_full 
-#where arena not like '%liquid%'
-#order by original_video_sizeMB DESC'''
+ #%%
+   

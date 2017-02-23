@@ -16,7 +16,7 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column, Integer, String, Sequence, DateTime, distinct
 
 ENG_OLD_PATH = r'mysql+pymysql://ajaver:@localhost/single_worm_old'
-MOVIES_LIST_F = os.path.join('..', 'files_lists', 'single_worm.txt')
+MOVIES_LIST_F = os.path.realpath(os.path.join('..', 'files_lists', 'single_worm.txt'))
 INS_STRAINS_F = 'ins_strains.csv'
 
 NONE_STR='-N/A-'
@@ -242,6 +242,10 @@ def FIND_DUPLICATES():
 #%%
 if __name__ == '__main__':
     #%%
+    #genotypes with the wrong format in the old database
+    genotype2change = {'ocr-4(vs137)ocr-2(ak47)IV':'ocr-4(vs137); ocr-2(ak47)IV',
+            'egl-30(n686)goa-1(n1134)I':'egl-30(n686); goa-1(n1134)I',
+            'osm-9(ky10)trpa-1(ok999)IV':'osm-9(ky10); trpa-1(ok999)IV'}
     
     myengine = create_engine(ENG_OLD_PATH)
     meta = MetaData()
@@ -283,6 +287,11 @@ if __name__ == '__main__':
             _, _, ventral_side, food_old, habituation, experimenter, \
             _, genotype, _ = old_data
             
+            
+            
+            if genotype in genotype2change:
+                genotype = genotype2change[genotype]
+                
         sex = get_sex(base_name)
         arena, food = get_food_arena(media_str, directory)
         developmental_stage = get_develp_stage(base_name, food)
@@ -636,12 +645,19 @@ if __name__ == '__main__':
     session.query(ExperimentsFullNew).filter(ExperimentsFullNew.habituation =='none').update({'habituation': 'no waiting'})
     session.query(ExperimentsFullNew).filter(ExperimentsFullNew.habituation =='30 minutes').update({'habituation': '30m wait'})
 
-
-    #bad_rows = session.query(ExperimentsFullNew).filter(or_(
-    #        ExperimentsFullNew.strain == None, ExperimentsFullNew.strain == NONE_STR))
-    #bad_rows.delete()
     #%%
     
+    
+    
+    # (PROBABLY WRONG) correct ventral sides
+#    bad_ventral = session.query(ExperimentsFullNew).filter(ExperimentsFullNew.experimenter =='Andre Brown').all()
+#
+#    switch_dict = {'clockwise':'anticlockwise', 'anticlockwise':'clockwise'}
+#    for row in bad_ventral:
+#        if row.ventral_side != 'unknown':
+#            row.ventral_side = switch_dict[row.ventral_side]
+    
+#%%
     session.commit()
     session.close()
     #%%

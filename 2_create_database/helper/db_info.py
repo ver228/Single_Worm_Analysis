@@ -77,18 +77,21 @@ def db_row2dict(row):
     experiment_info['tracker'] = row['tracker']
     experiment_info['original_video_name'] = row['original_video']
     
+    print(experiment_info['ventral_side'])
     
     return experiment_info
 
-#%%
-def add_exp_info(fname, experiment_info_str):
+
+def _add_exp_info(fname, experiment_info_str):
     with tables.File(fname, 'r+') as fid:
         if '/experiment_info' in fid:
+            
             fid.remove_node('/', 'experiment_info')
         fid.create_array('/', 'experiment_info', obj = experiment_info_str)
+        
+        
 
-
-def fetch_exp_info(cur, base_name):
+def _get_exp_info(cur, base_name):
     
     cur.execute("SELECT * FROM experiments_full WHERE base_name='{}';".format(base_name))
     row = cur.fetchone()
@@ -96,6 +99,17 @@ def fetch_exp_info(cur, base_name):
     experiment_info_str = bytes(json.dumps(experiment_info), 'utf-8')
     return experiment_info_str
     
+def add_exp_info(cur, base_name, mask_dir, results_dir):
+    experiment_info_str = _get_exp_info(cur, base_name)
+    
+    mask_file = os.path.join(mask_dir, base_name + '.hdf5')
+    skeletons_file = os.path.join(results_dir, base_name + '_skeletons.hdf5')
+    features_file = os.path.join(results_dir, base_name + '_features.hdf5')
+    
+    for fname in [mask_file, skeletons_file, features_file]:
+        if os.path.exists(fname):
+            _add_exp_info(mask_file, experiment_info_str)
+
 
 
 if __name__ == '__main__':
@@ -120,13 +134,10 @@ if __name__ == '__main__':
     else:
         valid_files = walkAndFindValidFiles(video_dir_root, pattern_include = '*.hdf5')
     
-    
     for ii, mask_file in enumerate(valid_files):
         base_name = os.path.basename(mask_file).replace('.hdf5', '')
         print('{} of {} : {}'.format(ii+1, len(valid_files), base_name))
         
-        experiment_info_str = fetch_exp_info(cur, base_name)
-        add_exp_info(mask_file, experiment_info_str)
         
         skeletons_file = mask_file.replace('MaskedVideos', 'Results').replace('.hdf5', '_skeletons.hdf5')
         if os.path.exists(skeletons_file):
@@ -135,4 +146,6 @@ if __name__ == '__main__':
         features_file = mask_file.replace('MaskedVideos', 'Results').replace('.hdf5', '_features.hdf5')
         if os.path.exists(features_file):
             add_exp_info(features_file, experiment_info_str)
+        
+        add_exp_info(cur, base_name, mask_dir, results_dir)
             

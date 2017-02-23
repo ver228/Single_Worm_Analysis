@@ -11,7 +11,7 @@ import os
 
 NONE_STR = '-N/A-'
 
-def _build_dir(row):
+def build_dir(row):
     if row['strain'] == '-N/A-':
         return ''
     
@@ -42,25 +42,24 @@ def _build_dir(row):
     return os.path.join(*d_parts)
 
 
-if __name__ == '__main__':
-    conn = pymysql.connect(host='localhost')
-    cur = conn.cursor(pymysql.cursors.DictCursor)
-    
-    cur.execute('USE `single_worm_db`;')
-    
+def get_dir_from_base(base_name, cur=None):
+    if cur is None:
+        conn = pymysql.connect(host='localhost')
+        cur = conn.cursor(pymysql.cursors.DictCursor)
+        
+        cur.execute('USE `single_worm_db`;')
+
     sql = '''
     SELECT base_name, date, strain, genotype, allele, gene, 
     chromosome, sex, food, habituation, arena
     FROM experiments_full
-    ''' #some filter
-    
+    WHERE base_name={}
+    '''.format(base_name)
+
     cur.execute(sql)
     results = cur.fetchall()
-    
-    
-    all_dirs = map(_build_dir, results)
-    all_dirs = [x for x in all_dirs if x]
-    
-    
-    for x in sorted(list(set(all_dirs))):
-        print(x)
+
+    assert len(results) == 1
+    return _build_dir(results[0])
+
+

@@ -81,9 +81,10 @@ def init_database(DROP_PREV_DB = False):
     `arena_id` INT,
     `habituation_id` INT,
     `experimenter_id` INT,
-    
     `original_video` VARCHAR(700) NOT NULL UNIQUE,
     `original_video_sizeMB` FLOAT,
+    `exit_flag_id` INT NOT NULL DEFAULT 0,
+    `results_dir` VARCHAR(200),
     
     PRIMARY KEY (id),
     FOREIGN KEY (strain_id) REFERENCES strains(id),
@@ -94,7 +95,8 @@ def init_database(DROP_PREV_DB = False):
     FOREIGN KEY (food_id) REFERENCES foods(id),
     FOREIGN KEY (arena_id) REFERENCES arenas(id),
     FOREIGN KEY (habituation_id) REFERENCES habituations(id),
-    FOREIGN KEY (experimenter_id) REFERENCES experimenters(id)
+    FOREIGN KEY (experimenter_id) REFERENCES experimenters(id),
+    FOREIGN KEY (exit_flag_id) REFERENCES exit_flags(id)
     )
     '''
     
@@ -105,7 +107,7 @@ def init_database(DROP_PREV_DB = False):
     CREATE TABLE IF NOT EXISTS `exit_flags`
     (
     `id` INT NOT NULL AUTO_INCREMENT,
-    `checkpoint` VARCHAR(30) UNIQUE NOT NULL,
+    `name` VARCHAR(30) UNIQUE NOT NULL,
     `description` VARCHAR(100),
     PRIMARY KEY (id)
     );
@@ -138,10 +140,10 @@ def init_database(DROP_PREV_DB = False):
     (104, 'MISSING_ADD_FILES', 'The extra files log.csv and/or info.xml are missing.')
     ]
     
-    exit_flags_init = ('INSERT INTO exit_flags (checkpoint, description) VALUES (%s, %s)',
+    exit_flags_init = ('INSERT INTO exit_flags (name, description) VALUES (%s, %s)',
                        exit_flags_vals)
     
-    exit_flags_init_f = ('INSERT INTO exit_flags (id, checkpoint, description) VALUES (%s, %s, %s)',
+    exit_flags_init_f = ('INSERT INTO exit_flags (id, name, description) VALUES (%s, %s, %s)',
                        exit_flags_vals_failed)
     
     
@@ -149,13 +151,9 @@ def init_database(DROP_PREV_DB = False):
     
     progress_analysis_tab_sql = \
     '''
-    CREATE TABLE IF NOT EXISTS `analysis_progress`
+    CREATE TABLE IF NOT EXISTS `results_summary`
     (
     `experiment_id` INT NOT NULL,
-    `exit_flag_id` INT NOT NULL,
-    `mask_file` VARCHAR(700),
-    `skeletons_file` VARCHAR(700),
-    `features_file` VARCHAR(700),
     `n_valid_frames` INT,
     `n_missing_frames` INT,
     `n_segmented_skeletons` INT,
@@ -164,18 +162,17 @@ def init_database(DROP_PREV_DB = False):
     `n_timestamps` INT,
     `first_skel_frame` INT,
     `last_skel_frame` INT,
-    
     `fps` FLOAT,
     `total_time` FLOAT,
+    `mask_file_sizeMB` FLOAT,
     PRIMARY KEY (experiment_id),
-    FOREIGN KEY (experiment_id) REFERENCES experiments(id),
-    FOREIGN KEY (exit_flag_id) REFERENCES exit_flags(id)
+    FOREIGN KEY (experiment_id) REFERENCES experiments(id)
     );
     '''
     
     segworm_features_tab_sql = \
     '''
-    CREATE TABLE IF NOT EXISTS `segworm_features`
+    CREATE TABLE IF NOT EXISTS `segworm_info`
     (
     `id` INT NOT NULL AUTO_INCREMENT,
     `segworm_file` VARCHAR(700),
@@ -202,13 +199,13 @@ def init_database(DROP_PREV_DB = False):
     `error_95th` FLOAT,
     PRIMARY KEY (id),
     FOREIGN KEY (experiment_id) REFERENCES experiments(id),
-    FOREIGN KEY (segworm_feature_id) REFERENCES segworm_features(id)
+    FOREIGN KEY (segworm_feature_id) REFERENCES segworm_info(id)
     )
     '''
     
     all_tabs_sql = [strains_tab_sql,
-    experiment_tab_sql,
     exit_flags_tab_sql,
+    experiment_tab_sql,
     progress_analysis_tab_sql,
     segworm_features_tab_sql, 
     segworm_comparisons_tab_sql]
@@ -238,6 +235,7 @@ def init_database(DROP_PREV_DB = False):
     e.date AS date, 
     e.original_video as original_video,
     e.original_video_sizeMB as original_video_sizeMB,
+    e.results_dir  as results_dir,
     s.name AS strain,
     s.genotype AS genotype,
     a.name AS allele, 
@@ -251,6 +249,7 @@ def init_database(DROP_PREV_DB = False):
     h.name AS habituation, 
     experimenters.name AS experimenter,
     arenas.name AS arena
+    
     FROM experiments AS e 
     LEFT JOIN strains AS s ON e.strain_id = s.id
     LEFT JOIN alleles AS a ON s.allele_id = a.id
@@ -264,7 +263,9 @@ def init_database(DROP_PREV_DB = False):
     LEFT JOIN habituations AS h ON e.habituation_id = h.id
     LEFT JOIN experimenters ON e.experimenter_id = experimenters.id
     LEFT JOIN arenas ON e.arena_id = arenas.id
+    LEFT JOIN exit_flags ON e.exit_flag_id = exit_flags.id
     '''
+    
     cur.execute(create_full_view_sql)
     
     cur.execute('SHOW TABLES')
@@ -370,8 +371,8 @@ def fill_table(REPLACE_DUPLICATES = True):
     exp_init = '''
     INSERT INTO experiments (base_name, date, original_video, 
     strain_id, tracker_id, sex_id, developmental_stage_id, 
-    ventral_side_id, food_id, arena_id, habituation_id, experimenter_id) 
-    VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    ventral_side_id, food_id, arena_id, habituation_id, experimenter_id, exit_flag_id) 
+    VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, 1)
     '''
     
     if REPLACE_DUPLICATES:
@@ -388,7 +389,8 @@ def fill_table(REPLACE_DUPLICATES = True):
         food_id=food_id,
         arena_id=arena_id, 
         habituation_id=habituation_id, 
-        experimenter_id=experimenter_id;
+        experimenter_id=experimenter_id,
+        exit_flag_id=1;
         '''
     
     print('Inserting {} experiments'.format(len(exp_dat)))
@@ -423,11 +425,11 @@ def add_video_sizes():
     conn.close()
     
 if __name__ == '__main__':
-    DROP_PREV_DB = True
-    REPLACE_DUPLICATES = True
+    DROP_PREV_DB = False
+    REPLACE_DUPLICATES = False
     
     
-    #init_database(DROP_PREV_DB)
-    #fill_table(REPLACE_DUPLICATES)
+    init_database(DROP_PREV_DB)
+    fill_table(REPLACE_DUPLICATES)
     add_video_sizes()
     

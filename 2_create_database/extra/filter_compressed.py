@@ -9,7 +9,35 @@ Created on Mon Feb 13 17:45:43 2017
 
 
 import pymysql
-import os
+
+
+
+def get_all(is_swimming = False):
+    conn = pymysql.connect(host='localhost', database='single_worm_db')
+    cur = conn.cursor()
+    
+    sql_liquid = '''
+    select original_video 
+    from experiments
+    where arena like '%liquid%' 
+    order by original_video_sizeMB DESC'''
+    
+    
+    sql_agar = '''
+    select original_video 
+    from experiments
+    where arena not like '%liquid%'
+    order by original_video_sizeMB DESC'''
+    
+    if is_swimming:
+        cur.execute(sql_liquid)
+    else:
+        cur.execute(sql_agar)
+    
+    file_list = cur.fetchall()
+    file_list = [x for x, in file_list] #flatten
+
+
 
 
 def get_unfinished_in_list(list_path):
@@ -86,14 +114,7 @@ if __name__ == '__main__':
     
     print({x:len(val) for x,val in files_progress.items()})
     #%%
-    points2save = ['FEAT_CREATE']
+    points2save = ['BLOB_FEATS', 'COMPRESS', 'TRAJ_CREATE']
     files2save = sum([files_progress[x] for x in points2save], [])
-    divide_and_save(files2save, 2, 'feats')
-    
-    #%%
-#    files2save = files_progress['CONTOUR_ORIENT']
-#    with open('unfinished.txt', 'w') as fid:
-#        fid.write('\n'.join(files2save))
-    
-    
+    divide_and_save(files2save, 1, 'unfinished')
     

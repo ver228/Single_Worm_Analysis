@@ -50,9 +50,8 @@ if __name__ == '__main__':
         
         key_basenames = {_get_basename(x):x for x in flist if x}
     
-    conn = pymysql.connect(host='localhost')
+    conn = pymysql.connect(host='localhost', db='single_worm_db')
     cur = conn.cursor(pymysql.cursors.DictCursor)
-    cur.execute('USE `single_worm_db`;')
     
     segworm_basenames = list(key_basenames.keys())
     

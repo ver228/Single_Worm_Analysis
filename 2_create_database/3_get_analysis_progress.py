@@ -7,11 +7,16 @@ Created on Wed Apr 27 16:17:35 2016
 
 import os
 import pymysql.cursors
+import multiprocessing as mp
+
 from tierpsy.processing.AnalysisPoints import AnalysisPoints
 from tierpsy.analysis.stage_aligment.alignStageMotion import isGoodStageAligment
 from tierpsy.analysis.contour_orient.correctVentralDorsal import isBadVentralOrient
 from tierpsy.analysis.compress.processVideo import isGoodVideo
 from tierpsy.analysis.compress_add_data.getAdditionalData import hasAdditionalFiles
+
+from tierpsy.helper.timeCounterStr import timeCounterStr
+
 import tierpsy
 params_dir = os.path.join(os.path.dirname(tierpsy.__file__), 'misc', 'param_files')
 ON_FOOD_JSON = os.path.join(params_dir, 'single_worm_on_food.json')
@@ -115,40 +120,54 @@ def get_rows(last_valid=''):
 if __name__ == '__main__':
     UPDATE_INFO = False
     NO_CHECK = False
-    last_valid = 'WCON_EXPORT'#''# #'FEAT_CREATE' 
+    last_valid = 'FEAT_CREATE' #'WCON_EXPORT'#''# 
     
     conn, all_rows = get_rows(last_valid)
     cur = conn.cursor(pymysql.cursors.DictCursor)
     
-    print('*******', len(all_rows))
-    for irow, row in enumerate(all_rows):
-        print('{} of {}'.format(irow+1, len(all_rows)))
+    def _process_row(row):
         main_file, masks_dir, results_dir, points2check = get_results_files(row)
+        output = None
         if not NO_CHECK:
             ap_obj = AnalysisPoints(main_file, masks_dir, results_dir, ON_FOOD_JSON)
             exit_flag_id, last_point = get_last_finished(ap_obj, cur, points2check)
+            print('ID:{} -> {}'.format(row['id'], last_point))      
             
-            sql = '''
+            output = row['id'], exit_flag_id
+            
+        if UPDATE_INFO:
+            add_exp_info(cur, row['base_name'], masks_dir, results_dir)
+            print('ID:{} info added.')
+        
+        
+        return output
+    
+    def _add_row(input_dat):
+        exp_id, exit_flag_id = input_dat
+        sql = '''
             UPDATE `experiments`
             SET exit_flag_id={} 
-            WHERE id={}'''.format(exit_flag_id, row['id'])
-            cur.execute(sql)
-            conn.commit()
-        
-            print('ID:{} -> {}'.format(row['id'], last_point))
-        
-        
-        if UPDATE_INFO:
+            WHERE id={}'''.format(exit_flag_id, exp_id)
+        cur.execute(sql)
             
-            add_exp_info(cur, row['base_name'], masks_dir, results_dir)
-
+    
+    print('*******', len(all_rows))
+    progress_timer = timeCounterStr()
+    
+    n_batch = mp.cpu_count()
+    p = mp.Pool(n_batch)
+    tot = len(all_rows)
+    for ii in range(0, tot, n_batch):
+        dat = all_rows[ii:ii + n_batch]
+        for x in p.map(_process_row, dat):
+            if x is not None:
+                _add_row(x)
+        conn.commit()
+        print('{} of {}. Total time: {}'.format(ii + n_batch, 
+                  tot, progress_timer.getTimeStr()))
+    
+        
         
     cur.close()
     conn.close()
-    
-    
-    
-            
-
-#    
 

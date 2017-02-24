@@ -69,7 +69,7 @@ def init_database(DROP_PREV_DB = False):
     experiment_tab_sql = '''
     CREATE TABLE IF NOT EXISTS `experiments`
     (
-    `id` int NOT NULL AUTO_INCREMENT,
+    `id` INT NOT NULL AUTO_INCREMENT,
     `base_name` VARCHAR(200) UNIQUE NOT NULL,
     `date` DATETIME,
     `strain_id` INT,
@@ -176,7 +176,7 @@ def init_database(DROP_PREV_DB = False):
     (
     `id` INT NOT NULL AUTO_INCREMENT,
     `segworm_file` VARCHAR(700),
-    `experiment_id` INT NOT NULL,
+    `experiment_id` INT NULL,
     `fps` FLOAT,
     `total_time` FLOAT,
     `n_segworm_skeletons` INT,

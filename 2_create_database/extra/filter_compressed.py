@@ -9,7 +9,7 @@ Created on Mon Feb 13 17:45:43 2017
 
 
 import pymysql
-
+import os
 
 
 def get_all(is_swimming = False):
@@ -88,33 +88,52 @@ def divide_and_save(file_list, n_div, save_prefix):
         with open('{}_{}.txt'.format(save_prefix, ii+1), 'w') as fid:
             fid.write('\n'.join(f_list))
 
+def _get_mask_name(base_name, results_dir):
+    return os.path.join(results_dir, base_name + '.hdf5')
+
 if __name__ == '__main__':
-    
-    
+#    sql = '''
+#        select results_dir, base_name
+#        from experiments as e
+#        order by original_video_sizeMB DESC
+#        '''
+#    
+#    conn = pymysql.connect(host='localhost', database='single_worm_db')
+#    cur = conn.cursor()
+#    cur.execute(sql)
+#    rows = cur.fetchall()
+#    
+#        
+#    with open('all_files', 'w') as fid:
+#        all_masks = [_get_mask_name(*x) for x in rows]
+#        fid.write('\n'.join(all_masks))
+#%%    
     sql = '''
-        select f.checkpoint, original_video
+        select f.id, f.name, original_video, results_dir, base_name
         from experiments as e
-        join analysis_progress as a on e.id = a.experiment_id
-        join exit_flags as f on f.id = a.exit_flag_id
+        join exit_flags as f on f.id = e.exit_flag_id
         order by original_video_sizeMB DESC
         '''
     
     conn = pymysql.connect(host='localhost', database='single_worm_db')
     cur = conn.cursor()
     cur.execute(sql)
-
     rows = cur.fetchall()
     
     files_progress = {}
-    
-    for checkpoint, file in rows:
+    for exit_flag_id, checkpoint, original_video, results_dir, base_name in rows:
         if not checkpoint in files_progress:
             files_progress[checkpoint] = []
+        
+        if exit_flag_id > 2:
+            file = _get_mask_name(base_name, results_dir)
+        else:
+            file = original_video
         files_progress[checkpoint].append(file)
     
     print({x:len(val) for x,val in files_progress.items()})
-    #%%
-    points2save = ['BLOB_FEATS', 'COMPRESS', 'TRAJ_CREATE']
-    files2save = sum([files_progress[x] for x in points2save], [])
-    divide_and_save(files2save, 1, 'unfinished')
+#    #%%
+#    points2save = ['BLOB_FEATS', 'COMPRESS', 'TRAJ_CREATE']
+#    files2save = sum([files_progress[x] for x in points2save], [])
+#    divide_and_save(files2save, 1, 'unfinished')
     

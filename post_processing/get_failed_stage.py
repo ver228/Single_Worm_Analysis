@@ -26,16 +26,16 @@ if __name__ == '__main__':
     cur.execute('USE `single_worm_db`;')
     
     sql = '''
-        SELECT e.id, e.base_name, e.original_video, e.arena_id
-        FROM analysis_progress AS a
-        JOIN experiments AS e ON e.id = a.experiment_id
-        JOIN exit_flags AS f ON f.id = a.exit_flag_id
-        WHERE f.checkpoint="FAIL_STAGE_ALIGMENT"
+        SELECT e.id, e.base_name, e.results_dir, e.arena_id
+        FROM experiments AS e
+        JOIN exit_flags AS f ON f.id = e.exit_flag_id
+        WHERE f.name="FAIL_STAGE_ALIGMENT"
         '''
     
     cur.execute(sql)
     unaligned_rows = cur.fetchall()
-    unaligned_map = {x['base_name']:x['original_video'] for x in unaligned_rows}
+    get_mask_name = lambda x:os.path.join(x['results_dir'], x['base_name']+'.hdf5') 
+    unaligned_map = {x['base_name']:get_mask_name(x) for x in unaligned_rows}
     unaligned_basenames = set(unaligned_map.keys())
     
     
@@ -53,7 +53,8 @@ if __name__ == '__main__':
             ]
     
     for fname, basenames in dat_pairs:
-        flist = [unaligned_map[bn].replace('thecus', 'MaskedVideos').replace('.avi', '.hdf5') for bn in basenames]
+        print(fname, len(basenames))
+        flist = [unaligned_map[bn] for bn in basenames]
         assert all([os.path.exists(x) for x in flist])
         
         with open(fname, 'w') as fid:

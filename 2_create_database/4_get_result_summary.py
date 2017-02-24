@@ -10,8 +10,13 @@ import tables
 import pandas as pd
 import numpy as np
 import pymysql.cursors
+import multiprocessing as mp
+from functools import partial
+
 from collections import OrderedDict
 from tierpsy.analysis.feat_create.obtainFeatures import getFPS
+from tierpsy.helper.timeCounterStr import timeCounterStr
+
 
 PROGRESS_TAB_FIELD = ['experiment_id', 'n_valid_frames', 'n_missing_frames', 
     'n_segmented_skeletons', 'n_filtered_skeletons', 'n_valid_skeletons', 
@@ -93,21 +98,17 @@ def update_row(cur, row_input):
     cur.execute(sql)
     
 if __name__ == '__main__':
-    CHECK_ONLY_UNFINISHED = True
+    CHECK_ONLY_UNFINISHED = False
     
     
-    conn = pymysql.connect(host='localhost')
+    conn = pymysql.connect(host='localhost', db='single_worm_db')
     cur = conn.cursor(pymysql.cursors.DictCursor)
     
-    cur.execute('USE `single_worm_db`;')
-    
     sql = "SELECT id, results_dir, base_name FROM experiments"
-       
     cur.execute(sql)
     all_rows = cur.fetchall()
     
-    print('*******', len(all_rows))
-    for irow, row in enumerate(all_rows):
+    def _process_row(row):
         results_dir = row['results_dir']
         base_name = row['base_name']
         
@@ -116,11 +117,26 @@ if __name__ == '__main__':
         features_file = os.path.join(results_dir, base_name + '_features.hdf5')
         
         
-        row_input = get_progress_data(row['id'], mask_file, skeletons_file, features_file)
-        update_row(cur, row_input)
+        row_progress = get_progress_data(row['id'], mask_file, skeletons_file, features_file)
+        return row_progress
+    
+    
+    print('*******', len(all_rows))
+    
+    progress_timer = timeCounterStr()
+    n_batch = mp.cpu_count()
+    p = mp.Pool(n_batch)
+    tot = len(all_rows)
+    for ii in range(0, tot, n_batch):
+        dat = all_rows[ii:ii + n_batch]
+        for x in p.map(_process_row, dat):
+            if x is not None:
+                update_row(cur, x)
         conn.commit()
-        
-        print('{} of {}'.format(irow+1, len(all_rows)))
+        print('{} of {}. Total time: {}'.format(ii + n_batch, 
+                  tot, progress_timer.getTimeStr()))
+    
+    
     
     cur.close()
     conn.close()

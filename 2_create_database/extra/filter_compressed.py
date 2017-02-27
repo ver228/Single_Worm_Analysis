@@ -133,7 +133,8 @@ if __name__ == '__main__':
     
     print({x:len(val) for x,val in files_progress.items()})
 #    #%%
-#    points2save = ['BLOB_FEATS', 'COMPRESS', 'TRAJ_CREATE']
-#    files2save = sum([files_progress[x] for x in points2save], [])
-#    divide_and_save(files2save, 1, 'unfinished')
+
+    points2save = ['INT_PROFILE', 'FEAT_CREATE', 'STAGE_ALIGMENT']
+    files2save = sum([files_progress[x] for x in points2save], [])
+    divide_and_save(files2save, 1, 'unfinished')
     

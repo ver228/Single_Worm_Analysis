@@ -44,7 +44,7 @@ def update_row(cur, row_input):
 SEGWORM_FEAT_LIST = '../../files_lists/segworm_feat_files.txt'
 
 if __name__ == '__main__':
-    DEL_PREV = False
+    DEL_PREV = True
     
     with open(SEGWORM_FEAT_LIST, 'r') as fid:
         flist = [x for x in fid.read().split('\n') if x]

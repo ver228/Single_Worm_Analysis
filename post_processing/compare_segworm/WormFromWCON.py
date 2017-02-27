@@ -12,6 +12,7 @@ import tables
 import json
 import zipfile
 from scipy.interpolate import interp1d
+import time
 
 def _h_signed_area(cnt_side1, cnt_side2):
     '''calculate the contour area using the shoelace method, the sign indicate the contour orientation.'''
@@ -130,38 +131,41 @@ def _h_width(
         b = +dR[1]
         c = b * skeleton[skel_ind, 1] - a * skeleton[skel_ind, 0]
         
-        # modified from https://en.wikipedia.org/wiki/Distance_from_a_point_to_a_line
-        #a = M, b = -1
-        
-        
-        dist2cnt1 = np.sum((contour_side1 - skeleton[skel_ind])**2, axis=1)
-        dist2cnt2 = np.sum((contour_side2 - skeleton[skel_ind])**2, axis=1)
-        
-        #get a threshold otherwise it might get a faraway point that it is closer to the parallel line
-        width_th = 4*max(np.min(dist2cnt1), np.min(dist2cnt2))
-        
-        d1 = np.abs(a * contour_side1[:, 0] - b * contour_side1[:, 1] + c)
-        d1[dist2cnt1 > width_th] = np.nan
-        
-        d2 = np.abs(a * contour_side2[:, 0] - b * contour_side2[:, 1] + c)
-        d2[dist2cnt2 > width_th] = np.nan
-        
         
         try:
-            cnt1_ind = np.nanargmin(d1)
-            cnt2_ind = np.nanargmin(d2)
-            cnt_width[skel_ind] = dist2cnt1[cnt1_ind] + dist2cnt2[cnt2_ind]
+            def _get_cnt_w(cnt):
+                # modified from https://en.wikipedia.org/wiki/Distance_from_a_point_to_a_line
+                #a = M, b = -1
+                dist2cnt = np.sum((cnt - skeleton[skel_ind])**2, axis=1)
+                dist_perp = np.abs(a * cnt[:, 0] - b * cnt[:, 1] + c)
+                #get a threshold otherwise it might get a faraway point that it is closer to the parallel line
+                
+                width_th = 4*np.min(dist2cnt)
+                good = dist2cnt <= width_th
+                cnt_ind_g = np.argmin(dist_perp[good])
+                
+                cnt_ind = np.where(good)[0][cnt_ind_g]
+                
+                return dist2cnt[cnt_ind], cnt_ind
+            
+            w1, cnt1_ind = _get_cnt_w(contour_side1) 
+            w2, cnt2_ind = _get_cnt_w(contour_side2)
+            cnt_width[skel_ind] = np.sqrt(w1) + np.sqrt(w2)
+            
+            #reduce the search space for later contours
+            contour_side1 = contour_side1[cnt1_ind+1:, :]
+            contour_side2 = contour_side2[cnt2_ind+1:, :]
             
             #xx = (contour_side1[cnt1_ind,0], skeleton[skel_ind,0], contour_side2[cnt2_ind,0])
             #yy = (contour_side1[cnt1_ind,1], skeleton[skel_ind,1], contour_side2[cnt2_ind,1])
             #plt.plot(xx, yy, 'o-')
             
         except ValueError:
-            cnt1_ind = np.nan
-            cnt2_ind = np.nan
             cnt_width[skel_ind] = np.nan
     
     return cnt_width
+
+#%%
 
 def _get_skels_segworm(segworm_feat_file):
     #load segworm data
@@ -234,8 +238,10 @@ class WormFromWCON(mv.NormalizedWorm):
             return self._length
         except:
             #calculate length
-            dR = np.diff(self.skeleton, axis=0)**2
-            self._length = np.sqrt(np.sum(dR, axis=(0, 1)))
+            dX2Y2 = np.diff(self.skeleton, axis=0)**2
+            dR = np.sqrt(np.sum(dX2Y2, axis=1))
+            
+            self._length = np.sum(dR, axis=0)
             return self._length
     
     @property
@@ -274,7 +280,9 @@ class WormFromWCON(mv.NormalizedWorm):
         try:
             return self._widths
         except:
-            self._widths = np.zeros((self.n_segments, self.num_frames))
+            tic = time.time()
+            
+            self._widths = np.full((self.n_segments, self.num_frames), np.nan)
             resampling_n = self.n_segments*4
             for ss in range(self.num_frames):
                 if np.isnan(self.skeleton[0, 0, ss]):
@@ -290,6 +298,8 @@ class WormFromWCON(mv.NormalizedWorm):
                                       resampling_n)
                 if ss % 1000 == 0:
                     print('Calculating contour widths {} of {}'.format(ss, self.num_frames))
+                    print(time.time()-tic)
+                    
             return self._widths
     
     @property
@@ -307,12 +317,14 @@ if __name__ == '__main__':
     
     feat_file = os.path.join(main_dir, base_name + '_features.hdf5')
     wcon_file = os.path.join(main_dir, base_name + '.wcon.zip')
-    wcon_file = os.path.join(main_dir, base_name + '.wcon')
     
     
     nw = WormFromWCON(wcon_file)
+    
+    length = nw.length
+    #widths = nw.widths
     #print(nw.area.shape)
-    wf = mv.WormFeatures(nw)
+    #wf = mv.WormFeatures(nw)
 
 
     #wp = mv.NormalizedWormPlottable(nw, interactive=False)

@@ -8,17 +8,14 @@ Created on Mon Feb 20 18:35:13 2017
 import os
 import tables
 import numpy as np
-import matplotlib.pylab as plt
+#import matplotlib.pylab as plt
 import pandas as pd
 import open_worm_analysis_toolbox as mv
 from WormFromWCON import WormFromWCON
 
-from tierpsy.analysis.wcon_export.exportWCON import __addOMGFeat
-#%%
 feats_conv = pd.read_csv('conversion_table.csv').dropna()
 FEATS_MAT_MAP = {row['feat_name_tierpsy']:row['feat_name_segworm'] for ii, row in feats_conv.iterrows()}
 FEATS_OW_MAP = {row['feat_name_tierpsy']:row['feat_name_openworm'] for ii, row in feats_conv.iterrows()}
-#%%
 
 def _get_skels(feat_file):
     try:
@@ -100,16 +97,6 @@ def read_feats_segworm(segworm_feat_file):
         
     return feats_segworm
 
-def read_feats(feat_file):
-    with pd.HDFStore(feat_file, 'r') as fid:
-        try:
-            features_timeseries = fid['/features_timeseries']
-            feats = __addOMGFeat(fid, features_timeseries, worm_id=1)
-        except KeyError:
-            feats = None
-    return feats
-
-
 def plot_skel_diff(skeletons, skel_segworm):
     delS = skeletons-skel_segworm
     R_error = delS[:,:,0]**2 + delS[:,:,1]**2
@@ -155,99 +142,80 @@ def get_wcon_feats(_data):
     feats_wcon = {key:np.array(val, np.float) for key, val in  feats_wcon.items() if val is not None}
     return feats_wcon
 #%%
+def plot_feats_comp(feats1, feats2):
+    tot = min(feats1['length'].size, feats2['length'].size)
+    fields = set(feats1.keys()) & set(feats2.keys())
+    ii = 0
+    
+    sub1, sub2 = 5, 6
+    tot_sub = sub1*sub2
+    
+    all_figs = []
+    for field in sorted(fields):
+        if feats1[field].size >= tot:            
+            if ii % tot_sub == 0:
+                fig = plt.figure(figsize=(14,12))
+                all_figs.append(fig)
+                
+            sub_ind = ii%tot_sub + 1
+            
+            ii += 1
+            plt.subplot(sub1, sub2, sub_ind)
+            
+            xx = feats1[field][:tot]
+            yy = feats2[field][:tot]
+            
+            ll = plt.plot(xx, yy, '.', label=field)
+            plt.plot(plt.xlim(), plt.xlim(), 'k--')
+            #plt.title(field)
+            plt.legend(handles=ll, loc="lower right", fancybox=True)
+            
+    return all_figs
+
+
+#%%
 if __name__ == '__main__':
     
     main_dir = '/Users/ajaver/OneDrive - Imperial College London/Local_Videos/single_worm/global_sample_v3/'
-    base_name = 'N2 on food L_2010_08_03__10_17_54___7___1'
+    #base_name = 'N2 on food L_2010_08_03__10_17_54___7___1'
+    base_name = 'N2 on food R_2011_09_13__11_59___3___3'
+    #base_name = 'N2 on food R_2010_10_15__15_36_54___7___10'
     
-    #from tierpsy.analysis.wcon_export.exportWCON import exportWCON
-    #feat_file = os.path.join(main_dir, base_name + '_features.hdf5')
-    #exportWCON(feat_file, READ_FEATURES=True)
+    if False:    
+        from tierpsy.analysis.wcon_export.exportWCON import exportWCON
+        feat_file = os.path.join(main_dir, base_name + '_features.hdf5')
+        exportWCON(feat_file, READ_FEATURES=True)
     
     feat_mat_file = os.path.join(main_dir, base_name + '_features.mat')
     wcon_file = os.path.join(main_dir, base_name + '.wcon.zip')
+    skel_file = os.path.join(main_dir, base_name + '_skeletons.hdf5')
     
     nw = WormFromWCON(wcon_file)
     wf = mv.WormFeatures(nw)
     #%%
     feats_mat = read_feats_segworm(feat_mat_file)
     feats_wcon = get_wcon_feats(nw._wcon_feats['data'][0])
-    feats_ow = {key:wf._features[val].value for key, val in  FEATS_OW_MAP.items()}
+    feats_ow = {key:np.array(wf._features[val].value, np.float) for key, val in  FEATS_OW_MAP.items()}
     #%%
-    feats1 = feats_wcon
-    feats2 = feats_ow
-    
-    tot = min(feats1['length'].size, feats2['length'].size)
-    
-    fields = set(feats1.keys()) & set(feats2.keys())
-    
-    plt.figure()
-    ii = 0
-    for field in sorted(fields):
-        if feats1[field].size >= tot:
-            
-            ii += 1
-            plt.subplot(4, 4, ii)
-            xx = feats1[field][:tot]
-            yy = feats2[field][:tot]
-            
-            plt.plot(xx, yy, '.')
-            plt.plot(plt.xlim(), plt.xlim(), 'k--')
-            plt.title(field)
     
     #%%
-#    for segworm_feat_file in f_list:        
-#        print(segworm_feat_file)
-#        feat_file = segworm_feat_file.replace('_features.mat', '_features.hdf5')
-#        skel_file = segworm_feat_file.replace('_features.mat', '_skeletons.hdf5')
-#        
+    import matplotlib.pyplot as plt
+    
+    
+    save_path = '/Users/ajaver/Documents/GitHub/single-worm-analysis/post_processing/compare_segworm'
+    
+    for name, feats_d in [('tierpsy', feats_ow), ('schafer', feats_mat)]:
+        all_figs = plot_feats_comp(feats_wcon, feats_d)
+        for ii, fig in enumerate(all_figs):
+            fig.savefig('{}/WCON_vs_{}_{}.png'.format(save_path, name, ii+1), bbox_inches='tight')
+        
+    
+        
+
+#%%
+#tot = min(feats_mat['length'].size, feats_ow['length'].size, feats_wcon['length'].size)
 #
-#        if not all(os.path.exists(x) for x in [feat_file, skel_file, segworm_feat_file]):
-#            continue
-#        
-#        skeletons = _get_skels(feat_file)
-#        skel_segworm = _get_skels_segworm(segworm_feat_file)
-#        
-#        if skeletons is None:
-#            continue
-#        
-#        skeletons, skel_segworm = _align_skeletons(skel_file, skeletons, skel_segworm)
-#        plot_skel_diff(skeletons, skel_segworm)
-#        
-#        
-#        #%%
-#        feats_segworm = read_feats_segworm(segworm_feat_file)
-#        feats = read_feats(feat_file)
-#        fields = set(feats.keys()) & set(feats_segworm.keys())
-#        for x in sorted(fields):
-#            N1 = 1 if isinstance(feats[x], (int,float)) else feats[x].shape
-#            N2 = 1 if isinstance(feats_segworm[x], (int,float)) else feats_segworm[x].shape
-#            print(x, N1, N2)
-#            
-#        #%%
-#        tot = skeletons.shape[0]
-#        plt.figure()
-#                
-#        ii = 0
-#        for field in sorted(fields):
-#            if feats[field].shape[0] >= tot:
-#                ii += 1
-#                plt.subplot(6, 10, ii)
-#                xx = feats[field][:tot]
-#                yy = feats_segworm[field][:tot]
-#                
-#                plt.plot(xx, yy, '.')
-#                plt.plot(plt.xlim(), plt.xlim(), 'k--')
-#                plt.title(field)
-#        #%%
-#        break
-#        #%%
-#        
-#        #%%
-#        
-#
-## 
-##        break
-
-
-
+#for feat_dic in [feats_ow, feats_wcon]:
+#    #plt.figure()
+#    plt.plot(feats_mat['length'][:tot], feat_dic['length'][:tot], '.')
+#    plt.plot(plt.xlim(), plt.xlim(), 'k--')

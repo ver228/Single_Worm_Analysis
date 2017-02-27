@@ -17,3 +17,13 @@ python processMultipleFiles.py --video_dir_root Y:\single_worm\thecus --mask_dir
 
 %SWIMMING
 python3 processMultipleFiles.py --video_dir_root /Volumes/behavgenom_archive\$/single_worm/thecus --mask_dir_root /Volumes/behavgenom_archive\$/single_worm/MaskedVideos --json_file ~/Documents/GitHub/tierpsy-tracker/tierpsy/misc/param_files/single_worm_swimming.json --videos_list ~/Documents/GitHub/single-worm-analysis/all_swim_1.txt --analysis_type all --end_point FEAT_CREATE --max_num_process 6 --copy_unfinished
+
+
+/Users/ajaver/miniconda/bin/python '/Users/ajaver/Documents/GitHub/tierpsy-tracker/cmd_scripts/processMultipleFiles.py' --mask_dir_root /Volumes/behavgenom_archive$/single_worm/unfinished --results_dir_root /Volumes/behavgenom_archive$/single_worm/unfinished --json_file ~/Documents/GitHub/tierpsy-tracker/tierpsy/misc/param_files/single_worm_on_food.json --videos_list ~/Documents/GitHub/single-worm-analysis/unfinished_1.txt --analysis_type all --max_num_process 25 --copy_unfinished --end_point FEAT_CREATE
+
+
+/Users/ajaver/miniconda/bin/python '/Users/ajaver/Documents/GitHub/tierpsy-tracker/cmd_scripts/processMultipleFiles.py' --mask_dir_root /Volumes/behavgenom_archive$/single_worm/unfinished --results_dir_root /Volumes/behavgenom_archive$/single_worm/unfinished --json_file ~/Documents/GitHub/tierpsy-tracker/tierpsy/misc/param_files/single_worm_on_food.json --videos_list ~/Documents/GitHub/single-worm-analysis/unfinished_1.txt --max_num_process 25 --copy_unfinished --analysis_checkpoints STAGE_ALIGMENT --tmp_dir_root ''
+
+
+
+/Users/ajaver/miniconda/bin/python '/Users/ajaver/Documents/GitHub/tierpsy-tracker/cmd_scripts/processMultipleFiles.py' --mask_dir_root '/Users/ajaver/OneDrive - Imperial College London/Local_Videos/single_worm/global_sample_v3' --results_dir_root '/Users/ajaver/OneDrive - Imperial College London/Local_Videos/single_worm/global_sample_v3' --json_file single_worm_on_food.json --pattern_include "*.hdf5" --max_num_process 25 --analysis_checkpoints FEAT_CREATE WCON_EXPORT --tmp_dir_root ''

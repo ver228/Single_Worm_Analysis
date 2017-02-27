@@ -9,7 +9,7 @@ Created on Thu Feb 23 18:29:24 2017
 import os
 import tables
 import numpy as np
-import pymysql
+#import pymysql
 import multiprocessing as mp
 
 #from tierpsy.analysis.stage_aligment.alignStageMotion import alignStageMotion
@@ -96,18 +96,24 @@ if __name__ == '__main__':
     results = cur.fetchall()
     
     
-#    p = mp.Pool(20)    
-#    all_timestamps = []
-#    n = 100
-#    for i in range(0, len(results), n):
-#        dat = results[i:i + n]
-#        res = list(p.imap(correct_data, dat))
-#        all_timestamps.append(res)
-        
-        
-    files2process = []
-    for input_dat in results:
-        correct_data(input_dat)
+    p = mp.Pool(20)    
+    all_timestamps = []
+    n = 100
+    for i in range(0, len(results), n):
+        dat = results[i:i + n]
+        res = list(p.imap(correct_data, dat))
+        all_timestamps.append(res)
+    
+#    import glob
+#    main_dir = '/Users/ajaver/OneDrive - Imperial College London/Local_Videos/single_worm/global_sample_v3/'
+#    f_list = glob.glob(os.path.join(main_dir, '*_features.mat'))
+#    
+#    base_names = [os.path.basename(x).replace('_features.mat', '') for x in f_list]
+#    results_dir = [os.path.dirname(x) for x in f_list]
+#    
+#    results = [(0, x, '', y) for x,y in zip(base_names, results_dir)]
+#    for input_dat in results:
+#        correct_data(input_dat)
     
     #%%    
 #    with open("missing.txt", 'w') as fid:

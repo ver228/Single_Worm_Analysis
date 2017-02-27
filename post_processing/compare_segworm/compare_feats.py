@@ -208,14 +208,3 @@ if __name__ == '__main__':
         all_figs = plot_feats_comp(feats_wcon, feats_d)
         for ii, fig in enumerate(all_figs):
             fig.savefig('{}/WCON_vs_{}_{}.png'.format(save_path, name, ii+1), bbox_inches='tight')
-        
-    
-        
-
-#%%
-#tot = min(feats_mat['length'].size, feats_ow['length'].size, feats_wcon['length'].size)
-#
-#for feat_dic in [feats_ow, feats_wcon]:
-#    #plt.figure()
-#    plt.plot(feats_mat['length'][:tot], feat_dic['length'][:tot], '.')
-#    plt.plot(plt.xlim(), plt.xlim(), 'k--')

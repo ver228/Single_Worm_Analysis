@@ -8,10 +8,11 @@ Created on Mon Feb 20 18:35:13 2017
 import os
 import tables
 import numpy as np
-#import matplotlib.pylab as plt
+import matplotlib.pylab as plt
 import pandas as pd
 import open_worm_analysis_toolbox as mv
 from WormFromWCON import WormFromWCON
+from tierpsy.analysis.feat_create.obtainFeaturesHelper import WormFromTable
 
 feats_conv = pd.read_csv('conversion_table.csv').dropna()
 FEATS_MAT_MAP = {row['feat_name_tierpsy']:row['feat_name_segworm'] for ii, row in feats_conv.iterrows()}
@@ -189,22 +190,24 @@ if __name__ == '__main__':
     feat_mat_file = os.path.join(main_dir, base_name + '_features.mat')
     wcon_file = os.path.join(main_dir, base_name + '.wcon.zip')
     skel_file = os.path.join(main_dir, base_name + '_skeletons.hdf5')
-    
-    nw = WormFromWCON(wcon_file)
-    wf = mv.WormFeatures(nw)
-    #%%
     feats_mat = read_feats_segworm(feat_mat_file)
-    feats_wcon = get_wcon_feats(nw._wcon_feats['data'][0])
+    
+    worm = WormFromTable(skel_file, 1)
+    worm.correct_schafer_worm()
+    nw = worm.to_open_worm()
+    
+    wf = mv.WormFeatures(nw)
     feats_ow = {key:np.array(wf._features[val].value, np.float) for key, val in  FEATS_OW_MAP.items()}
+    all_figs = plot_feats_comp(feats_mat, feats_ow)
     #%%
+#   ##feats_wcon = get_wcon_feats(nw._wcon_feats['data'][0])
+     
+#    
+#    
+#    save_path = '/Users/ajaver/Documents/GitHub/single-worm-analysis/post_processing/compare_segworm'
+#    
+#    for name, feats_d in [('tierpsy', feats_ow), ('schafer', feats_mat)]:
+#        all_figs = plot_feats_comp(feats_wcon, feats_d)
+#        for ii, fig in enumerate(all_figs):
+#            fig.savefig('{}/WCON_vs_{}_{}.png'.format(save_path, name, ii+1), bbox_inches='tight')
     
-    #%%
-    import matplotlib.pyplot as plt
-    
-    
-    save_path = '/Users/ajaver/Documents/GitHub/single-worm-analysis/post_processing/compare_segworm'
-    
-    for name, feats_d in [('tierpsy', feats_ow), ('schafer', feats_mat)]:
-        all_figs = plot_feats_comp(feats_wcon, feats_d)
-        for ii, fig in enumerate(all_figs):
-            fig.savefig('{}/WCON_vs_{}_{}.png'.format(save_path, name, ii+1), bbox_inches='tight')

@@ -72,7 +72,8 @@ def _make_eccentricty_test_cnt(npoints=49):
     cnt_ventral, cnt_dorsal = zip(*[_split_cnt(cnt, npoints) for cnt in cnt_points])
     return cnt_ventral, cnt_dorsal
     
-def eccentricity_test():    
+def eccentricity_test():
+    #%%
     skels = _make_eccentricty_test_skels()
     bw = mv.BasicWorm.from_skeleton_factory(skels);
     nw = mv.NormalizedWorm.from_BasicWorm_factory(bw)
@@ -87,7 +88,9 @@ def eccentricity_test():
     
     
     plt.figure()
+    plt.subplot(2,1,1)
     plt.plot(wf._features['posture.eccentricity'].value)
+    plt.subplot(2,1,2)
     plt.plot(wf_cnt._features['posture.eccentricity'].value)
 
 #%%
@@ -116,7 +119,7 @@ wf = mv.WormFeatures(nw)
 plt.plot(wf.get_features('posture.primary_wavelength').value)
     
     
-
+eccentricity_test()
 #%%
 
 

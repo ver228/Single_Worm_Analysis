@@ -11,6 +11,8 @@ import numpy as np
 import matplotlib.pylab as plt
 import pandas as pd
 import open_worm_analysis_toolbox as mv
+import time
+
 from WormFromWCON import WormFromWCON
 from tierpsy.analysis.feat_create.obtainFeaturesHelper import WormFromTable
 
@@ -143,7 +145,7 @@ def get_wcon_feats(_data):
     feats_wcon = {key:np.array(val, np.float) for key, val in  feats_wcon.items() if val is not None}
     return feats_wcon
 #%%
-def plot_feats_comp(feats1, feats2):
+def plot_feats_comp(feats1, feats2, is_hist=False):
     tot = min(feats1['length'].size, feats2['length'].size)
     fields = set(feats1.keys()) & set(feats2.keys())
     ii = 0
@@ -166,10 +168,20 @@ def plot_feats_comp(feats1, feats2):
             xx = feats1[field][:tot]
             yy = feats2[field][:tot]
             
-            ll = plt.plot(xx, yy, '.', label=field)
-            plt.plot(plt.xlim(), plt.xlim(), 'k--')
-            #plt.title(field)
-            plt.legend(handles=ll, loc="lower right", fancybox=True)
+            if is_hist:
+                dat = np.log2(xx/yy + 1)
+                bad = np.isnan(dat) | np.isinf(dat)
+                dat = dat[~bad]
+                plt.hist(dat)
+                plt.title(field)
+            else:
+                ll = plt.plot(xx, yy, '.', label=field)
+                plt.plot(plt.xlim(), plt.xlim(), 'k--')
+                #plt.title(field)
+                plt.legend(handles=ll, loc="lower right", fancybox=True)
+            
+            
+           
             
     return all_figs
 
@@ -182,6 +194,8 @@ if __name__ == '__main__':
     base_name = 'N2 on food R_2011_09_13__11_59___3___3'
     #base_name = 'N2 on food R_2010_10_15__15_36_54___7___10'
     
+    #
+
     if False:    
         from tierpsy.analysis.wcon_export.exportWCON import exportWCON
         feat_file = os.path.join(main_dir, base_name + '_features.hdf5')
@@ -197,6 +211,7 @@ if __name__ == '__main__':
     nw = worm.to_open_worm()
     
     wf = mv.WormFeatures(nw)
+<<<<<<< Updated upstream
     feats_ow = {key:np.array(wf._features[val].value, np.float) for key, val in  FEATS_OW_MAP.items()}
     all_figs = plot_feats_comp(feats_mat, feats_ow)
     #%%
@@ -211,3 +226,46 @@ if __name__ == '__main__':
 #        for ii, fig in enumerate(all_figs):
 #            fig.savefig('{}/WCON_vs_{}_{}.png'.format(save_path, name, ii+1), bbox_inches='tight')
     
+=======
+    
+    bw = mv.BasicWorm.from_contour_factory(nw.dorsal_contour.copy(), nw.ventral_contour.copy());
+    tic = time.time()
+    nw2 = mv.NormalizedWorm.from_BasicWorm_factory(bw)
+    print(time.time()-tic)
+    wf2 = mv.WormFeatures(nw2)
+    #%%
+    feats_mat = read_feats_segworm(feat_mat_file)
+    feats_wcon = get_wcon_feats(nw._wcon_feats['data'][0])
+    #feats_ow = {key:np.array(wf._features[val].value, np.float) for key, val in  FEATS_OW_MAP.items() if val in wf._features}
+    feats_ow2 = {key:np.array(wf2._features[val].value, np.float) for key, val in  FEATS_OW_MAP.items()}
+    #%%
+    save_path = '/Users/ajaver/Documents/GitHub/single-worm-analysis/post_processing/compare_segworm'
+    all_figs = plot_feats_comp(feats_mat, feats_ow2)
+    for ii, fig in enumerate(all_figs):
+        fig.savefig('{}/MAT_vs_OW_{}.png'.format(save_path, ii+1), bbox_inches='tight')
+    #%%
+#    tt = 0
+#    plt.figure(figsize=(15,5))
+#    plt.subplot(1,3,1)
+#    plt.plot(nw.skeleton_x[:, tt], nw.skeleton_y[:, tt], '.')
+#    plt.plot(nw2.skeleton_x[:, tt], nw2.skeleton_y[:, tt], '.')
+#    plt.subplot(1,3,2)
+#    plt.plot(nw.angles[:, tt]*180)
+#    plt.plot(nw2.angles[:, tt])
+#    plt.subplot(1,3,3)
+#    plt.plot(nw.widths[:, tt])
+#    plt.plot(nw2.widths[:, tt])
+#    
+    
+    #%%
+#    save_path = '/Users/ajaver/Documents/GitHub/single-worm-analysis/post_processing/compare_segworm'
+#    for name, feats_d in [('schafer', feats_mat)]:
+#        all_figs = plot_feats_comp(feats_ow, feats_d)
+    
+    #%%
+    #('tierpsy', feats_ow), 
+    #for name, feats_d in [('schafer', feats_mat)]:
+    #    all_figs = plot_feats_comp(feats_ow, feats_d)
+        #for ii, fig in enumerate(all_figs):
+        #    fig.savefig('{}/WCON_vs_{}_{}.png'.format(save_path, name, ii+1), bbox_inches='tight')
+>>>>>>> Stashed changes

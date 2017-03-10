@@ -60,8 +60,10 @@ with open(f_lists, 'r') as fid:
     files_lists = [x for x in fid.read().split('\n') if x.endswith('.avi') and not x.endswith('_seg.avi')]
     
     #directories that are from unclear data
-    bad_parts = ['control', 'bad', 'old', 'log_file_naming_issues', 'test', 'unanalysable']
-    files_lists = [x for x in files_lists if not any(bad_pre in x.lower() for bad_pre in bad_parts)]
+    #bad_parts = ['bad', 'log_file_naming_issues','unanalysable', 'control', 'old',  'test']
+    bad_parts = ['bad', 'log_file_naming_issues','unanalysable', 'test'] #control
+    
+    #files_lists = [x for x in files_lists if not any(bad_pre in x.lower() for bad_pre in bad_parts)]
  
     base_lists = [os.path.splitext(x.rpartition('\\')[-1])[0] for x in files_lists]
     
@@ -71,8 +73,8 @@ print(prefix_f, len(onlyInFeats - prefix_wshafer))
 
 prefix2copy = prefix_wshafer - prefix_movies
 
+print('Missing in feats {}'.format(len((prefix_old_feats-prefix_movies)-prefix2copy)))
 #%%
-    
 movies2copy = []
 for fname in files_lists:
     bn = fname.rpartition('\\')[-1]
@@ -83,7 +85,6 @@ for fname in files_lists:
             
     
     not_in_2009 = [x for x in movies2copy if not '2009' in x]
-
 
 
 #%%
@@ -113,8 +114,8 @@ def print_date_counts(prefixes):
 print_date_counts(prefix2copy)
 print('%%%%%%%%%%%%%%%%%%%%%%')
 print_date_counts(onlyInFeats)
-print('%%%%%%%%%%%%%%%%%%%%%%')
-print_date_counts(prefix_old_feats)
+#print('%%%%%%%%%%%%%%%%%%%%%%')
+#print_date_counts(prefix_old_feats)
 
 
 

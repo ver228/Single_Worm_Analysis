@@ -14,7 +14,7 @@ import pandas as pd
 
 from tierpsy.analysis.wcon_export.exportWCON import __addOMGFeat
 
-feats_conv = pd.read_csv('conversion_table.csv').dropna()
+feats_conv = pd.read_csv('../conversion_table.csv').dropna()
 FEATS_MAP = {row['feat_name_tierpsy']:row['feat_name_segworm'] for ii, row in feats_conv.iterrows()}
     
 
@@ -169,7 +169,7 @@ if __name__ == '__main__':
     f_list = glob.glob(os.path.join(main_dir, '*_features.mat'))
     
     #dd = [_get_valid_groups(x) for x in f_list]
-    f_list = [f_list[x] for x in [2,3]]#[21, 36, 48]]
+    #f_list = [f_list[x] for x in [2,3]]#[21, 36, 48]]
     
     for segworm_feat_file in f_list:        
         print(segworm_feat_file)
@@ -190,31 +190,31 @@ if __name__ == '__main__':
         plot_skel_diff(skeletons, skel_segworm)
         
         
+#        #%%
+#        feats_segworm = read_feats_segworm(segworm_feat_file)
+#        feats = read_feats(feat_file)
+#        fields = set(feats.keys()) & set(feats_segworm.keys())
+#        for x in sorted(fields):
+#            N1 = 1 if isinstance(feats[x], (int,float)) else feats[x].shape
+#            N2 = 1 if isinstance(feats_segworm[x], (int,float)) else feats_segworm[x].shape
+#            print(x, N1, N2)
+#            
+#        #%%
+#        tot = skeletons.shape[0]
+#        plt.figure()
+#                
+#        ii = 0
+#        for field in sorted(fields):
+#            if feats[field].shape[0] >= tot:
+#                ii += 1
+#                plt.subplot(6, 10, ii)
+#                xx = feats[field][:tot]
+#                yy = feats_segworm[field][:tot]
+#                
+#                plt.plot(xx, yy, '.')
+#                plt.plot(plt.xlim(), plt.xlim(), 'k--')
+#                plt.title(field)
         #%%
-        feats_segworm = read_feats_segworm(segworm_feat_file)
-        feats = read_feats(feat_file)
-        fields = set(feats.keys()) & set(feats_segworm.keys())
-        for x in sorted(fields):
-            N1 = 1 if isinstance(feats[x], (int,float)) else feats[x].shape
-            N2 = 1 if isinstance(feats_segworm[x], (int,float)) else feats_segworm[x].shape
-            print(x, N1, N2)
-            
-        #%%
-        tot = skeletons.shape[0]
-        plt.figure()
-                
-        ii = 0
-        for field in sorted(fields):
-            if feats[field].shape[0] >= tot:
-                ii += 1
-                plt.subplot(6, 10, ii)
-                xx = feats[field][:tot]
-                yy = feats_segworm[field][:tot]
-                
-                plt.plot(xx, yy, '.')
-                plt.plot(plt.xlim(), plt.xlim(), 'k--')
-                plt.title(field)
-        #%%
-        break
+        
         #%%
         

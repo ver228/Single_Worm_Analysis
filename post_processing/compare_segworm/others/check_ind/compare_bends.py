@@ -36,7 +36,7 @@ if __name__ == '__main__':
     main_dir = '/Users/ajaver/OneDrive - Imperial College London/Local_Videos/single_worm/global_sample_v3/'
     
     flist = glob.glob(os.path.join(main_dir, "N2*_features.mat"))
-    
+    flist = flist[:2]
     n_batch = mp.cpu_count()
     p = mp.Pool(n_batch)
     feats = p.map(_get_feats, flist)
@@ -70,7 +70,7 @@ if __name__ == '__main__':
         return good and not bad
     #%%
     for base_name, feats_mat, feats_ow in feats:
-        feats_ow = {x:feats_ow[x] for x in feats_ow if not _is_good(x)} 
+        feats_ow = {x:feats_ow[x] for x in feats_ow if  _is_good(x)} 
         #{x:feats_mat[x] for x in feats_mat if any(ff in x for ff in ('head_width'))}
         all_figs = plot_feats_comp(feats_ow, feats_mat, is_correct=True)
         for fig in all_figs:
@@ -80,33 +80,32 @@ if __name__ == '__main__':
         
     #%%
     from feat_helper import FEATS_MAT_MAP, FEATS_OW_MAP
-    
-    bad_feats = {x:FEATS_MAT_MAP[x] for x in FEATS_MAT_MAP if  not _is_good(x)}
+    bad_feats = {x:FEATS_MAT_MAP[x] for x in FEATS_MAT_MAP if  _is_good(x)}
     #%%
     for key, val in bad_feats.items():
         print(val.replace('/', '.')[1:])
     
-    #%%
-    '''
-    path.range has a very straight forward calculation, it seems wrong in segworm...
-    range -3 to 3??
-    
-    '''
-    
-    field = 'path_range'
-    plt.figure()
-    plt.subplot(1,2,1)
-    plt.plot(feats_ow['path_curvature'])
-    plt.subplot(1,2,2)
-    plt.plot(feats_mat['path_range'])
-    plt.suptitle(field)
-
-    #%%
-    
-    xx = feats_ow['path_curvature']
-    yy = feats_mat['path_range']
-    ax = plt.subplot(1,1,1)
-    ax.scatter(xx,yy)
+#    #%%
+#    '''
+#    path.range has a very straight forward calculation, it seems wrong in segworm...
+#    range -3 to 3??
+#    
+#    '''
+#    
+#    field = 'path_range'
+#    plt.figure()
+#    plt.subplot(1,2,1)
+#    plt.plot(feats_ow['path_curvature'])
+#    plt.subplot(1,2,2)
+#    plt.plot(feats_mat['path_range'])
+#    plt.suptitle(field)
+#
+#    #%%
+#    
+#    xx = feats_ow['path_curvature']
+#    yy = feats_mat['path_range']
+#    ax = plt.subplot(1,1,1)
+#    ax.scatter(xx,yy)
     
     #%%
     #%%

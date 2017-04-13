@@ -80,11 +80,4 @@ if __name__ == '__main__':
     #%%
     export_rand_sample(group_by_point['WCON_EXPORT'], segworm_db_mapper)
     
-    
-    
-    
-    
-    
-    
- #%%
    

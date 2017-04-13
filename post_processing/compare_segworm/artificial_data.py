@@ -17,8 +17,8 @@ def rotate_points(theta):
     
 def make_ellipse(major_axis, minor_axis, npoints = 49, max_ang = 2*np.pi):
     ang = np.linspace(0, max_ang, npoints)
-    xx = major_axis*np.sin(ang)
-    yy = minor_axis*np.cos(ang)
+    xx = major_axis*np.cos(ang)
+    yy = minor_axis*np.sin(ang)
     
     points = np.vstack((xx,yy))
     return points
@@ -42,59 +42,67 @@ def add_rotations(points, n_angles, ang_shift=0):
     return points_rot
 
 #%%
-
-def _make_eccentricty_test(npoints=49, n_angles=8, n_minor_axis=10):
-    
-    points = []
-    for minor_axis in np.linspace(0.1, 1, n_minor_axis):
-        ellipse_p= make_ellipse(1, minor_axis, npoints = npoints)
-        ellipse_rot = add_rotations(ellipse_p, n_angles)
+class Eccentricity_Test():
+    def __init__(self, n_points=49, n_angles=8, n_eccentricities=10):
+        self.n_points = n_points
+        self.n_angles = n_angles
+        self.eccentricity_range = np.linspace(0.1, 1, n_eccentricities)
         
-        points += ellipse_rot
-
-    return points
-
-def _make_eccentricty_test_skels(npoints=49):
-    #let's remove the last contour. The algorithm will not work if there are redundant points
-    skels = [x[:, :-1] for x in _make_eccentricty_test(npoints+1)]
-    return skels
-
-
-def _make_eccentricty_test_cnt(npoints=49):
-    n_cnt_points = npoints*2 - 2
-    cnt_points = _make_eccentricty_test(n_cnt_points)
+        
+        #create circular/elliptical skeletons
+        #we remove the last point so the skeletons does not overlaps
+        skels = [x[:, :-1] for x in self._make_eccentricty_test(self.n_points+1)]
+        bw = mv.BasicWorm.from_skeleton_factory(skels);
+        nw = mv.NormalizedWorm.from_BasicWorm_factory(bw)
+        self.wf_skel = mv.WormFeatures(nw)
+        
+        #create circular/elliptical contours
+        n_cnt_points = self.n_points*2 - 2
+        cnt_points = self._make_eccentricty_test(n_cnt_points)
+        
+        cnt_ventral, cnt_dorsal = zip(*[split_cnt(cnt, self.n_points) for cnt in cnt_points])
+        bw_cnt = mv.BasicWorm.from_contour_factory(cnt_ventral, cnt_dorsal);
+        nw_cnt = mv.NormalizedWorm.from_BasicWorm_factory(bw_cnt)
+        self.wf_cnt = mv.WormFeatures(nw_cnt)
+        
     
-    cnt_ventral, cnt_dorsal = zip(*[split_cnt(cnt, npoints) for cnt in cnt_points])
-    return cnt_ventral, cnt_dorsal
+    def _make_eccentricty_test(self, n_points):
+        points = []
+        for ecc in self.eccentricity_range:
+            minor_axis = 1-ecc**2
+            ellipse_p= make_ellipse(1, minor_axis, n_points)
+            ellipse_rot = add_rotations(ellipse_p, self.n_angles)
+            
+            points += ellipse_rot
     
-def eccentricity_test():
-    #%%
-    skels = _make_eccentricty_test_skels()
-    bw = mv.BasicWorm.from_skeleton_factory(skels);
-    nw = mv.NormalizedWorm.from_BasicWorm_factory(bw)
-    wf = mv.WormFeatures(nw)
-    
-    
-    
-    cnt_ventral, cnt_dorsal = _make_eccentricty_test_cnt(npoints=49)
-    bw_cnt = mv.BasicWorm.from_contour_factory(cnt_ventral, cnt_dorsal);
-    nw_cnt = mv.NormalizedWorm.from_BasicWorm_factory(bw_cnt)
-    wf_cnt = mv.WormFeatures(nw_cnt)
-    
-    #%%
-    plt.figure()
-    plt.subplot(2,2,1)
-    plt.plot(wf._features['posture.eccentricity'].value, '.-')
-    skel_angs = wf._get_and_log_feature('posture.eccentricity_and_orientation', internal_request=True).orientation
-    plt.subplot(2,2,2)
-    plt.plot(skel_angs, '.-')
+        return points
+        
+        
+        
     
     
-    plt.subplot(2,2,3)
-    plt.plot(wf_cnt._features['posture.eccentricity'].value, '.-')
-    cnt_angs = wf_cnt._get_and_log_feature('posture.eccentricity_and_orientation', internal_request=True).orientation
-    plt.subplot(2,2,4)
-    plt.plot(cnt_angs, '.-')
+    def plot(self):
+        real_eccentricities = [[x]*self.n_angles for x in self.eccentricity_range]
+        real_eccentricities = sum(real_eccentricities, [])
+        
+        plt.figure()
+        plt.subplot(2,1,1)
+        plt.plot(self.wf_skel._features['posture.eccentricity'].value, 'x-')
+        plt.plot(real_eccentricities, '.-')
+#        skel_angs = self.wf_skel._get_and_log_feature('posture.eccentricity_and_orientation', internal_request=True).orientation
+#        plt.subplot(2,2,2)
+#        plt.plot(skel_angs, 's-')
+        
+        
+        plt.subplot(2,1,2)
+        plt.plot(self.wf_cnt._features['posture.eccentricity'].value, 'x-')
+        plt.plot(real_eccentricities, '.-')
+#        cnt_angs = self.wf_cnt._get_and_log_feature('posture.eccentricity_and_orientation', internal_request=True).orientation
+#        plt.subplot(2,2,4)
+#        plt.plot(cnt_angs, 's-')
+#%%
+test_ecc = Eccentricity_Test()
+test_ecc.plot()
     #%%
 #    for ff in range(n_angles):
 #        #ang_t = angles_to_rotate[ff]*180/np.pi
@@ -112,7 +120,7 @@ def eccentricity_test():
 #        
 #        plt.plot(wwx, wwy, '.-')
 #        #plt.title('{} {}'.format(ang_t, skel_angs[ff]))
-#        plt.axis('equal')
+#        plt.axis('equal') 
 #%%
 def make_wave(wavelength, npoints=49, major_axis_l=1, minor_axis_l=0.1, ang_shift=0):
     xx = np.linspace(0, major_axis_l, npoints)
@@ -198,24 +206,74 @@ def wavelength_test():
         
         #plt.title('{} {}'.format(ang_t, skel_angs[ff]))
         plt.axis('equal')
+#%%
+#angles = nw.angles
+#for set_n in range(0, angles.shape[1], 8):
+#    plt.figure()
+#    
+#    for ii in range(set_n, set_n+8):
+#        plt.subplot(1,2,1)
+#        plt.plot(angles[:, ii])
+#        
+#        plt.subplot(1,2,2)
+#        plt.plot(nw.skeleton_x[:,ii], nw.skeleton_y[:,ii])
+#        plt.xlim((-1, 1))
+#        plt.ylim((-1, 1))
+#        plt.axis('equal')
+    
 
 #%%
 #eccentricity_test()
 #wavelength_test()
-
+#posture.bends.head
+#posture.bends.neck
+#posture.bends.midbody
+#posture.bends.hips
+#posture.bends.tail
+#posture.bends.head.mean
+#posture.bends.neck.mean
+#posture.bends.midbody.mean
+#posture.bends.hips.mean
+#posture.bends.tail.mean
+#posture.bends.head.std_dev
+#posture.bends.neck.std_dev
+#posture.bends.midbody.std_dev
+#posture.bends.hips.std_dev
+#posture.bends.tail.std_dev
 #%%
 
-wp = mv.prefeatures.basic_worm.WormPartition()
-worm_parts = wp.worm_partitions
-worm_parts_f = ['head', 'neck', 'midbody', 'hips', 'tail']
-
-#make_circle(radius, npoints=49,  max_ang = 2*np.pi)
-
-
-ini, fin = worm_parts['head']
-rad = (fin - ini)/49
-center = (fin+ini)/2
-
+#wp = mv.prefeatures.basic_worm.WormPartition()
+#worm_parts = wp.worm_partitions
+#worm_parts_f = ['head', 'neck', 'midbody', 'hips', 'tail']
+#
+##make_circle(radius, npoints=49,  max_ang = 2*np.pi)
+#
+#all_x = [np.zeros(1)]
+#all_y = [np.zeros(1)]
+#
+#A = 1
+#for field in worm_parts_f:
+#    ini, fin = worm_parts[field]
+#    n_points = (fin - ini)
+#    radius = (n_points)/2
+#    center = (fin+ini)/2
+#    
+#    x, y = make_circle(radius, npoints = n_points, max_ang = np.pi)
+#    x += center
+#    y *= A*y
+#    
+#    A *= -1
+#    all_x.append(x[:1:-1])
+#    all_y.append(y[:1:-1])
+#
+#xx = np.hstack(all_x)
+#yy = np.hstack(all_y)
+#
+#skels = [np.vstack((xx,yy)), np.vstack((xx,-yy))]
+##%%
+#bw = mv.BasicWorm.from_skeleton_factory(skels);
+#nw = mv.NormalizedWorm.from_BasicWorm_factory(bw)
+#wf = mv.WormFeatures(nw)
 
 #%%
 #xx = np.linspace(0, 1, 49)

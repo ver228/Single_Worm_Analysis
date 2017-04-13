@@ -1,0 +1,1 @@
+sudo mount -t cifs "//netapp3/behavgenom_archive$" "/Volumes/behavgenom_archive$" -o username=ajaver,domain=CSCDOM,uid=1000

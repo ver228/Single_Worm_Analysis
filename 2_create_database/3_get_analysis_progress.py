@@ -15,13 +15,10 @@ from tierpsy.analysis.contour_orient.correctVentralDorsal import isBadVentralOri
 from tierpsy.analysis.compress.processVideo import isGoodVideo
 from tierpsy.analysis.compress_add_data.getAdditionalData import hasAdditionalFiles
 
-from tierpsy.helper.timeCounterStr import timeCounterStr
+from tierpsy.helper.misc import TimeCounter
 
-import tierpsy
-params_dir = os.path.join(os.path.dirname(tierpsy.__file__), 'misc', 'param_files')
-ON_FOOD_JSON = os.path.join(params_dir, 'single_worm_on_food.json')
-
-
+from tierpsy import DFLT_PARAMS_PATH
+ON_FOOD_JSON = os.path.join(DFLT_PARAMS_PATH, 'single_worm_on_food.json')
 
 from helper.db_info import add_exp_info
 
@@ -152,7 +149,7 @@ if __name__ == '__main__':
             
     
     print('*******', len(all_rows))
-    progress_timer = timeCounterStr()
+    progress_timer = TimeCounter()
     
     n_batch = mp.cpu_count()
     p = mp.Pool(n_batch)
@@ -164,7 +161,7 @@ if __name__ == '__main__':
                 _add_row(x)
         conn.commit()
         print('{} of {}. Total time: {}'.format(ii + n_batch, 
-                  tot, progress_timer.getTimeStr()))
+                  tot, progress_timer.get_time_str()))
     
         
         

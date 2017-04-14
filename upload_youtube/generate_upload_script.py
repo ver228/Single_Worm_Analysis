@@ -11,12 +11,17 @@ from tierpsy.analysis.wcon_export.exportWCON import getWCONMetaData
 
 from googleapiclient.errors import ResumableUploadError
 
-    
-def resample_and_upload(masked_video, 
+INSERT_SQL = '''UPDATE experiments SET youtube_id="{1}" WHERE base_name="{0}";'''
+youtube_client = get_authenticated_service()    
+
+def resample_and_upload(base_name, 
+                        results_dir,
                         speed_up, 
                         db_cursor,
                         skip_invalid = False,
                         backup_file='youtube_ids.txt'):
+    
+    masked_video = os.path.join(results_dir, base_name + '.hdf5')
     
     WEBPAGE_INFO="For more information and the complete collection of experiments visit the C.elegans behavioural database - http://movement.openworm.org\n"
     LOCAL_ROOT_DIR = "/Volumes/behavgenom_archive$/single_worm/thecus/"
@@ -67,7 +72,7 @@ def resample_and_upload(masked_video,
             with open(backup_file, 'a') as file:
                 file.write('{}\t{}\n'.format(base_name, youtube_id))
             
-            sql = INSERT_SQL.format(experiment_id, youtube_id)       
+            sql = INSERT_SQL.format(base_name, youtube_id)       
             db_cursor.execute(sql)
             
             
@@ -89,25 +94,15 @@ def resample_and_upload(masked_video,
 def _correct_from_list():
     with open('youtube_ids.txt', 'r+') as file:
         data = file.read()
+    data = [x.split('\t') for x in data.split('\n') if x]
     
-    for bn, yid in [x.split('\t') for x in data.split('\n') if x]:
-        sql = '''
-        SELECT id
-        FROM experiments
-        WHERE base_name = "{}"
-        '''.format(bn)
+    assert len(set(x[0] for x in data)) == len(data)
+    
+    for bn, yid in data:
+        sql = INSERT_SQL.format(bn, yid)
         
-        cur.execute(sql)
-        
-        eid, = cur.fetchone()
-        sql = INSERT_SQL.format(eid, yid)       
         cur.execute(sql)
         conn.commit()
-
-
-INSERT_SQL = '''INSERT INTO external_links (experiment_id, youtube_id) VALUES ({0},"{1}")
-  ON DUPLICATE KEY UPDATE youtube_id="{1}";'''
-
 
 if __name__ == '__main__':
     skip_invalid = True 
@@ -117,28 +112,22 @@ if __name__ == '__main__':
     conn = pymysql.connect(host='localhost', database='single_worm_db')
     cur = conn.cursor()
     
+    
+    min_valid = 'FEAT_CREATE'
     ori_vid_sql = '''
     SELECT id, base_name, results_dir
     FROM experiments
-    WHERE exit_flag_id > 1
-    AND id NOT IN (
-    SELECT experiment_id
-    FROM external_links
-    WHERE youtube_id IS NOT NULL
-    )
-    ORDER BY id'''
+    WHERE exit_flag_id >= (SELECT f.id FROM exit_flags as f WHERE f.name="{}")
+    AND exit_flag_id < 100
+    AND youtube_id IS NULL
+    ORDER BY id'''.format(min_valid)
+    
+    
     cur.execute(ori_vid_sql)
     results = cur.fetchall()
     
-    
-    
-    youtube_client = get_authenticated_service()
-    
-    #results = results[10212:10213]
     for ii, (experiment_id, base_name, results_dir) in enumerate(results):
-        masked_video = os.path.join(results_dir, base_name + '.hdf5')
-        
-        youtube_id = resample_and_upload(masked_video, speed_up, cur, skip_invalid)
+        youtube_id = resample_and_upload(base_name, results_dir, speed_up, cur, skip_invalid)
         print('{} of {} %%%%%%%%%%%%%%%%%%%%%%%%%%%'.format(ii+1, len(results)))
         conn.commit()
 

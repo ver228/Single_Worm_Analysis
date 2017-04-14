@@ -96,10 +96,10 @@ def _get_exp_info(cur, base_name):
     experiment_info_str = bytes(json.dumps(experiment_info), 'utf-8')
     return experiment_info_str
     
-def add_exp_info(cur, base_name, mask_dir, results_dir):
+def add_exp_info(cur, base_name, results_dir):
     experiment_info_str = _get_exp_info(cur, base_name)
     
-    mask_file = os.path.join(mask_dir, base_name + '.hdf5')
+    mask_file = os.path.join(results_dir, base_name + '.hdf5')
     skeletons_file = os.path.join(results_dir, base_name + '_skeletons.hdf5')
     features_file = os.path.join(results_dir, base_name + '_features.hdf5')
     
@@ -107,7 +107,7 @@ def add_exp_info(cur, base_name, mask_dir, results_dir):
         if os.path.exists(fname):
             _add_exp_info(mask_file, experiment_info_str)
 
-
+    
 
 if __name__ == '__main__':
     video_dir_root = '/Volumes/behavgenom_archive$/single_worm/MaskedVideos'
@@ -118,31 +118,16 @@ if __name__ == '__main__':
     cur = conn.cursor(pymysql.cursors.DictCursor)
     cur.execute('USE `single_worm_db`;')
     
-    if ONLY_UNFINSHED:
-        sql = '''
-        SELECT mask_file 
-        FROM analysis_progress
-        WHERE exit_flag_id <= (SELECT f.id FROM exit_flags as f WHERE checkpoint="CONTOUR_ORIENT")
-        AND exit_flag_id > (SELECT f.id FROM exit_flags as f WHERE checkpoint="COMPRESS")
-        '''
-        cur.execute(sql)
-        valid_files = cur.fetchall()
-        valid_files = [x['mask_file'] for x in valid_files]
-    else:
-        valid_files = walkAndFindValidFiles(video_dir_root, pattern_include = '*.hdf5')
+    sql = '''
+    SELECT base_name, results_dir
+    FROM experiments
+    WHERE exit_flag_id > (SELECT f.id FROM exit_flags as f WHERE name="COMPRESS")
+    '''
+    cur.execute(sql)
+    valid_files = cur.fetchall()
     
-    for ii, mask_file in enumerate(valid_files):
-        base_name = os.path.basename(mask_file).replace('.hdf5', '')
-        print('{} of {} : {}'.format(ii+1, len(valid_files), base_name))
-        
-        
-        skeletons_file = mask_file.replace('MaskedVideos', 'Results').replace('.hdf5', '_skeletons.hdf5')
-        if os.path.exists(skeletons_file):
-            add_exp_info(skeletons_file, experiment_info_str)
     
-        features_file = mask_file.replace('MaskedVideos', 'Results').replace('.hdf5', '_features.hdf5')
-        if os.path.exists(features_file):
-            add_exp_info(features_file, experiment_info_str)
+    for ii, row in enumerate(valid_files):
+        print('{} of {} : {}'.format(ii+1, len(valid_files), row['base_name']))
+        add_exp_info(cur, **row)
         
-        add_exp_info(cur, base_name, mask_dir, results_dir)
-            

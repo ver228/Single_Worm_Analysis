@@ -135,8 +135,5 @@ if __name__ == '__main__':
         conn.commit()
         print('{} of {}. Total time: {}'.format(ii + n_batch, 
                   tot, progress_timer.getTimeStr()))
-    
-    
-    
     cur.close()
     conn.close()

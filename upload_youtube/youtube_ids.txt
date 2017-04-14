@@ -1,0 +1,158 @@
+422 ED3017 on food L_2011_02_22__12_52_19___2___3	vA8M5_XXbX0
+532 CB4853 swimming_2011_02_22__15_14_18___2___7	5RqI7Nq4vas
+655 JU394 swimming_2011_02_22__12_33_56___2___2	SxaieUDD4oA
+422 ED3017 on food L_2011_02_22__12_53_00___2___4	_RKSefQLpXs
+532 CB4853 on food L_2011_02_22__14_56_28___2___6	UO2NIW-kE0M
+655 JU394 on food L_2011_02_22__12_15_50___2___1	f0CROry1JiA
+N2 on food L_2011_02_22__15_32_41___2___8	KXXYYTNLXNU
+N2 swimming_2011_02_22__15_55_18___2___9	1AGa3Vg-tr4
+422 ED3017 swimming_2011_02_22__13_11_14___2___5	2snrMYGmWPo
+343 ED3021 on food R_2010_11_25__16_35_30___2___8	fiPVy-0oI6I
+247 JU438 on food R_2010_11_25__12_12_50___2___3	tdYEqPlYYrg
+814 JU393 on food R_2010_11_25__12_19_58___2___4	FphVg2j-q1Y
+798 JU258 on food L_2010_11_25__15_55_51___2___6	AuIFE6_7yB0
+247 JU438 on food R_2010_11_25__11_53_54___2___2	moR5bpc0if4
+247 JU438 on food R_2010_11_25__11_35_10___2___1	3lrrfc0qe2M
+798 JU258 on food L_2010_11_25__16_15_30___2___7	aZdkzHjZW_g
+343 ED3021 on food R_2010_11_25__16_53_32___2___9	SviYSsEeuaY
+814 JU393 on food R_2010_11_25__12_38_46___2___5	ljvhlIQWsYk
+N2 swimming_2011_02_24__16_53_06___2___10	EGKM59vI5wc
+240 CF2046 on food L_2011_02_24__16_02_36___2___7	oPFAuTWwdaA
+240 CF2046 swimming_2011_02_24__16_20_19___2___8	l-E7JRHsa6E
+135 CB4852 on food L_2011_02_24__17_14_02___2___11	oUCBlOD_-Wc
+532 CB4853 swimming_2011_02_24__15_11_09___2___4	qtuvYCEafnY
+371 JU402 on food R_2011_02_24__12_17_47___2___1	AruSTnof7eo
+N2 on food R_2011_02_24__16_35_59___2___9	HF5ikELU5hE
+371 JU402 swimming_2011_02_24__12_35_14___2___2	HVCV3_gpTAY
+135 CB4852 swimming_2011_02_24__17_33_20___2___12	oAlCA4_rRas
+422 ED3017 swimming_2011_02_24__15_48_27___2___6	_9FR2oKsAUM
+422 ED3017 on food R_2011_02_24__15_28_19___2___5	wCTpkiLw_0E
+532 CB4853 on food L_2011_02_24__14_52_39___2___3	H5tp7cIkehM
+343 ED3021 swimming_2011_04_12__15_26_29___2___8	5sQHBnKqr2Y
+798 JU258 on food R_2011_04_12__11_53_56___2___3	CuH5pjifqg4
+300 LSJ1 swimming_2011_04_12__16_39_40___2___12	D74KMHsNR-k
+300 LSJ1 on food L_2011_04_12__16_19_28___2___11	fvnIIn09lkk
+814 JU393 swimming_2011_04_12__11_37_42___2___2	sbS173kOf50
+422 ED3017 on food L_2011_02_22__12_52_19___2___3	-Rh5_KLDGp4
+532 CB4853 swimming_2011_02_22__15_14_18___2___7	cr9mDGK01jQ
+655 JU394 swimming_2011_02_22__12_33_56___2___2	CzIo4AJAlhA
+422 ED3017 on food L_2011_02_22__12_52_19___2___3	egG6U5v2K5s
+422 ED3017 on food L_2011_02_22__12_52_19___2___3	XbWyetMMJoI
+532 CB4853 swimming_2011_02_22__15_14_18___2___7	0zq6p1WCeRE
+655 JU394 swimming_2011_02_22__12_33_56___2___2	907o1IDUAQE
+422 ED3017 on food L_2011_02_22__12_53_00___2___4	Zdt7rBCZIAI
+532 CB4853 on food L_2011_02_22__14_56_28___2___6	uX5XF23lIJI
+655 JU394 on food L_2011_02_22__12_15_50___2___1	78q63j8o6FI
+N2 on food L_2011_02_22__15_32_41___2___8	RhY548jxmFY
+N2 swimming_2011_02_22__15_55_18___2___9	k2eC2kJM3N4
+422 ED3017 swimming_2011_02_22__13_11_14___2___5	3Y_HwLF_hnk
+343 ED3021 on food R_2010_11_25__16_35_30___2___8	kcfmh7JXQcQ
+247 JU438 on food R_2010_11_25__12_12_50___2___3	M_6XlUAJWRw
+814 JU393 on food R_2010_11_25__12_19_58___2___4	acSmNMqvB28
+431 JU298 on foor R_2011_04_12__12_29_49___2___5	VGJsAHJELrs
+343 ED3021 on food R_2011_04_12__15_08_27___2___7	VexV_9tKDdc
+247 JU438 on food L_2011_04_12__15_44_20___2___9	4h5IUjxxrhw
+431 JU298 swimming_2011_04_12__12_47_16___2___6	paUqYDz1_SE
+814 JU393 on food L_2011_04_12__11_19_09___2___1	JrQufhHfjxs
+247 JU438 swimming_2011_04_12__16_02_35___2___10	TSe7NlRAi0c
+240 CF2046 swimming_2011_03_04__12_00_16___2___4	1ukzJe5OgA4
+247 JU438 swimming_2011_03_04__13_09_43___2___8	R7d2hVQtsyo
+N2 on food R_2011_03_04__11_06_35___2___1	tD95NzZkrFQ
+N2 swimming_2011_03_04__11_24_59___2___2	w_DXz4HDpJk
+532 CB4853 swimming_2011_03_04__12_35_58___2___6	EP8D0gmpoQU
+247 JU438 on food L_2011_03_04__12_52_54___2___7	8Vx2B19q8Zo
+532 CB4853 on food L_2011_03_04__12_17_57___2___5	kLA-1918-LY
+240 CF2046 on food L_2011_03_04__11_42_13___2___3	CuLAaPIsLPo
+135 CB4852 swimming_2011_03_28__13_02_26___2___4	M2_RpmNJX30
+764 ED3049 on food L_2011_03_28__15_09_58___2___5	jZsmLnaFo1U
+N2 swimming_2011_03_28__12_31_33___2___2	W1Jo3dpMDuk
+N2 on food R_2011_03_28__15_43_47___2___7	B7CfyDmcHRg
+135 CB4852 on food R_2011_03_28__12_44_03___2___3	UmRj046bz1c
+N2 swimming_2011_03_28__16_01_40___2___8	T2xXJnWHV34
+N2 on food R_2011_03_28__12_08_49___2___1	-GpQzL5J7jI
+764 ED3049 swimming_2011_03_28__15_29_22___2___6	FJkx-Pff0xA
+431 JU298 on food L_2011_03_10__16_27_44___2___11	N9E4NVrD2vA
+300 LSJ1 on food L_2011_03_10__12_38_13___2___7	IQvZE6HrzkM
+575 JU440 swimming_2011_03_10__11_52_47___2___4	W_mgi-x-rXo
+swimming_2011_03_10__16_06_17___2___10	_r2mYyGVC4A
+300 LSJ1 swimming_2011_03_10__12_55_16___2___8	wsMOPehF7GM
+507 ED3054 on food R_2011_03_10__10_51_48___2___1	Jjbh2sa8vq8
+431 JU298 swimming_2011_03_10__16_45_33___2___12	7FaHdCOwYR0
+507 ED3054 swimming_2011_03_10__11_10_02___2___2	DdZPkRb6ejw
+575 JU440 on food L_2011_03_10__11_28_16___2___3	jJrtI-V5ePE
+883 RC301 on food R_2011_03_10__12_03_10___2___5	asuaRoer0rw
+883 RC301 swimming_2011_03_10__12_20_13___2___6	JiegQrJqWZE
+N2 on food L_2011_03_10__15_49_09___2___9	B8nvJLFhOOk
+814 JU393 swimming_2011_03_08__15_35_07___2___8	ugTPDPL7BHw
+814 JU393 on food R_2011_03_08__15_17_46___2___7	MO3wEyKXQyo
+300 LSJ1 swimming_2011_03_08__16_44_51___2___12	IlqabbAaGMc
+247 JU438 swimming_2011_03_08__12_39_28___2___4	YZ4WIe0Vrs8
+N2 swimming_2011_03_08__13_14_51___2___6	4J0R8N-wvNo
+800 MY16 swimming_2011_03_08__12_05_18___2___2	Yh4fvyDr-sQ
+883 RC301 on food R_2011_03_08__15_52_46___2___9	EKdbFzSRMDk
+883 RC301 swimming_2011_03_08__16_09_52___2___10	HQ_g1kKn9mw
+399 CB4956 swimming_2011_03_08__17_20_53___2___14	9Q6v32wwmYg
+800 MY16 on food L_2011_03_08__11_47_46___2___1	jboGxQJkkoo
+300 LSJ1 on food L_2011_03_08__16_28_05___2___11	Nh1_1QZE2M4
+399 CB4956 on food R_2011_03_08__17_02_24___2___13	kHBD3EksIvE
+N2 on food R_2011_03_08__12_57_09___2___5	i_cswVMB0A4
+798 JU258 on food R_2011_03_24__12_07_36___2___1	H6cz4Z88zYk
+N2 on food L_2011_03_24__16_37_52___2___4	aJYVSMKQAyM
+N2 swimming_2011_03_24__12_59_42___2___3	4KQtIrCv7FI
+N2 on food_2011_03_24__12_42_49___2___2	MBWtgffEwZ8
+N2 on food_2011_04_11__16_39_31___2___1	nOq7eGHPYAo
+764 ED3049 on food R_2011_04_13__15_39_35___2___9	ICqu0iWxpDM
+422 ED3017 on food R_2011_04_13__11_53_58___2___5	Cza1JgRqipw
+764 ED3049 swimming_2011_04_13__15_56_54___2___10	BhompBbhQCo
+507 ED3054 swimming_2011_04_13__12_47_43___2___8	CDaae8QhMN0
+371 JU402 on food R_2011_04_13__10_45_59___2___1	APJL2fllEjg
+422 ED3017 swimming_2011_04_13__12_11_15___2___6	j25IiNJQNsI
+507 ED3054 on food R_2011_04_13__12_29_12___2___7	hNgHsT_5Knc
+N2 swimming_2011_04_13__11_36_54___2___4	etPl4gvFR0w
+371 JU402 swimming_2011_04_13__11_05_40___2___2	d4K-RE0cqjc
+N2 on food L_2011_04_13__11_19_12___2___3	s-g8tg9Nwjc
+247 JU438 on food L_2011_03_17__11_28_17___2___1	DHx6R4_AyXs
+800 MY16 on food R_2011_03_17__12_39_59___2___5	9sajLeVm01s
+247 JU438 swimming_2011_03_17__11_45_53___2___2	1uOOlZHH3e4
+431 JU298 swimming_2011_03_17__12_18_55___2___4	hJ_bZC-CEQU
+972 JU345 on food L_2011_03_17__16_28_09___2___11	0GJ1HrAIF58
+800 MY16 swimming_2011_03_17__12_57_25___2___6	Lnc2PCiJwQY
+575 JU440 swimming_2011_03_17__15_34_00___2___8	l3uCYXfCqOo
+972 JU345 swimming_2011_03_17__16_44_49___2___12	KsETifJNKjY
+431 JU298 on food L_2011_03_17__12_02_58___2___3	OcFvTF1zlcc
+575 JU440 on food L_2011_03_17__15_17_20___2___7	PEBC6xxbRzE
+N2 swimming_2011_03_17__16_10_25___2___10	2lzPog7NCa4
+N2 on food L_2011_03_17__15_53_13___2___9	iCghgst5bnU
+431 JU298 swimming_2011_03_03__11_35_43___2___2	Y6bk4fvwzww
+507 ED3054 on food L_2011_03_03__16_16_48___2___9	Flww_wtMTuE
+800 MY16 swimming_2011_03_03__16_01_31___2___8	2JHpFmbsCtM
+N2 swimming_2011_03_03__12_49_11___2___6	oHMpnxgfyyc
+431 JU298 on food R_2011_03_03__11_17_44___2___1	19VMX4uFpKM
+507 ED3054 swimming_2011_03_03__16_34_53___2___10	juyUOW6N8DU
+764 ED3049 swimming_2011_03_03__12_11_22___2___4	C0Cx-5soOV4
+N2 on food L_2011_03_03__12_28_51___2___5	oQdJicA0_Ak
+764 ED3049 on food R_2011_03_03__11_53_03___2___3	3g6DH4cxjWw
+883 RC301 n food R_2011_03_03__16_52_07___2___11	_JPIu1mBkpI
+800 MY16 on food R_2011_03_03__15_44_09___2___7	uMh5Kb2-zuE
+883 RC301 swimming_2011_03_03__17_10_46___2___12	6foWoobqYME
+431 JU298 swimming_2011_04_14__12_21_27___2___4	hx8AI_VPEHA
+431 JU298 on food R_2011_04_14__12_04_15___2___3	ThZeePsmR6c
+575 JU440 on food L_2011_04_14__12_39_24___2___5	ZW788orDFKY
+575 JU440 swimming_2011_04_14__12_57_33___2___6	STmLpZ7w5vo
+343 ED3021 on food R_2011_04_14__11_30_17___2___1	DeuJg7hNp_I
+343 ED3021 swimming_2011_04_14__11_47_26___2___2	U_6t3QjarX4
+247 JU438 swimming_2011_03_07__12_00_23___2___4	6pxelPaTsts
+883 RC301 swimming_2011_03_07__16_14_56___2___12	tiPfAR5oA_I
+399 CB4856 on food R_2011_03_07__16_32_48___2___13	06Rqsaw-1Rg
+300 LSJ1 swimming_2011_03_07__15_42_03___2___10	ljFON7zSLsk
+800 MY16 swimming_2011_03_07__11_25_45___2___2	VRA1MQ5M-Rk
+N2 swimming_2011_03_07__12_34_13___2___6	R0EggcjCjEk
+300 LSJ1 on food R_2011_03_07__15_23_45___2___9	JqZbgAnZAHo
+883 RC301 on food R_2011_03_07__15_57_59___2___11	xk824V6ezXU
+814 JU393 on food R_2011_03_07__12_52_37___2___7	FyE3kq95ync
+814 JU393 swimming_2011_03_07__13_10_40___2___8	wiEUA96nOps
+800 MY16 on food R_2011_03_07__11_07_40___2___1	CZjmKZWw6FM
+399 CB4856 swimming_2011_03_07__16_51_50___2___14	JWabToZ9nTU
+N2 on food L_2011_03_07__12_17_13___2___5	GEwpkOXXexA
+247 JU438 on food L_2011_03_07__11_42_08___2___3	Sw-4ZbhvYEA
+135 CB4852 on food L_2011_03_09__16_32_51___2___11	zB49eD-0HR0

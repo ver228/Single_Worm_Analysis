@@ -1,18 +1,20 @@
 #!/usr/bin/python
-
+#pip install google-api-python-client
+#pip install httplib2
 import http.client
-import httplib2
 import os
 import random
 import sys
 import time
-
+import httplib2
 from apiclient.discovery import build
 from apiclient.errors import HttpError
 from apiclient.http import MediaFileUpload
 from oauth2client.client import flow_from_clientsecrets
 from oauth2client.file import Storage
 from oauth2client.tools import argparser, run_flow
+
+
 
 
 # Explicitly tell the underlying HTTP transport library not to retry, since

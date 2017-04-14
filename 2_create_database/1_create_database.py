@@ -203,12 +203,24 @@ def init_database(DROP_PREV_DB = False):
     )
     '''
     
+    links_tab_sql = '''
+    CREATE TABLE IF NOT EXISTS `external_links`
+    (
+    `experiment_id` int NOT NULL AUTO_INCREMENT,
+    youtube_id VARCHAR(40),
+    zenodo_id VARCHAR(40),
+    PRIMARY KEY (experiment_id),
+    FOREIGN KEY (experiment_id) REFERENCES experiments(id)
+    );
+    '''
+    
     all_tabs_sql = [strains_tab_sql,
     exit_flags_tab_sql,
     experiment_tab_sql,
     progress_analysis_tab_sql,
     segworm_features_tab_sql, 
-    segworm_comparisons_tab_sql]
+    segworm_comparisons_tab_sql,
+    links_tab_sql]
     
     for s_tab in SIMPLE_TABLES:
         sql = simple_tab_sql_str.format(s_tab)

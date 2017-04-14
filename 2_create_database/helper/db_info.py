@@ -33,14 +33,11 @@ def db_row2dict(row):
         
     experiment_info['timestamp'] = row['date'].isoformat()
     
-    
-    
     experiment_info['arena'] = {
             "kind":'petri',
             "diameter":35,
             "orient":"imaged through plate"
             }
-    
     
     if 'NGM liquid drop' in row['arena']:
         media = "NGM liquid drop + NGM agar low peptone"

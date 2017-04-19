@@ -17,7 +17,6 @@ import json
 feats_conv = pd.read_csv('conversion_table.csv').dropna()
 FEATS_MAT_MAP = {row['feat_name_tierpsy']:row['feat_name_segworm'] for ii, row in feats_conv.iterrows()}
 FEATS_OW_MAP = {row['feat_name_tierpsy']:row['feat_name_openworm'] for ii, row in feats_conv.iterrows()}
-#%%
 
 def read_feats_segworm(segworm_feat_file):
     with tables.File(segworm_feat_file, 'r') as fid: 

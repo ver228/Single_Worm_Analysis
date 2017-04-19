@@ -211,22 +211,7 @@ if __name__ == '__main__':
     nw = worm.to_open_worm()
     
     wf = mv.WormFeatures(nw)
-<<<<<<< Updated upstream
-    feats_ow = {key:np.array(wf._features[val].value, np.float) for key, val in  FEATS_OW_MAP.items()}
-    all_figs = plot_feats_comp(feats_mat, feats_ow)
-    #%%
-#   ##feats_wcon = get_wcon_feats(nw._wcon_feats['data'][0])
-     
-#    
-#    
-#    save_path = '/Users/ajaver/Documents/GitHub/single-worm-analysis/post_processing/compare_segworm'
-#    
-#    for name, feats_d in [('tierpsy', feats_ow), ('schafer', feats_mat)]:
-#        all_figs = plot_feats_comp(feats_wcon, feats_d)
-#        for ii, fig in enumerate(all_figs):
-#            fig.savefig('{}/WCON_vs_{}_{}.png'.format(save_path, name, ii+1), bbox_inches='tight')
-    
-=======
+
     
     bw = mv.BasicWorm.from_contour_factory(nw.dorsal_contour.copy(), nw.ventral_contour.copy());
     tic = time.time()
@@ -268,4 +253,4 @@ if __name__ == '__main__':
     #    all_figs = plot_feats_comp(feats_ow, feats_d)
         #for ii, fig in enumerate(all_figs):
         #    fig.savefig('{}/WCON_vs_{}_{}.png'.format(save_path, name, ii+1), bbox_inches='tight')
->>>>>>> Stashed changes
+

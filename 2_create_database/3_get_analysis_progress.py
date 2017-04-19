@@ -117,7 +117,7 @@ def get_rows(last_valid=''):
 if __name__ == '__main__':
     UPDATE_INFO = False
     NO_CHECK = False
-    last_valid = 'FEAT_CREATE' #'WCON_EXPORT'#''# 
+    last_valid = ''#'FEAT_CREATE' #'WCON_EXPORT'#''# 
     
     conn, all_rows = get_rows(last_valid)
     cur = conn.cursor(pymysql.cursors.DictCursor)
@@ -163,8 +163,6 @@ if __name__ == '__main__':
         print('{} of {}. Total time: {}'.format(ii + n_batch, 
                   tot, progress_timer.get_time_str()))
     
-        
-        
     cur.close()
     conn.close()
 

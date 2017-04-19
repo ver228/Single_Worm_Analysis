@@ -1,0 +1,800 @@
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/npr-8(tm1553)X@FX1553/food_OP50/XX/30m_wait/anticlockwise/npr-8 (tm1553) on food R_2010_01_25__12_16_57___7___3.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/flp-9(ok2730)IV@RB2067/food_OP50/XX/30m_wait/clockwise/flp-9 (ok2730)IV on food L_2010_01_14__11_14_49___1___3.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/WT/N2/food_OP50/XX/30m_wait/clockwise/N2 on food L_2010_03_09__10_43_41___6___1.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/trp-2(gk298)III@VC602/food_OP50/XX/30m_wait/anticlockwise/trp-2 (ok298) on food R_2010_04_23__15_58_45___6___14.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/mec-12(e1605)III;bzIs17[pmec-4::YC2.12;lin-15(+)]@AQ1031/food_OP50/XX/30m_wait/anticlockwise/mec-12 (e1605) on food R_2010_10_28__11_58_00___8___4.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/ser-1(ok345)X@DA1814/food_OP50/XX/30m_wait/anticlockwise/ser-1 (ok345) on food R_2009_12_17__11_25___3___1.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/gpa-11(pk349)II@NL787/food_OP50/XX/30m_wait/anticlockwise/gpa-11 (pk349)II on food R_2010_03_04__13_02_30___6___13.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/npr-3(tm1583)IV@FX1583/food_OP50/XX/30m_wait/anticlockwise/npr-3 (tm1583)IV on food R_2010_01_26__14_54_36___2___9.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/trpa-2(tm3092)I@FX3092/food_OP50/XX/30m_wait/clockwise/mo5b5.6 (tm3092) on food L_2010_06_15__11_50_11___4___4.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/egl-37(n742)II@MT1543/food_OP50/XX/30m_wait/clockwise/egl-37 (n742)II on food L_2010_08_06__11_35_57___6___3.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/egl-33(n151)I@MT151/food_OP50/XX/30m_wait/clockwise/egl-33 (n151)I on food L_2010_05_14__15_34_42___2___14.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/flp-1(yn2)IV@NY7/food_OP50/XX/30m_wait/clockwise/flp-1 (yn2) on food L_2010_01_14__12_54_03___2___8.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/acr-21(ok1314)III@RB1250/food_OP50/XX/30m_wait/clockwise/acr-21 (ok1314)III on food L_2010_02_23__09_53_01___1___3.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/flp-6(ok3056)V@VC2324/food_OP50/XX/30m_wait/anticlockwise/flp-6 (ok3056)V on food R_2010_01_14__11_36_37___8___4.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/flp-12(ok2409)X@RB1863/food_OP50/XX/30m_wait/clockwise/flp-12 (ok2409)X on food L_2010_01_11__12_14_47___2___3.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/pkg-1(n478)IV@MT1073/food_OP50/XX/30m_wait/clockwise/egl-4 (n478)IV on food L_2010_05_14__10_50_01___4___3.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/WT/N2/food_OP50/XX/30m_wait/clockwise/N2 on food L_2010_01_26__10_44_01___4___1.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/unc-101(m1)I@DR1/food_OP50/XX/30m_wait/anticlockwise/unc-101 (m1)I on food R_2010_04_13__10_44_45___4___2.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/ocr-3(ok1559)X@RB1374/food_OP50/XX/30m_wait/clockwise/ocr-3 (ok1557) on food L_2010_04_21__10_50_15___8___2.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/gpa-5(pk376)X@NL1137/food_OP50/XX/30m_wait/clockwise/gpa-5 (pk376)X on food L_2010_02_26__11_05_23___7___8.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/WT/N2/food_OP50/XX/30m_wait/anticlockwise/N2 on food R_2010_03_30__11_24_23___6___1.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/npr-9(tm1652)X@IC683/food_OP50/XX/30m_wait/anticlockwise/npr-9 (tm1652) on food R_2010_01_25__16_25_18___7___10.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/lev-8(x15)X@ZZ15/food_OP50/XX/30m_wait/clockwise/acr-13 or lev-8 (x15)X on food L_2010_02_24__10_03_32___4___3.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/egl-10(md176)V@MT8504/food_OP50/XX/30m_wait/anticlockwise/egl-10 (md176)V on food R_2011_02_08__12_36___3___6.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/egl-37(n742)II@MT1543/food_OP50/XX/30m_wait/clockwise/egl-37 (n742)II on food L_2010_08_05__11_47_42___7___3.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/npr-12(tm1498)IV@FX1498/food_OP50/XX/30m_wait/clockwise/npr-12 (tm1498)IV on food L_2010_01_26__15_57_25___4___12.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/egl-50(n1086)II@AQ2316/food_OP50/XX/30m_wait/anticlockwise/egl-50 (n1086) on food R_2009_12_09__12_14_19___6___6.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/del-1(ok150)X@NC279/food_OP50/XX/30m_wait/anticlockwise/del-1 (ok150) on food R_2010_07_06__12_09_06___8___7.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/asic-2(ok289)I@RB557/food_OP50/XX/30m_wait/clockwise/T2854.2 (ok289) on food L_2010_03_25__15_44_17___1___9.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/unc-118(e2331)X@CB4371/food_OP50/XX/30m_wait/anticlockwise/unc-118 (e2331)X on food R_2010_04_13__12_45___3___8.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/goa-1(sa734)I@DG1856/food_OP50/XX/30m_wait/anticlockwise/goa-1 (sa734)I on food R_2010_03_04__10_43_43___4___6.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/gpa-17(ok2334)III@RB1800/food_OP50/XX/30m_wait/anticlockwise/gpa-17 (ok2334)III on food R_2010_03_05__12_13_11___1___9.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/W03B1.2(ok2433)IV@RB1883/food_OP50/XX/30m_wait/anticlockwise/W03B1.2 (ok2433) on food R_2010_04_23__14_39_26___8___10.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/nlp-14(tm1880)X@FX1880/food_OP50/XX/30m_wait/anticlockwise/nlp-14 (tm1880)X on food R_2010_03_17__10_54_05___6___4.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/gpa-4(pk381)IV@NL790/food_OP50/XX/30m_wait/anticlockwise/gpa-4 (pk381)IV on food R_2010_02_26__12_26_50___8___12.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/egl-47(n1081)V@MT2248/food_OP50/XX/30m_wait/anticlockwise/egl-47 (n1081)V on food R_2010_05_20__11_35_51___8___2.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/flp-25(gk1016)III@VC1982/food_OP50/XX/30m_wait/anticlockwise/flp-25 (gk1016)III on food R_2010_01_12__13_08_00___8___8.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/WT/N2/food_OP50/XX/30m_wait/anticlockwise/N2 on food R_2010_05_18__15_23_13___1___4.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/unc-60(e723)V@CB723/food_OP50/XX/30m_wait/clockwise/unc-60 (e723)V on food L_2010_04_13__15_58_00___6___15.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/gpc-1(pk298)X@NL792/food_OP50/XX/30m_wait/anticlockwise/gpc-1 (pk298) on food R_2010_03_09__15_14_42___8___10.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/npr-10(tm1568)X@FX1568/food_OP50/XX/30m_wait/anticlockwise/npr-10  (tm1568) on food R_2010_01_25__14_23_14___2___6.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/asic-1(ok415)I@RB680/food_OP50/XX/30m_wait/anticlockwise/asic-1 (ok415) on food R_2010_07_06__11_05_25___6___4.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/acr-21(ok1314)III@RB1250/food_OP50/XX/30m_wait/anticlockwise/acr-21 (ok1314)IIIon food R_2010_02_24__14_44_45___7___12.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/pkc-1(nj3)V@IK130/food_OP50/XX/30m_wait/anticlockwise/pkc-1 (nj3) on food R_2010_07_22__12_45_44___4___7.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/goa-1(sa734)I@DG1856/food_OP50/XX/30m_wait/anticlockwise/goa-1 (sa734)I on food R_2010_02_26__11_44_02___4___10.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/del-4(ok1014)I@RB1064/food_OP50/XX/30m_wait/anticlockwise/T28138.5 (ok1014) on food R_2010_03_30__15_05_23___1___7.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/egl-14(n549)X@MT1179/food_OP50/XX/30m_wait/anticlockwise/egl-14 (n549)X on food R_2010_07_20__15_00_55___6___9.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/WT/N2/no_food/XX/30m_wait/clockwise/N2 on food L_2010_04_28__10_33_11___8___1.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/mir-124(n4255)IV@MT13292/food_OP50/XX/30m_wait/clockwise/M124 on food L_2010_05_14__10_29_03___4___2.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/unc-105(ok1432)II@RB1316/food_OP50/XX/30m_wait/anticlockwise/unc-105 (ok1432) on food R_2010_07_08__11_03___3___3.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/egl-21(n476)IV@KP2018/food_OP50/XX/30m_wait/anticlockwise/egl-21 (n476)IV on food R_2010_07_20__12_06_57___7___5.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/egl-30(ep271)I@CE1047/food_OP50/XX/30m_wait/clockwise/egl-30 (ep271gf) on food L_2010_02_26__09_42_16___1___4.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/mod-5(n822)I@MT8944/food_OP50/XX/30m_wait/clockwise/mod-5 (n822)I on food L_2009_11_18__10_53_44___7___2.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/flp-13(tm2427)IV@FX2427/food_OP50/XX/30m_wait/clockwise/flp-13 (tm2427) on food L_2010_01_19__11_24_28___8___4.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/WT/N2/food_OP50/XX/30m_wait/anticlockwise/N2 on food R_2010_02_24__09_23_33___4___1.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/trp-2(gk298)III@VC602/food_OP50/XX/30m_wait/clockwise/trp-2 (ok298) on food L_2010_04_23__15_59_13___4___14.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/unc-77(gk9)IV@VC12/food_OP50/XX/30m_wait/anticlockwise/C11D2.6 (gk9)IV on food R_2011_08_31__15_12_52___7___7.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/npr-10(tm1568)X@FX1568/food_OP50/XX/30m_wait/anticlockwise/npr-10 (tm1568) on food R_2010_01_26__16_17_38___7___12.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/ocr-3(ok1559)X@RB1374/no_food/XX/30m_wait/clockwise/ocr-3 (a1537) off food L_2010_04_27__12_04_39___4___5.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/ins-28(ok2722)I@RB2059/food_OP50/XX/30m_wait/anticlockwise/ins-28 (ok2722) on food R_2011_05_12__11_22_43__3.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/WT/N2/food_OP50/XX/30m_wait/anticlockwise/N2 on food R_2010_07_15__10_47_37___1___1.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/unc-29(e193)I@CB193/food_OP50/XX/30m_wait/clockwise/unc-29 (e193) on food L_2009_12_15__11_03_31___2___3.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/unc-105(ok1432)II@RB1316/food_OP50/XX/30m_wait/anticlockwise/unc-105 (ok14232) on food R_2010_06_15__12_10_49___7___5.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/WT/N2/food_OP50/XX/30m_wait/clockwise/N2 on food L_2010_05_18__12_16_13___7___2.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/WT/N2/food_OP50/XX/30m_wait/anticlockwise/N2 on food R_2010_01_21__11_02_47___7___1.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/trpa-2(tm3092)I@FX3092/food_OP50/XX/30m_wait/anticlockwise/MO5B5.6 (tm3092) on food R_2010_07_06__10_26_18___2___2.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/trp-2(sy691)III@TQ194/food_OP50/XX/30m_wait/anticlockwise/trp-2 (sy691) on food R_2010_03_19__11_32_33___1___8.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/osm-9(ky10);trpa-1(ok999)IV@AQ1422/food_OP50/XX/30m_wait/anticlockwise/trpa-1 (ok999); osm-9 (ky10) on food R_2010_04_21__14_40_10___7___9.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/npr-1(ad609)X@DA609/food_OP50/XX/30m_wait/clockwise/npr-1 (ad609)X on food L_2010_01_22__11_34_42___7___5.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/egl-9(n586)V@MT1216/food_OP50/XX/30m_wait/anticlockwise/egl-9 (n586)V on food R_2010_07_16__12_44_08___2___8.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/goa-1(sa734)I@DG1856/food_OP50/XX/30m_wait/anticlockwise/goa-1 (sa734)I on food R_2010_02_26__11_43_28___2___10.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/snf-4(ok496)II@RB738/food_OP50/XX/30m_wait/anticlockwise/snf-4 (ok496)II on food R_2009_11_18__13_11_49___6___9.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/egl-7(n575)III@MT1205/food_OP50/XX/30m_wait/clockwise/egl-7 (n575)IV on food L_2010_05_14__11_09_23___4___4.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/lev-8(x15)X@ZZ15/food_OP50/XX/30m_wait/clockwise/acr-13or lev-8 (x15)X on food L_2010_02_24__10_04_21___8___3.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/acr-9(ok933)X@VC649/food_OP50/XX/30m_wait/anticlockwise/acr-9 (ok933)X on food R_2010_02_19__10_23_11___8___4.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/del-1(ok150)X@NC279/food_OP50/XX/30m_wait/clockwise/del-1 (ok150) on food L_2010_07_06__12_06_10___1___7.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/acr-18(ok1285)V@RB1226/food_OP50/XX/30m_wait/anticlockwise/acr-18 (ok1205)V on food R_2010_02_23__12_32_41___1___11.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/acr-14(ok1155)II@RB1132/food_OP50/XX/30m_wait/clockwise/acr-14 (ok1155) on food L_2010_02_24__09_45_20__1.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/egl-40(n606)IV@MT1236/food_OP50/XX/30m_wait/clockwise/egl-40 (n606)IV on food L_2010_08_05__12_05_43___2___5.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/snf-4(ok496)II@RB738/food_OP50/XX/30m_wait/anticlockwise/snf-4 (ok496)II on food R_2009_11_17__14_29_38___1___5.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/C24G7.1(ok1822)I@RB1523/food_OP50/XX/30m_wait/clockwise/C24G7.1 (ok1822) on food L_2010_03_30__12_07_16___4___3.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/pmk-1(km25)IV@KU25/food_OP50/XX/30m_wait/anticlockwise/pmk-1 (km25) on food R_2010_04_22__12_30_03___4___10.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/WT/N2/food_OP50/XX/30m_wait/anticlockwise/N2 on food R_2009_12_09__10_32_28___8___1.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/npr-1(ad609)X@DA609/food_OP50/XX/30m_wait/anticlockwise/npr-1 (ad609)X on food R_2010_01_26__12_45_51___7___7.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/flp-16(ok3085)II@RB2275/food_OP50/XX/30m_wait/clockwise/flp-16 (ok3085) on food L_2010_01_11__12_33_48___6___4.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/npr-10(tm1568)X@FX1568/food_OP50/XX/30m_wait/anticlockwise/npr-10 (tm1568) on food  R_2010_01_26__16_16_07___2___13.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/unc-26(m2)IV@DR2/food_OP50/XX/30m_wait/anticlockwise/unc-26 (m2)IV on food R_2010_04_16__15_09_30___2___10.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/egl-8(n488)V@MT1083/food_OP50/XX/30m_wait/anticlockwise/egl-8 (n488)V on food R_2010_05_11__12_24_32___4___5.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/tag-336(ok1477)V@VC975/food_OP50/XX/30m_wait/clockwise/tag-336 (ok1477) on food L_2010_03_31__12_34_27___7___6.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/ocr-3(ok1559)X@RB1374/food_OP50/XX/30m_wait/anticlockwise/ocr-3 (a1537) on food R_2010_04_23__12_19_31___2___8.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/flp-13(tm2427)IV@FX2427/food_OP50/XX/30m_wait/anticlockwise/flp-13 (tm2427) on food R_2010_01_21__12_05_27___2___4.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/ocr-3(ok1559)X@RB1374/food_OP50/XX/30m_wait/clockwise/ocr-3 (a1537) on food L_2010_04_22__11_46_54___1___8.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/egl-32(n155)I@MT155/food_OP50/XX/30m_wait/anticlockwise/egl-32 (n155)I on food R_2010_05_14__11_29_50___4___5.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/snf-4(ok496)II@RB738/food_OP50/XX/30m_wait/anticlockwise/snf-4 (ok496)II on food R_2009_11_17__14_30_17___6___5.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/WT/N2/food_OP50/XX/30m_wait/anticlockwise/N2 on food R_2010_10_15__15_36_48__10.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/unc-63(ok1075)I@VC731/food_OP50/XX/30m_wait/anticlockwise/unc-63 (ok1075) on food R_2010_04_16__12_54_42___1___9.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/gpa-17(ok2334)III@RB1800/food_OP50/XX/30m_wait/clockwise/gpa-17 (ok2334)III on food L_2010_03_09__13_04_21___8___8.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/W03B1.2(ok2433)IV@RB1883/food_OP50/XX/30m_wait/clockwise/W03B1.2 (ko2433) on food L_2010_04_23__14_37_57___6___10.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/del-1(ok150)X@NC279/food_OP50/XX/30m_wait/anticlockwise/del-1 (ok150) on food R_2010_07_06__12_09_36___7___7.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/trp-2(gk298)III@VC602/food_OP50/XX/30m_wait/clockwise/trp-2 (ok298) on food L_2010_04_21__11_07_49___6___3.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/gpa-10(pk362)V@NL1147/food_OP50/XX/30m_wait/clockwise/gpa-10 (pk362)V on food L_2010_03_05__10_14_56___8___3.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/snf-10(hc194)V@BA1093/food_OP50/XX/30m_wait/clockwise/snf-10 (hc194)V on food L_2009_11_17__16_50_29___1___11.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/npr-7(ok527)X@RB761/food_OP50/XX/30m_wait/anticlockwise/npr-7 (ok527)X  on food R_2010_01_28__11_34_14___2___4.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/unc-7(e5)X@CB5/food_OP50/XX/30m_wait/anticlockwise/unc-7 (cb5) on food R_2010_05_20__11_54_46___4___3.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/ocr-4(vs137)IV@LX950/food_OP50/XX/30m_wait/anticlockwise/ocr-4 (vs137) on food R_2010_04_23__15_19_46___7___12.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/WT/N2/food_OP50/XX/30m_wait/clockwise/N2 on food L_2010_07_27__10_27_31__1.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/unc-105(ok1432)II@RB1316/food_OP50/XX/30m_wait/clockwise/unc-105 (ok1432) on food L_2010_04_09__13_02_03___6___8.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/acr-18(ok1285)V@RB1226/food_OP50/XX/30m_wait/anticlockwise/acr-18 (ok1285) on food R_2010_02_19__15_05_38__13.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/snf-11(ok156)V@RM2710/food_OP50/XX/30m_wait/clockwise/snf-11 (ok156)V on food L_2009_11_18__11_54_28___6___5.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/nlp-15(ok1512)I@VC1063/food_OP50/XX/30m_wait/anticlockwise/nlp-15 (ok1512) on food R_2010_03_18__10_35_16___7___2.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/acr-19(ad1674)I@DA1674/food_OP50/XX/30m_wait/anticlockwise/acr-19 (ad1674) on food R_2010_02_23__11_34_19___8___8.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/ocr-4(vs137)IV@LX950/food_OP50/XX/30m_wait/anticlockwise/ocr-4 (vs137) on food R_2010_04_22__15_20___3___13.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/snf-2(ok147)I@RB641/food_OP50/XX/30m_wait/anticlockwise/snf-2 (ok147)I on food R_2009_11_19__10_51_43___8___2.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/unc-118(e2331)X@CB4371/food_OP50/XX/30m_wait/anticlockwise/unc-118 (e2331)X on food R_2010_04_14__10_39_08___2___3.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/npr-10(tm1568)X@FX1568/food_OP50/XX/30m_wait/anticlockwise/npr-10 (tm1568) on food R_2010_01_22__10_33___3___2.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/nlp-20(ok1591)IV@RB1396/food_OP50/XX/30m_wait/anticlockwise/nlp-20 (ok1591)IV on food R_2010_03_18__11_56_01___7___6.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/WT/N2/food_OP50/XX/30m_wait/clockwise/N2 on food L_2010_04_29__10_48_49___2___1.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/unc-37(e262)I@CB262/food_OP50/XX/30m_wait/anticlockwise/unc-37 (e2126)I on food R_2010_04_13__14_59_07___4___12.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/WT/N2/food_OP50/XX/30m_wait/clockwise/N2 on food L_2010_05_18__12_15_48___8___2.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/trp-1(sy690)III@TQ225/food_OP50/XX/30m_wait/clockwise/trp-1 (sy691) on food L_2010_04_23__11_37_22___1___6.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/egl-36(n728)X@MT1540/food_OP50/XX/30m_wait/clockwise/egl-36 (n728)X on food L_2010_07_20__11_05_59___4___3.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/gpa-16(ok2349)I@RB1816/food_OP50/XX/30m_wait/anticlockwise/gpa-16 (ok2349) on ood R_2010_12_16__12_37_28___8___1.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/ocr-4(vs137)ocr-2(ak47)IV;ocr-1(ok132)V@LX982/food_OP50/XX/30m_wait/anticlockwise/ocr-4 (vs137); ocr-2 (9447); ocr-1 (ok134) on food R_2010_06_15__10_47_56___8___2.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/unc-105(ok1432)II@RB1316/food_OP50/XX/30m_wait/anticlockwise/unc-105 (ok1432) on food R_2010_04_16__10_37_21___6___2.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/gpa-9(pk438)V@NL793/food_OP50/XX/30m_wait/anticlockwise/GPA-9 9PK438)v on food r_2010_03_09__11_07_00___8___2.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/ser-1(ok345)X@DA1814/food_OP50/XX/30m_wait/clockwise/ser-1 (ok345) on food L_2009_12_15__15_08_05___2___10.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/gpa-12(pk322)X@NL594/food_OP50/XX/30m_wait/anticlockwise/gpa-12 (pk322)X on food R_2010_02_25__11_05_21___4___5.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/mec-4(u253)X;bzIs17[pmec-4::YC2.12;lin-15(+)]@AQ908/food_OP50/XX/30m_wait/anticlockwise/mec-4 (u253) on food R_2010_11_04__12_54_35___1___8.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/gpa-16(ok2349)I@RB1816/food_OP50/XX/30m_wait/anticlockwise/gpa-16 (ok2349)I on food R_2010_03_09__12_23_40___1___6.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/C24G7.4(ok1237)I@RB1192/food_OP50/XX/30m_wait/anticlockwise/C24G7.4 (ok1237) on food R_2010_03_30__11_46___3___2.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/mir-124(n4255)IV@MT13292/food_OP50/XX/30m_wait/anticlockwise/M124 on food R_2010_05_13__10_36_07___7___2.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/C18B2.6(ok2353)X@RB1818/food_OP50/XX/30m_wait/anticlockwise/C1B2.6 (ok2353) on food R_2010_03_25__11_33_20___2___3.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/egl-19(n2368)IV@MT6129/food_OP50/XX/30m_wait/clockwise/egl-19 (n2368)IV on food L_2010_05_11__15_50_12___6___11.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/pkg-1(n478)IV@MT1073/food_OP50/XX/30m_wait/clockwise/egl-4 (n478)IV on food L_2010_05_13__12_55_46___8___9.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/pkg-1(n478)IV@MT1073/food_OP50/XX/30m_wait/clockwise/egl-4 (n478)IV on food L_2010_05_13__12_54_07___2___8.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/asic-1(ok415)I@RB680/food_OP50/XX/30m_wait/anticlockwise/asic-1 (ok415) on food R_2010_07_06__11_04_04___1___4.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/ser-1(ok345)X@DA1814/food_OP50/XX/30m_wait/clockwise/ser-1 (ok345) on food L_2009_12_15__15_09_28___7___11.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/ocr-4(tm2173)IV@FX2173/food_OP50/XX/30m_wait/clockwise/ocr-4 (tm2173) on food L_2010_03_26__14_53_09___2___10.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/egl-43(n1079)II@MT2246/food_OP50/XX/30m_wait/clockwise/egl-43 (n1079)II on food L_2010_07_20__12_46_20___1___8.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/tom-1(ok285)I@VC223/food_OP50/XX/30m_wait/anticlockwise/tom-1 (ok1285) on food R_2010_07_22__15_27_19___7___10.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/WT/N2/food_OP50/XX/30m_wait/anticlockwise/N2 on food R_2010_03_19__08_55_04___8___1.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/npr-1(ad609)X@DA609/food_OP50/XX/30m_wait/clockwise/npr-1 (ad609)X on food L_2010_01_22__11_33___3___5.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/unc-108(n501)I@MT1093/food_OP50/XX/30m_wait/anticlockwise/unc-108 (n501gf) on food R_2009_12_09__15_36_46___6___12.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/flp-3(ok3265)X@VC2497/food_OP50/XX/30m_wait/clockwise/flp-3 (ok3265)X on food L_2010_01_19__12_24_34__5.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/F23B2.3(ok1226)IV@RB1177/food_OP50/XX/30m_wait/clockwise/F23B2.2 (ok1226) on food L_2010_03_26__11_14_28___2___4.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/egl-21(n476)IV@KP2018/food_OP50/XX/30m_wait/clockwise/egl-21 (n476)IV on food L_2010_07_20__12_06_28___8___7.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/ser-4(ok512)III@AQ866/food_OP50/XX/30m_wait/clockwise/ser-4 (ok512) on food L_2009_12_15__13_03_18___6___9.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/unc-63(ok1075)I@VC731/food_OP50/XX/30m_wait/clockwise/unc-63 (ok1075) on food L_2010_04_09__11_43_25___1___5.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/pmk-1(km25)IV@KU25/food_OP50/XX/30m_wait/anticlockwise/pmk-1 (km25) on food R_2010_04_21__11_28_07___2___4.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/W03B1.2(ok2433)IV@RB1883/food_OP50/XX/30m_wait/anticlockwise/W03B1.2 (ok2433) on food R_2010_04_23__14_38_26___4___10.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/npr-11(ok594)X@RB799/food_OP50/XX/30m_wait/anticlockwise/npr-11 (ok594)X on food R_2010_01_28__11_15_27___7___3.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/unc-80(e1069)V@CB1069/food_OP50/XX/30m_wait/clockwise/unc-80 (e1069) on food L_2010_04_14__14_57_46___6___12.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/W03B1.2(ok2433)IV@RB1883/food_OP50/XX/30m_wait/clockwise/W03B1.2 (ok2433) on food L_2010_04_22__16_02_11___8___14.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/snf-8(ok349)IV@RB648/food_OP50/XX/30m_wait/anticlockwise/snf-8 (ok349)IV on food R_2009_11_18__12_31___3___7.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/WT/N2/food_OP50/XX/30m_wait/clockwise/N2 on food L_2010_03_18__10_13_47___6___1.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/mir-124(n4255)IV@MT13292/food_OP50/XX/30m_wait/clockwise/m124 on food l_2010_05_14__16_34_21___6___17.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/flp-3(ok3265)X@VC2497/food_OP50/XX/30m_wait/anticlockwise/flp-3 (ok3265)X on food R_2010_01_20__12_37_42___8___9.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/unc-9(e101)X@CB101/food_OP50/XX/30m_wait/anticlockwise/unc-9 (e101) on food R_2011_09_20__11_43_53___7___2.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/gpa-3(pk35)V@NL335/food_OP50/XX/30m_wait/clockwise/gpa-3 (pk35)IV on food L_2010_02_26__10_45_32__7.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/ric-19(ok833)@RB946/food_OP50/XX/30m_wait/clockwise/ric-19 (ok833) on food L_2011_08_04__12_32_03___8___7.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/pmk-1(km25)IV@KU25/food_OP50/XX/30m_wait/anticlockwise/pmk-1 (km25) on food R_2010_04_22__12_29_33___6___10.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/snf-8(ok349)IV@RB648/food_OP50/XX/30m_wait/anticlockwise/snf-8 (ok349)IV on food R_2009_11_17__14_53_00___1___6.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/F23B2.3(ok1226)IV@RB1177/food_OP50/XX/30m_wait/clockwise/F23B2.2 (ok1226) on food L_2010_03_26__11_15_02___4___4.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/WT/N2/food_OP50/XX/30m_wait/clockwise/N2 on food_2010_07_20__10_24_16___2___1.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/gpa-12(pk322)X@NL594/food_OP50/XX/30m_wait/clockwise/gpa-12 (pk322)X on food L_2010_02_25__11_06_09___8___5.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/unc-17(e245)IV@CB933/food_OP50/XX/30m_wait/clockwise/unc-17 (e245)IV on food L_2010_04_14__15_20_08___8___13.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/WT/JU258/food_OP50/XX/30m_wait/anticlockwise/798 JU258 on food R_2010_11_25__11_35___3___1.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/ocr-3(ok1559)X@RB1374/food_OP50/XX/30m_wait/anticlockwise/ocr-3 (a1537) on food R_2010_04_23__12_20_05___4___8.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/egl-9(n586)V@MT1216/food_OP50/XX/30m_wait/clockwise/egl-9 (n586)V on food L_2010_07_20__13_06_45___4___9.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/acr-3(ok2049)X@RB1659/food_OP50/XX/30m_wait/anticlockwise/acr-3 (ok2049)X on food R_2010_02_24__11_05_28___7___6.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/WT/N2/food_OP50/XX/30m_wait/clockwise/N2 on food L_2010_06_15__10_25_51___4___1.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/gpa-8(pk345)V@NL1142/food_OP50/XX/30m_wait/clockwise/gpa-8 (pk435)V on food L_2010_03_11__10_25_35___8___2.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/F23B2.3(ok1226)IV@RB1177/food_OP50/XX/30m_wait/clockwise/F23B2.2 (ok1226) on food L_2010_03_26__11_14_33___6___4.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/egl-9(n586)V@MT1216/food_OP50/XX/30m_wait/clockwise/egl-9 (n586)V on food L_2010_07_20__13_06_14___6___8.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/WT/N2/food_OP50/XX/30m_wait/anticlockwise/N2 on food R_2010_03_09__10_45_49__1.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/WT/N2/food_OP50/XX/30m_wait/anticlockwise/N2 on food R_2010_05_20__11_15_54___7___1.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/npr-1(ad609)X@DA609/food_OP50/XX/30m_wait/anticlockwise/npr-1 (ad609)X on food R_2010_01_22__11_33_42___4___5.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/WT/N2/food_OP50/XX/30m_wait/clockwise/N2 on food L_2010_05_18__15_25_52___8___4.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/ser-7(tm1325)X@DA2100/food_OP50/XX/30m_wait/anticlockwise/ser-7 (tm1325) on food R_2009_12_14__12_43_59___8___7.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/WT/MY16/food_OP50/XX/30m_wait/anticlockwise/800 MY16 on food R_2011_03_07__16_37_10__1.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/WT/N2/food_OP50/XX/30m_wait/clockwise/N2 on food L_2010_04_15__10_08_32___6___1.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/egl-15(n484)X@MT1079/food_OP50/XX/30m_wait/anticlockwise/egl-15 (n484)X on food R_2010_05_19__12_04_53___6___3.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/acr-15(ok1214)V@RB1172/food_OP50/XX/30m_wait/anticlockwise/acr-15 (ok1214)V on food R_2010_02_23__09_31_51___1___2.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/snf-1(ok790)I@RB919/food_OP50/XX/30m_wait/anticlockwise/snf-1 (ok790)I on food R_2009_11_18__15_54_01___2___12.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/snf-4(ok496)II@RB738/food_OP50/XX/30m_wait/clockwise/snf-4 (ok496)II on food L_2009_11_18__13_11_01___1___9.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/unc-7(e5)X@CB5/food_OP50/XX/30m_wait/anticlockwise/unc-7 (cb5) on food R_2010_08_19__11_20_41___7___3.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/nlp-17(ok3461)IV@RB2498/food_OP50/XX/30m_wait/anticlockwise/nlp-17 (ok3461)IV on food R_2010_03_17__11_56_41___6___7.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/flp-33(gk1038)I@VC2423/food_OP50/XX/30m_wait/anticlockwise/flp-33 (gk1038) on food R_2010_01_21__17_05_00___2___10.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/egl-6(n592)X@MT1222/food_OP50/XX/30m_wait/anticlockwise/egl-6 (n592)X on food R_2010_05_13__15_46_35___1___13.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/egl-13(n483)X@MT1078/food_OP50/XX/30m_wait/clockwise/egl-13 (n483)X on food L_2010_07_16__11_04_50___6___3.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/gpa-4(pk381)IV@NL790/food_OP50/XX/30m_wait/anticlockwise/gpa-4 (pk381)V on food R_2010_02_25__10_26_04___8___3.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/egl-50(n1086)II@AQ2316/food_OP50/XX/30m_wait/clockwise/egl-50 (n1086) on food L_2009_12_09__12_14___3___6.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/flp-19(ok2460)X@RB1902/food_OP50/XX/30m_wait/anticlockwise/flp-19 (ok2460) on food R_2010_01_19__15_03_32___6___9.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/flp-11(tm2706)X@FX2706/food_OP50/XX/30m_wait/clockwise/flp-11 (tm2706)X on food L_2010_01_12__11_29_57___4___3.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/egl-24(n572)III@MT1202/food_OP50/XX/30m_wait/clockwise/egl-24 (n572)III on food L_2010_05_13__11_15_58___8___4.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/npr-11(ok594)X@RB799/food_OP50/XX/30m_wait/anticlockwise/npr-11  (ok594)X on food R_2010_01_28__10_52_33___1___2.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/egl-19(n2368)IV@MT6129/food_OP50/XX/30m_wait/clockwise/egl-19 (n2368)IV on food L_2010_05_11__15_49_07___1___11.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/WT/N2/food_OP50/XX/30m_wait/clockwise/N2 on food L_2009_11_18__10_11_48___2___1.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/C46A5.2(ok1187)IV@RB1156/food_OP50/XX/30m_wait/anticlockwise/C45A6.2 (ok1187) on food R_2010_03_25__12_53_37___2___7.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/ocr-4(vs137);ocr-2(ak47)IV@LX981/food_OP50/XX/30m_wait/clockwise/ocr-4 (vs137); ocr-2 (9697) on food L_2010_04_21__12_08_57___4___6.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/flp-16(ok3085)II@RB2275/food_OP50/XX/30m_wait/clockwise/flp-16 (ok3085) on food L_2010_01_14__12_35_59___8___7.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/WT/N2/food_OP50/XX/30m_wait/anticlockwise/N2 on food R_2010_07_15__10_48___3___1.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/ser-7(tm1325)X@DA2100/food_OP50/XX/30m_wait/anticlockwise/ser-7 (tm1352) on food R_2009_12_17__13_04_44___8___7.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/C24G7.1(ok1822)I@RB1523/food_OP50/XX/30m_wait/clockwise/C24G7.1 (ok1822) on food L_2010_03_19__09_55_17___1___4.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/unc-7(e5)X@CB5/food_OP50/XX/30m_wait/clockwise/unc-7 (cb5) on food L_2010_09_10__16_15_33___6___12.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/flp-28(gk1075)X@VC2502/food_OP50/XX/30m_wait/anticlockwise/flp-28 (gk1075)X on food R_2010_01_19__15_23_28___6___10.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/flp-10(ok2624)IV@RB1989/food_OP50/XX/30m_wait/clockwise/flp-10 (ok2624)IV on food L_2010_01_21__11_49_11___7___3.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/trp-2(sy691)III@TQ194/food_OP50/XX/30m_wait/clockwise/trp-2 (sy691) on food L_2010_03_19__11_33_58___4___8.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/mir-124(n4255)IV@MT13292/food_OP50/XX/30m_wait/anticlockwise/M124 on food R_2010_05_13__10_35_42___8___2.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/egl-19(n2368)IV@MT6129/food_OP50/XX/30m_wait/anticlockwise/egl-19 (n2368)IV on food R_2010_05_13__15_28_45___8___12.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/npr-11(ok594)X@RB799/food_OP50/XX/30m_wait/anticlockwise/npr-11  (ok594)X on food R_2010_01_28__11_13_05___1___3.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/flp-33(gk1038)I@VC2423/food_OP50/XX/30m_wait/anticlockwise/flp-33 (gk1038)IV on food R_2010_01_19__12_02_42___2___6.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/flp-13(tm2427)IV@FX2427/food_OP50/XX/30m_wait/anticlockwise/flp-13 (tm2427) on food R_2010_01_19__11_22_28___1___4.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/tph-1(mg280)II@MT15434/food_OP50/XX/30m_wait/anticlockwise/tph-1 superoutcrossed on food R_2009_12_15__11_44_23__4.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/flr-1(ut11)X@JC55/food_OP50/XX/30m_wait/clockwise/flr-1 (ut11) on food L_2010_04_09__15_54___3___13.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/trpa-2(tm3085)I@FX3085/food_OP50/XX/30m_wait/clockwise/MO5B5.6 (tm3085) on food L_2010_07_06__10_44_46___6___3.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/acr-23(ok2804)V@RB2119/food_OP50/XX/30m_wait/clockwise/acr-23 (ok2804)V on food L_2010_02_24__15_04_46___7___13.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/trp-2(sy691)III@TQ194/food_OP50/XX/30m_wait/anticlockwise/trp-2 (sy691) on food R_2010_03_25__16_45_19___1___12.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/WT/N2/food_OP50/XX/30m_wait/clockwise/N2 on food L_2010_07_08__10_24___3___1.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/WT/N2/no_food/XX/30m_wait/clockwise/N2 off food_2010_04_30__11_21_04___2___1.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/WT/N2/food_OP50/XX/30m_wait/clockwise/N2 on food L_2009_12_10__10_20_00___1___1.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/egl-21(n476)IV@KP2018/food_OP50/XX/30m_wait/anticlockwise/egl-21 (n476)IV on food R_2010_07_20__12_04___3___6.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/WT/N2/food_OP50/XX/30m_wait/anticlockwise/N2 on food R_2010_03_31__10_54___3___1.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/snf-4(ok496)II@RB738/food_OP50/XX/30m_wait/anticlockwise/snf-4 (ok496)II on food R_2009_11_18__13_11___3___9.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/C24G7.4(ok1237)I@RB1192/food_OP50/XX/30m_wait/anticlockwise/C24G7.4 (ok1237) on food R_2010_03_25__11_13_53___4___2.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/npr-13(tm1504)V@AQ2153/food_OP50/XX/30m_wait/anticlockwise/npr-13 (tm1504)V on food R_2010_01_22__11_53_52___2___6.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/gpa-13(pk1270)V@NL2330/food_OP50/XX/30m_wait/anticlockwise/gpa-13 (pk1270) on food R_2010_02_25__12_44_01___4___10.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/lev-8(x15)X@ZZ15/food_OP50/XX/30m_wait/clockwise/acr-13 or lev-8 (x15)X on food L_2010_02_19__13_03_58__11.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/gpa-5(pk376)X@NL1137/food_OP50/XX/30m_wait/clockwise/gpa-5 (pk376)X on food L_2010_02_26__11_05_03___8___8.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/acr-9(ok933)X@VC649/food_OP50/XX/30m_wait/anticlockwise/acr-9 (ok933)X on food R_2010_02_24__12_24_55___8___10.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/egl-36(n728)X@MT1540/food_OP50/XX/30m_wait/clockwise/egl-36 (n728)X on food L_2010_07_20__11_05_39___6___2.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/npr-7(ok527)X@RB761/food_OP50/XX/30m_wait/anticlockwise/npr-7 (ok527)X on food R_2010_01_28__15_02_43___6___10.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/trpa-2(tm3092)I@FX3092/food_OP50/XX/30m_wait/anticlockwise/M05B5.6 (tm3092) on food R_2010_07_08__12_26_11___1___7.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/npr-5(ok1583)V@AX1745/food_OP50/XX/30m_wait/clockwise/npr-5 (ok1358)  on food L_2010_01_28__11_56_06___2___5.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/npr-8(tm1553)X@FX1553/food_OP50/XX/30m_wait/clockwise/npr-8 (tm1553) on food L_2010_01_26__15_38_28___4___11.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/ocr-3(ok1559)X@RB1374/no_food/XX/30m_wait/anticlockwise/ocr-3 (ok1557) off food_2010_04_28__11_10_27__3.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/ocr-3(ok1559)X@RB1374/food_OP50/XX/30m_wait/clockwise/ocr-3 (21537) on food L_2010_04_21__14_18_39___6___8.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/nlp-14(tm1880)X@FX1880/food_OP50/XX/30m_wait/anticlockwise/nlp-14 (tm1880)X on food R_2010_03_12__13_03_35___1___10.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/T28F2.7(ok2657)I@RB2005/food_OP50/XX/30m_wait/clockwise/T28f2.7 (ok2657) on food L_2010_03_19__09_34_43___6___3.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/egl-8(n488)V@MT1083/food_OP50/XX/30m_wait/anticlockwise/egl-8 (n488) on food R_2010_05_11__12_24_05___6___5.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/WT/N2/food_OP50/XX/30m_wait/clockwise/N2  on food L_2010_07_08__10_24_28___6___1.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/WT/N2/food_OP50/XX/30m_wait/anticlockwise/N2 on food R_2010_02_19__09_24_05___7___1.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/unc-40(n324)I@MT324/food_OP50/XX/30m_wait/clockwise/unc-40 (n324)I on food L_2010_04_13__13_03_42___2___9.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/acr-18(ok1285)V@RB1226/food_OP50/XX/30m_wait/anticlockwise/acr-18 (ok1205) on food R_2010_02_24__12_02_55___6___9.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/egl-47(n1081)V@MT2248/food_OP50/XX/30m_wait/anticlockwise/egl-47 (n1081)V on food R_2010_05_20__12_36_43__4.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/nlp-18(ok1557)II@RB1372/food_OP50/XX/30m_wait/anticlockwise/nlp-18 (ok1557)II on food R_2010_03_12__12_05_52___8___7.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/acr-3(ok2049)X@RB1659/food_OP50/XX/30m_wait/anticlockwise/acr-3 (ok2049)X on food R_2010_02_24__11_03_49___6___6.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/lov-1(ok522)II@RB753/food_OP50/XX/30m_wait/clockwise/lov-1 (con5221) on food L_2010_03_19__11_58_48___6___8.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/snf-4(ok496)II@RB738/food_OP50/XX/30m_wait/clockwise/snf-4 (ok496)II on food L_2009_11_18__13_12_46___8___9.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/unc-40(n324)I@MT324/food_OP50/XX/30m_wait/clockwise/unc-40 (n324)I on food L_2010_04_14__11_00_05___8___4.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/egl-42(n995)II@MT2068/food_OP50/XX/30m_wait/clockwise/egl-42 (n995sd) on food L_2009_12_10__11_04_01___4___3.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/unc-10(md1117)X@NM1657/food_OP50/XX/30m_wait/clockwise/unc-10 (ad1117) on food L_2009_12_09__11_15_08___1___3.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/acr-7(tm863)II@FX863/food_OP50/XX/30m_wait/clockwise/acr-7 (tm863)II on food L_2010_02_24__11_24_32___8___7.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/npr-4(tm1782)X@AX1743/food_OP50/XX/30m_wait/clockwise/npr-4 (tm1782)X on food L_2010_01_22__10_54___3___3.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/lov-1(ok522)II@RB753/food_OP50/XX/30m_wait/clockwise/lov-1 con5221 on food L_2010_03_26__15_12_35___1___11.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/WT/N2/food_OP50/XO/30m_wait/clockwise/N2 male on food L_2012_02_23__12_21_07___3___3.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/unc-7(e5)X@CB5/food_OP50/XX/30m_wait/anticlockwise/unc-7 (cb5) on food R_2010_05_20__11_56_34___7___3.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/gpc-1(pk298)X@NL792/food_OP50/XX/30m_wait/clockwise/gpc-1 (pk298) on food L_2010_03_05__09_55_49___7___2.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/egl-9(n586)V@MT1216/food_OP50/XX/30m_wait/clockwise/egl-9 (n586)V on food L_2010_07_20__13_08_26__8.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/dat-1(ok157)III@RM2702/food_OP50/XX/30m_wait/clockwise/dat-1 (ok157)III on food L_2009_11_18__11_34_55___1___4.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/egl-44(n1080)II@MT2247/food_OP50/XX/30m_wait/clockwise/egl-44 (n1080)II on food L_2010_08_06__11_55_40___6___4.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/egl-7(n575)III@MT1205/food_OP50/XX/30m_wait/clockwise/egl-7 (n575)III on food L_2010_05_11__17_10_27___1___15.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/ric-19(ok833)@RB946/food_OP50/XX/30m_wait/anticlockwise/ric-19 (ok833) on food R_2011_08_24__11_05_23___8___4.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/unc-31(e169)IV@CB169/food_OP50/XX/30m_wait/clockwise/unc-31 (e169) on food L_2009_12_09__11_33_42___1___4.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/gon-2(q362)I@EJ26/food_OP50/XX/30m_wait/anticlockwise/gon-2 (9362) on food R_2010_04_29__11_51_41___7___4.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/nlp-20(ok1591)IV@RB1396/food_OP50/XX/30m_wait/anticlockwise/nlp-20 (ok1591)IV on food R_2010_03_18__11_54_17___6___6.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/WT/N2/food_OP50/XX/30m_wait/clockwise/N2 on food L_2010_04_13__10_26_11___8___1.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/egl-1(n487)V@MT1082/food_OP50/XX/30m_wait/anticlockwise/egl-1 (n487) on food R_2011_08_04__15_44_44___8___11.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/egl-23(n601)IV@MT1231/food_OP50/XX/30m_wait/clockwise/egl-23 (n601)IV on food L_2010_07_15__15_15_04___2___11.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/flp-21(ok889)V@RB982/food_OP50/XX/30m_wait/anticlockwise/flp-21 (ok889)V on food R_2010_01_13__12_33_34___6___7.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/unc-40(n324)I@MT324/food_OP50/XX/30m_wait/anticlockwise/unc-40 (n324)I on food R_2010_04_14__10_57_37___1___4.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/C24G7.1(ok1822)I@RB1523/food_OP50/XX/30m_wait/clockwise/C24G71 (ok1822) on food L_2010_03_19__09_56___3___3.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/WT/N2/food_OP50/XX/30m_wait/clockwise/N2 on  L_2010_04_15__10_10_22___7___1.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/egl-10(md176)V@MT8504/food_OP50/XX/30m_wait/anticlockwise/egl-10 (md176)V on food R_2010_05_14__12_50_57___8___9.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/ocr-4(vs137)IV@LX950/food_OP50/XX/30m_wait/anticlockwise/ocr-4 (vs137) on food R_2010_04_23__15_19_23___8___12.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/egl-33(n151)I@MT151/food_OP50/XX/30m_wait/anticlockwise/egl-33 (n151)I on food R_2010_05_11__15_07_38___1___9.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/WT/N2/food_OP50/XX/30m_wait/clockwise/N2 on food L_2010_04_21__10_28_29___6___1.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/egl-5(n486)III@MT1081/food_OP50/XX/30m_wait/anticlockwise/egl-5 (n486)III on food  R_2010_05_14__15_13_58___1___12.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/ser-5(tm2654)I@AQ2197/food_OP50/XX/30m_wait/clockwise/ser-5 (tm2654) on food L_2009_12_14__11_42_00___1___6.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/egl-30(ep271)I@CE1047/food_OP50/XX/30m_wait/anticlockwise/egl-30 (ep271gf) on food R_2010_03_04__11_23_48___6___8.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/WT/N2/food_OP50/XX/30m_wait/anticlockwise/N2 on food R_2010_09_16__11_25_14___2___1.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/acr-7(tm863)II@FX863/food_OP50/XX/30m_wait/anticlockwise/acr-7 (tm863)II on food R_2010_02_24__11_22_21___1___7.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/gpa-4(pk381)IV@NL790/food_OP50/XX/30m_wait/clockwise/gpa-4 (pk381)V on food L_2010_02_25__10_24_44___6___3.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/unc-2(ox106)X@EG106/food_OP50/XX/30m_wait/anticlockwise/unc-2 (ox106) on food R_2010_04_13__15_17_54___2___13.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/unc-16(e109)III@CB109/food_OP50/XX/30m_wait/clockwise/unc-16 (e109) on food L_2009_12_09__11_52_59___1___5.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/odr-3(n2150)V@CX2205/food_OP50/XX/30m_wait/clockwise/odr-3 (n2150) on food L_2010_03_09__15_54_40___8___12.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/flp-20(ok2964)X@RB2188/food_OP50/XX/30m_wait/anticlockwise/flp-20 (ok2964) on food R_2010_01_21__17_28_15___7___12.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/unc-69(e587)III@CB587/food_OP50/XX/30m_wait/clockwise/unc-69 (e587) on food L_2010_04_15__12_46_32___1___9.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/nlp-8(ok1799)I@VC1309/food_OP50/XX/30m_wait/anticlockwise/nlp-8 (ok1799)I on food R_2010_03_17__11_37_24___8___5.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/trp-1(sy690)III@TQ225/food_OP50/XX/30m_wait/anticlockwise/trp-1 (sy691) on food R_2010_04_22__14_39_10___6___11.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/acr-18(ok1285)V@RB1226/food_OP50/XX/30m_wait/anticlockwise/acr-18 (ok1285) on food R_2010_02_23__12_33___3___12.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/unc-118(e2331)X@CB4371/food_OP50/XX/30m_wait/clockwise/unc-118 (e2331)X on food L_2010_04_09__11_25_53___8___4.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/bas-1(ad446)III@MT7988/food_OP50/XX/30m_wait/anticlockwise/bas-1 (ad446) on food R_2009_12_17__15_53_54___7___12.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/unc-38(e264)I@CB904/food_OP50/XX/30m_wait/clockwise/unc-38 (e264)I on food L_2011_09_06__16_33_36__9.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/acr-23(ok2804)V@RB2119/food_OP50/XX/30m_wait/anticlockwise/acr-23 (ok2804)V on food R_2010_02_23__10_14_21___1___4.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/WT/N2/food_OP50/XX/30m_wait/anticlockwise/N2 on food R_2010_04_15__10_09_00___4___1.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/npr-7(ok527)X@RB761/food_OP50/XX/30m_wait/anticlockwise/npr-7 (ok527)X on food R_2010_01_28__15_04_14___7___11.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/gpa-4(pk381)IV@NL790/food_OP50/XX/30m_wait/clockwise/gpa-4 (pk381)IV on food L_2010_02_26__12_25_29___6___12.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/acr-21(ok1314)III@RB1250/food_OP50/XX/30m_wait/anticlockwise/acr-21 (ok1314)III on food R_2010_02_24__14_43_06___6___12.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/lev-8(x15)X@ZZ15/food_OP50/XX/30m_wait/clockwise/acr-13 or lev-8 (x15)X on food L_2010_02_23__14_42_37___1___14.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/ocr-3(ok1559)X@RB1374/food_OP50/XX/30m_wait/clockwise/ocr-3 (a1537) on food L_2010_04_23__12_19_37___6___8.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/egl-13(n483)X@MT1078/food_OP50/XX/30m_wait/anticlockwise/egl-13 (n483)X on food R_2010_07_13__12_07_09__6.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/ser-2(pk1357)X@OH313/food_OP50/XX/30m_wait/clockwise/ser-2 (pk1357) on food L_2009_12_17__11_45_05___2___3.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/gpa-15(pk477)I@NL797/food_OP50/XX/30m_wait/clockwise/gpa-15 (pk477)I on food L_2010_03_05__11_55_16___8___8.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/npr-3(tm1583)IV@FX1583/food_OP50/XX/30m_wait/clockwise/npr-3  (tm1583) on food L_2010_01_25__15_09_48___2___7.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/WT/N2/food_OP50/XX/30m_wait/clockwise/N2 on food L_2010_05_20__11_16_09__1.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/flp-17(ok3587)IV@RB2575/food_OP50/XX/30m_wait/anticlockwise/flp-17 (ok3587)IV on food R_2010_01_20__12_19_52___8___8.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/trpa-1(ok999)IV@RB1052/food_OP50/XX/30m_wait/clockwise/trpa-1 (ok999) on food L_2010_04_21__12_26_33___1___7.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/ocr-4(vs137)ocr-2(ak47)IV;ocr-1(ok132)V@LX982/food_OP50/XX/30m_wait/clockwise/ocr-4 (vs137); ocr-2 (9447); ocr-1 (ok134) on food L_2010_03_26__12_38_22___8___8.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/nlp-18(ok1557)II@RB1372/food_OP50/XX/30m_wait/clockwise/nlp-18 (ok1557)II on food L_2010_03_12__12_06_41__7.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/WT/N2/food_OP50/XX/30m_wait/clockwise/N2 on food_2010_07_06__10_05_55___8___1.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/unc-40(n324)I@MT324/food_OP50/XX/30m_wait/anticlockwise/unc-40 (n324)I on food R_2010_04_15__11_29_53___2___4.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/gpb-2(sa603)I@JT603/food_OP50/XX/30m_wait/clockwise/gpb-2 (sa603) on food L_2010_03_05__12_35_45___7___10.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/WT/N2/food_OP50/XX/30m_wait/anticlockwise/N2 on food_2010_07_20__10_24___3___1.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/tyra-2(tm1846)X@FX1846/food_OP50/XX/30m_wait/anticlockwise/tyra-2 (tm1846)X on food R_2010_01_26__11_04_43___1___2.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/egl-30(ep271)I@CE1047/food_OP50/XX/30m_wait/anticlockwise/egl-30 (ep271gf) on food R_2010_03_05__12_54_53___6___11.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/unc-127(hs13)V@HH27/food_OP50/XX/30m_wait/clockwise/unc-127 (hs13)V on food L_2010_04_13__12_24_02___2___7.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/W03B1.2(ok2433)IV@RB1883/food_OP50/XX/30m_wait/clockwise/W03B1.2 (ok2433) on food L_2010_04_22__16_00_43___6___15.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/W03B1.2(ok2433)IV@RB1883/food_OP50/XX/30m_wait/clockwise/W03B1.2 (ok2433) on food L_2010_04_22__15_59_43___1___15.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/pkg-1(n478)IV@MT1073/food_OP50/XX/30m_wait/anticlockwise/egl-4 (n478)IV on food R_2010_05_11__17_30_17___4___17.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/flp-21(ok889)V@RB982/food_OP50/XX/30m_wait/clockwise/flp-21 (ok889)V on food L_2010_01_14__10_53_52___2___2.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/flp-7(ok2625)X@RB1990/food_OP50/XX/30m_wait/clockwise/flp-7 (ok2625)X on food L_2010_01_12__11_03_36___7___2.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/del-4(ok1014)I@RB1064/food_OP50/XX/30m_wait/anticlockwise/T28138.5 (ok1014) on food R_2010_04_08__13_04_08___2___6.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/spe-41(sy693)III;him-5(e1490)V@PS4330/food_OP50/XX/30m_wait/anticlockwise/spe-41 (sy693); him-5 (e1490) on food R_2010_04_09__15_35_37___8___13.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/acr-7(tm863)II@FX863/food_OP50/XX/30m_wait/anticlockwise/acr-7 (tm863)II on food R_2010_02_24__11_24_51___7___7.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/gpa-2(pk16)V@NL334/food_OP50/XX/30m_wait/clockwise/gpa-2 (pk16)V on food L_2010_02_25__14_32_57___1___12.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/egl-18(ok290)IV@JR2370/food_OP50/XX/30m_wait/clockwise/egl-18 (ok290)IV on food L_2010_07_20__11_24___3___4.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/trpa-2(tm3092)I@FX3092/food_OP50/XX/30m_wait/clockwise/mo5b5.6 (tm3092) on food L_2010_06_15__11_48_35___1___4.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/gpa-8(pk345)V@NL1142/food_OP50/XX/30m_wait/clockwise/gpa-8 (pk435)V on food L_2010_03_11__10_25_56___7___2.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/npr-8(tm1553)X@FX1553/food_OP50/XX/30m_wait/anticlockwise/npr-8 (tm1553) on food  R_2010_01_26__15_37_57___2___11.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/WT/N2/food_OP50/XX/30m_wait/anticlockwise/N2 on food R_2010_05_11__11_04_39___4___1.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/mir-124(n4255)IV@MT13292/food_OP50/XX/30m_wait/anticlockwise/M124 on food R_2010_05_18__11_53_39___2___1.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/pmk-1(km25)IV@KU25/food_OP50/XX/30m_wait/anticlockwise/pmk-1 (km25) on food R_2010_04_23__11_56_26___1___7.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/osm-9(ky10);trpa-1(ok999)IV@AQ1422/food_OP50/XX/30m_wait/clockwise/trpa-1 (ok999); osm-9 (ky10) on food L_2010_04_21__14_38_48___4___9.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/WT/N2/food_OP50/XX/30m_wait/clockwise/N2 on food L_2010_05_19__11_25_52___8___1.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/snf-11(ok156)V@RM2710/food_OP50/XX/30m_wait/anticlockwise/snf-11 (ok156)V on food R_2009_11_17__16_10_03___1___9.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/osm-9(ky10);trpa-1(ok999)IV@AQ1422/food_OP50/XX/30m_wait/anticlockwise/trp-1 (ko999); osm-9 (ky10) on food R_2010_04_23__16_16_40___6___15.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/WT/N2/food_OP50/XX/30m_wait/clockwise/N2 on food L_2010_03_11__10_05_29___7___1.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/osm-9(ky10);trpa-1(ok999)IV@AQ1422/food_OP50/XX/30m_wait/anticlockwise/trpa-1 (ok999); osm-9 (ky10) on food R_2010_04_21__14_40_32__9.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/flp-10(ok2624)IV@RB1989/food_OP50/XX/30m_wait/anticlockwise/flp-10 (ok2624)IV on food R_2010_01_19__14_43_33___1___8.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/acr-2(ok1887)X@RB1559/food_OP50/XX/30m_wait/anticlockwise/acr-2 (ok1887) on food R_2010_02_23__10_53_57___2___6.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/snf-9(ok957)IV@RB1030/food_OP50/XX/30m_wait/anticlockwise/snf-9 (ok957)IIV on food R_2009_11_19__15_58_48___4___10.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/gpa-7(pk610)IV@NL795/food_OP50/XX/30m_wait/clockwise/gpa-7 (pk610) on food L_2010_03_09__11_43_23___2___4.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/mod-1(ok103)V@MT9668/food_OP50/XX/30m_wait/anticlockwise/mod-1 (ok103) on food R_2009_12_15__10_42_06___6___2.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/gpa-2(pk16)V@NL334/food_OP50/XX/30m_wait/anticlockwise/gpa-2 (pk16)V on food R_2010_02_26__10_23_53___4___6.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/WT/N2/food_OP50/XX/30m_wait/clockwise/N2 on food L_2010_04_14__09_57_49___2___1.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/egl-1(n487)V@MT1082/food_OP50/XX/30m_wait/clockwise/egl-1 (n487) on food L_2011_08_03__09_32___3___1.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/acr-23(ok2804)V@RB2119/food_OP50/XX/30m_wait/clockwise/acr-23 (ok2804)III on food L_2010_02_24__15_03___3___13.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/gpa-7(pk610)IV@NL795/food_OP50/XX/30m_wait/anticlockwise/gpa-7 (pk610)IV on food R_2010_03_11__12_24_28___1___7.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/WT/N2/food_OP50/XX/30m_wait/clockwise/N2 on food L_2010_12_16__12_54_51___2___2.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/ocr-4(tm2173)IV@FX2173/food_OP50/XX/30m_wait/anticlockwise/ocr-4 (tm2173) on food R_2010_03_19__10_36_23___8___6.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/gpa-5(pk376)X@NL1137/food_OP50/XX/30m_wait/clockwise/gpa-5 (pk376)X on food L_2010_02_26__11_03_42___6___8.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/unc-86(e1416)III@CB1416/food_OP50/XX/30m_wait/clockwise/unc-86 (e1416)III on food L_2010_08_06__12_15_22___6___5.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/npr-1(ad609)X@DA609/food_OP50/XX/30m_wait/clockwise/npr-1 (ad609)X on food L_2010_01_25__16_07_58___2___10.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/unc-115(mn481)X@SP1789/food_OP50/XX/30m_wait/clockwise/unc-115 (mn481)X on food L_2010_08_20__15_07_18__10.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/acr-6(ok3117)I@RB2294/food_OP50/XX/30m_wait/clockwise/acr-6 (ok3117) on food L_2010_02_19__15_22_09___6___15.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/npr-7(ok527)X@RB761/food_OP50/XX/30m_wait/anticlockwise/npr-7 (ok527)X on food R_2010_01_28__11_34_45___4___5.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/flp-28(gk1075)X@VC2502/food_OP50/XX/30m_wait/clockwise/flp-28 (gk1075)X on food L_2010_01_21__16_14_28___8___11.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/mir-124(n4255)IV@MT13292/food_OP50/XX/30m_wait/clockwise/M124 on food  L_2010_05_14__10_27_30___1___2.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/snf-11(ok156)V@RM2710/food_OP50/XX/30m_wait/anticlockwise/snf-11 (ok156)V on food R_2009_11_18__11_54_56___4___5.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/trp-4(sy695)I@TQ296/food_OP50/XX/30m_wait/anticlockwise/trp-4 (sy695) on food R_2010_04_23__11_20_08___4___5.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/trpa-2(tm3092)I@FX3092/food_OP50/XX/30m_wait/anticlockwise/MO5B5.6 (tm3092) on food R_2010_07_06__10_26_34___6___2.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/acr-15(ok1214)V@RB1172/food_OP50/XX/30m_wait/anticlockwise/acr-15 (ok1214)V on food R_2010_02_23__09_32_40___2___2.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/Y69H2.2(ok1522)V@RB1356/food_OP50/XX/30m_wait/anticlockwise/Y69h2.2 (ok1522) on food R_2010_03_26__11_34_42___8___5.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/flp-20(ok2964)X@RB2188/food_OP50/XX/30m_wait/clockwise/flp-20 (ok2964)X on food L_2010_01_19__10_24_27___8___1.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/WT/N2/food_OP50/XX/30m_wait/clockwise/N2 on foodL_2010_07_15__10_50_34___8___1.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/flp-13(tm2427)IV@FX2427/food_OP50/XX/30m_wait/clockwise/flp-13 (tm2427) on food L_2010_01_21__12_05_28___6___4.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/gpa-3(pk35)V@NL335/food_OP50/XX/30m_wait/anticlockwise/gpa-3 (pk35)IV on food R_2010_03_04__11_42_50___1___9.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/ocr-4(tm2173)IV@FX2173/food_OP50/XX/30m_wait/clockwise/ocr-4 (tm2173) on food L_2010_03_26__14_54_59___7___10.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/egl-1(n487)V@MT1082/food_OP50/XX/30m_wait/clockwise/egl-1 (n487) on food L_2011_08_03__09_36_30___7___1.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/tyra-3(ok325)X@VC125/food_OP50/XX/30m_wait/clockwise/tyra-3 (ok325)X on food L_2010_01_22__15_47_16___7___13.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/acr-21(ok1314)III@RB1250/food_OP50/XX/30m_wait/anticlockwise/acr-21 (ok1314)III on food R_2010_02_19__09_42_35___4___2.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/trpa-2(tm3085)I@FX3085/food_OP50/XX/30m_wait/anticlockwise/M0585.6 (tm3085) on food R_2010_03_30__15_27_37___1___8.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/ocr-3(ok1559)X@RB1374/no_food/XX/30m_wait/clockwise/ocr-3 (ok1557) off food_2010_04_30__15_07_41___2___9.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/acr-3(ok2049)X@RB1659/food_OP50/XX/30m_wait/clockwise/acr-3 (ok2049)X on food L_2010_02_19__10_45_38___7___5.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/acr-14(ok1155)II@RB1132/food_OP50/XX/30m_wait/anticlockwise/acr-14 (ok1155) on food R_2010_02_23__15_03___3___16.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/unc-79(e1068)III@CB1068/food_OP50/XX/30m_wait/clockwise/unc-79 (e1068)III on food L_2010_04_13__15_37_57___6___14.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/egl-15(n484)X@MT1079/food_OP50/XX/30m_wait/clockwise/egl-15 (n484)X on food L_2010_05_11__11_44_46___6___3.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/WT/N2/food_OP50/XX/30m_wait/clockwise/N2 on food L_2009_12_14__10_22_30___7___1.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/snf-10(hc194)V@BA1093/food_OP50/XX/30m_wait/clockwise/snf-10 (hc194)V on food L_2009_11_19__16_21_43___6___11.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/unc-7(e5)X@CB5/food_OP50/XX/30m_wait/anticlockwise/unc-7 (cb5) on food R_2010_09_10__12_45_55___4___5.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/snf-8(ok349)IV@RB648/food_OP50/XX/30m_wait/anticlockwise/snf-8 (ok349)IV on food R_2009_11_19__12_08_47___6___6.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/egl-42(n995)II@MT2068/food_OP50/XX/30m_wait/clockwise/egl-42 (n995) on food L_2011_05_25__14_48_56__3.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/WT/N2/food_OP50/XX/30m_wait/anticlockwise/N2 on food R_2010_01_13__10_34_41___8___1.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/WT/N2/food_OP50/XO/30m_wait/clockwise/N2 male on food L_2012_02_22__11_18_14___3___3.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/acr-9(ok933)X@VC649/food_OP50/XX/30m_wait/anticlockwise/acr-9 (ok933)X on food R_2010_02_19__10_23_30___7___4.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/WT/N2/food_OP50/XX/30m_wait/clockwise/N2 on food L_2010_01_11__11_37_48___8___1.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/goa-1(sa734)I@DG1856/food_OP50/XX/30m_wait/clockwise/goa-1 (sa734)I on food L_2010_03_04__10_44_32___8___6.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/trp-4(sy695)I@TQ296/food_OP50/XX/30m_wait/anticlockwise/trp-4 (sy695) on food R_2010_04_23__11_21_08___8___5.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/trpa-2(tm3092)I@FX3092/food_OP50/XX/30m_wait/anticlockwise/mo5b5.6 (tm3092) on food R_2010_06_15__11_49_48___6___4.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/egl-15(n484)X@MT1079/food_OP50/XX/30m_wait/clockwise/egl-15 (n484)XRon food L_2010_05_19__12_05_17___4___3.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/flp-12(ok2409)X@RB1863/food_OP50/XX/30m_wait/anticlockwise/flp-12 (ok2409)X on food R_2010_01_11__12_14_01___1___3.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/mec-10(u20)X@AQ2533/food_OP50/XX/30m_wait/clockwise/mec-10 (u20) on food L_2010_11_11__15_55___3___9.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/WT/N2/food_OP50/XX/30m_wait/anticlockwise/N2 on food R_2010_05_11__11_05_42___8___1.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/tyra-2(tm1846)X@FX1846/food_OP50/XX/30m_wait/anticlockwise/tyra-2 (tm1846)X on food R_2010_01_28__12_59_10___4___9.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/unc-32(e189)III@CB189/food_OP50/XX/30m_wait/anticlockwise/unc-32 (e189) on food R_2009_12_11__16_55_12__10.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/WT/N2/food_OP50/XX/30m_wait/anticlockwise/N2 on food R_2010_05_14__10_08_37___2___1.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/npr-10(tm1568)X@FX1568/food_OP50/XX/30m_wait/clockwise/npr-10 (tm1568) on food  L_2010_01_26__16_17_21___8___13.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/C24G7.1(ok1822)I@RB1523/food_OP50/XX/30m_wait/anticlockwise/C24G7.1 (ok1822) on food R_2010_03_30__12_08_12___8___4.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/flp-25(gk1016)III@VC1982/food_OP50/XX/30m_wait/anticlockwise/flp-25 (gk1016)III on food R_2010_01_14__12_16_36___7___6.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/nlp-8(ok1799)I@VC1309/food_OP50/XX/30m_wait/anticlockwise/nlp-8 (ok1799)I on food R_2010_03_17__11_35_07___1___6.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/dat-1(ok157)III@RM2702/food_OP50/XX/30m_wait/clockwise/dat-1 (ok157) on food L_2009_11_18__11_35_39___2___4.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/gpc-1(pk298)X@NL792/food_OP50/XX/30m_wait/anticlockwise/gpc-1 (pk298) on food R_2010_03_11__13_05_42___6___9.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/egl-13(n483)X@MT1078/food_OP50/XX/30m_wait/clockwise/egl-13 (n483)X on food L_2010_07_16__11_03_30___1___3.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/trp-4(sy695)I@TQ296/no_food/XX/30m_wait/anticlockwise/trp-4 (sy695) off food R_2010_04_27__15_21_21___7___8.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/trpa-2(tm3092)I@FX3092/food_OP50/XX/30m_wait/clockwise/M05B5.6 (tm3092) on food L_2010_03_25__16_23_46___1___11.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/ser-4(ok512)III@AQ866/food_OP50/XX/30m_wait/anticlockwise/ser-4 (ok512) on food R_2009_12_14__11_25_17___7___4.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/unc-101(m1)I@DR1/food_OP50/XX/30m_wait/anticlockwise/unc-101 (m1)I on food R_2010_04_15__12_30_08___7___8.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/npr-9(tm1652)X@IC683/food_OP50/XX/30m_wait/anticlockwise/npr-9 (tm1652) on food R_2010_01_26__15_20_04___7___10.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/tbh-1(n3247)X@MT9455/food_OP50/XX/30m_wait/clockwise/tbh-1 on food L_2010_01_28__12_37_41___4___8.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/gpa-14(pk347)I@AQ495/food_OP50/XX/30m_wait/clockwise/gpa-14 (pk347)I on food L_2010_02_26__09_04_20___8___2.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/egl-15(n484)X@MT1079/food_OP50/XX/30m_wait/clockwise/egl-15 (n484)X on food L_2010_05_19__12_04_42___2___3.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/flp-17(ok3587)IV@RB2575/food_OP50/XX/30m_wait/anticlockwise/flp-17 (ok3587)IV on food R_2010_01_20__12_18_39___2___8.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/lev-8(x15)X@ZZ15/food_OP50/XX/30m_wait/clockwise/acr-13 or lev-8 (x15)X on food L_2010_02_19__13_01_52___6___12.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/npr-11(ok594)X@RB799/food_OP50/XX/30m_wait/clockwise/npr-11 (ok594)X  on food L_2010_01_28__11_13_53___2___3.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/unc-89(e1460)I@CB1460/food_OP50/XX/30m_wait/anticlockwise/unc-89 ((e140)I on food R_2010_04_09__14_54_29___6___10.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/mod-5(n822)I@MT8944/food_OP50/XX/30m_wait/clockwise/mod-5 (n822)I on food L_2009_11_17__17_11_06___6___12.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/npr-7(ok527)X@RB761/food_OP50/XX/30m_wait/anticlockwise/npr-7 (ok527)X  on food R_2010_01_28__15_01_52___1___11.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/npr-2(ok419)IV@AQ2056/food_OP50/XX/30m_wait/clockwise/npr-2 (ok419)IV on food L_2010_01_22__13_12_03___1___10.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/flp-20(ok2964)X@RB2188/food_OP50/XX/30m_wait/clockwise/flp-20 (ok2964)X on food L_2010_01_21__11_26_25___2___2.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/mod-1(ok103)V@MT9668/food_OP50/XX/30m_wait/anticlockwise/mod-1 (ok103) on food R_2009_12_14__15_26_10___2___12.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/egl-28(n570)II@MT1200/food_OP50/XX/30m_wait/anticlockwise/egl-28 (n570)II on food R_2010_07_15__12_49___3___7.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/acr-14(ok1155)II@RB1132/food_OP50/XX/30m_wait/anticlockwise/acr-14 (ok1155) on food R_2010_02_24__09_43_09___2___2.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/mir-124(n4255)IV@MT13292/food_OP50/XX/30m_wait/anticlockwise/M124 on food R_2010_05_13__10_34_03___2___1.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/acr-9(ok933)X@VC649/food_OP50/XX/30m_wait/clockwise/acr-9 (ok933)X on food L_2010_02_24__12_23_35___6___10.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/mir-124(n4255)IV@MT13292/food_OP50/XX/30m_wait/clockwise/M124 on food L_2010_05_18__15_05_53___4___3.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/C24G7.4(ok1237)I@RB1192/food_OP50/XX/30m_wait/anticlockwise/C24G7.4 (ok1237) on food R_2010_03_30__11_46_46___4___2.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/WT/N2/food_OP50/XX/30m_wait/clockwise/N2 on food L_2010_01_13__10_34_57___7___1.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/trpa-1(ok999)IV@RB1052/food_OP50/XX/30m_wait/anticlockwise/trpa-1 (ok999) on food R_2010_04_21__12_29_03___8___7.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/gpa-17(ok2334)III@RB1800/food_OP50/XX/30m_wait/clockwise/gpa-17 (ok2334)III on food L_2010_03_11__11_25_00___2___5.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/nlp-17(ok3461)IV@RB2498/food_OP50/XX/30m_wait/clockwise/nlp-17 (ok3461)IV on food L_2010_03_12__10_33_03___2___3.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/del-4(ok1014)I@RB1064/food_OP50/XX/30m_wait/clockwise/T28138.5 (ok1014) on food L_2010_04_08__13_03_15___1___6.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/C11D2.2(ok1565)IV@RB1380/food_OP50/XX/30m_wait/clockwise/C11D2.2 (ok1565)IV on food L_2011_08_25__15_03_30__7.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/flp-3(ok3265)X@VC2497/food_OP50/XX/30m_wait/anticlockwise/flp-3 (ok3265) on food R_2010_01_20__12_36_29___6___8.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/trpa-1(ok999)IV@RB1052/food_OP50/XX/30m_wait/clockwise/trpa-1 (ko999) on food L_2010_04_23__15_00_20___7___11.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/ocr-4(vs137)IV@LX950/food_OP50/XX/30m_wait/anticlockwise/ocr-4 (vs137) on food R_2010_04_21__15_20_06___7___11.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/osm-9(ky10);trpa-1(ok999)IV@AQ1422/food_OP50/XX/30m_wait/anticlockwise/trpa-1 (ok999); osm-9 (ky10) on food R_2010_04_23__16_18_31___7___15.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/del-1(ok150)X@NC279/food_OP50/XX/30m_wait/anticlockwise/del-1 (ok150) on food R_2010_06_15__14_35_03___1___7.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/nlp-2(tm1908)X@FX1908/food_OP50/XX/30m_wait/clockwise/nlp-2 (tm1908)X on food L_2010_03_18__12_54_19___6___9.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/gpa-12(pk322)X@NL594/food_OP50/XX/30m_wait/anticlockwise/gpa-12 (pk322)X on food R_2010_02_26__11_24_33___8___9.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/C24G7.1(ok1822)I@RB1523/food_OP50/XX/30m_wait/anticlockwise/C24G7.1 (ok1822) on food R_2010_03_26__15_54_53___1___13.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/npr-10(tm1568)X@FX1568/food_OP50/XX/30m_wait/anticlockwise/npr-10 (tm1568) on food R_2010_01_22__10_33_06___6___2.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/nlp-15(ok1512)I@VC1063/food_OP50/XX/30m_wait/anticlockwise/nlp-15 (ok1512) on food R_2010_03_17__10_35_03___6___3.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/trp-4(sy695)I@TQ296/food_OP50/XX/30m_wait/anticlockwise/trp-4 (sy695) on food R_2010_04_29__12_09_37___8___5.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/gpa-10(pk362)V@NL1147/food_OP50/XX/30m_wait/anticlockwise/gpa-10 (pk362)V on food R_2010_02_25__10_45_20___8___4.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/flp-10(ok2624)IV@RB1989/food_OP50/XX/30m_wait/anticlockwise/flp-10 (ok2624)IV on food R_2010_01_19__14_45_33___8___8.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/nlp-2(tm1908)X@FX1908/food_OP50/XX/30m_wait/anticlockwise/nlp-2 (tm1908)X on food R_2010_03_18__12_56_03___7___9.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/ser-5(tm2654)I@AQ2197/food_OP50/XX/30m_wait/anticlockwise/ser-5 (tm2654) on food R_2009_12_14__11_42_42___2___6.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/gpa-17(ok2334)III@RB1800/food_OP50/XX/30m_wait/clockwise/gpa-17 (ok2334)III on food L_2010_03_09__13_04_42___7___4.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/nlp-12(ok335)IV@RB607/food_OP50/XX/30m_wait/clockwise/nlp-12 (ok335)IV on food L_2010_03_17__13_16_03___8___10.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/spe-41(sy693)III;him-5(e1490)V@PS4330/food_OP50/XX/30m_wait/clockwise/spe-41 (sy693); him-5 (e1490) on food L_2010_04_09__12_26_27___7___7.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/WT/N2/food_OP50/XX/30m_wait/anticlockwise/N2 on food R_2010_01_22__10_12_29___4___1.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/flp-21(ok889)V@RB982/food_OP50/XX/30m_wait/anticlockwise/flp-21 (ok889)V on food R_2010_01_13__12_34_45___8___7.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/snf-6(eg28)III@BZ28/food_OP50/XX/30m_wait/anticlockwise/snf-6 (eg28) on food R_2010_09_30__11_07_43___7___3.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/egl-18(ok290)IV@JR2370/food_OP50/XX/30m_wait/clockwise/egl-18 (e290)IV on food L_2010_07_15__11_29___3___3.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/egl-50(n1086)II@AQ2316/food_OP50/XX/30m_wait/anticlockwise/egl-50 (n1086) on food R_2009_12_09__12_15_21___8___7.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/egl-13(n483)X@MT1078/food_OP50/XX/30m_wait/clockwise/egl-13 (n483)X on food L_2010_07_13__12_04_56___6___6.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/nlp-15(ok1512)I@VC1063/food_OP50/XX/30m_wait/anticlockwise/nlp-15 (ok1512)I on food R_2010_03_12__12_26_19__8.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/npr-8(tm1553)X@FX1553/food_OP50/XX/30m_wait/clockwise/npr-8 (tm1553) on food L_2010_01_25__12_15_19___2___3.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/gpa-15(pk477)I@NL797/food_OP50/XX/30m_wait/clockwise/gpa-15 (pk477)I on food L_2010_03_09__12_43_13___6___7.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/ocr-4(vs137)ocr-2(ak47)IV;ocr-1(ok132)V@LX982/food_OP50/XX/30m_wait/clockwise/ocr-4 vs137); ocr-2 (9447); ocr-1 (ok134) on food L_2010_06_15__10_46_23___6___2.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/unc-79(e1068)III@CB1068/food_OP50/XX/30m_wait/anticlockwise/unc-79 (e1068)III on food R_2010_04_09__12_42_48___1___8.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/gpa-16(ok2349)I@RB1816/food_OP50/XX/30m_wait/anticlockwise/gpa-16 (ok2349)I on food R_2010_03_11__11_05_59___2___4.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/C18B2.6(ok2353)X@RB1818/food_OP50/XX/30m_wait/clockwise/C1B2.6 (ok2353) on food L_2010_03_30__15_51_48___8___9.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/npr-11(ok594)X@RB799/food_OP50/XX/30m_wait/clockwise/npr-11 (ok594)X on food L_2010_01_28__15_22_32___1___12.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/dat-1(ok157)III@RM2702/food_OP50/XX/30m_wait/clockwise/dat-1 (ok1571) on food L_2009_11_17__15_52_53___8___9.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/unc-80(e1069)V@CB1069/food_OP50/XX/30m_wait/clockwise/unc-80 (e1069) on food L_2010_04_14__14_56_45___1___12.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/egl-30(ep271)I@CE1047/food_OP50/XX/30m_wait/clockwise/egl-30 (ep271gf) on food L_2010_02_26__09_43_11___6___4.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/acr-2(ok1887)X@RB1559/food_OP50/XX/30m_wait/anticlockwise/acr-2 (ok1887) on food R_2010_02_23__10_53_59___6___6.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/gpa-6(pk480)X@NL1146/food_OP50/XX/30m_wait/clockwise/gpa-6 (ph480)X on food L_2010_02_25__11_44_57___8___7.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/egl-40(n606)IV@MT1236/food_OP50/XX/30m_wait/anticlockwise/egl-40 (n606)IV on food R_2010_08_06__12_55_22___6___7.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/C46A5.2(ok1187)IV@RB1156/food_OP50/XX/30m_wait/clockwise/C46A5.2 (ok1187) on food L_2010_03_26__10_35_29__2.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/trpa-2(tm3085)I@FX3085/food_OP50/XX/30m_wait/anticlockwise/M0585.6 (ok3085) on food R_2010_03_30__15_28_33___6___8.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/WT/N2/food_OP50/XX/30m_wait/anticlockwise/N2 on food R_2010_03_18__10_15_09___8___1.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/mod-5(n822)I@MT8944/food_OP50/XX/30m_wait/clockwise/mod-5 (n822)I on food L_2009_11_18__10_53_26___8___2.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/flp-21(ok889)V@RB982/food_OP50/XX/30m_wait/clockwise/flp-21 (ok889)V on food L_2010_01_12__12_06_45___6___5.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/egl-15(n484)X@MT1079/food_OP50/XX/30m_wait/clockwise/egl-15 (n484)X on food  L_2010_05_14__12_28_10___1___8.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/snf-2(ok147)I@RB641/food_OP50/XX/30m_wait/clockwise/snf-2 (ok147)I on food L_2009_11_17__12_40_50___1___3.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/flp-20(ok2964)X@RB2188/food_OP50/XX/30m_wait/anticlockwise/flp-20 (ok2964)X on food R_2010_01_19__10_23___3___1.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/WT/ED3054/food_OP50/XX/30m_wait/anticlockwise/507 ED3054 on food R_2011_02_25__10_28_17___6___1.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/gpa-12(pk322)X@NL594/food_OP50/XX/30m_wait/clockwise/gpa-12 (pk322)X on food L_2010_03_04__09_22_58___6___2.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/tph-1(mg280)II@MT15434/food_OP50/XX/30m_wait/clockwise/tph-1 superoutcrossed on food L_2009_12_15__11_43_33___8___5.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/WT/N2/food_OP50/XX/30m_wait/clockwise/N2 on food L_2010_03_09__10_42_47___1___1.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/WT/N2/food_OP50/XX/30m_wait/clockwise/N2 on food L_2011_11_11__13_12_27___2___4.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/npr-7(ok527)X@RB761/food_OP50/XX/30m_wait/anticlockwise/npr-7 (ok527)X on food R_2010_01_28__15_03_57___8___11.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/pqn-66(ok1507)II@RB1350/no_food/XX/30m_wait/anticlockwise/pgn-66 (ok1507) off food R_2010_04_27__11_44_02___7___3.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/tyra-3(ok325)X@VC125/food_OP50/XX/30m_wait/clockwise/tyra-3 (ok325)X on food L_2010_01_28__14_45_27___7___10.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/egl-32(n155)I@MT155/food_OP50/XX/30m_wait/anticlockwise/egl-32 (n155)I on food R_2010_05_14__11_31_20___7___5.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/flp-9(ok2730)IV@RB2067/food_OP50/XX/30m_wait/anticlockwise/flp-9 (ok2730)V on food R_2010_01_13__12_14_26___2___6.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/F23B2.3(ok1226)IV@RB1177/food_OP50/XX/30m_wait/anticlockwise/F23B2.2 (ok1226) on food R_2010_03_25__12_35_16___6___7.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/ocr-3(ok1559)X@RB1374/food_OP50/XX/30m_wait/anticlockwise/ocr-3 (ok1557) on food R_2010_04_21__10_50_37___7___2.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/flp-6(ok3056)V@VC2324/food_OP50/XX/30m_wait/anticlockwise/flp-6 (ok3056)V on food R_2010_01_14__11_34_39___1___4.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/snf-9(ok957)IV@RB1030/food_OP50/XX/30m_wait/clockwise/snf-9 (ok957)IV on food L_2009_11_19__15_58___3___10.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/trpa-2(ok3189)I@RB2351/food_OP50/XX/30m_wait/clockwise/M05B5.6 (ok3189) on food L_2010_04_29__11_09_47___8___2.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/gpa-1(pk15)V@NL332/food_OP50/XX/30m_wait/clockwise/gpa-1 (pk15) on food L_2010_02_25__12_03_39___2___8.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/trpa-2(ok3189)I@RB2351/food_OP50/XX/30m_wait/anticlockwise/M05B5.6 (ok3189) on food R_2010_04_29__11_08_46___4___2.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/flp-11(tm2706)X@FX2706/food_OP50/XX/30m_wait/clockwise/flp-11 (tm2706)X on food L_2010_01_14__12_53_17___1___8.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/acr-6(ok3117)I@RB2294/food_OP50/XX/30m_wait/clockwise/acr-6 (ok3117) on food L_2010_02_19__15_23_48___7___15.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/trp-4(sy695)I@TQ296/food_OP50/XX/30m_wait/anticlockwise/trp-4 (sy695) on food R_2010_04_29__12_08_01___2___5.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/WT/N2/food_OP50/XX/30m_wait/clockwise/N2 on food L_2010_05_20__11_14_23___4___1.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/WT/N2/food_OP50/XX/30m_wait/clockwise/N2 on food L_2010_05_19__11_24_11___2___1.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/WT/N2/food_OP50/XX/30m_wait/clockwise/N2 on food L_2010_03_04__09_02___3___1.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/WT/N2/food_OP50/XX/30m_wait/clockwise/N2 on food L_2009_11_19__12_48_21___8___7.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/npr-2(ok419)IV@AQ2056/food_OP50/XX/30m_wait/anticlockwise/npr-2 (ok419)IV on food  R_2010_01_25__15_27_44___1___10.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/WT/N2/no_food/XX/30m_wait/anticlockwise/N2 off food R_2010_04_27__11_24_45___1___2.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/unc-4(gk705)II@VC1528/food_OP50/XX/30m_wait/clockwise/unc-4 (gk705)II on food L_2011_08_11__10_20_25___6___2.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/tdc-1(n3419)II@MT13113/food_OP50/XX/30m_wait/clockwise/tdc-1 (n3419) on food L_2010_03_12__14_43___3___10.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/egl-8(n488)V@MT1083/food_OP50/XX/30m_wait/clockwise/egl-8 (n488)V on food L_2010_05_11__12_22_58___1___5.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/npr-1(ad609)X@DA609/food_OP50/XX/30m_wait/anticlockwise/npr-1 (ad609)X on food R_2010_01_22__11_34_25___8___5.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/nlp-1(ok1469)X@RB1340/food_OP50/XX/30m_wait/clockwise/nlp-1 (ok1469)X on food L_2010_03_12__11_22_42___1___5.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/trp-2(sy691)III@TQ194/food_OP50/XX/30m_wait/anticlockwise/trp-2 (sy691) on food R_2010_03_26__15_35_26___8___12.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/egl-20(mu39)IV@CF263/food_OP50/XX/30m_wait/anticlockwise/egl-20 (mu39)IV on food R_2010_07_16__11_26_30___8___4.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/pqn-66(ok1507)II@RB1350/food_OP50/XX/30m_wait/anticlockwise/pgn-66 (ok1507) on food R_2010_04_23__10_21_38___8___2.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/snf-4(ok496)II@RB738/food_OP50/XX/30m_wait/anticlockwise/snf-4 (ok496)II on food R_2009_11_19__11_07_59___2___3.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/egl-21(n611)IV@MT1241/food_OP50/XX/30m_wait/anticlockwise/egl-21 (n611)IV on food R_2010_05_14__15_54_37___4___15.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/flp-28(gk1075)X@VC2502/food_OP50/XX/30m_wait/anticlockwise/flp-28 (gk1075)X on food R_2010_01_19__15_24_39___8___10.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/C24G7.4(ok1237)I@RB1192/food_OP50/XX/30m_wait/anticlockwise/C24G7.4 (ok1237) on food R_2010_03_26__11_55_29__7.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/acr-6(ok3117)I@RB2294/food_OP50/XX/30m_wait/anticlockwise/acr-6 (ok3117) on food R_2010_02_19__15_22_08___2___15.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/egl-21(n476)IV@KP2018/food_OP50/XX/30m_wait/anticlockwise/egl-21 (n476)IV on food R_2010_07_20__12_05_13___4___6.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/acr-3(ok2049)X@RB1659/food_OP50/XX/30m_wait/anticlockwise/acr-3 (ok2049) on food R_2010_02_23__15_27_09___4___16.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/ocr-4(tm2173)IV@FX2173/food_OP50/XX/30m_wait/clockwise/ocr-4 (tm2173) on food L_2010_03_19__10_35_29___4___6.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/egl-11(n587)V@MT1217/food_OP50/XX/30m_wait/clockwise/egl-11 (n587)V on food L_2010_05_13__10_56_26__3.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/C24G7.1(ok1822)I@RB1523/food_OP50/XX/30m_wait/clockwise/C24G7.1 (ok1822) on food L_2010_03_26__15_57_58__14.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/egl-20(mu39)IV@CF263/food_OP50/XX/30m_wait/anticlockwise/egl-20 (mu39)IV on food R_2010_07_15__12_31_29___7___6.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/unc-40(n324)I@MT324/food_OP50/XX/30m_wait/clockwise/unc-40 (n324)I on food L_2010_04_14__11_00_26___7___4.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/octr-1(ok371)X@VC224/food_OP50/XX/30m_wait/clockwise/tag-24 (ok371)X on food L_2010_01_22__15_02_47___1___12.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/Y69H2.2(ok1522)V@RB1356/food_OP50/XX/30m_wait/clockwise/Y69H2.2 (ok1522) on food L_2010_03_25__17_07_31___7___14.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/npr-2(ok419)IV@AQ2056/food_OP50/XX/30m_wait/anticlockwise/npr-2 (ok419)IV on food R_2010_01_25__15_29_03___4___10.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/egl-30(ep271)I@CE1047/food_OP50/XX/30m_wait/clockwise/egl-30 (ep271gf) on food L_2010_02_26__09_44_30___8___4.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/acr-10(ok3064)X@RB2262/food_OP50/XX/30m_wait/clockwise/acr-10 (ok3064) on food L_2010_02_23__12_13_55___6___10.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/ocr-3(ok1559)X@RB1374/no_food/XX/30m_wait/clockwise/ocr-3 (a1537) off food_2010_04_30__12_38_45___2___5.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/nlp-17(ok3461)IV@RB2498/food_OP50/XX/30m_wait/clockwise/nlp-17 (ok3461)IV on food L_2010_03_18__11_34_22___6___5.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/ocr-4(tm2173)IV@FX2173/food_OP50/XX/30m_wait/clockwise/ocr-4 on food L_2010_03_25__12_14_26___6___6.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/flp-9(ok2730)IV@RB2067/food_OP50/XX/30m_wait/anticlockwise/flp-9 (ok2730)IV on food R_2010_01_13__12_13_41___1___6.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/flp-25(gk1016)III@VC1982/food_OP50/XX/30m_wait/clockwise/flp-25 (gk1016)III on food L_2010_01_12__13_06_02___1___8.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/T28F2.7(ok2657)I@RB2005/food_OP50/XX/30m_wait/clockwise/T28F2.7 (ok2657) on food L_2010_03_30__12_27_29___6___4.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/npr-12(tm1498)IV@FX1498/food_OP50/XX/30m_wait/anticlockwise/npr-12 (tm1498)IV on food R_2010_01_26__15_56_53___6___12.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/unc-79(e1068)III;nzIs29[punc-17::rho-1(G14V);punc-122::GFP]@AQ2935/food_OP50/XX/30m_wait/clockwise/unc-79 (e1068) nRHO-1 QT309 on food L_2011_11_09__10_27_16___7___1.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/snf-1(ok790)I@RB919/food_OP50/XX/30m_wait/clockwise/snf-1 (ok790)I on food L_2009_11_17__12_21_40___6___2.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/unc-26(m2)IV@DR2/food_OP50/XX/30m_wait/anticlockwise/unc-26 (m2)IV on food R_2010_04_16__11_58_52___8___6.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/unc-37(e262)I@CB262/food_OP50/XX/30m_wait/anticlockwise/unc-37 (e2621)I on food R_2010_04_14__12_18_53___4___7.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/octr-1(ok371)X@VC224/food_OP50/XX/30m_wait/clockwise/tag-24 (ok371)X on food L_2010_01_26__11_28_15___7___3.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/WT/N2/food_OP50/XX/30m_wait/anticlockwise/N2 on food R_2011_08_04__15_21___4___10.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/snf-4(ok496)II@RB738/food_OP50/XX/30m_wait/clockwise/snf-4 (ok496)II on food L_2009_11_17__14_31_14___8___6.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/ocr-3(ok1559)X@RB1374/food_OP50/XX/30m_wait/anticlockwise/ocr-3 (ok1557) on food R_2010_04_21__10_48_48___6___2.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/flp-9(ok2730)IV@RB2067/food_OP50/XX/30m_wait/clockwise/flp-9 (ok2730)V on food L_2010_01_13__12_15_54___7___6.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/tag-336(ok1477)V@VC975/food_OP50/XX/30m_wait/clockwise/tag-336 (ok1477) on food L_2010_03_31__12_32_36___2___6.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/egl-24(n572)III@MT1202/food_OP50/XX/30m_wait/anticlockwise/egl-24 (n572)III on food R_2010_05_11__13_05_05__7.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/C24G7.4(ok1237)I@RB1192/food_OP50/XX/30m_wait/anticlockwise/C24G7.4 (ok1237) on food R_2010_03_25__11_13_24___6___2.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/ocr-3(ok1559)X@RB1374/food_OP50/XX/30m_wait/clockwise/ocr-3 (ok1557) on food L_2010_04_22__11_30_56__7.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/WT/N2/food_OP50/XX/30m_wait/anticlockwise/N2 on food_2010_01_25__11_33_44___8___1.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/gpa-3(pk35)V@NL335/food_OP50/XX/30m_wait/anticlockwise/gpa-3 (pk35)IV on food R_2010_02_25__12_23_48___2___9.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/dnc-1(or404)IV@EU1006/food_OP50/XX/30m_wait/anticlockwise/dnc-1 (or404ts) on food R_2009_12_09__12_35_40___6___7.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/octr-1(ok371)X@VC224/food_OP50/XX/30m_wait/clockwise/tag-24 (ok371)X on food L_2010_01_22__15_03_37___6___12.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/flp-11(tm2706)X@FX2706/food_OP50/XX/30m_wait/clockwise/flp-11 (tm2706)X on food L_2010_01_14__13_11_55___2___9.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/trpa-1(ok999)IV@RB1052/food_OP50/XX/30m_wait/clockwise/trpa-1 (ok999) on food L_2010_04_21__12_28_02___4___7.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/npr-5(ok1583)V@AX1745/food_OP50/XX/30m_wait/clockwise/npr-5 (ok1358) on food L_2010_01_26__12_26_40___7___6.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/acr-23(ok2804)V@RB2119/food_OP50/XX/30m_wait/anticlockwise/acr-23 (ok2084)V on food R_2010_02_23__10_15_12___6___4.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/acr-15(ok1214)V@RB1172/food_OP50/XX/30m_wait/clockwise/acr-15 (ok1214)X on food L_2010_02_24__15_43_41___2___16.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/flp-20(ok2964)X@RB2188/food_OP50/XX/30m_wait/anticlockwise/flp-20 (ok2964) on food R_2010_01_21__17_26_32___2___11.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/WT/N2/food_OP50/XX/30m_wait/anticlockwise/N2 on ood R_2010_12_16__15_07_56___8___5.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/gon-2(q362)I@EJ26/food_OP50/XX/30m_wait/anticlockwise/gon-2 (9352) on food R_2010_04_23__10_40_50___2___3.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/W03B1.2(ok2433)IV@RB1883/food_OP50/XX/30m_wait/anticlockwise/W03B1.2 (ok2433) on food R_2010_04_21__11_50_32___7___5.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/npr-5(ok1583)V@AX1745/food_OP50/XX/30m_wait/clockwise/npr-5 (ok1358) on food L_2010_01_25__12_37_51___2___4.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/spe-41(sy693)III;him-5(e1490)V@PS4330/food_OP50/XX/30m_wait/clockwise/spe-41 (sy693); him-5 (e1490) on food L_2010_04_09__15_34_10___6___12.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/del-1(ok150)X@NC279/food_OP50/XX/30m_wait/clockwise/del-1 (ok150) on food L_2010_07_06__12_07_33___6___7.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/lov-1(ok522)II@RB753/food_OP50/XX/30m_wait/anticlockwise/lov-1 (con5221) on food R_2010_03_19__12_00_12___8___9.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/flp-7(ok2625)X@RB1990/food_OP50/XX/30m_wait/anticlockwise/flp-7 (ok2625)X on food R_2010_01_14__11_56_13___2___5.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/F23B2.3(ok1226)IV@RB1177/food_OP50/XX/30m_wait/clockwise/F23B2.2 (ok1226) on food L_2010_03_25__12_35_11___2___6.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/unc-108(n777)I@MT1656/food_OP50/XX/30m_wait/anticlockwise/unc-108 (n777)I on food R_2009_12_10__14_42_34___6___11.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/T28F2.7(ok2657)I@RB2005/food_OP50/XX/30m_wait/anticlockwise/T28F7.2 (ok2657) on food R_2010_03_31__11_15_58___7___2.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/npr-12(tm1498)IV@FX1498/food_OP50/XX/30m_wait/anticlockwise/npr-12 (tm1498)IV on food R_2010_01_26__15_56_07___1___11.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/egl-42(n995)II@MT2068/food_OP50/XX/30m_wait/clockwise/egl-42 (n995sd) on food L_2009_12_11__14_56_11___6___6.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/unc-127(hs13)V@HH27/food_OP50/XX/30m_wait/clockwise/unc-127 (hs13)V on food L_2010_04_13__12_23_07___1___7.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/egl-17(e1313)X@CB1313/food_OP50/XX/30m_wait/anticlockwise/egl-17 (e1313)X on food R_2010_07_09__11_43_13___2___4.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/WT/N2/food_OP50/XX/30m_wait/clockwise/N2 on food L_2010_01_21__11_02_30___8___1.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/trp-2(sy691)III@TQ194/food_OP50/XX/30m_wait/clockwise/trp-2 (sy691) on food L_2010_03_26__15_32_24___6___12.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/npr-1(ad609)X@DA609/food_OP50/XX/30m_wait/clockwise/npr-1 (ad609)X on food L_2010_01_22__11_33_10___2___5.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/bas-1(ad446)III@MT7988/food_OP50/XX/30m_wait/anticlockwise/bas-1 (ad446) on food R_2009_12_14__13_02_07___2___9.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/egl-9(n586)V@MT1216/food_OP50/XX/30m_wait/clockwise/egl-9 (n586)V on food L_2010_07_20__13_07_50___8___10.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/tag-336(ok1477)V@VC975/food_OP50/XX/30m_wait/anticlockwise/tag-336 (ok1477) on food R_2010_04_08__12_06_20__3.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/egl-1(n487)V@MT1082/food_OP50/XX/30m_wait/anticlockwise/egl-1 (n487)V on food R_2010_07_09__11_24_47___2___3.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/egl-31(n472)I@MT1067/food_OP50/XX/30m_wait/anticlockwise/egl-31 (n472)I on food R_2010_07_20__10_43_24___1___2.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/npr-13(tm1504)V@AQ2153/food_OP50/XX/30m_wait/clockwise/npr-13 (tm1504)V on food L_2010_01_22__11_55_08___8___6.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/flp-18(db99)X@AX1410/food_OP50/XX/30m_wait/anticlockwise/flp-18 (dp99)X on food R_2010_01_19__10_43_30___1___2.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/unc-118(e2331)X@CB4371/food_OP50/XX/30m_wait/anticlockwise/unc-118 (e2331)X on food R_2010_04_13__12_47_22__8.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/gpa-6(pk480)X@NL1146/food_OP50/XX/30m_wait/anticlockwise/gpa-6 (ph480)X on food R_2010_02_26__09_23_06___2___3.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/npr-9(tm1652)X@IC683/food_OP50/XX/30m_wait/anticlockwise/npr-9 (tm1652) on food R_2010_01_22__12_14_31___8___7.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/flp-28(gk1075)X@VC2502/food_OP50/XX/30m_wait/clockwise/flp-28 (gk1075)X on food L_2010_01_21__16_14_45___7___9.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/ser-1(ok345)X@DA1814/food_OP50/XX/30m_wait/anticlockwise/ser-1 (ok345)X on food R_2009_12_14__10_40_49___1___3.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/unc-2(ox106)X@EG106/food_OP50/XX/30m_wait/clockwise/unc-2 (ox106) on food L_2010_04_13__15_17_00___1___13.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/unc-118(e2331)X@CB4371/food_OP50/XX/30m_wait/anticlockwise/unc-118 (e2331)X on food R_2010_04_14__10_39_42___4___3.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/flp-16(ok3085)II@RB2275/food_OP50/XX/30m_wait/anticlockwise/flp-16 (ok3085) on food R_2010_01_14__12_36_11___7___7.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/ocr-3(ok1559)X@RB1374/food_OP50/XX/30m_wait/anticlockwise/ocr-3 (ok1557) on food R_2010_04_21__10_48_41___2___2.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/tyra-2(tm1846)X@FX1846/food_OP50/XX/30m_wait/anticlockwise/tyra-2 (tm1846)X on food R_2010_01_22__15_25_41___7___12.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/hcf-1(ok559)IV@RB777/food_OP50/XX/30m_wait/clockwise/hcf-1 (ok559)IV on food L_2011_09_15__12_59___4___6.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/octr-1(ok371)X@VC224/food_OP50/XX/30m_wait/clockwise/tag-24 (ok371)X on food L_2010_01_22__15_05_07___7___11.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/acr-3(ok2049)X@RB1659/food_OP50/XX/30m_wait/clockwise/acr-3 (ok2049)X on food L_2010_02_24__11_05_09___8___6.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/egl-43(n1079)II@MT2246/food_OP50/XX/30m_wait/clockwise/egl-43 (n1079)II on food L_2010_07_20__12_49_17___8___9.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/spe-41(sy693)III;him-5(e1490)V@PS4330/food_OP50/XX/30m_wait/clockwise/spe-41 (sy693); hin-5 (e1490) on food L_2010_07_08__15_15_57___7___9.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/gpb-2(sa603)I@JT603/food_OP50/XX/30m_wait/clockwise/gpb-2 (sa603) on food L_2010_03_05__12_34_03___6___10.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/ser-7(tm1325)X@DA2100/food_OP50/XX/30m_wait/clockwise/ser-7 (tm1325)X on food L_2009_12_15__12_01_30___1___6.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/acr-10(ok3064)X@RB2262/food_OP50/XX/30m_wait/clockwise/acr-10 (ok3064) on food L_2010_02_19__12_05_49__9.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/acr-11(ok1345)I@RB1263/food_OP50/XX/30m_wait/clockwise/acr-11 (ok1345) on food L_2010_02_19__12_22_05___2___10.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/nlp-3(ok2688)X@RB2030/food_OP50/XX/30m_wait/clockwise/nlp-3 (ok2688)X on food L_2010_03_18__12_35_49___7___8.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/gpa-5(pk376)X@NL1137/food_OP50/XX/30m_wait/clockwise/gpa-5 (pk376)X on food L_2010_02_25__13_04_40___2___11.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/npr-9(tm1652)X@IC683/food_OP50/XX/30m_wait/anticlockwise/npr-9  (tm1652) on food R_2010_01_28__12_15_08___1___6.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/C46A5.2(ok1187)IV@RB1156/food_OP50/XX/30m_wait/clockwise/C46A5.2 (ok1187) on food L_2010_04_08__14_36_55___8___7.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/egl-7(n575)III@MT1205/food_OP50/XX/30m_wait/anticlockwise/egl-7 (n575)III on food R_2010_05_13__13_14_27___6___10.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/mir-124(n4255)IV@MT13292/food_OP50/XX/30m_wait/clockwise/M124 on food L_2010_05_14__16_54_24___8___18.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/snf-2(ok147)I@RB641/food_OP50/XX/30m_wait/anticlockwise/snf-2 (ok147)I on food R_2009_11_19__10_46_41___1___2.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/WT/N2/food_OP50/XX/30m_wait/clockwise/N2 on food L_2010_04_15__10_07_32___1___1.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/gpa-16(ok2349)I@RB1816/food_OP50/XX/30m_wait/clockwise/gpa-16 (ok2349)I on food L_2010_03_11__11_06_34___4___4.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/bas-1(ad446)III@MT7988/food_OP50/XX/30m_wait/anticlockwise/bas-1 (ad446)III on food R_2009_12_14__13_01_23___1___9.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/trp-2(sy691)III@TQ194/food_OP50/XX/30m_wait/anticlockwise/trp-2 (sy691) on food R_2010_03_26__15_32_21___2___12.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/unc-127(hs13)V@HH27/food_OP50/XX/30m_wait/anticlockwise/unc-127 (hs13)V on food R_2010_04_13__12_24_34___4___7.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/WT/N2/food_OP50/XX/30m_wait/anticlockwise/N2 on food R_2010_05_18__15_24_48___4___4.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/acr-7(tm863)II@FX863/food_OP50/XX/30m_wait/clockwise/acr-7 (tm863)II on food l_2010_02_19__11_42_19___1___8.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/tdc-1(n3419)II@MT13113/food_OP50/XX/30m_wait/clockwise/tdc-1 (n3419) on food L_2010_03_09__14_55_20___7___5.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/acr-15(ok1214)V@RB1172/food_OP50/XX/30m_wait/clockwise/acr-15 (ok1214)X on food L_2010_02_24__15_43_43___6___15.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/egl-32(n155)I@MT155/food_OP50/XX/30m_wait/clockwise/egl-32 (n155)I on food L_2010_05_11__16_47_05___1___14.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/rab-3(y250)II@NM210/food_OP50/XX/30m_wait/anticlockwise/rab-3 (cy250) on food R_2011_08_04__11_30___3___4.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/mod-5(n822)I@MT8944/food_OP50/XX/30m_wait/clockwise/mod-5 (n822)I on food L_2009_11_17__17_11_07___2___12.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/ser-2(pk1357)X@OH313/food_OP50/XX/30m_wait/anticlockwise/ser-2 (pk1357) on food R_2009_12_15__14_46_50__9.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/nlp-20(ok1591)IV@RB1396/food_OP50/XX/30m_wait/anticlockwise/nlp-20 (ok1591) on food R_2010_03_17__10_13_59___4___2.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/flr-1(ut11)X@JC55/food_OP50/XX/30m_wait/anticlockwise/flr-1 (ut11) on food R_2010_03_31__11_55_08___2___4.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/nlp-1(ok1469)X@RB1340/food_OP50/XX/30m_wait/anticlockwise/nlp-1 (ok1469)X on food R_2010_03_12__11_23_36___6___5.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/egl-47(n1081)V@MT2248/food_OP50/XX/30m_wait/clockwise/egl-47 (n1081)V on food L_2010_05_20__11_34_19___6___2.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/flp-18(db99)X@AX1410/food_OP50/XX/30m_wait/anticlockwise/flp-18 (dp99)X on food R_2010_01_21__13_06___3___6.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/unc-40(n324)I@MT324/food_OP50/XX/30m_wait/clockwise/unc-40 (n324)I on food L_2010_04_13__13_05_36___7___9.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/egl-21(n476)IV@KP2018/food_OP50/XX/30m_wait/anticlockwise/egl-21 (n476)IV on food R_2010_07_15__13_10_04___1___8.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/flp-21(ok889)V@RB982/food_OP50/XX/30m_wait/clockwise/flp-21 (ok889)V on food L_2010_01_13__12_32_47___1___7.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/gpa-10(pk362)V@NL1147/food_OP50/XX/30m_wait/clockwise/gpa-10 (pk362)V on food L_2010_03_04__09_43_05___6___3.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/spe-41(sy693)III;him-5(e1490)V@PS4330/food_OP50/XX/30m_wait/anticlockwise/spe-41 (sy693); hin-5 (e1490) on food R_2010_07_06__14_45_41___8___9.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/bas-1(ad446)III@MT7988/food_OP50/XX/30m_wait/anticlockwise/bas-1 (ad446) on food R_2009_12_14__13_02_05___6___8.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/ocr-4(vs137)IV@LX950/food_OP50/XX/30m_wait/anticlockwise/ocr-4 (vs137) on food R_2010_04_21__15_17_13___1___11.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/dat-1(ok157)III@RM2702/food_OP50/XX/30m_wait/anticlockwise/dat-1 (ok157) on food R_2009_11_18__11_36_37___8___4.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/dnc-1(or404)IV@EU1006/food_OP50/XX/30m_wait/clockwise/dnc-1 (or404ts) on food L_2009_12_09__12_36_43___8___8.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/pqn-66(ok1507)II@RB1350/food_OP50/XX/30m_wait/anticlockwise/pgn-66 (ok1507) on food R_2010_04_29__11_30_08___8___3.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/flp-6(ok3056)V@VC2324/food_OP50/XX/30m_wait/anticlockwise/flp-6 (ok3056)V on food R_2010_01_12__12_25_33___2___6.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/tyra-2(tm1846)X@FX1846/food_OP50/XX/30m_wait/clockwise/tyra-2 (tm1846)X on food L_2010_01_28__12_59_54___8___8.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/T28F2.7(ok2657)I@RB2005/food_OP50/XX/30m_wait/anticlockwise/T28F2.7 (ok2657) on food R_2010_03_30__12_27_54___4___4.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/nlp-3(ok2688)X@RB2030/food_OP50/XX/30m_wait/clockwise/nlp-3 (ok2688)X on food L_2010_03_18__12_34_05___6___8.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/WT/JU393/food_OP50/XX/30m_wait/clockwise/814 JU393 on food L_2010_11_26__15_45___3___11.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/trp-4(sy695)I@TQ296/no_food/XX/30m_wait/anticlockwise/trp-4 (sy695) off food R_2010_04_27__15_54_07___7___9.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/trpa-2(tm3092)I@FX3092/food_OP50/XX/30m_wait/clockwise/M05B5.6 (tm3092) on food L_2010_07_08__12_29_36___7___7.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/bas-1(ad446)III@MT7988/food_OP50/XX/30m_wait/clockwise/bas-1 (ad446) on food L_2009_12_15__11_24_17___7___4.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/egl-47(n1081)V@MT2248/food_OP50/XX/30m_wait/anticlockwise/egl-47 (n1081)V on food R_2010_05_20__11_34_09___2___2.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/flp-16(ok3085)II@RB2275/food_OP50/XX/30m_wait/anticlockwise/flp-16 (ok3085) on food R_2010_01_12__11_48_34___6___4.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/trpa-2(ok3189)I@RB2351/food_OP50/XX/30m_wait/anticlockwise/M05B5.6 (ok3189) on food R_2010_04_23__10_59_53___2___4.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/nlp-20(ok1591)IV@RB1396/food_OP50/XX/30m_wait/anticlockwise/nlp-20 (ok1591)IV on food R_2010_03_12__10_12_07___1___2.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/flp-20(ok2964)X@RB2188/food_OP50/XX/30m_wait/clockwise/flp-20 (ok2964)X on food L_2010_01_19__10_25_16__1.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/F23B2.3(ok1226)IV@RB1177/food_OP50/XX/30m_wait/anticlockwise/F23B2.2 (ok1226) on food R_2010_03_31__11_38_31___7___3.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/npr-10(tm1568)X@FX1568/food_OP50/XX/30m_wait/clockwise/npr-10 (tm1568) on food L_2010_01_25__14_24_47___7___5.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/egl-9(n586)V@MT1216/food_OP50/XX/30m_wait/anticlockwise/egl-9 (n586)V on food R_2010_07_20__13_04_50___1___9.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/snf-7(ok482)III@RB709/food_OP50/XX/30m_wait/clockwise/snf-7 (ok482)III on food L_2009_11_18__12_51_55___2___8.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/trpa-2(tm3085)I@FX3085/food_OP50/XX/30m_wait/clockwise/mo5b5.6 (tm3085) on food L_2010_06_15__12_30_24___4___6.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/nlp-20(ok1591)IV@RB1396/food_OP50/XX/30m_wait/clockwise/nlp-20 (ok1591)IV on food L_2010_03_18__11_54_45___4___6.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/tyra-3(ok325)X@VC125/food_OP50/XX/30m_wait/clockwise/tyra-3 (ok325)X on food L_2010_01_26__11_48_27___7___4.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/egl-21(n476)IV@KP2018/food_OP50/XX/30m_wait/clockwise/egl-21 (n476)IV on food L_2010_07_15__13_11___3___8.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/unc-4(gk705)II@VC1528/food_OP50/XX/30m_wait/clockwise/unc-4 (gk705)II on food L_2011_09_20__13_32_23___8___7.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/WT/N2/food_OP50/XX/30m_wait/clockwise/N2 on food_2010_06_15__10_25_31___6___1.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/snf-5(ok447)II@RB687/food_OP50/XX/30m_wait/clockwise/snf-5 (ok447)II on food L_2009_11_19__11_30_56___6___4.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/flp-18(db99)X@AX1410/food_OP50/XX/30m_wait/anticlockwise/flp-18 (dp99)X on food R_2010_01_20__11_35_42___1___6.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/egl-1(n487)V@MT1082/food_OP50/XX/30m_wait/clockwise/egl-1 (n487)V on food L_2010_07_15__11_49_39___4___4.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/trpa-2(ok3189)I@RB2351/food_OP50/XX/30m_wait/anticlockwise/M05B5.6 (ok3189) on food R_2010_04_22__10_09_34___8___3.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/npr-3(tm1583)IV@FX1583/food_OP50/XX/30m_wait/clockwise/npr-3 (tm1583)IV on food  L_2010_01_26__14_58_45___8___9.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/egl-9(n586)V@MT1216/food_OP50/XX/30m_wait/anticlockwise/egl-9 (n586)V on food R_2010_07_13__11_02_30___6___3.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/ser-5(tm2654)I@AQ2197/food_OP50/XX/30m_wait/anticlockwise/ser-5 (tm2654) on food R_2009_12_14__11_43_12___4___5.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/snf-10(hc194)V@BA1093/food_OP50/XX/30m_wait/clockwise/snf-10 (hc194)V on food L_2009_11_19__16_17_08___1___10.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/del-4(ok1014)I@RB1064/food_OP50/XX/30m_wait/clockwise/T28138.5 (ok1014) on food _2010_03_31__12_15_17___8___5.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/acr-23(ok2804)V@RB2119/food_OP50/XX/30m_wait/anticlockwise/acr-23 (ok2084)V on food R_2010_02_23__10_16_50___7___4.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/nlp-15(ok1512)I@VC1063/food_OP50/XX/30m_wait/anticlockwise/nlp-15 (ok1512)I on food R_2010_03_12__12_24_02___2___8.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/WT/N2/food_OP50/XX/30m_wait/anticlockwise/N2 on food R_2010_03_11__10_03_46___6___1.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/egl-20(mu39)IV@CF263/food_OP50/XX/30m_wait/clockwise/egl-20 (mu39)IV on food L_2010_07_20__11_45_05___4___5.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/C24G7.4(ok1237)I@RB1192/food_OP50/XX/30m_wait/clockwise/C24G7.4 (ok1237) on food L_2010_03_30__11_45_19___1___2.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/nlp-8(ok1799)I@VC1309/food_OP50/XX/30m_wait/clockwise/nlp-8 (ok1799)I on food L_2010_03_18__10_55_40___4___3.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/trp-1(sy690)III@TQ225/food_OP50/XX/30m_wait/anticlockwise/trp-1 (sy691) on food R_2010_04_21__14_59_17___8___10.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/acr-10(ok3064)X@RB2262/food_OP50/XX/30m_wait/anticlockwise/acr-10 (ok3064) on food R_2010_02_23__12_13_51___2___10.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/WT/N2/food_OP50/XX/30m_wait/anticlockwise/N2 on food_2010_01_25__11_34_00___7___1.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/unc-69(e587)III@CB587/food_OP50/XX/30m_wait/anticlockwise/unc-69 (e587) on food R_2010_04_14__14_38_28___2___11.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/acr-14(ok1155)II@RB1132/food_OP50/XX/30m_wait/clockwise/acr-14 (ok1155) on food L_2010_02_24__09_44_52___7___2.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/gpb-2(sa603)I@JT603/food_OP50/XX/30m_wait/anticlockwise/gpb-2 (sa603) on food R_2010_03_05__12_34___3___10.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/ser-7(tm1325)X@DA2100/food_OP50/XX/30m_wait/anticlockwise/ser-7 (tm1352)X on food R_2009_12_14__12_42_10___1___8.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/npr-11(ok594)X@RB799/food_OP50/XX/30m_wait/anticlockwise/npr-11 (ok594)X on food R_2010_01_28__10_53___3___2.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/gpa-15(pk477)I@NL797/food_OP50/XX/30m_wait/clockwise/gpa-15 (pk477)I on food L_2010_03_11__10_44_55___6___3.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/unc-108(n501)I@MT1093/food_OP50/XX/30m_wait/clockwise/unc-108 (n510) on food L_2009_12_09__14_55___3___10.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/acr-18(ok1285)V@RB1226/food_OP50/XX/30m_wait/anticlockwise/acr-18 (ok1285)V on food R_2010_02_24__12_02_02___1___9.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/mod-5(n822)I@MT8944/food_OP50/XX/30m_wait/clockwise/mod-5 (n822)I on food L_2009_11_18__10_54_22__2.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/npr-2(ok419)IV@AQ2056/food_OP50/XX/30m_wait/anticlockwise/npr-2  (ok419)IV on food R_2010_01_25__15_28_32___2___8.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/C38D9.2(ok1853)V@RB1543/food_OP50/XX/30m_wait/clockwise/C3809.2 (ok1853)V on food L_2012_03_08__13_33_48___3___.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/egl-43(n1079)II@MT2246/food_OP50/XX/30m_wait/clockwise/egl-43 (n1079)II on food L_2010_08_06__12_35_06___6___6.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/gpa-5(pk376)X@NL1137/food_OP50/XX/30m_wait/clockwise/gpa-5 (pk376)X on food L_2010_03_11__12_06_09___1___6.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/C18B2.6(ok2353)X@RB1818/food_OP50/XX/30m_wait/clockwise/C1B2.6 (ok2353) on food L_2010_03_26__12_15_10___8___7.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/egl-19(n2368)IV@MT6129/food_OP50/XX/30m_wait/clockwise/egl-19 (n2368)IV on food L_2010_05_13__15_23_42___6___12.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/C46A5.2(ok1187)IV@RB1156/food_OP50/XX/30m_wait/anticlockwise/C45A6.2 (ok1187) on food R_2010_03_25__12_52_44___1___7.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/WT/N2/food_OP50/XX/30m_wait/clockwise/N2 on food L_2010_04_15__10_09_59___8___1.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/WT/N2/food_OP50/XX/30m_wait/clockwise/N2 on food L_2010_04_09__10_25_20___8___1.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/asic-2(ok289)I@RB557/food_OP50/XX/30m_wait/clockwise/T2854.2 (ok289) on food L_2010_03_25__15_46_58___7___10.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/nlp-17(ok3461)IV@RB2498/food_OP50/XX/30m_wait/anticlockwise/nlp-17 (ok3461)IV on food R_2010_03_12__10_34_29___8___3.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/flp-13(tm2427)IV@FX2427/food_OP50/XX/30m_wait/clockwise/flp-13 (tm2427) on food L_2010_01_19__11_24_44___7___4.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/flp-10(ok2624)IV@RB1989/food_OP50/XX/30m_wait/clockwise/flp-10 (ok2624)IV on food L_2010_01_21__11_47_24___2___3.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/C24G7.1(ok1822)I@RB1523/food_OP50/XX/30m_wait/anticlockwise/C24G7.1 (ok1822) on food R_2010_03_30__12_06_47___6___3.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/nlp-2(tm1908)X@FX1908/food_OP50/XX/30m_wait/clockwise/nlp-2 (tm1908)X on food L_2010_03_12__12_45_56___7___9.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/flp-17(ok3587)IV@RB2575/food_OP50/XX/30m_wait/clockwise/flp-17 (ok3587)IV on food L_2010_01_21__12_24_17___6___5.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/lov-1(ok522)II@RB753/food_OP50/XX/30m_wait/anticlockwise/lov-1 (con5221) on food R_2010_03_19__11_58_45___2___9.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/ocr-3(ok1559)X@RB1374/no_food/XX/30m_wait/clockwise/ocr-3 (ok1557) off food_2010_04_28__11_08_28___4___2.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/egl-17(e1313)X@CB1313/food_OP50/XX/30m_wait/anticlockwise/egl-17 (e1313)X on food R_2010_07_16__13_05_28___1___9.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/egl-36(n728)X@MT1540/food_OP50/XX/30m_wait/anticlockwise/egl-36 (n728)X on food R_2010_07_20__11_04_16___1___3.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/unc-89(e1460)I@CB1460/food_OP50/XX/30m_wait/clockwise/unc-89 (e1460)I on food L_2010_04_14__11_39_49___2___6.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/unc-29(e193)I@CB193/food_OP50/XX/30m_wait/anticlockwise/unc-29 (e193) on food R_2009_12_15__11_03_32___6___3.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/WT/N2/food_OP50/XX/30m_wait/anticlockwise/N2 on food R_2010_07_16__10_25_49___4___1.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/snf-1(ok790)I@RB919/food_OP50/XX/30m_wait/anticlockwise/snf-1 (ok790)I on food R_2009_11_19__10_23_23___8___1.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/egl-19(n2368)IV@MT6129/food_OP50/XX/30m_wait/anticlockwise/egl-19 (n2368)IV on food R_2010_05_11__15_50_05___2___11.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/nlp-17(ok3461)IV@RB2498/food_OP50/XX/30m_wait/clockwise/nlp-17 (ok3461)IV on food L_2010_03_17__11_58_25___7___6.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/nlp-15(ok1512)I@VC1063/food_OP50/XX/30m_wait/anticlockwise/nlp-15 (ok1512) on food R_2010_03_17__10_36_26___8___2.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/egl-11(n587)V@MT1217/food_OP50/XX/30m_wait/clockwise/egl-11 (n587)V on food L_2010_05_11__15_29_00___6___10.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/ocr-3(ok1559)X@RB1374/food_OP50/XX/30m_wait/anticlockwise/ocr-3 (ok1557) on food R_2010_04_22__11_27_43___1___7.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/lev-8(x15)X@ZZ15/food_OP50/XX/30m_wait/clockwise/acr-13 or lev-8 (x15)X on food L_2010_02_23__14_43_29___6___14.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/egl-17(e1313)X@CB1313/food_OP50/XX/30m_wait/anticlockwise/egl-17 (e1313)X on food R_2010_07_16__13_08_22___8___9.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/gpa-1(pk15)V@NL332/food_OP50/XX/30m_wait/anticlockwise/gpa-1 (pk15) on food R_2010_03_04__12_24_51___8___11.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/C24G7.1(ok1822)I@RB1523/food_OP50/XX/30m_wait/anticlockwise/C24G7.1 (ok1822) on food R_2010_03_26__15_55_45___2___13.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/ser-2(pk1357)X@OH313/food_OP50/XX/30m_wait/clockwise/ser-2 (pk1357) on food L_2009_12_17__11_45___3___2.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/npr-2(ok419)IV@AQ2056/food_OP50/XX/30m_wait/anticlockwise/npr-2 (ok419)IV on food R_2010_01_22__13_13_22___4___10.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/ocr-4(vs137);ocr-2(ak47)IV@LX981/food_OP50/XX/30m_wait/anticlockwise/ocr-4 (vs137); ocr-2 (9697) on food R_2010_04_23__15_39_33___8___13.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/snf-1(ok790)I@RB919/food_OP50/XX/30m_wait/clockwise/snf-1 (ok790)I on food L_2009_11_19__10_22___3___1.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/gpa-6(pk480)X@NL1146/food_OP50/XX/30m_wait/clockwise/gpa-6 (ph480)X on food L_2010_02_26__09_24_48___7___3.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/snf-9(ok957)IV@RB1030/food_OP50/XX/30m_wait/anticlockwise/snf-9 (ok957)IV on food R_2009_11_17__15_26_15___1___7.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/snf-9(ok957)IV@RB1030/food_OP50/XX/30m_wait/anticlockwise/snf-9 (ok957)IV on food R_2009_11_17__15_26___3___7.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/del-1(ok150)X@NC279/food_OP50/XX/30m_wait/clockwise/del-1 (ok150) on food L_2010_07_08__14_54_37___6___9.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/unc-108(n501)I@MT1093/food_OP50/XX/30m_wait/clockwise/unc-108 (n501gf) on food L_2009_12_09__15_37_49___8___13.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/egl-18(ok290)IV@JR2370/food_OP50/XX/30m_wait/anticlockwise/egl-18 (e290)IV on food R_2010_07_15__11_29_57___4___3.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/acr-7(tm863)II@FX863/food_OP50/XX/30m_wait/anticlockwise/acr-7 (tm863)II on food R_2010_02_24__11_23_10___2___7.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/gpa-16(ok2349)I@RB1816/food_OP50/XX/30m_wait/anticlockwise/gpa-16 (ok2349)X on food R_2010_03_09__12_26_29___4___6.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/acr-10(ok3064)X@RB2262/food_OP50/XX/30m_wait/anticlockwise/acr-10 (ok3064) on food R_2010_02_19__12_03_45___6___9.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/acr-10(ok3064)X@RB2262/food_OP50/XX/30m_wait/anticlockwise/acr-10 (ok3064) on food R_2010_02_23__12_14_24___4___10.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/tag-336(ok1477)V@VC975/food_OP50/XX/30m_wait/anticlockwise/tag-336 (ok1477) on food R_2010_03_31__12_34_05___8___6.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/egl-28(n570)II@MT1200/food_OP50/XX/30m_wait/clockwise/egl-28 (n570)II on food L_2010_07_15__12_49_51___4___7.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/trpa-2(tm3085)I@FX3085/food_OP50/XX/30m_wait/anticlockwise/M05B5.6 (tm3085) on food R_2010_07_06__10_46_20___8___3.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/WT/N2/food_OP50/XX/30m_wait/anticlockwise/N2 on food_2010_04_23__09_57_56___6___1.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/acr-6(ok3117)I@RB2294/food_OP50/XX/30m_wait/clockwise/acr-6 (ok3117)I on food L_2010_02_19__15_21_18___1___15.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/gpa-6(pk480)X@NL1146/food_OP50/XX/30m_wait/clockwise/gpa-6 (ph480)X on food L_2010_03_04__12_03_46___2___10.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/flp-25(gk1016)III@VC1982/food_OP50/XX/30m_wait/clockwise/flp-25 (gk1016)III on food L_2010_01_11__12_55_10___7___5.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/unc-2(ox106)X@EG106/food_OP50/XX/30m_wait/clockwise/unc-2 (ox106) on food L_2010_04_13__15_19_26___8___13.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/egl-47(n1081)V@MT2248/food_OP50/XX/30m_wait/anticlockwise/egl-47 (n1081)V on food R_2010_05_20__11_36_16___7___2.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/tag-336(ok1477)V@VC975/food_OP50/XX/30m_wait/clockwise/tag-336 (ok1477) on food L_2010_03_30__14_44_23___4___6.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/npr-13(tm1504)V@AQ2153/food_OP50/XX/30m_wait/anticlockwise/npr-13 (tm1504)V on food R_2010_01_22__11_53_55___6___6.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/gpa-10(pk362)V@NL1147/food_OP50/XX/30m_wait/anticlockwise/gpa-10 (pk362)V on food R_2010_02_26__12_45_44___8___13.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/acr-14(ok1155)II@RB1132/food_OP50/XX/30m_wait/clockwise/acr-14 (ok1155) on food L_2010_02_24__09_43_12___6___2.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/trp-4(sy695)I@TQ296/food_OP50/XX/30m_wait/clockwise/trp-4 (sy695) on food L_2010_04_29__12_08_35___4___5.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/flp-13(tm2427)IV@FX2427/food_OP50/XX/30m_wait/anticlockwise/flp-13 (tm2427) on food R_2010_01_19__11_23_15___6___4.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/unc-105(ok1432)II@RB1316/food_OP50/XX/30m_wait/anticlockwise/unc-105 (ok1432) on food R_2010_04_09__13_01_59___2___9.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/flp-19(ok2460)X@RB1902/food_OP50/XX/30m_wait/clockwise/flp-19 (ok2460) on food L_2010_01_20__11_17_23___7___5.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/snf-2(ok147)I@RB641/food_OP50/XX/30m_wait/clockwise/snf-2 (ok147)I on food L_2009_11_18__15_32_58___1___12.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/egl-13(n483)X@MT1078/food_OP50/XX/30m_wait/anticlockwise/egl-13 (n483)X on food R_2010_07_15__12_08___3___5.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/nlp-20(ok1591)IV@RB1396/food_OP50/XX/30m_wait/anticlockwise/nlp-20 (ok1591)IV on food R_2010_03_17__10_15_14___7___2.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/dat-1(ok157)III@RM2702/food_OP50/XX/30m_wait/anticlockwise/dat-1 (ok157) on food R_2009_11_18__11_36_07___4___4.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/ser-6(tm2146)IV@FX2146/food_OP50/XX/30m_wait/anticlockwise/ser-6 (tm2146) on food R_2009_12_14__12_23_08___6___6.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/snf-11(ok156)V@RM2710/food_OP50/XX/30m_wait/clockwise/snf-11 (ok156)V on food L_2009_11_18__11_54___3___5.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/trpa-2(ok3189)I@RB2351/food_OP50/XX/30m_wait/anticlockwise/M05B5.6 (ok3189) on food R_2010_04_29__11_08_11___2___2.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/gpb-2(sa603)I@JT603/food_OP50/XX/30m_wait/clockwise/gpb-2 (sa603)I on food L_2010_03_05__12_33_07___1___10.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/unc-44(e1197)IV@CB1197/food_OP50/XX/30m_wait/anticlockwise/unc-44 (e1197) on food R_2010_04_16__14_49_51___8___10.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/lov-1(ok522)II@RB753/food_OP50/XX/30m_wait/clockwise/lov-1 con5221 on food L_2010_03_26__15_13___3___11.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/flp-20(ok2964)X@RB2188/food_OP50/XX/30m_wait/anticlockwise/flp-20 ok2964) on food R_2010_01_21__17_25_39___1___11.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/gpa-13(pk1270)V@NL2330/food_OP50/XX/30m_wait/clockwise/gpa-13 (pk1270) on food L_2010_02_25__12_43_28___2___10.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/trpa-2(tm3085)I@FX3085/food_OP50/XX/30m_wait/anticlockwise/M05B5.6 (tm3085) on food R_2010_07_08__12_07_24___7___6.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/acr-7(tm863)II@FX863/food_OP50/XX/30m_wait/anticlockwise/acr-7 (tm863)II on food R_2010_02_23__11_55_00___7___9.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/gpa-3(pk35)V@NL335/food_OP50/XX/30m_wait/anticlockwise/gpa-3 (pk35)IV on food R_2010_03_04__11_45_26___7___9.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/ocr-4(vs137)IV@LX950/food_OP50/XX/30m_wait/clockwise/ocr-4 (vs137) on food L_2010_04_22__15_21_32___8___12.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/daf-7(m62)III@DR62/food_OP50/XX/30m_wait/anticlockwise/daf-7 (m62)III on food R_2010_07_29__12_55_18___2___7.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/egl-9(n586)V@MT1216/food_OP50/XX/30m_wait/anticlockwise/egl-9 (n586)V on food R_2010_07_15__14_56_48___4___10.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/WT/N2/food_OP50/XX/30m_wait/anticlockwise/N2 on food R_2011_03_09__12_35_37__5.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/unc-1(e1598)X@CB1598/food_OP50/XX/30m_wait/clockwise/unc-1 (e1598)X on food L_2010_04_13__16_17_42___6___16.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/nlp-1(ok1469)X@RB1340/food_OP50/XX/30m_wait/anticlockwise/nlp-1 (ok1469)X on food R_2010_03_12__11_23___3___5.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/flp-19(ok2460)X@RB1902/food_OP50/XX/30m_wait/clockwise/flp-19 (ok2460) on food L_2010_01_20__11_15_53___6___5.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/snf-2(ok147)I@RB641/food_OP50/XX/30m_wait/anticlockwise/snf-2 (ok147)I on food R_2009_11_18__15_34_39___8___11.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/flp-20(ok2964)X@RB2188/food_OP50/XX/30m_wait/anticlockwise/flp-20 (ok2964)X on food R_2010_01_21__11_27_56___7___2.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/WT/N2/food_OP50/XX/30m_wait/clockwise/N2 on food L_2010_03_31__10_54_11___6___1.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/npr-3(tm1583)IV@FX1583/food_OP50/XX/30m_wait/anticlockwise/npr-3 (tm1583)IV on food R_2010_01_26__14_54_38___6___9.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/WT/N2/no_food/XX/30m_wait/anticlockwise/N2 off food R_2010_04_27__11_27_58___4___3.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/tdc-1(n3419)II@MT13113/food_OP50/XX/30m_wait/anticlockwise/tdc-1 (n3419 ) on food R_2010_03_05__13_13_38___2___12.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/npr-1(ad609)X@DA609/food_OP50/XX/30m_wait/clockwise/npr-1 (ad609)X on food L_2010_01_26__12_44_20___6___7.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/asic-2(ok289)I@RB557/food_OP50/XX/30m_wait/anticlockwise/T2854.2 (ok289) on food R_2010_03_25__15_46_37___8___10.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/unc-40(n324)I@MT324/food_OP50/XX/30m_wait/clockwise/unc-40 (n324)I on food L_2010_04_15__11_29_58___6___5.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/flp-16(ok3085)II@RB2275/food_OP50/XX/30m_wait/clockwise/flp-16 (ok3085) on food L_2010_01_11__12_35_14___7___4.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/sma-3(e491)III@CB491/food_OP50/XX/30m_wait/anticlockwise/sma-3 (e491)III on food R_2011_10_13__12_16_04__3.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/snf-5(ok447)II@RB687/food_OP50/XX/30m_wait/clockwise/snf-5 (ok447)I on food L_2009_11_17__13_01_45___2___4.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/unc-7(e5)X@CB5/food_OP50/XX/30m_wait/clockwise/unc-7 (cb5) on food L_2010_09_10__16_16_03___4___12.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/C18B2.6(ok2353)X@RB1818/food_OP50/XX/30m_wait/anticlockwise/C1B2.6 (ok2353) on food R_2010_03_26__12_14_15___4___7.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/unc-89(e1460)I@CB1460/food_OP50/XX/30m_wait/anticlockwise/unc-89 (e1460)I on food R_2010_04_13__12_04_08___1___6.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/egl-12(n602)V@MT1232/food_OP50/XX/30m_wait/anticlockwise/egl-12 (n602)V on food R_2010_07_16__12_07_57___8___6.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/unc-7(e5)X@CB5/food_OP50/XX/30m_wait/anticlockwise/unc-7 (cb5) on food R_2010_05_20__13_14_36___8___7.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/nlp-8(ok1799)I@VC1309/food_OP50/XX/30m_wait/anticlockwise/nlp-8 (ok1799)I on food R_2010_03_18__10_56_56___7___3.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/flp-7(ok2625)X@RB1990/food_OP50/XX/30m_wait/clockwise/flp-7 (ok2625)X on food L_2010_01_14__11_58_12___7___5.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/WT/N2/food_OP50/XX/30m_wait/anticlockwise/N2 on food R_2010_01_21__11_04_33___2___1.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/unc-127(hs13)V@HH27/food_OP50/XX/30m_wait/clockwise/unc-127 (hs13)V on food L_2010_04_09__12_04_28___6___5.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/npr-10(tm1568)X@FX1568/food_OP50/XX/30m_wait/anticlockwise/npr-10 (tm1568) on food R_2010_01_22__10_34_20___8___2.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/egl-19(n2368)IV@MT6129/food_OP50/XX/30m_wait/anticlockwise/egl-19 (n2368)IV on food R_2010_05_11__15_50_40___4___12.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/flp-17(ok3587)IV@RB2575/food_OP50/XX/30m_wait/anticlockwise/flp-17 (ok3587)IV on food R_2010_01_19__11_04_56___4___3.hdf5
+/Volumes/behavgenom_archive$/single_worm/unfinished/mutants/unc-101(m1)I@DR1/food_OP50/XX/30m_wait/clockwise/unc-101 (m1)I on food L_2010_04_13__10_44_19___6___2.hdf5

@@ -76,21 +76,3 @@ if __name__ == '__main__':
         
         plt.suptitle(fname.replace('_features.hdf5', ''))
         
-#    base_name = 'N2 on food L_2010_02_26__08_44_59___7___1'
-#    #base_name = 'N2 on food R_2011_09_13__11_59___3___3'
-#    #base_name = 'N2 on food R_2010_10_15__15_36_54___7___10'
-#    
-#    feat_mat_file = os.path.join(main_dir, base_name + '_features.mat')
-#    skel_file = os.path.join(main_dir, base_name + '_skeletons.hdf5')
-#    feat_file = os.path.join(main_dir, base_name + '_features.hdf5')
-#    segworm_feat_file = os.path.join(main_dir, '_segworm_files', base_name + '_features.mat')
-#    
-#    
-#    
-#    tierpsy_feats = feats_reader.read_plate_features()
-#    segworm_feats = feats_reader.read_feats_segworm()
-#    
-#    
-#    
-#    
-#    

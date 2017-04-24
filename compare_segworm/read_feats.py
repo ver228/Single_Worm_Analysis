@@ -8,6 +8,8 @@ Created on Mon Feb 20 18:35:13 2017
 import tables
 import numpy as np
 import pandas as pd
+from scipy.io import loadmat
+
 
 feats_conv = pd.read_csv('conversion_table.csv').dropna()
 FEATS_MAT_MAP = {row['feat_name_tierpsy']:row['feat_name_segworm'] for ii, row in feats_conv.iterrows()}
@@ -84,7 +86,7 @@ class FeatsReaderComp(FeatsReader):
         self.segworm_feat_file = segworm_feat_file
         super().__init__(feat_file)
     
-    def read_feats_segworm(self, correct_misnamed = True):
+    def _read_feats_segworm_hdf5(self):
         with tables.File(self.segworm_feat_file, 'r') as fid: 
             feats_segworm = {}
             for name_tierpsy, name_segworm in FEATS_MAT_MAP.items():
@@ -106,6 +108,59 @@ class FeatsReaderComp(FeatsReader):
             
             for key, val in feats_segworm.items():
                 feats_segworm[key] = np.squeeze(val)
+        
+        
+        return feats_segworm
+    
+    def _read_feats_segworm_mat(self):
+        dat  = loadmat(self.segworm_feat_file)
+        feats_segworm = {}
+        for name_tierpsy, name_segworm in FEATS_MAT_MAP.items():
+            prev = dat
+            for field in name_segworm.split('/'):
+                if isinstance(prev, (np.ndarray, np.void)):
+                    ff = prev.dtype.names
+                    if not ff is None:
+                        has_field = field in ff
+                    else:
+                        has_field = False
+                else:
+                    has_field = field in prev
+                
+                if has_field:
+                    prev = prev[field]
+                    if prev.size == 1:
+                        prev = prev[0,0]
+            
+            
+            if 'eigen_projection_' in name_tierpsy:
+                ii = int(name_tierpsy.replace('eigen_projection_', '')) - 1
+                prev = prev[ii, :]
+                
+            if isinstance(prev, np.float64):
+                prev = float(prev)
+            elif isinstance(prev, np.ndarray):
+                prev = np.squeeze(prev)
+                if prev.size == 0:
+                    prev = np.nan
+                elif prev.dtype == np.dtype('O'):
+                    prev = prev.astype(np.float)
+                else:
+                    if prev.size < 100:
+                        raise ValueError
+                
+                    
+            feats_segworm[name_tierpsy] = prev
+            
+        return feats_segworm
+    
+
+    def read_feats_segworm(self, correct_misnamed = True):
+        try:
+            feats_segworm = self._read_feats_segworm_hdf5()
+        except:
+            feats_segworm = self._read_feats_segworm_mat()
+        
         if correct_misnamed:
             feats2switch = [('hips_bend_mean', 'neck_bend_mean'),
                         ('hips_bend_sd', 'neck_bend_sd'),
@@ -113,10 +168,8 @@ class FeatsReaderComp(FeatsReader):
     
             for feat1, feat2 in feats2switch:
                 feats_segworm[feat1], feats_segworm[feat2] = feats_segworm[feat2], feats_segworm[feat1]
-        
         return feats_segworm
-        
-    
+                
     @property
     def skels_segworm(self):
         try:

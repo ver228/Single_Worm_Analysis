@@ -7,10 +7,11 @@ Created on Thu Apr 20 11:39:21 2017
 """
 
 import os
+import glob
 import numpy as np
 import matplotlib.pylab as plt
 
-from read_feats import FeatsReaderComp, FEATS_OW_MAP
+from read_feats import FeatsReaderComp, FEATS_OW_MAP, FEATS_MAT_MAP
 #%%
 def _plot_indv_feat(feats1, feats2, field, add_name=True, is_hist=False):
     xx = feats1[field]
@@ -98,17 +99,29 @@ def plot_feats_comp(feats1, feats2, is_hist=False):
 
 if __name__ == '__main__':
     
-    main_dir = '/Users/ajaver/OneDrive - Imperial College London/Local_Videos/single_worm/global_sample_v3/'
+    #main_dir = '/Users/ajaver/OneDrive - Imperial College London/Local_Videos/single_worm/global_sample_v3/'
     #base_name = 'N2 on food L_2010_02_26__08_44_59___7___1'
-    base_name = 'unc-7 (cb5) on food R_2010_09_10__15_17_34___7___9'
+    #base_name = 'unc-7 (cb5) on food R_2010_09_10__15_17_34___7___9'
     #base_name = 'N2 on food R_2011_09_13__11_59___3___3'
     #base_name = 'N2 on food R_2010_10_15__15_36_54___7___10'
     
-    feat_mat_file = os.path.join(main_dir, base_name + '_features.mat')
-    skel_file = os.path.join(main_dir, base_name + '_skeletons.hdf5')
-    feat_file = os.path.join(main_dir, base_name + '_features.hdf5')
-    segworm_feat_file = os.path.join(main_dir, '_segworm_files', base_name + '_features.mat')
+    #main_dir = '/Users/ajaver/OneDrive - Imperial College London/Local_Videos/single_worm/global_sample_v3/'
     
+#    skel_file = os.path.join(main_dir, base_name + '_skeletons.hdf5')
+#    feat_file = os.path.join(main_dir, base_name + '_features.hdf5')
+#    segworm_feat_file = os.path.join(main_dir, '_segworm_files', base_name + '_features.mat')
+    
+    main_dir = '/Users/ajaver/OneDrive - Imperial College London/Ev_L4 worms/Results'
+    feat_files = glob.glob(os.path.join(main_dir, '**', '*_features.hdf5'), recursive=True)
+    
+    feat_file = feat_files[0]
+    skel_file = feat_file.replace('_features.hdf5', '_skeletons.hdf5')
+    segworm_feat_file = feat_file.replace('.hdf5', '.mat').replace('Results','RawVideos')
+    
+    #%%
+    
+    
+#%%    
     feats_reader = FeatsReaderComp(feat_file, segworm_feat_file)
     
     tierpsy_feats = feats_reader.read_plate_features()
@@ -139,7 +152,7 @@ if __name__ == '__main__':
             L.get_texts()[ii].set_text(ff)
         
         plt.suptitle(ow_field)
-        
+#        
     
     #%%
     #plt.figure()

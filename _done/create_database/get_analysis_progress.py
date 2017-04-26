@@ -19,7 +19,7 @@ import numpy as np
 import pandas as pd
 
 from MWTracker.batchProcessing.trackSingleWorker import getStartingPoint, checkpoint_label, \
-isBadStageAligment, hasExpCntInfo, constructNames
+isBadStageAligment, is_valid_cnt_info, constructNames
 
 from MWTracker.batchProcessing.compressMultipleFilesHelper import isBadMask
 from MWTracker.compressVideos.getAdditionalData import getAdditionalFiles
@@ -166,7 +166,7 @@ if __name__ == '__main__':
             current_point = checkpoint_label[checkpoint_ind]
             if current_point == 'INT_PROFILE' and isBadStageAligment(skeletons_file):
                 current_point = 'STAGE_ALIGMENT'
-            if current_point == 'FEAT_CREATE' and hasExpCntInfo(skeletons_file):
+            if current_point == 'FEAT_CREATE' and is_valid_cnt_info(skeletons_file):
                 current_point = 'CONTOUR_ORIENT'
             
             track_progress_flag, _ = dict_track_flags[current_point]

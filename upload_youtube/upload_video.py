@@ -2,6 +2,7 @@ import pymysql
 import os
 import json
 import time
+from random import shuffle
 from upload_video_helper import get_authenticated_service, resumable_upload
 from apiclient.http import MediaFileUpload
 
@@ -11,13 +12,13 @@ from tierpsy.analysis.wcon_export.exportWCON import getWCONMetaData
 
 from googleapiclient.errors import ResumableUploadError
 
+DATABASE_NAME = 'single_worm_db'
 INSERT_SQL = '''UPDATE experiments SET youtube_id="{1}" WHERE base_name="{0}";'''
 youtube_client = get_authenticated_service()    
 
 def resample_and_upload(base_name, 
                         results_dir,
-                        speed_up, 
-                        db_cursor,
+                        speed_up,
                         skip_invalid = False,
                         backup_file='youtube_ids.txt'):
     
@@ -71,71 +72,89 @@ def resample_and_upload(base_name,
     while 1:
         try:
             response = resumable_upload(insert_request)
-            
             youtube_id = response['id']
-            
-            with open(backup_file, 'a') as file:
-                file.write('{}\t{}\n'.format(base_name, youtube_id))
-            
-            sql = INSERT_SQL.format(base_name, youtube_id)       
-            db_cursor.execute(sql)
-            
-            
             # print('I am waiting for a few seconds before uploading the next video.')
             # time.sleep(3)
             break
         
         except Exception as e:
             print(e)
+            if not "The user has exceeded the number of videos they may upload." in e.content.decode("utf-8"):
+                return
             #print('I will wait a few seconds before trying again.')
             #time.sleep(60)
-            min_to_wait = 5
+            min_to_wait = 15
             print('The limit of youtube uploads has been reached. I will try it again in {} minutes.'.format(min_to_wait))
         for n in range(1, min_to_wait+1):
             time.sleep(60)
             print(n, end=' ', flush=True)
-        print()
+
+    with open(backup_file, 'a') as file:
+        file.write('{}\t{}\n'.format(base_name, youtube_id))
+    conn = pymysql.connect(host='localhost', database=DATABASE_NAME)
+    cur = conn.cursor()
+    sql = INSERT_SQL.format(base_name, youtube_id)       
+    cur.execute(sql)
+    conn.commit()
+    conn.close()
     
     os.remove(tmp_file)
     return youtube_id
 
 def _correct_from_list():
+    from collections import Counter
+
     with open('youtube_ids.txt', 'r+') as file:
         data = file.read()
     data = [x.split('\t') for x in data.split('\n') if x]
     
+    dd = Counter([x[0] for x in data])
+    duplicated_vals = [x for x, val in dd.items() if val != 1]
+    if len(duplicated_vals)!= 0:
+        raise ValueError('There are duplicated basenames {}'.format(duplicated_vals))
+
+    #check that all the 
     assert len(set(x[0] for x in data)) == len(data)
     
+    conn = pymysql.connect(host='localhost', database=DATABASE_NAME)
+    cur = conn.cursor()
     for bn, yid in data:
         sql = INSERT_SQL.format(bn, yid)
         
         cur.execute(sql)
-        conn.commit()
+    conn.commit()
 
 if __name__ == '__main__':
+    _correct_from_list()
     skip_invalid = True 
     speed_up = 8
     youtube_privacy_status='public'#'private'
     
-    conn = pymysql.connect(host='localhost', database='single_worm_db')
+    conn = pymysql.connect(host='localhost', database=DATABASE_NAME)
     cur = conn.cursor()
     
     
     min_valid = 'FEAT_CREATE'
     ori_vid_sql = '''
-    SELECT id, base_name, results_dir
-    FROM experiments
+    SELECT e.id, base_name, results_dir
+    FROM experiments AS e
+    JOIN strains AS s ON s.id = strain_id 
     WHERE exit_flag_id >= (SELECT f.id FROM exit_flags as f WHERE f.name="{}")
     AND exit_flag_id < 100
     AND youtube_id IS NULL
+    AND s.name!="-N/A-"
     ORDER BY id'''.format(min_valid)
     
     
     cur.execute(ori_vid_sql)
     results = cur.fetchall()
-    
+    conn.close()
+
+
+    results = list(results)
+    shuffle(results)
+
     for ii, (experiment_id, base_name, results_dir) in enumerate(results):
-        youtube_id = resample_and_upload(base_name, results_dir, speed_up, cur, skip_invalid)
+        youtube_id = resample_and_upload(base_name, results_dir, speed_up, skip_invalid)
         print('{} of {} %%%%%%%%%%%%%%%%%%%%%%%%%%%'.format(ii+1, len(results)))
-        conn.commit()
     

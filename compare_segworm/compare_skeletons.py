@@ -9,7 +9,7 @@ import os
 import glob
 import numpy as np
 import matplotlib.pylab as plt
-
+from matplotlib.backends.backend_pdf import PdfPages
 
 from read_feats import FeatsReaderComp
 
@@ -57,22 +57,29 @@ def plot_skel_diff(skeletons, skel_segworm):
     
     
 if __name__ == '__main__':
+    #main_dir = '/Users/ajaver/OneDrive - Imperial College London/Local_Videos/single_worm/global_sample_v3/'
+    #feat_files = glob.glob(os.path.join(main_dir, '*_features.hdf5'))
+    main_dir = '/Users/ajaver/OneDrive - Imperial College London/Ev_L4 worms/Results_anticlockwise'
+    feat_files = glob.glob(os.path.join(main_dir, '**', '*_features.hdf5'), recursive=True)
     
-    main_dir = '/Users/ajaver/OneDrive - Imperial College London/Local_Videos/single_worm/global_sample_v3/'
-    feat_files = glob.glob(os.path.join(main_dir, '*_features.hdf5'))
+    save_plot_dir = os.path.join('.', 'plots')
+    pdf_file = os.path.join(save_plot_dir, 'skeletons_comparison.pdf')
     
-    for feat_file in feat_files:
-        fname = os.path.basename(feat_file)
-        print(fname)
-        
-        dd = fname.rpartition('.')[0] + '.mat'
-        segworm_feat_file = os.path.join(main_dir, '_segworm_files', dd)
-        
-        feats_reader = FeatsReaderComp(feat_file, segworm_feat_file)
-        
-        skeletons, skel_segworm = feats_reader.read_skeletons()
-        plot_skel_diff(skeletons, skel_segworm)
-        
-        
-        plt.suptitle(fname.replace('_features.hdf5', ''))
+    with PdfPages(pdf_file) as pdf_id:
+        for feat_file in feat_files:
+            fname = os.path.basename(feat_file)
+            print(fname)
+            
+            #dd = fname.rpartition('.')[0] + '.mat'
+            #segworm_feat_file = os.path.join(main_dir, '_segworm_files', dd)
+            
+            segworm_feat_file = feat_file.replace('.hdf5', '.mat').replace('Results','RawVideos')
+            feats_reader = FeatsReaderComp(feat_file, segworm_feat_file)
+            
+            skeletons, skel_segworm = feats_reader.read_skeletons()
+            plot_skel_diff(skeletons, skel_segworm)
+            plt.suptitle(fname.replace('_features.hdf5', ''))
+            
+            pdf_id.savefig()
+            plt.close()
         

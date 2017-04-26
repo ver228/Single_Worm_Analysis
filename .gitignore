@@ -6,3 +6,5 @@
 *.pyc
 
 *oauth2.json
+
+compare_segworm/plots

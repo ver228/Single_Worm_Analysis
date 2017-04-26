@@ -8,12 +8,29 @@ Created on Mon Feb 20 18:35:13 2017
 import tables
 import numpy as np
 import pandas as pd
+from tierpsy.analysis.feat_create.obtainFeaturesHelper import _h_get_stage_inv
+
 from scipy.io import loadmat
 
 
 feats_conv = pd.read_csv('conversion_table.csv').dropna()
 FEATS_MAT_MAP = {row['feat_name_tierpsy']:row['feat_name_segworm'] for ii, row in feats_conv.iterrows()}
 FEATS_OW_MAP = {row['feat_name_tierpsy']:row['feat_name_openworm'] for ii, row in feats_conv.iterrows()}
+
+def test_mismatching():
+    for x in FEATS_MAT_MAP:
+        mat = FEATS_MAT_MAP[x]
+        ow = FEATS_OW_MAP[x]
+        
+        mat_r = mat.replace('/worm/', '').replace('/','.')
+        if mat_r != ow:
+            d1 = mat_r.split('.')
+            d2 = ow.split('.')
+            
+            missed = [x for x in d1 if not x in d2]
+            
+            
+            print(missed, ow, mat)
 
 class FeatsReader():
     def __init__(self, feat_file):
@@ -137,8 +154,8 @@ class FeatsReaderComp(FeatsReader):
                 ii = int(name_tierpsy.replace('eigen_projection_', '')) - 1
                 prev = prev[ii, :]
                 
-            if isinstance(prev, np.float64):
-                prev = float(prev)
+            if isinstance(prev, (np.float64, float)):
+                prev = np.atleast_1d(np.array(prev))
             elif isinstance(prev, np.ndarray):
                 prev = np.squeeze(prev)
                 if prev.size == 0:
@@ -155,36 +172,45 @@ class FeatsReaderComp(FeatsReader):
         return feats_segworm
     
 
-    def read_feats_segworm(self, correct_misnamed = True):
+    def read_feats_segworm(self):
         try:
             feats_segworm = self._read_feats_segworm_hdf5()
         except:
             feats_segworm = self._read_feats_segworm_mat()
         
-        if correct_misnamed:
-            feats2switch = [('hips_bend_mean', 'neck_bend_mean'),
-                        ('hips_bend_sd', 'neck_bend_sd'),
-                        ('path_curvature', 'path_range')]
-    
-            for feat1, feat2 in feats2switch:
-                feats_segworm[feat1], feats_segworm[feat2] = feats_segworm[feat2], feats_segworm[feat1]
         return feats_segworm
-                
+
+    def _read_skels_segworm_hdf5(self):
+        with tables.File(self.segworm_feat_file, 'r') as fid:
+            segworm_x = fid.get_node('/worm/posture/skeleton/x')[:]
+            segworm_y = fid.get_node('/worm/posture/skeleton/y')[:]
+        return segworm_x, segworm_y
+        
+    
+    def read_skels_segworm_mat(self):
+        dat  = loadmat(self.segworm_feat_file)
+        segworm_x = dat['worm'][0,0]['posture'][0,0]['skeleton'][0,0]['x']
+        segworm_y = dat['worm'][0,0]['posture'][0,0]['skeleton'][0,0]['y']
+        
+        return segworm_x.T, segworm_y.T
+
     @property
     def skels_segworm(self):
         try:
             return self._skels_segworm
         except:
             #load segworm data
-            with tables.File(self.segworm_feat_file, 'r') as fid:
-                segworm_x = -fid.get_node('/worm/posture/skeleton/x')[:]
-                segworm_y = -fid.get_node('/worm/posture/skeleton/y')[:]
-                skel_segworm = np.stack((segworm_x,segworm_y), axis=2)
+            try:
+                segworm_x, segworm_y = self._read_skels_segworm_hdf5()
+            except:
+                segworm_x, segworm_y = self.read_skels_segworm_mat()
             
+            skel_segworm = np.stack((-segworm_x,-segworm_y), axis=2)
             skel_segworm = np.rollaxis(skel_segworm, 0, skel_segworm.ndim)
             skel_segworm = np.asfortranarray(skel_segworm)
             
             self._skels_segworm = np.rollaxis(skel_segworm, 2, 0)
+            
             return self._skels_segworm
     
     @property
@@ -224,5 +250,12 @@ class FeatsReaderComp(FeatsReader):
             
             return skeletons, skel_segworm
 
-
+    @property
+    def stage_movement(self):
+        try:
+            return self._stage_movement
+        except:
+            timestamp = np.arange(self._skeletons.shape[0])
+            self._stage_movement = _h_get_stage_inv(self.skel_file, timestamp)
+            return self._stage_movement
 

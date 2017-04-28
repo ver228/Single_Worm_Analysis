@@ -14,8 +14,9 @@ import multiprocessing as mp
 from functools import partial
 
 from collections import OrderedDict
-from tierpsy.analysis.feat_create.obtainFeatures import getFPS
-from tierpsy.helper.timeCounterStr import timeCounterStr
+from tierpsy.helper.misc import TimeCounter
+from tierpsy.helper.params import read_fps
+
 
 
 PROGRESS_TAB_FIELD = ['experiment_id', 'n_valid_frames', 'n_missing_frames', 
@@ -34,19 +35,22 @@ def get_progress_data(experiment_id, mask_file, skeletons_file, features_file):
         with tables.File(mask_file, 'r') as fid:
             out['n_valid_frames'] = int(fid.get_node('/mask').shape[0])
         
-        fps, _ = getFPS(mask_file, None)
+        fps = read_fps(mask_file, None)
         if not fps is None:
+            out['fps'] = float(fps)
             with tables.File(mask_file, 'r') as fid:
                 timestamp_time = fid.get_node('/timestamp/time')[:]
                 timestamp_ind = fid.get_node('/timestamp/raw')[:]
+                
                 #sometimes only the last frame is nan
                 timestamp_ind = timestamp_ind[~np.isnan(timestamp_time)]
                 timestamp_time = timestamp_time[~np.isnan(timestamp_time)]
                 assert timestamp_ind.size == timestamp_time.size
                 
-                out['n_missing_frames'] = int(timestamp_ind[-1] - out['n_valid_frames'] + 1)
-                out['total_time'] = float(timestamp_time[-1])
-                out['fps'] = float(fps)
+                if timestamp_ind.size > 0:
+                    out['n_missing_frames'] = int(timestamp_ind[-1] - out['n_valid_frames'] + 1)
+                    out['total_time'] = float(timestamp_time[-1])
+                
         
     if os.path.exists(skeletons_file):
         with pd.HDFStore(skeletons_file, 'r') as fid:
@@ -123,7 +127,7 @@ if __name__ == '__main__':
     
     print('*******', len(all_rows))
     
-    progress_timer = timeCounterStr()
+    progress_timer = TimeCounter()
     n_batch = mp.cpu_count()
     p = mp.Pool(n_batch)
     tot = len(all_rows)
@@ -134,6 +138,6 @@ if __name__ == '__main__':
                 update_row(cur, x)
         conn.commit()
         print('{} of {}. Total time: {}'.format(ii + n_batch, 
-                  tot, progress_timer.getTimeStr()))
+                  tot, progress_timer.get_time_str()))
     cur.close()
     conn.close()

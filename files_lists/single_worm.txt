@@ -9,7 +9,6 @@
 /Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp1/thecus_other_videos/Larval Tracking 2/cat-2 L1 on food_2010_02_10__12_36_24___6___8.avi
 /Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp1/thecus_other_videos/Larval Tracking 2/cat-2 L2 on food_2010_02_10__15_03_00___6___10.avi
 /Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp1/thecus_other_videos/Larval Tracking 2/cat-2 L1 on food_2010_02_10__10_40_24___6___2.avi
-/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp1/thecus_other_videos/misc_videos/197 PS312 2 on food L_2011_05_26__11_25_51___2___1.avi
 /Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp1/thecus_other_videos/misc_videos/avoidance long.avi
 /Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp1/thecus_other_videos/misc_videos/avoidance.avi
 /Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp1/thecus_other_videos/misc_videos/L3 escape wounded.avi
@@ -14812,3 +14811,383 @@
 /Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp3B/thecus/nas207-1/experimentBackup/from pc220-6/!worm_videos/from pc207-15/off food tracking/27-04-10/ocr-3 (a1537) off food R_2010_04_27__12_00_43___2___4.avi
 /Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp3B/thecus/nas207-1/experimentBackup/from pc220-6/!worm_videos/from pc207-15/off food tracking/27-04-10/trpa-1 (ok999); osm-9 (ky10) off food R_2010_04_27__15_48_33___2___9.avi
 /Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp3B/thecus/nas207-1/experimentBackup/from pc220-6/!worm_videos/from pc207-15/off food tracking/27-04-10/trpa-1 (ok999); osm-9 (ky10) off food R_2010_04_27__15_50_30___2___10.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-10/laura/09-12-09/unc-80 (e1069)V on food L_2009_12_09__16_37_24___8___16.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/03-04-12/N2 no wait on food_2012_04_03__12_13_56___6___1.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/03-08-11/N2 Laura on food R_2011_08_03__15_42_02___6___2.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/08-03-12/N2 no wait on food R_2012_03_08__16_30_00___6___10.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/10-02-12/daf-2 (e1370) dauer on food _2012_02_10__09_31_25___6___1.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/10-02-12/lim-4 (ky403) on food R_2012_02_10__12_35_20___6___3.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/20-04-10/N2 on food R_2010_04_20__09_52_11___6___1.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/22-02-12/N2 no wait on food R_2012_02_22__11_51_14___6___5.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 03-08-09/finished/N2 on food L_2009_07_17__10_26_02__1.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 03-08-09/finished/gsa-1 (ce81)I on food R_2009_07_17__10_43_13__2.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 03-08-09/finished/nlp-14 (tm1880)X on food L_2009_07_17__12_27_39__8.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 03-08-09/finished/nlp-14 (tm1880)X on food R_2009_07_17__12_04_25__6.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 03-08-09/finished/nlp-14 (tm1880)X on food R_2009_07_17__12_15_57__7.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 03-08-09/finished/nlp-17 (ok3461)V on food L_2009_07_17__11_45_05__4.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 03-08-09/finished/nlp-2 (tm1908)X on food L_2009_07_17__12_36_56__9.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 03-08-09/finished/nlp-5 (ok1981)II on food R_2009_06_15__15_38_41__20.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 03-08-09/finished/nlp-5 (ok1981)II on food R_2009_06_15__16_44_14__28.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 03-08-09/finished/nlp-8 (ok1799)I  on food L_2009_06_15__15_47_30__23.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 03-08-09/finished/nlp-8 (ok1799)I on food L_2009_06_15__10_38_34__5.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 05-08-09/finished/gpa-2 (pK16)V on food L_2009_06_24__11_43_51__11.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 05-08-09/finished/gpa-2 (pK16)V on food R_2009_06_24__11_53_22__12.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 05-08-09/finished/gpa-2 (pk16)V on food L_2009_06_24__14_37_59__21.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 05-08-09/finished/gpa-2 (pk16)V on food R_2009_06_24__10_11_37__3.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 05-08-09/finished/gpa-3 (pK35)V on food R_2009_06_24__12_02_45__13.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 05-08-09/finished/gpa-3 (pk35)IV on food R_2009_06_24__14_48_19__22.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 05-08-09/finished/gpa-4 (pk381)IV on food L_2009_06_24__10_32_05__4.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 05-08-09/finished/gpa-4 (pk381)IV on food R_2009_06_24__14_58_22__23.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 05-08-09/finished/gpa-5 (pK376)X on food L_2009_06_24__12_21_36__15.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 05-08-09/finished/gpa-5 (pk376)X on food L_2009_06_24__10_42_53__5.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 05-08-09/unfinished/gpa-4 (pK381)IV on food R_2009_06_24__12_12_17__14.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 06-08-09/finished/N2 on food R_2009_06_24__16_55__25.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 06-08-09/finished/gpa-10 (pk362)V on food L_2009_06_24__11_22__10.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 06-08-09/finished/gpa-10 (pk362)V on food L_2009_06_24__14_14__19.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 06-08-09/finished/gpa-5 (pk376)X on food R_2009_06_24__15_08__24.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 06-08-09/finished/gpa-7 (pk610)IV on food L_2009_06_24__12_31__16.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 06-08-09/finished/gpa-7 (pk610)IV on food L_2009_06_24__12_39__17.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 06-08-09/finished/gpa-7 (pk610)IV on food R_2009_06_24__10_51__7.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 06-08-09/finished/gpa-8 (ph345)V on food L_2009_06_24__11_01__8.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 06-08-09/finished/gpa-9 (pk348)V on food R_2009_06_24__13_07__18.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 06-08-09/finished/gpa-9 (pk438)V on food R_2009_06_24__11_11__9.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 06-08-09/unfinished/N2 on food R_2009_06_24__09_53__1.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 21-07-09/09-07-09/finished/Egl-30  (ep271gf) on food R_2009_07_10__12_07_16__3.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 21-07-09/09-07-09/finished/N2 on food R_2009_07_09__13_07_03__1.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 21-07-09/09-07-09/finished/egl-30 (ep271gf) on food R_2009_07_09__14_03_19__2.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 21-07-09/09-07-09/finished/gpa-10 (pk362)V on food R_2009_07_09__15_05_07__6.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 21-07-09/09-07-09/finished/gpa-12 (pk322)x on food L_2009_07_09__15_50_56__9.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 21-07-09/09-07-09/finished/gpa-13 (pk1270)V on food L_2009_07_09__15_18_35__7.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 21-07-09/09-07-09/finished/gpa-17 (ok2334)III on food L_2009_07_09__16_03_38__10.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 21-07-09/09-07-09/finished/gpa-2 (pk16)V on food L_2009_07_09__14_28_04__4.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 21-07-09/09-07-09/finished/gpa-7 (pk610)IV on food R_2009_07_09__15_38_30__8.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 21-07-09/09-07-09/finished/gpa-9 (pk438)V on food R_2009_07_09__14_53_57__5.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 21-07-09/09-07-09/finished/gpb-2 (sa603) on food L_2009_07_09__14_16_56__3.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 21-08-09/finished/N2 on food R_2009_07_29__12_21_43__6___6.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 21-08-09/finished/odr-3 (n2150)V on food L_2009_07_08__11_57__5.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 22-07-09/finished/N2 on food L_2009_07_10__11_39_58__1.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 22-07-09/finished/N2 on food R_2009_07_10__16_52_10__14.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 22-07-09/finished/egl-30 (ep271gf) on food L_2009_07_10__13_17_09__9.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 22-07-09/finished/gpa-15 (pk447)I on food L_2009_07_10__15_13_49__11.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 22-07-09/finished/gpa-15 (pk447)I on food R_2009_07_10__12_51_51__7.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 22-07-09/finished/gpa-3 (pk35)IV on food R_2009_07_10__12_28_29__5.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 22-07-09/finished/gpa-6 (ph480)X on food L_2009_07_10__15_00_58__10.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 22-07-09/finished/gpa-6 (ph480)X on food R_2009_07_10__13_04_43__8.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 22-07-09/finished/gpa-7 (pk610)IV on food L_2009_07_10__12_40_23__6.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 22-07-09/finished/gpa-7 (pk610)IV on food L_2009_07_10__15_30_49__12.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 22-07-09/finished/gpb-2 (sa603) on food L_2009_07_10__12_18_04__4.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 22-07-09/finished/odr-3  (n2150)V on food R_2009_07_10__11_54_39__2.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 22-07-09/finished/odr-3 (n2150)V on food R_2009_07_10__16_39_51__13.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 23-07-09/finished/N2 on food L_2009_07_13__12_36_13__1.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 23-07-09/finished/gpa-16 (ok2349)I on food L_2009_07_13__12_49_56__2.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 23-07-09/finished/gpa-16 (ok2349)I on food L_2009_07_13__13_04_12__3.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 23-07-09/finished/gpa-2 (pk16)V on food L_2009_07_14__11_11_13__3.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 23-07-09/finished/gpa-2 (pk16)V on food L_2009_07_14__15_49_51__13.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 23-07-09/finished/gpa-4 (pk381)IV on food R_2009_07_14__14_51_38__9.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 23-07-09/finished/gpa-5 (pk376)X on food R_2009_07_14__11_48_38__6.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 23-07-09/finished/gpa-5 (pk376)X on food R_2009_07_14__16_39_33__15.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 23-07-09/finished/gpa-8 (ph345)V on food L_2009_07_14__12_03_16__7.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 23-07-09/finished/gpa-9 (pk438)V on food L_2009_07_14__11_22_11__4.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 23-07-09/finished/gpa-9 (pk438)V on food L_2009_07_14__16_28_56__14.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 24-07-09/finished/GPB-2 (SA603) on food L_2009_07_16__15_08_06__7.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 24-07-09/finished/N2 on food L_2009_07_17__10_27_39__1.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 24-07-09/finished/N2 on food R_2009_07_15__10_36_13__1.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 24-07-09/finished/N2 on food R_2009_07_16__12_29_59__1.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 24-07-09/finished/N2 on food R_2009_07_16__15_34_22__9.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 24-07-09/finished/acr-2 (ok1887) on food R_2009_07_20__12_19_33__2.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 24-07-09/finished/acr-2 (ok1887) on food l_2009_07_20__14_55_38__9.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 24-07-09/finished/acr-3 (ok2049)X on food L_2009_07_20__12_30_49__3.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 24-07-09/finished/acr-3 (ok2049)X on food R_2009_07_20__15_07_48__10.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 24-07-09/finished/acr-7 (tm863)II on food R_2009_07_20__12_44_08__4.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 24-07-09/finished/gSa-1 (ce81)I on food L_2009_07_14__15_06_11__10.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 24-07-09/finished/gSa-1 (ce81)I on food L_2009_07_14__15_21_00__11.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 24-07-09/finished/gpa-1 (pk15)V on food L_2009_07_15__11_47_21__4.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 24-07-09/finished/gpa-10 (pk362)V on food L_2009_07_16__12_42_09__2.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 24-07-09/finished/gpa-10 (pk362)V on food L_2009_07_16__13_04_40__4.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 24-07-09/finished/gpa-10 (pk362)V on food R_2009_07_16__12_54_03__3.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 24-07-09/finished/gpa-12 () on food L_2009_07_16__13_15_17__5.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 24-07-09/finished/gpa-13 (pk1270)V on food L_2009_07_15__12_52_00__6.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 24-07-09/finished/gpa-14 (pk347)I on food L_2009_07_14__11_36_17__5.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 24-07-09/finished/gpa-14 (pk347)I on food L_2009_07_14__15_39_34__12.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 24-07-09/finished/gpa-16 (ok2349)I on food L_2009_07_16__14_26_52__6.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 24-07-09/finished/gpa-17 (ok2334)III on food R_2009_07_15__12_31_44__5.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 24-07-09/finished/gpc-1 (pk298) on food R_2009_07_15__10_51_06__2.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 24-07-09/finished/gsa-1 (ce81)I R_2009_07_14__10_58_47__2.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 24-07-09/finished/gsa-1 (ce81)I on food L_2009_07_16__15_20_59__8.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 24-07-09/finished/gsa-1 (ce81)I on food L_2009_07_17__10_48_28__2.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 24-07-09/finished/nlp-17 (ok3461)V on food R_2009_07_17__11_48_21__3.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 24-07-09/finished/nlp-17 (ok3461)V on food R_2009_07_17__12_07_40__5.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 24-07-09/finished/nlp-17 (ok3461)V on food R_2009_07_17__12_18_31__6.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 24-07-09/finished/nlp-2 (tm1908)X on food L_2009_07_17__12_39_35__7.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 24-07-09/finished/odr-3 (n2150)V on food R_2009_07_15__11_14_33__3.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 24-07-09/unfinished/gpa-11 (pk348)II on food R_2009_07_14__14_40_45__8.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 24-07-09/unfinished/nlp-17 (ok3461)V on food L_2009_07_17__11_57_50__4.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 27-07-09/finished/N2 on food L_2009_07_23__14_47_24__1.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 27-07-09/finished/N2 on food R_2009_07_20__12_05_28__1.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 27-07-09/finished/acr-13 (x16 lev-8 2215) on food R_2009_07_20__13_11_09__7.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 27-07-09/finished/acr-13 (x16 x lev-8 2215) on food R_2009_07_23__14_58_47__2.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 27-07-09/finished/acr-14 (ok1155) on food R_2009_07_20__14_42_19__8.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 27-07-09/finished/acr-14 (ok1155) on food R_2009_07_23__15_12_22__3.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 27-07-09/finished/acr-15 (ok1215) on food L_2009_07_23__15_23_14__4.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 27-07-09/finished/acr-19 (ad1674) on food R_2009_07_23__15_37_09__5.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 27-07-09/finished/acr-2 (ok1887) on food R_2009_07_24__14_58_10__12.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 27-07-09/finished/acr-20 (dpy-20) on food L_2009_07_23__15_48_00__6.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 27-07-09/finished/acr-6 (ok3117) on food L_2009_07_24__11_39_54__2.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 27-07-09/finished/acr-6 (ok3117) on food R_2009_07_24__12_52_32__8.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 27-07-09/finished/acr-7 (tm863)II on food R_2009_07_20__12_44_23__5.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 27-07-09/finished/acr-9 (ok933)X on food L_2009_07_20__12_56_28__6.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 28-07-09/finished/N2 on food L_2009_06_09__10_45_29__1.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 28-07-09/finished/N2 on food L_2009_06_09__17_01_19__22.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 28-07-09/finished/NLP-1 (OK1469)X L_2009_06_09__10_59_01__2.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 28-07-09/finished/nlp-1 (ok1469)X on food R_2009_06_09__12_01_51__9.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 29-07-09/finished/gpa-10 (pk362)V on food L_2009_07_09__15_02_18__7.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 29-07-09/finished/gpa-12 (pk322)X on food L_2009_07_09__15_47_48__10.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 29-07-09/finished/gpa-13 (pk1270)V on food L_2009_07_09__15_15_35__8.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 29-07-09/finished/gpa-17 (ok2334)III on food R_2009_07_09__16_00_04__11.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 29-07-09/finished/gpa-7 (pk610)IV on food R_2009_07_09__15_35_08__9.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 29-07-09/finished/gpa-9 (pk438)V on food R_2009_07_09__14_51_24__6.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 29-07-09/finished/gpb-2 (sa603) on food R_2009_07_09__14_13_46__4.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 29-07-09/finished/nlp-1 (ok1469)X on food R_2009_06_09__13_02_57__15.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 29-07-09/finished/odr-3 (n2150)V on food R_2009_07_08__11_56_16__5.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 29-07-09/finished/odr-3 (n2150)V on food R_2009_07_08__12_07_27__6.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 29-07-09/unfinished/gpa-2 (pk16)V on food R_2009_07_09__14_24_45__5.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 30-07-09/finished/egl-30 (ep271gf)on food R_2009_07_10__13_14_48__9.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 30-07-09/finished/gpa-1 (pk15)V on food R_2009_06_16__13_07_31__2.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 30-07-09/finished/gpa-1 (pk35)V on food R_2009_06_16__15_56_12__14.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 30-07-09/finished/gpa-15 (ph447)Ion food L_2009_07_10__15_11_34__11.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 30-07-09/finished/gpa-15 (ph447)Ion food L_2009_07_10__15_11_47__12.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 30-07-09/finished/gpa-15 (pk447)I on food R_2009_07_10__12_48_37__7.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 30-07-09/finished/gpa-3 (pk35)IV on food L_2009_07_10__12_25_37__5.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 30-07-09/finished/gpa-3 (pk35)IV on food L_2009_07_10__15_51_35__15.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 30-07-09/finished/gpa-4 (pk381)IV on food R_2009_06_16__14_16_12__3.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 30-07-09/finished/gpa-4 (pk381)IV on food R_2009_06_16__16_24_17__15.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 30-07-09/finished/gpa-5 (pk376)X on food L_2009_06_16__14_26_29__4.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 30-07-09/finished/gpa-5 (pk376)X on food L_2009_06_16__16_32_32__16.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 30-07-09/finished/gpa-6 (ph480)V on food L_2009_06_16__14_52_03__7.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 30-07-09/finished/gpa-6 (ph480)X on food L_2009_07_10__14_58_14__10.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 30-07-09/finished/gpa-6 (ph480)X on food R_2009_07_10__13_01_35__8.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 30-07-09/finished/gpa-7 (pk610)IV on food L_2009_07_10__12_37_59__6.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 30-07-09/finished/gpa-7 (pk610)IV on food L_2009_07_10__15_27_40__13.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 30-07-09/finished/gpa-7 (pk610)IV on food L_2009_07_10__15_44_31__14.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 30-07-09/finished/nlp-12 (ok335)IV  on food R_2009_06_15__15_55_27__24.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 30-07-09/finished/nlp-12 (ok335)IV on food R_2009_06_15__10_46_24__6.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 30-07-09/finished/nlp-12 (ok335)IV on food R_2009_06_15__12_02_24__14.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 30-07-09/finished/nlp-15 (ok1512)  on food L_2009_06_15__16_03_44__25.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 30-07-09/finished/nlp-15 (ok1512) on food R_2009_06_15__10_54_34__7.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 30-07-09/finished/nlp-15 (ok1512) on food R_2009_06_15__12_11_10__15.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 30-07-09/finished/nlp-18 (ok1557)  on food L_2009_06_15__16_11_44__26.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 30-07-09/finished/nlp-18 (ok1557)II on food L_2009_06_15__12_19_11__16.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 30-07-09/finished/nlp-18 (ok1557)II on food R_2009_06_15__11_03_21__8.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 30-07-09/finished/nlp-20 (ok1591) on food L_2009_06_15__12_26_56__17.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 30-07-09/finished/nlp-20 (ok1591) on food R_2009_06_15__11_12_14__9.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 30-07-09/unfinished/nlp-8 (ok1799)I on food L_2009_06_15__11_54_13__13.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/analysis/analysis 30-07-09/unfinished/nlp-8 (ok1799)I on food L_2009_06_15__16_53_11__29.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/log_file_naming_issues/dop-1 (vs101) on food L_2009_11_10__12_55_44___6___6.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/log_file_naming_issues/dop-1 on food L_2009_11_07__13_37_54___6___4.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/log_file_naming_issues/dop-4 (tm1392)X on food L_2009_11_06__12_25_44___6___5.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/ocr-3 (a1537) on food R_2009_11_15__18_27_23___6___.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/ocr-3 (a1537) on food R_2009_11_15__19_06_35___6___.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/ocr-3 (a1537) on food R_2009_11_15__20_27_27___6___.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/off food tracking/27-04-10/M05B5.6 (ok3189) off food L_2010_04_27__14_18_08___6___5.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/off food tracking/27-04-10/N2 off food R_2010_04_27__11_10_23___6___1.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/off food tracking/27-04-10/N2 off food R_2010_04_27__11_24_25___6___2.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/off food tracking/27-04-10/ocr-3 (a1537) off food L_2010_04_27__12_09_03___6___4.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/off food tracking/27-04-10/pgn-66 (ok1507) off food L_2010_04_27__11_41_52___6___3.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/off food tracking/27-04-10/pmk-1 (km25) off food L_2010_04_27__14_55_04___6___7.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/off food tracking/27-04-10/trp-2 (ok298) off food L_2010_04_27__14_37_35___6___6.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/off food tracking/27-04-10/trp-4 (sy695) off food_2010_04_27__15_17_03___6___9.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/off food tracking/27-04-10/trp-4 (sy695) off food_2010_04_27__15_54_03___6___10.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/off food tracking/28-04-10/N2 off food L_2010_04_28__10_29_35___6___1.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/off food tracking/28-04-10/ocr-3 (ok1557) off food _2010_04_28__11_06_42___6___2.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/swimming/N2_2010_10_19__10_33_30___6___1.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-12/Laura/worm1_2009_10_14__16_42_10___6___1.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-13/Laura/08-02-11/RB1546 on food R_2011_02_08__11_15_29___1___2.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-13/Laura/08-03-12/483 AQ2947 no wait on food R_2012_03_08__16_27_17___1___9.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-13/Laura/15-03-12/83 AQ2947 on food R_2012_03_15__09_51_04___1___2.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-13/Laura/17-04-12/ins-10 (tm3498) on food R_2012_04_17__15_56_41___1___3.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-13/Laura/17-04-12/ins-33 (tm2988) on food R_2012_04_17__15_16_16___1___1.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-13/Laura/17-04-12/ins-35 (ok3297) on food l_2012_04_17__15_36_10___1___2.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-13/Laura/22-02-12/N2 no wait on food L_2012_02_22__11_48_29___1___4.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-13/Laura/30-03-12/N2 no wait on food R_2012_03_30__11_27_41___1___1.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-14/Laura/18-03-10/nlp-14 (tm1880)X on food L_2010_03_18__13_12___3___10.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-14/Laura/19-08-10/unanalysable worm/unc-86 (e1416)III on food R_2010_08_19__17_05___3___13.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-14/Laura/Analysis/analysis 29-07-09/finished/N2 on food R_2009_06_12__10_49__1.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-14/Laura/Analysis/analysis 29-07-09/finished/N2 on foodR_2009_07_13__12_35__1.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-14/Laura/Analysis/analysis 29-07-09/finished/gpa- 16 (ok2349)I on food L_2009_07_13__12_48__2.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-14/Laura/Analysis/analysis 29-07-09/finished/gpa- 16 (ok2349)I on food R_2009_07_13__13_03__3.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-14/Laura/Analysis/analysis 29-07-09/finished/gpa-17 (ok2334)III on food R_2009_06_12__12_39__12.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-14/Laura/Analysis/analysis 29-07-09/finished/gpa-2 (pk16)V L_2009_07_14__11_10__3.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-14/Laura/Analysis/analysis 29-07-09/unfinished/gpa-17 (ok2334)I on food L_2009_06_12__15_23__21.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-15/laura/04-08-11/egl-1 (n487) on food L_2011_08_04__15_41_41___2___11.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-15/laura/19-08-11/dpy-20 (e1282)IV on food R_2011_08_19__10_34_53___2___1.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/ANALYSIS 21-07-09/10-07-09/finished/N2 on food R_2009_07_10__11_41_47__1.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/ANALYSIS 21-07-09/10-07-09/finished/N2 on food R_2009_07_10__16_53_28__11.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/ANALYSIS 21-07-09/10-07-09/finished/egl-30 (ep271gf) on food L_2009_07_10__13_18_31__7.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/ANALYSIS 21-07-09/10-07-09/finished/gpa-15 (pk447)I on food R_2009_07_10__12_53_28__6.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/ANALYSIS 21-07-09/10-07-09/finished/gpa-15 (pk447)I on food R_2009_07_10__15_15_18__9.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/ANALYSIS 21-07-09/10-07-09/finished/gpa-3 (pk35)IV on food L_2009_07_10__12_30_02__4.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/ANALYSIS 21-07-09/10-07-09/finished/gpa-6 (ph480)X on food L_2009_07_10__15_02_33__8.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/ANALYSIS 21-07-09/10-07-09/finished/gpa-7 (pk610)IV on food L_2009_07_10__12_41_44__5.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/ANALYSIS 21-07-09/10-07-09/finished/gpa-7 (pk610)IV on food R_2009_07_10__15_32_18__10.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/ANALYSIS 21-07-09/10-07-09/finished/odr-3 (n2150)V on food L_2009_07_10__11_56_10__2.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/ANALYSIS 21-07-09/10-07-09/finished/pb-2 (sa603) on food R_2009_07_10__12_19_24__3.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/Analysis 22-07-09/finished/N2 on food L_2009_07_09__13_10_01__1.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/Analysis 22-07-09/finished/N2 on food L_2009_07_13__12_37_40__1.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/Analysis 22-07-09/finished/gpa-16 (ok2349)I on food LR_2009_07_13__13_05_16__3.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/Analysis 22-07-09/finished/gpa-16 (ok2349)I on food R_2009_07_13__12_51_43__2.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/Analysis 22-07-09/finished/gpa-16 (ok2349)I on food _2009_07_13__16_08_39__4.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/Analysis 22-07-09/finished/gpa-2 (pk16)V on food R_2009_07_14__11_12_56__3.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/Analysis 22-07-09/finished/gpa-8 (ph345)V on food L_2009_07_14__12_04_41__5.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/Analysis 22-07-09/finished/gpb-2 (sa603) on food R_2009_07_09__14_18_17__2.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/Analysis 22-07-09/finished/nlp-17 (ok3461)V on food L_2009_07_17__11_50_05__2.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/Analysis 22-07-09/finished/nlp-17 (ok3461)V on food L_2009_07_17__11_58_37__3.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/Analysis 22-07-09/finished/nlp-17 (ok3461)V on food L_2009_07_17__12_08_59__4.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/Analysis 22-07-09/finished/nlp-2 (tm1908)X on food L_2009_07_17__12_41_00__5.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/Analysis 22-07-09/finished/odr-3 (n2150)V on food R_2009_07_08__12_00_47__6.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 05-08-09/finished/N2 on food L_2009_07_20__12_05__1.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 05-08-09/finished/N2 on food L_2009_07_23__14_46__1.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 05-08-09/finished/N2 on food R_2009_06_23__10_05__1.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 05-08-09/finished/acr-13 (x16 x lev-8 2215)on food L_2009_07_23__14_57__2.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 05-08-09/finished/acr-14 (ok1155) on food L_2009_07_20__14_40__7.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 05-08-09/finished/acr-14 (ok1155)on food L_2009_07_23__15_11__3.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 05-08-09/finished/acr-15 (ok1215)on food R_2009_07_23__15_21__4.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 05-08-09/finished/acr-19 (ad1674) on food L_2009_07_23__15_35__5.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 05-08-09/finished/gpa-1 (pk15)V on food R_2009_06_23__10_14__2.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 06-08-09/finished/N2 on food R_2009_07_28__12_23_50__1.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 06-08-09/finished/acr-18 (ok1285)V on food L_2009_07_28__12_49_48__4.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 06-08-09/finished/acr-21 (ok1314)III on food L_2009_07_24__15_48_21__17.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 06-08-09/finished/acr-21 (ok1314)III on food R_2009_07_24__12_27_17__6.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 06-08-09/finished/acr-21 (ok1314)III on food R_2009_07_24__14_30_50__10.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 06-08-09/finished/acr-23 (ok2804) on food L_2009_07_24__12_37_39__7.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 06-08-09/finished/acr-23 (ok2804) on food L_2009_07_24__14_42_13__11.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 06-08-09/finished/acr-23 (ok2804) on food R_2009_07_24__15_59_09__18.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 06-08-09/finished/acr-3 (ok2049)X on food R_2009_07_28__12_26_05__2.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 06-08-09/finished/acr-9 (ok933)X on food L_2009_07_28__12_38_06__3.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 21-08-09/finished/N2 on food R_2009_07_29__12_22_59__7___5.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 21-09-09/finished/unc-29 (e193)I on food L_2009_09_16__13_19_42___2___5.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 21-09-09/unc-29 (e193)I on food R_2009_09_16__14_56_02___2___6.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 22-04-10/nc-118 (e2331)X on food R_2010_04_14__10_41_03___7___3.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 22-04-10/nc-127 (hs13)V on food L_2010_04_14__10_20_12___7___2.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 23-07-09/finished/N2 on food R_2009_07_15__10_37_42__1.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 23-07-09/finished/gpa-1 (pk15)V on food L_2009_07_15__11_48_48__5.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 23-07-09/finished/gpa-11 (pk348)II on food L_2009_07_14__14_41_56__6.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 23-07-09/finished/gpa-17 (ok2334)III on food L_2009_07_15__12_33_14__6.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 23-07-09/finished/gpa-9 (pk438)V on food L_2009_07_14__11_23_30__4.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 23-07-09/finished/gpc-1 (pk298) on food L_2009_07_15__10_53_36__2.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 23-07-09/finished/gpc-1 (pk298) on food R_2009_07_15__11_03_06__3.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 23-07-09/finished/gsa-1 (ce81)I R_2009_07_14__11_00_29__2.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 23-07-09/finished/gsa-1 (ce81)I on food L_2009_07_14__15_08_17__1.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 23-07-09/finished/odr-3 (n2150)V on food R_2009_07_15__11_14_46__4.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 24-07-09/finished/N2 on food L_2009_07_16__12_31_42__1.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 24-07-09/finished/N2 on food L_2009_07_16__15_36_00__8.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 24-07-09/finished/N2 on food R_2009_07_20__12_06_46__1.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 24-07-09/finished/acr-11 (ok1345)I on food L_2009_07_24__12_18_55__5.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 24-07-09/finished/acr-11 (ok1345)I on food L_2009_07_24__15_41_13__14.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 24-07-09/finished/acr-11 (ok1345)I on food R_2009_07_24__13_06_09__8.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 24-07-09/finished/acr-13 ~(x16 xlev-8 2215) on food L_2009_07_23__15_00_19__1.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 24-07-09/finished/acr-14 (ok1155) on food L_2009_07_20__14_42_36__1.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 24-07-09/finished/acr-14 (ok1155) on food L_2009_07_23__15_13_59__2.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 24-07-09/finished/acr-15 (ok1215) on food R_2009_07_23__15_25_15__3.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 24-07-09/finished/acr-19 (ad1674) on food L_2009_07_23__15_38_41__4.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 24-07-09/finished/acr-2 (ok1887) on food L_2009_07_20__14_57_06__2.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 24-07-09/finished/acr-21 (ok1314)III on food L_2009_07_24__12_42_36__6.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 24-07-09/finished/acr-21 (ok1314)III on food L_2009_07_24__14_34_53__9.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 24-07-09/finished/acr-23 (ok2804) on food R_2009_07_24__14_46_30__10.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 24-07-09/finished/acr-3 (ok2049)X on food L_2009_07_20__12_32_35__2.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 24-07-09/finished/acr-3 (ok2049)X on food L_2009_07_20__15_09_36__3.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 24-07-09/finished/acr-6 (ok3117) on food L_2009_07_24__12_54_00__7.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 24-07-09/finished/acr-6 (ok3117) on food L_2009_07_24__15_10_33__11.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 24-07-09/finished/acr-7 (tm863)II on food L_2009_07_24__11_55_51__3.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 24-07-09/finished/acr-7 (tm863)II on food L_2009_07_24__15_20_56__12.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 24-07-09/finished/acr-7 (tm863)II on food R_2009_07_20__12_46_04__3.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 24-07-09/finished/acr-9 (ok933)X on food L_2009_07_20__12_58_39__4.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 24-07-09/finished/acr-9 (ok933)X on food R_2009_07_24__12_07_29__4.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 24-07-09/finished/acr-9 (ok933)X on food R_2009_07_24__15_30_45__13.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 24-07-09/finished/gpa-10 (pk362)V on food L_2009_07_16__12_44_18__2.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 24-07-09/finished/gpa-10 (pk362)V on food L_2009_07_16__13_06_43__3.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 24-07-09/finished/gpa-12 () on food L_2009_07_16__13_16_40__4.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 24-07-09/finished/gpa-12 () on food L_2009_07_16__15_09_35__5.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 24-07-09/finished/gpb-2 (sa603) on food L_2009_07_16__15_10_42__6.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 24-07-09/finished/gsa-1 (ce81)I on food L_2009_07_16__15_22_10__7.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 24-07-09/unfinished/acr-21 (ok1314)III on food L_2009_07_24__15_53_08__1.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 24-07-09/unfinished/acr-7 (tm863)II on food L_2009_07_24__11_55_43__2.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 27-07-09/finished/acr-11 (ok1345)I on food L_2009_07_24__12_16_56__5.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 27-07-09/finished/acr-11 (ok1345)I on food L_2009_07_24__13_04_27__9.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 27-07-09/finished/acr-11 (ok1345)II on food L_2009_07_24__15_39_38__16.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 27-07-09/finished/acr-21 (ok1314)III on food L_2009_07_24__14_33_13__10.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 27-07-09/finished/acr-21 (ok1314)III on food L_2009_07_24__15_51_27__17.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 27-07-09/finished/acr-21 (ok1314)III on food R_2009_07_24__12_28_43__6.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 27-07-09/finished/acr-23 (ok2804) on food L_2009_07_24__14_44_55__11.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 27-07-09/finished/acr-23 (ok2804) on food R_2009_07_24__12_41_02__7.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 27-07-09/finished/acr-23 (ok2804) on food R_2009_07_24__16_01_42__18.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 27-07-09/finished/acr-6 (ok3117) on food R_2009_07_24__15_09_08__13.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 27-07-09/finished/acr-7 (tm863) on food R_2009_07_24__15_19_40__14.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 27-07-09/finished/acr-7 (tm863)II on food L_2009_07_24__11_53_39__3.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 27-07-09/finished/acr-9 (ok933)X on food R_2009_07_24__12_05_21__4.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 27-07-09/finished/acr-9 (ok933)X on food R_2009_07_24__15_29_15__15.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 28-07-09/finished/nlp-1 (ok1469)X on food R_2009_06_09__16_54_48__21.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 28-07-09/finished/nlp-12 (ok335) on food R_2009_06_09__11_20_00__4.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 28-07-09/finished/nlp-12 (ok335)IV on food L_2009_06_09__12_19_53__11.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 28-07-09/finished/nlp-12 (ok335)IV on food R_2009_06_09__16_21_33__17.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 28-07-09/finished/nlp-15 (ok1512) on food L_2009_06_09__11_29_40__5.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 28-07-09/finished/nlp-15 (ok1512) on food L_2009_06_09__11_39_06__6.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 28-07-09/finished/nlp-15 (ok1512) on food L_2009_06_09__12_27_26__12.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 28-07-09/finished/nlp-15 (ok1512) on food R_2009_06_09__16_30_38__18.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 28-07-09/finished/nlp-2 (tm1908)X on food L_2009_06_09__12_10_38__10.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 29-07-09/finished/gpa-11 (pk349)II on food R_2009_06_12__11_58__8.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 29-07-09/finished/gpa-12 (pk322)X on food R_2009_06_12__12_18__10.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 29-07-09/finished/gpa-13 (pk1270)V on food L_2009_06_12__12_07__9.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 29-07-09/finished/gpa-13 (pk1270)V on food R_2009_06_12__14_53__18.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 29-07-09/finished/gpa-16 (ok2349)I on food L_2009_06_12__12_29__11.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 29-07-09/finished/gpa-16 (ok2349)I on food R_2009_06_12__15_14__20.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 29-07-09/finished/gpa-16 (ok322)X on food L_2009_06_12__15_03__19.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 29-07-09/finished/gpa-9 (pk438)V on food R_2009_06_12__11_47__7.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 29-07-09/finished/gpa-9 (pk438)V on food R_2009_06_12__14_35__17.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 29-07-09/finished/nlp-2 (tm1908)X on food L_2009_06_09__13_12_07__16.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 29-07-09/finished/nlp-2 (tm1908)X on food R_2009_06_09__11_09_50__3.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 30-07-09/finished/N2 on food L_2009_06_15__10_03__1.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 30-07-09/finished/N2 on food R_2009_06_15__17_03__29.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 30-07-09/finished/egl-30 (ep271gf) on food R_2009_07_15__11_34__6.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 30-07-09/finished/gsa-1 (ce81)I R_2009_07_14__10_57__2.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 30-07-09/finished/gsa-1 (ce81)I on food L_2009_07_14__15_04__10.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 30-07-09/finished/gsa-1 (ce81)I on food R_2009_07_14__15_20__11.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 30-07-09/finished/nlp-1 (ok1469)X on food L_2009_06_15__10_13__2.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 30-07-09/finished/nlp-1 (ok1469)X on food L_2009_06_15__11_22__10.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 30-07-09/finished/nlp-1 (ok1469)X on food L_2009_06_15__15_21__18.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 30-07-09/finished/nlp-12 (ok335)IV on food L_2009_06_15__10_46__6.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 30-07-09/finished/nlp-12 (ok335)IV on food L_2009_06_15__12_02__14.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 30-07-09/finished/nlp-12 (ok335)IV on food L_2009_06_15__15_55__22.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 30-07-09/finished/nlp-15 (ok1512) on food R_2009_06_15__10_54__7.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 30-07-09/finished/nlp-15 (ok1512) on food R_2009_06_15__16_04__23.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 30-07-09/finished/nlp-15(ok1512) on food R_2009_06_15__12_11__15.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 30-07-09/finished/nlp-18 (ok1557) on food R_2009_06_15__16_12__24.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 30-07-09/finished/nlp-18 (ok1557)II on food L_2009_06_15__12_19__16.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 30-07-09/finished/nlp-18 (ok1557)II on food R_2009_06_15__11_03__8.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 30-07-09/finished/nlp-20 (ok1591) on food L_2009_06_15__11_12__9.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 30-07-09/finished/nlp-20 (ok1591) on food L_2009_06_15__16_24__25.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 30-07-09/finished/nlp-20 (ok1591) on food R_2009_06_15__12_27__17.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 30-07-09/finished/nlp-3 (ok2688)X on food L_2009_06_15__11_37__11.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 30-07-09/finished/nlp-3 (ok2688)X on food L_2009_06_15__16_35__26.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 30-07-09/finished/nlp-3 (ok2688)X on food R_2009_06_15__10_22__3.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 30-07-09/finished/nlp-5 (ok1981)II on food L_2009_06_15__11_45__12.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 30-07-09/finished/nlp-5 (ok1981)II on food L_2009_06_15__15_38__20.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 30-07-09/finished/nlp-5 (ok1981)II on food R_2009_06_15__10_30__4.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 30-07-09/finished/nlp-5 (ok1981)II on food R_2009_06_15__16_44__27.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 30-07-09/finished/nlp-8 (ok1799)I on food L_2009_06_15__10_38__5.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 30-07-09/finished/nlp-8 (ok1799)I on food L_2009_06_15__11_54__13.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 30-07-09/finished/nlp-8 (ok1799)I on food L_2009_06_15__16_53__28.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 30-07-09/finished/nlp-8 (ok1799)I on food R_2009_06_15__15_48__21.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/analysis 30-07-09/unfinished/nlp-3 (ok2688)X on food L_2009_06_15__15_30__19.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/finished/N2 on food L_2009_06_16__12_57__1.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/finished/N2 on food L_2009_06_16__16_57__18.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/finished/gpa-10 (pk362)V on food L_2009_07_16__12_55__4.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/finished/gpa-12 () on food L_2009_07_16__13_14__6.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/finished/gpa-15 (pk447)I on food R_2009_06_16__15_37__11.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/finished/gpa-15 (pk477)I on food R_2009_07_16__13_03__5.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/finished/gpa-16 (ok2349)I on food L_2009_07_16__14_25__7.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/finished/gpa-17 (OK2334)III on food R_2009_06_16__15_46__12.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/finished/gpa-3 () on food L_2009_07_16__12_29__2.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/analysis/analysis 03-08-09/finished/gpa-6 (ph480)X on food L_2009_07_16__12_40__3.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-16/Laura/swimming/N2 _2010_10_19__10_35_48___7___1.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-8/Laura/24-05-11/ins-16 (ok2919)III on food L_2011_05_24__13_00___3___6.avi
+/Volumes/behavgenom_archive$/single_worm/original_videos/single_worm_raw_bkp11/from pc207-9/Laura/15-04-10/1/unc-1 (e1598)X on food L_2010_04_15__10_50_07__3.avi

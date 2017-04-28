@@ -68,16 +68,14 @@ def get_file_parts():
     #do not include any file that has "old video" or "control experiments" in the directory path
     data = [(d,f) for d, f in data if not 'old video' in d.lower()]
     data = [(d,f) for d, f in data if not 'control exp' in d.lower()]
-    directories, file_names = zip(*data)
     
-    file_names = [x.rpartition('.avi')[0] for x in file_names]
     #%%
     #this is known extracrap after the L and R simbole
     STR_S = '(?P<left>.*?)(?P<side>(L|R)*((\+| |O|A|z|1|t| TINY)*_))(?P<date>\d{4}(_\d{2}){2}_(_\d{2}){2,3})(?P<tracker>(_{2,3}\d*)+)$'
     prog_part1 = re.compile(STR_S, re.M|re.I)
     STR_S2 = '(?P<strain>.*?)(?P<media>(((o?(n|m))|off|all) \w?oo\w?)|( on.*)|(s?wim.*)|(_onfood))([ _]*)'
     prog_part2 = re.compile(STR_S2, re.M|re.I)
-
+#%%
 #    file_name = 'N2 on food R _2010_05_20__11_13___3___1'
 #    result = prog_part1.match(file_name)
 #    print((result.group('left'), result.group('side'), 
@@ -87,16 +85,19 @@ def get_file_parts():
     #%%
     file_parts = []
     weird_names = []
-    for file_name in file_names:
-        result = prog_part1.match(file_name)
+    
+    for dname, fname in data:
+        bn = fname.rpartition('.avi')[0]
+        result = prog_part1.match(bn)
         if not result is None:
-            file_parts.append((result.group('left'), result.group('side'), 
+            file_parts.append((dname, bn, result.group('left'), result.group('side'), 
                   result.group('date'), result.group('tracker')))
         else:
-            weird_names.append(file_name)
+            weird_names.append(bn)
+    print('WEIRD_NAMES => ', weird_names)
     
-    
-    left_str, side_str, date_str, tracker_str = zip(*file_parts)
+    #%%
+    directories, base_names, left_str, side_str, date_str, tracker_str = zip(*file_parts)
     
     dates = [datetime.datetime(*[int(y) for y in x.split('_') if y]) for x in date_str]
     
@@ -111,12 +112,16 @@ def get_file_parts():
             left_parts.append((result.group('strain'),result.group('media')))
         else:
             left_parts.append((l_str, ''))
-            weird_left.append((l_str, file_names[ii]))
+            weird_left.append((l_str, base_names[ii]))
     #print(weird_left)
     strain_str, media_str  = zip(*left_parts)
     strain_str = [x.strip() for x in strain_str]
-
-    return file_names, directories, side_str, dates, tracker_str, strain_str, media_str
+    
+    output = (base_names, directories, side_str, dates, tracker_str, strain_str, media_str)
+    
+    assert all(len(output[0])==len(x) for x in output)
+#%%
+    return output
 
 
 def create_base_table(myengine, session):
@@ -261,6 +266,8 @@ if __name__ == '__main__':
     tracker_strs, strain_strs, media_strs = get_file_parts()
     create_base_table(myengine, session)
     
+    
+    #%%
     new_rows = []
     for ii, dat in enumerate(zip(*get_file_parts())):
         if ii % 1000 == 0:
@@ -311,7 +318,8 @@ if __name__ == '__main__':
         session.add(ExperimentsFullNew(**row))
         
         new_rows.append(row)
-    
+        
+        
     #session.add(new_rows)
     session.commit()
     
@@ -439,7 +447,8 @@ if __name__ == '__main__':
     'Qt825 nca-1 nRHO-1 nNCA-1Ex [acr-2mcherry]', 'Qt825 nca-1 nRHO-1 nNca-1 Ex[acr-2 mcherry]', 'Qt825 nca-1 nRHO-1 nNCA Ex [acr-2 mcherry]',
     'Qt825 nca-1 nRHO-1 nNCA-1 [acr-2 mcherry]'],
     'Br200':['br200'],
-    'N2' : ['N2 L3', 'N2 male', 'N2_', 'N2 con', 'n2', '', 'N2 (Robyn)', 'Ne'],
+    'N2' : ['N2 L3', 'N2 male', 'N2_', 'N2 con', 'n2', '', 
+            'N2 (Robyn)', 'Ne', 'N2 Kate', 'N2 Laura', 'N2 Robyn'],
     '507 ED3054':['507 ED3059', '07 ED3054', '507'],
     '532 CB4853':['532 CG4853', '532 CB4053'],
     '300 LSJ1':['300 LS51'],
@@ -509,9 +518,13 @@ if __name__ == '__main__':
 
     '342.2 in RB2005':['342.2 inRB2005'],
     'LR342.2 in RB2005':['lr342.2 in RB2005', 'LR342.2 in RB2005 2', 'plg342.2 IN rb2005'],
-    'ocr4;ocr2;ocr1' : ['LX982'],
-    'ocr-2;4' : ['LX981']
-
+    'LX982' : ['ocr4;ocr2;ocr1'],
+    'LX981' : ['ocr-2;4'],
+    
+    'acr-15 (ok1214)V':['acr-15 (ok1214)R', 'acr-15 (ok1412)'],
+    'acr-23 (ok2804)V':['acr-23 (ok2084)V'],
+    'ser-4(ok512)III':['ser-4', 'Ser-4'],
+    'ocr-3(ok1559)X':['ocr-3 (a1537)'],
     }
 
     str2change = {'unc-8':'unc-80 (e1069)', 
@@ -565,7 +578,7 @@ if __name__ == '__main__':
         strain_match = re.match('(\d{2,4} )?(?P<strain>[\-A-Z0-9;a-z]+)( .)?$', strain_str)
         genotype_match = re.match('^(?P<gene>[a-zA-Z\-0-9]+) ?\((?P<allele>[a-zA-Z\-0-9]*?)\)[IXV]{,3}$', strain_str)
         
-
+        
         set_genotype = []
         if strain_match:
             strain = strain_match.group('strain')
@@ -607,6 +620,11 @@ if __name__ == '__main__':
                         
                         elif g_diff == 1 and a_diff != 1:
                             set_genotype = set_allele
+        
+        
+        
+        
+        
         
         if set_genotype is None:
             set_genotype = []
@@ -674,15 +692,15 @@ if __name__ == '__main__':
             group_base_names[strain] = []
         group_base_names[strain].append(base_name)
     #%%
-    range_base_names = {}
-    
-    for strain in group_base_names:
-        base_n = group_base_names[strain]
-        if len(base_n) > 1:
-            DD = [re.findall('(?P<date>\d{4}(_\d{2}){2}_(_\d{2}){2,3})', x)[0][0] for x in base_n]
-            range_base_names[strain] = '%s || %s' % (min(DD), max(DD))
-        else:
-            range_base_names[strain] = base_n[0]
+#    range_base_names = {}
+#    
+#    for strain in group_base_names:
+#        base_n = group_base_names[strain]
+#        if len(base_n) > 1:
+#            DD = [re.findall('(?P<date>\d{4}(_\d{2}){2}_(_\d{2}){2,3})', x)[0][0] for x in base_n]
+#            range_base_names[strain] = '%s || %s' % (min(DD), max(DD))
+#        else:
+#            range_base_names[strain] = base_n[0]
     #%%
 #    with open('problematic_strains.csv', 'w') as fid:
 #        for strain in range_base_names:

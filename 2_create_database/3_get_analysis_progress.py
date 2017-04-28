@@ -133,7 +133,7 @@ if __name__ == '__main__':
             output = row['id'], exit_flag_id
             
         if UPDATE_INFO:
-            add_exp_info(cur, row['base_name'], masks_dir, results_dir)
+            add_exp_info(cur, row['base_name'], results_dir)
             print('ID:{} info added.')
         
         

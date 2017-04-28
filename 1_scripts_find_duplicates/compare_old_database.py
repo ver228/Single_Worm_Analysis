@@ -86,7 +86,6 @@ for fname in files_lists:
     
     not_in_2009 = [x for x in movies2copy if not '2009' in x]
 
-
 #%%
 #for x in sorted(set([x.rpartition('\\')[0] for x in movies2copy])):
 #    print(x)

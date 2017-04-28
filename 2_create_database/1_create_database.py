@@ -434,5 +434,5 @@ if __name__ == '__main__':
     
     init_database(DROP_PREV_DB)
     fill_table(REPLACE_DUPLICATES)
-    add_video_sizes()
+    #add_video_sizes()
     

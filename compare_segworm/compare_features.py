@@ -63,20 +63,24 @@ def plot_indv_feat(feats1, feats2, field, add_name=True, is_hist=False):
         #plt.axis('equal')
 #%%
 
-def plot_feats_comp(feats1, feats2, is_hist=False):
+def plot_feats_comp(feats1, feats2, add_name=True, is_hist=False):
+    valid_feats = set(feats1.keys()) & set(feats2.keys())
     
-    tot_f1 = max(feats1[x].size for x in feats1)
-    tot_f2 = max(feats2[x].size for x in feats2)
+    valid_feats = [x for x in valid_feats 
+                   if isinstance(feats1[x], np.ndarray) and 
+                   isinstance(feats2[x], np.ndarray)]
+    
+    tot_f1 = max(feats1[x].size for x in valid_feats)
+    tot_f2 = max(feats2[x].size for x in valid_feats)
     tot = min(tot_f1, tot_f2)
     
-    fields = set(feats1.keys()) & set(feats2.keys())
     ii = 0
     
     sub1, sub2 = 5, 6
     tot_sub = sub1*sub2
     
     all_figs = []
-    for field in sorted(fields):
+    for field in sorted(valid_feats):
         if feats1[field].size == 1 or feats2[field].size == 1:
             continue
         
@@ -94,7 +98,7 @@ def plot_feats_comp(feats1, feats2, is_hist=False):
         plt.subplot(sub1, sub2, sub_ind)
         
         
-        plot_indv_feat(feats1, feats2, field, is_hist)
+        plot_indv_feat(feats1, feats2, field, add_name, is_hist)
         
     
     return all_figs

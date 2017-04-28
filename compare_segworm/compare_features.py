@@ -29,8 +29,21 @@ def plot_indv_feat(feats1, feats2, field, add_name=True, is_hist=False):
         xx = xx[~np.isnan(xx)]
         yy = yy[~np.isnan(yy)]
         
-        bot = min(np.min(xx), np.min(yy))
-        top = max(np.max(xx), np.max(yy))
+        
+        #get limits considering that one of the features is an empty list (all nan)
+        if xx.size > 0:
+            x_bot, x_top = np.min(xx), np.max(xx)
+        else:
+            x_bot, x_top = None, None
+            
+        if yy.size > 0:
+            y_bot, y_top = np.min(xx), np.max(xx)
+        else:
+            y_bot, y_top = None, None
+            
+        bot = [x for x in (x_bot, y_bot) if x is not None]
+        top = [x for x in (x_top, y_top) if x is not None]
+        bot, top = (min(bot), max(top)) if len(bot)>=1 else (0,1)
         
         bins = np.linspace(bot, top, 100)
         
@@ -62,13 +75,22 @@ def plot_indv_feat(feats1, feats2, field, add_name=True, is_hist=False):
         #plt.legend(handles=ll, loc="lower right", fancybox=True)
         #plt.axis('equal')
 #%%
-
-def plot_feats_comp(feats1, feats2, add_name=True, is_hist=False):
+def _get_common_feats(feats1, feats2):
     valid_feats = set(feats1.keys()) & set(feats2.keys())
     
     valid_feats = [x for x in valid_feats 
                    if isinstance(feats1[x], np.ndarray) and 
                    isinstance(feats2[x], np.ndarray)]
+    
+    valid_feats = [x for x in valid_feats  
+                     if feats1[x].size > 1 and
+                     feats2[x].size > 1]
+    
+    return valid_feats
+
+
+def plot_feats_comp(feats1, feats2, add_name=True, is_hist=False):
+    valid_feats = _get_common_feats(feats1, feats2)
     
     tot_f1 = max(feats1[x].size for x in valid_feats)
     tot_f2 = max(feats2[x].size for x in valid_feats)
@@ -103,25 +125,19 @@ def plot_feats_comp(feats1, feats2, add_name=True, is_hist=False):
     
     return all_figs
 #%%
-def save_features_pdf(feat_file, 
-                      segworm_feat_file, 
-                      save_plot_dir,
-                      feats2plot=None):
-    
-    basename = get_base_name(feat_file)
-    pdf_file = os.path.join(save_plot_dir, basename + '_feat_comparison.pdf')
-    feats_reader = FeatsReaderComp(feat_file, segworm_feat_file)
-    tierpsy_feats = feats_reader.read_plate_features()
-    segworm_feats = feats_reader.read_feats_segworm()
-    
-    
+def save_features_pdf(tierpsy_feats, 
+                      segworm_feats, 
+                      pdf_file,
+                      feats2plot=None,
+                      xlabel='tierpsy features',
+                      ylabel='segworm features'):
     rev_dict = {val:key for key,val in FEATS_OW_MAP.items()}
     
     if feats2plot is None:
-        feats2plot = [val for key,val in FEATS_OW_MAP.items()]
-    else:
-        if not any('.' in x for x in feats2plot):
-            feats2plot = [FEATS_OW_MAP[x] for x in feats2plot]
+        feats2plot = _get_common_feats(tierpsy_feats, segworm_feats)
+    
+    if not any('.' in x for x in feats2plot):
+        feats2plot = [FEATS_OW_MAP[x] for x in feats2plot]
             
     feats2plot = sorted(feats2plot)
     with PdfPages(pdf_file) as pdf_id:
@@ -129,14 +145,12 @@ def save_features_pdf(feat_file,
             #if not 'locomotion.crawling_bends' in ow_field:
             #    continue 
             field = rev_dict[ow_field]
-            if tierpsy_feats[field].size == 1 or segworm_feats[field].size == 1:
-                continue
             
             plt.figure(figsize=(10,5))
             plt.subplot(1,2,1)
             plot_indv_feat(tierpsy_feats, segworm_feats, field, add_name=False, is_hist=False)
-            plt.xlabel('tierpsy features')
-            plt.ylabel('segworm features')
+            plt.xlabel(xlabel)
+            plt.ylabel(ylabel)
             
             
             plt.subplot(1,2,2)
@@ -174,10 +188,17 @@ if __name__ == '__main__':
         print(feat_file)
         skel_file = feat_file.replace('_features.hdf5', '_skeletons.hdf5')
         segworm_feat_file = feat_file.replace('.hdf5', '.mat').replace('Results','RawVideos')
+        basename = get_base_name(feat_file)
+        
+        pdf_file = os.path.join(save_plot_dir, basename + '_feat_comparison.pdf')
+        feats_reader = FeatsReaderComp(feat_file, segworm_feat_file)
+        tierpsy_feats = feats_reader.read_plate_features()
+        segworm_feats = feats_reader.read_feats_segworm()
+        
         tierpsy_feats, segworm_feats = \
-        save_features_pdf(feat_file, 
-                          segworm_feat_file, 
-                          save_plot_dir,
+        save_features_pdf(tierpsy_feats, 
+                          segworm_feats, 
+                          pdf_file,
                           feats2plot=feats2plot)
     
 

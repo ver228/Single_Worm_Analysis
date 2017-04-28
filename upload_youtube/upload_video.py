@@ -125,7 +125,7 @@ def _correct_from_list():
     conn.commit()
 
 if __name__ == '__main__':
-    _correct_from_list()
+    #_correct_from_list()
     skip_invalid = True 
     speed_up = 8
     youtube_privacy_status='public'#'private'
@@ -155,6 +155,7 @@ if __name__ == '__main__':
     shuffle(results)
 
     for ii, (experiment_id, base_name, results_dir) in enumerate(results):
-        youtube_id = resample_and_upload(base_name, results_dir, speed_up, skip_invalid)
         print('{} of {} %%%%%%%%%%%%%%%%%%%%%%%%%%%'.format(ii+1, len(results)))
+        youtube_id = resample_and_upload(base_name, results_dir, speed_up, skip_invalid)
+        
     

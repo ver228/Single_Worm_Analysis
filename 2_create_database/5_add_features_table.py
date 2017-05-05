@@ -9,6 +9,9 @@ import os
 import pandas as pd
 import pymysql
 from sqlalchemy import create_engine
+import multiprocessing as mp
+
+from tierpsy.helper.misc import TimeCounter
 
 if __name__ == '__main__':
     REPLACE_PREVIOUS = False
@@ -34,7 +37,7 @@ if __name__ == '__main__':
     
     cur.execute(sql)
     
-    results = cur.fetchall()
+    all_rows = cur.fetchall()
     
     
     
@@ -47,37 +50,61 @@ if __name__ == '__main__':
                            disk_engine, 
                            if_exists= 'append', 
                            index = False)
-    
-    for irow, row in enumerate(results):
-        print('{} of {}'.format(irow+1, len(results)))
-        features_file = os.path.join(row['results_dir'], row['base_name'] + '_features.hdf5')
-        
-        with pd.HDFStore(features_file, 'r') as fid:
-            if '/features_means' in fid:
-                features_means = fid['/features_means'][:]
+    def _process_row(row):
+       features_file = os.path.join(row['results_dir'], row['base_name'] + '_features.hdf5')
+       with pd.HDFStore(features_file, 'r') as fid:
+            if '/features_summary/means' in fid:
+                features_means = fid['/features_summary/means'][:]
                 assert len(features_means) == 1 
                 #remove unnecessary fields...
                 features_means.drop(labels=['worm_index', 'n_frames', 'n_valid_skel', 'first_frame'], axis=1)
                 #... and add the experiment_id 
                 features_means.insert(0, 'experiment_id', row['id'])
                 
-        _add_to_db(features_means)
+                return features_means
         
     
+    print('*******', len(all_rows))
+    progress_timer = TimeCounter()
+    
+    n_batch = mp.cpu_count()
+    p = mp.Pool(n_batch)
+    tot = len(all_rows)
+    for ii in range(0, tot, n_batch):
+        dat = all_rows[ii:ii + n_batch]       
+        features_means = [x for x in p.map(_process_row, dat) if x is not None]
+        if features_means:
+            features_means = pd.concat(features_means)
+            _add_to_db(features_means)
+            
+        print('{} of {}. Total time: {}'.format(ii + n_batch, 
+                  tot, progress_timer.get_time_str()))
+        
+    #%%
     #modify table for some reason the default of int would be bigint
     sql = '''
     ALTER TABLE features_means
-    MODIFY experiment_id INT
+    MODIFY experiment_id INT;
     '''
     cur.execute(sql)
+    #%% REMOVE ANY DUPLICATED KEYS
+    sql = '''
+    CREATE TABLE tmp LIKE `features_means`;
+    ALTER TABLE tmp ADD UNIQUE(`experiment_id`);
+    INSERT IGNORE INTO tmp SELECT * FROM `features_means`;
+    RENAME TABLE `features_means` TO deleteme, tmp TO `features_means`;
+    DROP TABLE deleteme;
+    '''
+    
+    #%%
+    #ADD FOREING KEY CONSTRAIN
     sql = '''
     ALTER TABLE features_means
-    ADD FOREIGN KEY (`experiment_id`) REFERENCES `experiments`(`id`)
+    ADD CONSTRAIN FOREIGN KEY (`experiment_id`) REFERENCES `experiments`(`id`);
     '''
     cur.execute(sql)
-    
-    
+    #%%
     cur.close()
     conn.commit()
-            
+       
         

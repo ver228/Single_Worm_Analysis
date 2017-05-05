@@ -8,10 +8,12 @@ Created on Mon Jan 23 16:59:45 2017
 import os
 import json
 import tables
+import numpy as np
 import pymysql.cursors
 from collections import OrderedDict
 
-from tierpsy.processing.batchProcHelperFunc import walkAndFindValidFiles
+from tierpsy.helper.params import copy_unit_conversions, read_microns_per_pixel
+from tierpsy.analysis.stage_aligment.alignStageMotion import isGoodStageAligment, _h_get_stage_inv
 
 def db_row2dict(row):
     
@@ -74,38 +76,55 @@ def db_row2dict(row):
     experiment_info['tracker'] = row['tracker']
     experiment_info['original_video_name'] = row['original_video']
     
-    print(experiment_info['ventral_side'])
-    
     return experiment_info
 
 
-def _add_exp_info(fname, experiment_info_str):
-    with tables.File(fname, 'r+') as fid:
-        if '/experiment_info' in fid:
-            
-            fid.remove_node('/', 'experiment_info')
-        fid.create_array('/', 'experiment_info', obj = experiment_info_str)
-        
-        
-
 def _get_exp_info(cur, base_name):
-    
     cur.execute("SELECT * FROM experiments_full WHERE base_name='{}';".format(base_name))
     row = cur.fetchone()
     experiment_info = db_row2dict(row)
     experiment_info_str = bytes(json.dumps(experiment_info), 'utf-8')
     return experiment_info_str
+
+
+def add_extra_info(cur, base_name, results_dir):
     
-def add_exp_info(cur, base_name, results_dir):
-    experiment_info_str = _get_exp_info(cur, base_name)
-    
+    valid_fields = ['/mask', '/trajectories_data', '/features_timeseries']
     mask_file = os.path.join(results_dir, base_name + '.hdf5')
     skeletons_file = os.path.join(results_dir, base_name + '_skeletons.hdf5')
     features_file = os.path.join(results_dir, base_name + '_features.hdf5')
     
-    for fname in [mask_file, skeletons_file, features_file]:
+    def _add_exp_data(fname, experiment_info_str):
+        with tables.File(fname, 'r+') as fid:
+            if os.path.exists(skeletons_file):
+                group_to_save = fid.get_node(field)
+                copy_unit_conversions(group_to_save, skeletons_file)
+            
+            if '/experiment_info' in fid:
+                fid.remove_node('/', 'experiment_info')
+            fid.create_array('/', 'experiment_info', obj = experiment_info_str)
+    
+    
+    experiment_info_str = _get_exp_info(cur, base_name)
+    
+    fnames = [mask_file, skeletons_file, features_file]
+    for fname, field in zip(fnames, valid_fields):
         if os.path.exists(fname):
-            _add_exp_info(mask_file, experiment_info_str)
+            _add_exp_data(fname, experiment_info_str)
+    
+    #finally if the stage was aligned correctly add the information into the mask file    
+    if os.path.exists(mask_file) and isGoodStageAligment(skeletons_file):
+        microns_per_pixel = read_microns_per_pixel(mask_file)
+        with tables.File(mask_file, 'r+') as fid:
+            n_frames = fid.get_node('/mask').shape[0]
+            stage_vec_inv = _h_get_stage_inv(skeletons_file, np.arange(n_frames))
+            stage_vec_pix = stage_vec_inv/microns_per_pixel
+            if '/stage_position_pix' in fid: 
+                fid.remove_node('/', 'stage_position_pix')
+            fid.create_array('/', 'stage_position_pix', obj=stage_vec_pix)
+            
+        
+    
 
     
 
@@ -129,5 +148,5 @@ if __name__ == '__main__':
     
     for ii, row in enumerate(valid_files):
         print('{} of {} : {}'.format(ii+1, len(valid_files), row['base_name']))
-        add_exp_info(cur, **row)
+        add_extra_info(cur, **row)
         

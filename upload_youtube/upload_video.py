@@ -83,7 +83,7 @@ def resample_and_upload(base_name,
                 return
             #print('I will wait a few seconds before trying again.')
             #time.sleep(60)
-            min_to_wait = 15
+            min_to_wait = 60
             print('The limit of youtube uploads has been reached. I will try it again in {} minutes.'.format(min_to_wait))
         for n in range(1, min_to_wait+1):
             time.sleep(60)

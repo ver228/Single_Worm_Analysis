@@ -10,7 +10,10 @@ import shutil
 import pymysql
 from helper.build_dir import get_dir_from_base
 import glob
-from tierpsy.helper.misc import RESERVED_EXT, get_base_name
+from tierpsy.helper.misc import RESERVED_EXT
+
+valid_ext = RESERVED_EXT.copy()
+valid_ext.append('.hdf5')
 
 def get_files_old(original_video):
     
@@ -34,6 +37,8 @@ def _correct_from_old(original_video):
     return new_name
 
 def correct_wrong_path(dir_root):
+    #I NEED TO ADD SOMETHING TO DEAL WITH FINISH UNFINISHED HERE
+    
     exiting_files = glob.glob(os.path.join(dir_root, '**', '*.hdf5'), recursive=True)
     exiting_files = [x for x in exiting_files if not any(x.endswith(rext) for rext in RESERVED_EXT)]
     for fullname in exiting_files:
@@ -45,13 +50,13 @@ def correct_wrong_path(dir_root):
         
         
         if os.path.abspath(dname_correct) != os.path.abspath(dname):
-            all_files = [os.path.join(dname, base_name + rext) for rext in  RESERVED_EXT]
+            all_files = [os.path.join(dname, base_name + rext) for rext in  valid_ext]
             files2move = [x for x in all_files if os.path.exists(x)]
             for ff in files2move:
                 shutil.move(ff, dname_correct)
 
 if __name__ == '__main__':
-    dir_root = '/Volumes/behavgenom_archive$/single_worm/unfinished'
+    dir_root_r = '/Volumes/behavgenom_archive$/single_worm/'
 
     conn = pymysql.connect(host='localhost')
     cur = conn.cursor()
@@ -59,37 +64,51 @@ if __name__ == '__main__':
     cur.execute('USE `single_worm_db`')
     
     sql = '''
-    SELECT id, base_name, original_video
-    FROM experiments_full
+    SELECT e.id, results_dir, base_name, original_video, f.name
+    FROM experiments AS e
+    JOIN exit_flags AS f ON f.id = exit_flag_id
     '''
     cur.execute(sql)
     results = cur.fetchall()
     
     
     tot = len(results)
-    for ii, (exp_id, base_name, original_video) in enumerate(results):
+    for ii, (exp_id, results_dir, base_name, original_video, exit_flag) in enumerate(results):
+        #correct from the original schaffer path
         original_video = _correct_from_old(original_video)
+        files2move = get_files_old(original_video) 
+        
+        if exit_flag != 'END':
+            dir_root = os.path.join(dir_root_r, 'unfinished')
+        else:
+            
+            dir_root = os.path.join(dir_root_r, 'finished')
         
         
         dpart = get_dir_from_base(base_name)
         dname = os.path.join(dir_root, dpart)
-        
         if not os.path.exists(dname):
             os.makedirs(dname)
         
-        files2move = get_files_old(original_video)
-        for fname in get_files_old(original_video):
-            if os.path.exists(fname):
-                shutil.move(fname, dname)
+        if len(files2move) == 0:
+            files2move = [os.path.join(results_dir, base_name + rext) for rext in  valid_ext]
         
-        sql = '''
-        UPDATE experiments
-        SET results_dir="{}"
-        WHERE id = {}
-        '''.format(dname, exp_id)
-        cur.execute(sql)
-        conn.commit()
+        files_moved = 0
+        if os.path.abspath(dname) != os.path.abspath(results_dir):
+            for fname in files2move:
+                if os.path.exists(fname):
+                    shutil.move(fname, dname)
+                    files_moved += 1
         
-        print('{} of {} : {} "{}"'.format(ii+1, tot, len(files2move), base_name))
+        if files_moved > 0:
+            sql = '''
+            UPDATE experiments
+            SET results_dir="{}"
+            WHERE id = {}
+            '''.format(dname, exp_id)
+            cur.execute(sql)
+            conn.commit()
+        
+        print('{} of {} : {} "{}"'.format(ii+1, tot, files_moved, base_name))
         
         

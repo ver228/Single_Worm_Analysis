@@ -8,7 +8,7 @@ Created on Mon Feb 20 18:35:13 2017
 import tables
 import numpy as np
 import pandas as pd
-from tierpsy.analysis.feat_create.obtainFeaturesHelper import _h_get_stage_inv
+from tierpsy.analysis.stage_aligment.alignStageMotion import _h_get_stage_inv
 
 from scipy.io import loadmat
 
@@ -135,7 +135,9 @@ class FeatsReaderComp(FeatsReader):
         for name_tierpsy, name_segworm in FEATS_MAT_MAP.items():
             prev = dat
             for field in name_segworm.split('/'):
+                
                 if isinstance(prev, (np.ndarray, np.void)):
+                    
                     ff = prev.dtype.names
                     if not ff is None:
                         has_field = field in ff
@@ -146,8 +148,14 @@ class FeatsReaderComp(FeatsReader):
                 
                 if has_field:
                     prev = prev[field]
-                    if prev.size == 1:
-                        prev = prev[0,0]
+                    if prev.size == 1 and prev.shape == (1,1):
+                       prev = prev[0,0]
+                
+#                if name_tierpsy == 'inter_backward_distance':
+#                    print(field)
+#                    import pdb
+#                    pdb.set_trace()
+                        
             
             
             if 'eigen_projection_' in name_tierpsy:

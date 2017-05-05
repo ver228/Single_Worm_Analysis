@@ -112,6 +112,8 @@ if __name__ == '__main__':
         select f.id, f.name, original_video, results_dir, base_name
         from experiments as e
         join exit_flags as f on f.id = e.exit_flag_id
+        join arenas as a on arena_id = a.id
+        where a.name not like '%liquid%'
         order by original_video_sizeMB DESC
         '''
     
@@ -132,9 +134,11 @@ if __name__ == '__main__':
         files_progress[checkpoint].append(file)
     
     print({x:len(val) for x,val in files_progress.items()})
-#    #%%
-
-    points2save = ['INT_PROFILE', 'FEAT_CREATE', 'STAGE_ALIGMENT']
+    
+    ignore_fields = ['INVALID_VIDEO', 'FAIL_STAGE_ALIGMENT', 'END', 'UNKNOWN_CONTOUR_ORIENT']
+    points2save = [x for x in files_progress.keys() if not x in ignore_fields]
+    
+    #['INT_PROFILE', 'FEAT_CREATE', 'STAGE_ALIGMENT']
     files2save = sum([files_progress[x] for x in points2save], [])
     divide_and_save(files2save, 1, 'unfinished')
     

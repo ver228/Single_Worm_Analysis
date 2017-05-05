@@ -72,11 +72,11 @@ def process_file(feat_files, pdf_file):
             
             xx = skeletons_pix[frame_number, :, 0]
             yy = skeletons_pix[frame_number, :, 1]
-            l1, = plt.plot(xx,yy, label="tierpsy")
+            l1, = plt.plot(xx,yy,  '.', label="tierpsy")
             
             xx = skel_segworm_pix[frame_number, :, 0]
             yy = skel_segworm_pix[frame_number, :, 1]
-            l2, = plt.plot(xx,yy, label="segworm")
+            l2, = plt.plot(xx,yy, '.', label="segworm")
             
             X = np.mean(xx)
             plt.xlim((X-100, X+100))
@@ -93,7 +93,6 @@ def process_file(feat_files, pdf_file):
             l = ax.legend(handles, labels)
             for text in l.get_texts():
                 text.set_color("white")
-            
             pdf_id.savefig()
             
 
@@ -102,7 +101,7 @@ def process_file(feat_files, pdf_file):
 if __name__ == '__main__':
     #main_dir = '/Users/ajaver/OneDrive - Imperial College London/Local_Videos/single_worm/global_sample_v3/'
     #feat_files = glob.glob(os.path.join(main_dir, '*_features.hdf5'))
-    main_dir = '/Users/ajaver/OneDrive - Imperial College London/Ev_L4 worms/Results'
+    main_dir = '/Users/ajaver/OneDrive - Imperial College London/Ev_videos/N2_L4/Results/'
     feat_files = glob.glob(os.path.join(main_dir, '**', '*_features.hdf5'), recursive=True)
     
     

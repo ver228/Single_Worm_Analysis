@@ -37,7 +37,7 @@ def plot_indv_feat(feats1, feats2, field, add_name=True, is_hist=False):
             x_bot, x_top = None, None
             
         if yy.size > 0:
-            y_bot, y_top = np.min(xx), np.max(xx)
+            y_bot, y_top = np.min(yy), np.max(yy)
         else:
             y_bot, y_top = None, None
             
@@ -156,13 +156,32 @@ def save_features_pdf(tierpsy_feats,
             plt.subplot(1,2,2)
             ax = plot_indv_feat(tierpsy_feats, segworm_feats, field, add_name=False, is_hist=True)
             L=plt.legend(ax)
-            for ii, ff in enumerate(('tierpsy features', 'segworm features')):
+            for ii, ff in enumerate((xlabel, ylabel)):
                 L.get_texts()[ii].set_text(ff)
             
             plt.suptitle(ow_field)
             pdf_id.savefig()
             plt.close()
-
+            
+            plt.figure(figsize=(10,5))
+            ax = plt.subplot(1,1,1)
+            
+            x1 = tierpsy_feats[field]
+            x1 = x1[:min(x1.size, 1000)]
+            ax2= plt.plot(x1)
+            
+            x2 = segworm_feats[field]
+            x2 = x2[:min(x2.size, 1000)]
+            ax1 = plt.plot(x2)
+            
+            plt.title(ow_field)
+            L=plt.legend((ax1, ax2), loc=1)
+            for ii, ff in enumerate((xlabel, ylabel)):
+                L.get_texts()[ii].set_text(ff)
+            pdf_id.savefig()
+            plt.close()
+            
+            
     return tierpsy_feats, segworm_feats
 
 if __name__ == '__main__':
@@ -174,11 +193,12 @@ if __name__ == '__main__':
     #feat_file = os.path.join(main_dir, base_name + '_features.hdf5')
     #segworm_feat_file = os.path.join(main_dir, '_segworm_files', base_name + '_features.mat')
     
-    save_plot_dir = os.path.join('.', 'plots', 'original')
+    save_plot_dir = os.path.join('.', 'plots', 'original', 'adults')
     if not os.path.exists(save_plot_dir):
         os.makedirs(save_plot_dir)
     
-    main_dir = '/Users/ajaver/OneDrive - Imperial College London/Ev_L4 worms/Results'
+    #main_dir = '/Users/ajaver/OneDrive - Imperial College London/Ev_L4 worms/Results'
+    main_dir = '/Users/ajaver/OneDrive - Imperial College London/Ev_videos/N2_adults/Results/'
     feat_files = glob.glob(os.path.join(main_dir, '**', '*_features.hdf5'), recursive=True)
     
     
@@ -195,11 +215,14 @@ if __name__ == '__main__':
         tierpsy_feats = feats_reader.read_plate_features()
         segworm_feats = feats_reader.read_feats_segworm()
         
+        
+        
         tierpsy_feats, segworm_feats = \
         save_features_pdf(tierpsy_feats, 
                           segworm_feats, 
                           pdf_file,
                           feats2plot=feats2plot)
-    
+        
+        
 
 

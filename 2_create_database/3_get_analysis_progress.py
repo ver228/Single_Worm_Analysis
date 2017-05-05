@@ -20,7 +20,7 @@ from tierpsy.helper.misc import TimeCounter
 from tierpsy import DFLT_PARAMS_PATH
 ON_FOOD_JSON = os.path.join(DFLT_PARAMS_PATH, 'single_worm_on_food.json')
 
-from helper.db_info import add_exp_info
+from helper.db_info import add_extra_info
 
 def get_points2check():
     conn = pymysql.connect(host='localhost')
@@ -48,7 +48,10 @@ POINTS2CHECK_M =  [x for x in POINTS2CHECK if x not in ['COMPRESS', 'COMPRESS_AD
 #%%
 def get_last_finished(ap_obj, cur, points2check):
     def _get_flag_name(_ap_obj):
-        unfinished = _ap_obj.getUnfinishedPoints(points2check)
+        
+        points2check_m = points2check.copy()
+        points2check_m.remove('END')
+        unfinished = _ap_obj.getUnfinishedPoints(points2check_m)
         if not unfinished:
             return 'END'
         else:
@@ -92,7 +95,7 @@ def get_results_files(row):
     return main_file, masks_dir, results_dir, points2check
 
 
-def get_rows(last_valid=''):
+def get_rows(last_valid='', skip_bad_flags=False):
     conn = pymysql.connect(host='localhost')
     cur = conn.cursor(pymysql.cursors.DictCursor)
     
@@ -107,6 +110,7 @@ def get_rows(last_valid=''):
         sql += '''
         WHERE e.exit_flag_id < (SELECT f.id FROM exit_flags as f WHERE f.name="{}")
         '''.format(last_valid)
+    
         
     cur.execute(sql)
     all_rows = cur.fetchall()
@@ -115,9 +119,9 @@ def get_rows(last_valid=''):
     return conn, all_rows
 
 if __name__ == '__main__':
-    UPDATE_INFO = False
-    NO_CHECK = False
-    last_valid = ''#'FEAT_CREATE' #'WCON_EXPORT'#''# 
+    UPDATE_INFO = True
+    CHECK_FLAG = True
+    last_valid = 'END'#'FEAT_CREATE' #'WCON_EXPORT'#''# 
     
     conn, all_rows = get_rows(last_valid)
     cur = conn.cursor(pymysql.cursors.DictCursor)
@@ -125,16 +129,19 @@ if __name__ == '__main__':
     def _process_row(row):
         main_file, masks_dir, results_dir, points2check = get_results_files(row)
         output = None
-        if not NO_CHECK:
+        
+        if UPDATE_INFO:
+            add_extra_info(cur, row['base_name'], results_dir)
+            print('ID:{} info added.'.format(row['id']))
+            
+        if CHECK_FLAG:
             ap_obj = AnalysisPoints(main_file, masks_dir, results_dir, ON_FOOD_JSON)
             exit_flag_id, last_point = get_last_finished(ap_obj, cur, points2check)
             print('ID:{} -> {}'.format(row['id'], last_point))      
             
             output = row['id'], exit_flag_id
             
-        if UPDATE_INFO:
-            add_exp_info(cur, row['base_name'], results_dir)
-            print('ID:{} info added.')
+        
         
         
         return output

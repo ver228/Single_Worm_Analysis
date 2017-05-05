@@ -11,7 +11,6 @@ import pandas as pd
 import numpy as np
 import pymysql.cursors
 import multiprocessing as mp
-from functools import partial
 
 from collections import OrderedDict
 from tierpsy.helper.misc import TimeCounter
@@ -64,8 +63,8 @@ def get_progress_data(experiment_id, mask_file, skeletons_file, features_file):
     
     if os.path.exists(features_file):
         with tables.File(features_file, 'r') as fid:
-            if '/skeletons' in fid:
-                skel = fid.get_node('/skeletons')[:,0,0] #use it as a proxy of valid skeletons
+            if '/coordinates/skeletons' in fid:
+                skel = fid.get_node('/coordinates/skeletons')[:,0,0] #use it as a proxy of valid skeletons
                 if skel.size > 0:
                     out['n_valid_skeletons'] = int(np.sum(~np.isnan(skel)))
                     out['n_timestamps'] = len(skel)

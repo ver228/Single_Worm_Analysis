@@ -1117,3 +1117,597 @@ mec-14 (v55) on food R_2010_10_21__14_45_25___6___	zlw-o9GBW6g
 acr-19 (ad1674) on food L_2010_02_23__11_34_38___7___8	mHAqLtejZP8
 egl-14 (n549)X on food L_2010_07_15__16_22_45__14	sR2B3aBbR58
 ins-10 (tm3498) on food R_2012_08_03__12_04_48___8___6	q7sCaIpCyaQ
+tag-336 (ok1477) on food L_2010_04_08__12_04_04___2___3	aye9YEnZGYc
+unc-8 (e15)I on food L_2011_10_21__11_21_25___7___4	ySrD5kNRNMU
+ins-21 (tm5180) on food L_2012_09_27__15_26_33___5___10	2xFQkXH91uY
+acr-7 (tm863)II on food L_2010_02_24__11_23_11___6___7	aFvasd2oWO0
+mod-1 (ok103) on food R_2009_12_14__15_26_42___4___11	VtL976ylgGA
+unc-63 (ok1075) on food L_2010_04_16__12_57_57__9	93CoXae1UNA
+cat-4 (e1141)I on food R_2010_07_22__13_06___3___8	mE-0Uqlrtws
+C25B9.11 (gk596)V on food R_2011_09_15__11_39___3___2	nC7ZCfRX77s
+pgn-66 (ok1507) on food R_2010_04_22__09_50_50___7___2	Qo0h9_J_OYc
+N2 all food R_2009_06_08__16_54__4	cZepK9wV7c0
+acr-10 (ok3064)X on food R_2010_02_24__11_43_04___1___8	vvUCx8EeOAg
+unc-1 (e94)X on food L_2011_10_18__15_39_18___2___10	-Dqa2MMpdWs
+RB1546 on food R_2011_01_27__15_56___3___4	KKhS8c50kwU
+ins-4 (tm3620 on food R_2012_10_04__15_27_07___1___15	wMIcv_-yZ-U
+371 JU402 on food L_2011_03_22__15_13___3___8	1OtGDoHM9cI
+unc-31 (e169) on food L_2009_12_09__11_36_02___8___5	h_JLLm1V2LE
+egl-6 (n592)X on food L_2010_05_13__15_49_13___8___13	fJR6jRq6y_A
+srp-8 (ok291)V on food R_2011_09_20__11_37_44___1___2	-GymMGFbia4
+ins-23 (tm1875) on food L_2012_04_17__16_03_35___7___3	olRnzLmYRnI
+pmk-1 (km25) on food R_2010_04_22__12_30_03___4___10	xEjAtRMKzD4
+flp-1 (yn2) on food R_2010_01_15__10_21___3___1	vytoD-7KIp0
+acr-3 (ok2049)X on food R_2010_02_19__10_44___3___5	7miMzNmHyQ8
+nRHO-1 (QT309) on food L_2011_10_13__13_26_21___8___7	4HeB4Vifigw
+unc-18 (e81)X on food R_2011_08_09__11_51_10___6___5	SNbSTZjqgcE
+flp-1 (yn2) on food R_2010_01_14__12_55_15___8___8	UzN6VR2yzI8
+acr-18 (ok1285) on food L_2010_02_24__12_04_14___8___9	BDXGxnoR11M
+gpa-16 (ok2349)I on food R_2010_03_11__11_06_12___6___4	c84JnDHq66w
+egl-18 (ok290)IV on food L_2010_07_20__11_23_32___1___4	ROUVtj2uCvE
+mec-7 (v448) on food R_2010_10_28__10_58_31___7___1	yDwqKhDq2ok
+npr-9 (tm1652) on food  L_2010_01_25__16_23___3___11	c0HVQIiCEPQ
+M05B5.6 (tm3092) on food L_2010_07_08__12_29_07___8___7	sX819Fye5Cs
+ins-35 (ok3297)V on food R_2011_05_12__11_58_15___1___5	Yd_9ETEvnPM
+ins-20 (tm1947) on food L_2012_10_04__12_20_27___4___10	MeMYnPPN1oc
+mec-10 (e1515) on food L_2010_11_04__11_16___3___3	eFumwe2hi4w
+N2 on food R_2010_04_15__10_10_45__1	SXrRabdaZqw
+odr-3 (n2150) on food L_2011_02_04__11_11_12__2	33iQsXS4Io4
+unc-55 (e402)I on food L_2011_11_04__10_28_52___8___3	hIH_Q8-nz9c
+acr-2 (ok1887) on food L_2010_02_24__13_03_08___2___11	3VJGnbJx7ek
+T07D4.1 (ok2575)II on food L_2011_09_13__16_37___4___12	wY8_nkfSYHo
+431 JU298 on food L_2011_04_12__16_22_25___8___11	7FutZLo8IHs
+lig-4 (ok716)II on food R_2011_08_19__10_31___4___1	nDsWHJfnjqs
+lin-39 on food L_2010_07_27__11_43_17___1___4	nTvFrv626aY
+nca-2 (gk5) nRHO-1 QT309 on food L_2011_11_11__12_56_32___8___3	3dHzxTgmsv4
+vab-7 (e1562)III on food L_2011_10_06__11_57_20___7___4	FZVj_nPlCTw
+unc-38 (e264)I on food R_2010_09_17__11_55_31___4___3	pz5yADa6dss
+483 AQ2947 on food R_2012_03_15__11_35_52___6___7	UT8PdE3YYRM
+odr-3 (n2150) on food L_2010_03_11__16_03_20___6___10	BZC-dfak-KM
+snf-2 (ok147)I on food L_2009_11_19__10_52_41__2	AwsjKaw4hvs
+dpy-20 (e1282)IV on food R_2011_08_25__13_00___3___6	lWkQXlce6Ew
+gpa-16 (ok2349)I on food R_2009_06_12__15_14_17__21	Y5DDSynyUUs
+egl-10 (md176)IV on food R_2010_12_14__12_07_10___7___3	PG8yWYqD9gE
+pink-1(tm1779) on food L_2012_08_31__13_50_15___5___10	o-0sP5q_yaE
+sem-4 (ga82)I on food L_2010_07_22__16_27_56__13	WHWCkQgKk0s
+gar-2 (ok520)III on food R_2010_07_29__15_34_10___1___10	fVqfe-rNrHw
+483 AQ2947 on food L_2012_03_15__10_34_49___3___4	0qFhTbxg210
+RB557 on food L_2015_10_23__12_47_28___5___5	nMye7PTvyzs
+flp-13 (tm2427) on food R_2010_01_20__10_14_35__2	UyjO3BFKxk8
+daf-3 (e1376)X on food R_2010_07_29__15_17_15___4___10	YyMiivwH0ZA
+srp-8 (ok291)V on food R_2011_09_15__12_24_05___7___4	Nc3WLKrHFRI
+gpa-4 (p381)IV on food R_2010_03_04__10_22_17___1___5	U9PhkVqQfQw
+unc-44 (e1197) on food R_2010_04_16__11_39_41___8___5	aitOt7P9VKY
+tag-24 (ok371)X on food R_2010_01_26__11_27_13___4___3	p0xSKKRKBks
+dpy-20 (e1282)IV on food R_2011_08_25__15_40_16___6___9	EVI96UjWob4
+egl-49 (n1107) on food R_2010_05_11__11_25_59___7___2	fG-q2u6d0QY
+gpa-6 (ph480)X on food L_2010_02_25__11_42_46___1___7	tWVFpVwHwpI
+acr-13 or lev-8 (x15)X on food R_2010_02_19__13_01_01___1___12	W7O2ITtrL0g
+egl-14 (n549)X on food L_2010_07_23__14_54_52___2___10	1yLqMf_S1dE
+snf-7 (ok482)III on food L_2009_11_18__12_51_14___1___8	7bTVxR2RsWo
+tom-1 (ok1285) on food L_2010_08_03__11_57_29__6	QI-MHkd-PiI
+flp-9 (ok2430) on food L_2011_02_08__12_59_55___6___7	VV5FkDdcIl4
+unc-108 (n501gf) on food L_2009_12_10__14_21_24___6___10	LjHnEuiD0lE
+N2 on food R_2010_10_15__14_57___3___8	ed-j2gfdFWY
+ins-28 (ok2722)I on food L_2011_05_19__13_00_10___2___7	v1k8PhZgVc8
+dop-2;dop-3 on food R_2009_09_15__13_09___3___4	oBqIJen3rCE
+unc-122 (e2520)I on food L_2010_04_13__14_38_48___1___11	gK4cjyxYlIs
+unc-60 (e273)V on food L_2010_04_14__12_39_47___7___10	QuF-ErA_Idk
+M05B5.6 (ok3189) on food L_2010_04_22__10_07_04___1___3	WDfWd-2fmD0
+npr-7 (ok527)X on food L_2010_01_25__15_47_02___2___9	tyj3YAgOcPE
+pgn=66 (ok1507) on food L_2010_04_29__11_28_39___6___3	lFE8JH3Mut8
+N2 on food R_2010_03_05__09_33___3___1	x0znbROFYGI
+rab-3 (cy250) on food L_2011_08_09__11_54_43___7___5	SmeT55xUfos
+egl-18 (ok290)IV on food L_2010_07_16__12_24_46___1___7	NfdAUScIwzo
+tbh-1 (n3247)X on food R_2010_01_26__12_05_25___1___5	_r3V8Qrl07M
+unc-8 on food R_2009_12_10__11_23_19___8___4	FSqWaP9Kkuc
+egl-40 (n606)IV on food R_2010_08_06__12_55___3___7	GfuHTAD-F7I
+N2 on food L_2015_03_19__13_01_23___4___6	l7ZgQyZTD10
+egl-7 (n575)III on food L_2010_05_14__11_08_56___6___4	PE8t3OEB8d8
+acr-13or lev-8 (x15)X on food R_2010_02_23__14_44_50___8___13	NFr1vGaHqJs
+ins-11 (tm1053)II on food R_2011_05_24__11_19___3___1	x13xeJefaMc
+mec-10 (e1515) on food L_2010_10_21__15_07_49___8___8	BZn6WXsIkt4
+snf-10 (hc194)V on food L_2009_11_19__16_18_17___4___11	bzb5IVFX1go
+flp-11 (tm2706)X on food R_2010_01_13__11_36___3___4	Lswry6FFFK8
+snf-9 (ok957)IV on food L_2009_11_19__16_02_43__10	b6I_tyo6GhA
+N2 on food L_2011_05_24__11_17_18___1___1	lCOhoto4t9k
+nlp-15 (ok1512)I on food L_2010_03_12__12_23_11___1___8	SkCtbEzkOv4
+acr-21 (ok1314)III on food L_2010_02_23__09_54_23___4___3	NXV7Re_6mHo
+egl-33 (n151)I on food L_2010_05_13__12_13_00___1___7	7JlBHfJGbpk
+ocr-4 (tm2173) on food R_2015_06_18__16_53_04___4___6	6jlEfIBmjnM
+bas-1 (ad446) on food R_2009_12_15__11_22_56___2___4	9MnxsRJJ31Q
+gpa-9 (pK438)V on food L_2009_06_24__11_10_43__8	wWH6NPA3ILA
+npr-11 (ok594)X  on food L_2010_01_28__11_13_53___2___3	bOWB3pDcgrw
+ins-38 (tm2632) on food L_2012_08_03__10_24_56___5___1	QAYQJAJs1RQ
+egl-27 (ok151)II on food L_2010_08_03__12_35_25___1___8	mud5sCgDhjg
+nlp-1 (ok1469)X on food R_2010_03_17__12_55_03___1___9	734UzoKnDPw
+N2 on food R_2009_09_04__15_56_54___4___20	VOdCDA3wT6A
+ins-13 (tm4856) on food R_2012_10_26__14_56_22___3___4	19ROgu5yqm8
+RB1546 off food R_2011_02_08__15_45_46___1___9	qASwegwHzSs
+mec-12 (u76) on food L_2010_11_04__10_38_31__1	bokIj5fbLtY
+snf-6 (eg28)III on food R1_2010_10_01__13_05_24___8___5	70aV-w27Rpo
+spe-41 (sy693); hin-5 (e1490) on food L_2010_07_08__15_16_09__9	yiTyzvrG5i0
+flp-10 (ok2624)IV on food L_2010_01_19__14_45_50___7___8	Iw9wLUOtzyI
+npr-11 (ok594)X on food L_2010_01_28__15_24_41___8___12	3rT-dSLHsYQ
+trpa-1 (ok999)IV on food L_2015_06_18__15_49_10___3___3	XTJyv1TJzmE
+N2 on food R_2011_06_07__12_01___3___5	1F1WgaBMXWU
+ins-22 (ok3616) on food L_2011_06_07__12_20_04___2___6	5uMDoFBd4Zc
+422 ED3017 on food R_2011_04_13__15_40___3___10	oCCHEfildxc
+Y69H2.2 (ok1522) on food L_2010_03_25__17_07_31___7___14	1ycRBJeQfVo
+asic-1 (ok415) on food R_2010_06_15__11_26_55___4___3	LIggLET0sqI
+N2 on food R_2012_08_01__11_50_35___4___4	PG029ZIBgJg
+egl-49 (n1107) on food  R_2010_05_14__14_54_38___1___11	LPYO9isDgls
+ins-22 (ok3616) on food R_2011_06_09__11_11_38___8___3	3Cpm703qTJA
+flp-20 (ok2964)X on food L_2010_01_21__11_25_38___1___2	SIuLOcXZgXQ
+unc-127 (hs13)V on food L_2010_04_13__12_24___3___7	iNeGnjWGcs8
+tag-336 (ok1477) on food R_2010_03_30__14_42_57___1___6	rX0auiKsY8o
+flp-25 (gk1016)III on food R_2010_01_12__13_06_49___6___8	Na_NKxBwZs4
+247 JU438 on food L_2010_11_26__15_05___3___9	BlzbG9lpoKE
+C24G7.1 (ok1822) on food_2010_03_26__15_57_13___8___13	sggW-D-yUbg
+ser-4 (ok512) on food R_2009_12_14__11_24_25___4___4	I3ZpWTadNQg
+C1B2.6 (ok2353) on food R_2010_03_26__12_12_47___1___7	c9b0ntrotiY
+T2854.2 (ok289) on food L_2010_03_26__10_55_31___2___3	h3_vYIBjoDY
+dat-1 (ok157)III on food L_2009_11_19__15_41_20__9	bDZLOO96Xo0
+unc-7 (cb5) on food L_2010_09_10__14_11___3___7	8D6BmRw4djQ
+N2 on food R_2011_11_09__10_40_14___2___2	2BM2CJQ-b4Y
+M05B5.6 (tm3092) on food L_2010_03_26__14_34___3___9	FKFtuuPC7i8
+N2 on food L_2014_12_05__13_27_07___5___4	9CSeH7i8VCc
+trpa-1 (ok999) on food L_2010_04_21__12_27_29___2___7	xyUVVo3MIXk
+goa-1 (sa734)I on food L_2010_03_04__10_43_11___6___6	_6RUygDOf7Q
+unc-31 (e169) on food R_2009_12_10__12_30_30___4___7	FNedtED--Vo
+nRHO (QT309) on food L_2011_10_18__11_25_49___2___1	-Bkz5ProZrM
+spe-41 (sy693); him-5 (e1490) on food L_2010_04_09__12_26_06___8___7	ahGtmpaTQgY
+unc-4 (e120)III on food R_2010_09_17__12_57_40___4___5	EFjcn0PSfDg
+N2 on food R_2011_10_06__12_35_46__6	Y7hEkTdvgCE
+unc-14 (e57)I on food L_2009_12_11__17_31_22___1___13	qONW7kaVNUo
+acr-14 (ok1155) on food L_2010_02_23__15_03_00___2___15	V8-IhMc8dkg
+nlp-15 (ok1512) on food R_2010_03_18__10_34_55___8___2	bOiaERaA-84
+ins-25 (ok2773) on food L_2012_10_25__12_31_26___8___5	6aTq2QKlYEM
+ins-23 (tm1875) on food L_2012_04_17__15_39_12___6___2	0lHJC2DtdO0
+ins-15 (ok3444)II on food L_2011_06_07__10_42_58___7___1	lkSH4_dYppM
+acr-11 (ok1345) on food L_2010_02_24__10_44___3___5	QwY_TY12okw
+unc-98 (su130)X on food L_2011_02_04__11_46___3___4	g_qIFTkwLKQ
+nlp-15 (ok1512) on food R_2010_03_17__10_37_11__3	0VOlyrvBIPc
+gld-1 (op236)I on food R_2012_03_08__13_36_58___5___7	ePqZ7Xm_jiA
+gpa-3 (pk35)IV on food R_2010_02_26__10_43_25___2___7	a9hXa6QAynI
+unc-79 (e1068)III on food L_2011_10_13__14_59_22___8___8	qA9fw5aGDew
+unc-4 (gk705)II on food L_2011_09_13__13_39_11___6___8	P0E2mjvk-6U
+gpa-9 (pk438)V on food R_2010_03_05__10_52_25___1___5	jDbPWYvJs-k
+N2 on food L_2010_07_08__10_24_48___4___1	NALm4zeoVrg
+unc-4 (gk705)II on food L_2011_09_20__11_39___3___2	b7QeK7lMTr4
+npr-5 (ok1358) on food R_2010_01_28__11_57_22___8___5	BHRRzu22W1g
+nca-1 (gk9) nca-2 (gk5) on food R_2011_10_18__15_22_59___8___9	3FCbQUWZAwc
+flp-10 (ok2624)IV on food R_2010_01_20__11_58_29___4___8	iIIiUqt7u18
+flp-25 (gk1016)III on food L_2010_01_11__12_52_56___1___5	I6YejhiAEbY
+unc-4 (e120)III on food L_2010_08_20__11_15_57___6___4	bBXZLtXTZhU
+N2 on food L_2011_05_19__12_44_41___7___6	ioksUnPiZqs
+unc-105 (ok1432) on food L_2010_04_15__10_27_46___1___2	OmjhxRJlqnw
+N2 on food R_2010_03_05__09_33_49___6___1	9ESfvPLJ2Hk
+unc-4  (e120)III on food L_2010_08_06__15_00___3___9	cFl1r0WNJE0
+mec-7 (v448) on food L_2010_10_14__15_40_53__3	Ez6Bwd6D4gQ
+egl-21 (n611)V on food R_2010_05_13__12_36_51__8	RrPW6XJMX3M
+nlp-18 (ok1557)II on food L_2009_07_17__11_38__4	MHpmj2wksAM
+egl-6 (n592)X on food R_2010_05_11__14_50_51___8___7	2745nv3_0jk
+N2 on food R_2010_03_25__10_52_59___6___1	B84rFHukr98
+gpa-15 (pk477)I on food L_2009_07_10__15_43__13	rkoUJCnLEfQ
+gpa-16 (ok2349)I on food R_2010_03_11__11_05_07___1___3	7V4XmYCTco8
+tdc-1 (n3419)II on food L_2010_03_05__13_12_48___1___12	-RbEfsUh43A
+ins-31 (ok3543)II on food L_2011_05_19__15_41_01___6___9	kw_51U0qtlc
+gpa-6 (ph480)X on food L_2010_02_25__11_45_43__7	4WivqMZ4DKc
+ins-35 (ok3297)V on food R_2011_05_12__13_04_53__8	UJWrgDpByZo
+C11D2.2 (ok1565)IV on food R_2011_08_31__11_52_49__2	M4oGrgizxTc
+unc-76 (e911)V on food R_2012_03_08__13_33_01___4___6	soaWKPiZNHI
+egl-36 (n728)X on food R_2010_07_15__15_33_56___6___12	1uA2WmyZ2Vg
+acr-23 (ok2084)V on food R_2010_02_23__10_17_18__4	Fz_m5rLNaxw
+acr-3 (ok2049)X on food L_2010_02_24__11_03___3___6	xEn22sFduNM
+gld-1 (op236)I L_2012_03_08__15_19_02___6___8	E3YoDEsnWk0
+nlp-18 (ok1557)II on food L_2010_03_12__12_04_59___4___6	rcWRdwA2bGc
+lig-4 (ok716)II on food R_2011_08_25__14_59_57___2___7	YV6koBaTGfk
+nca-1 (gk9)IV nca-2 (gk5) on food R_2011_10_06__12_51_49___2___2	r1imr1N_4QI
+egl-15 (n484)X on food R_2010_05_19__12_07_05__3	0r_QN59JJxg
+unc-63 (ok1075) on food L_2010_04_09__11_44_51___4___5	blvn24K86gk
+ric-19 (ok833) on food L_2011_08_04__11_33_37__4	lLGrwBo2YTQ
+snf-1 (ok790)I  on food L_2009_11_18__15_55_52__12	oQVBhyVtmeo
+acr-15 (ok1214)V on food R_2010_02_23__09_34_21___7___2	ISsgk_crLrM
+N2 on food R_2010_05_13__10_12_26___1___1	Hr4nT1aI610
+acr-23 (ok2804)V on food L_2010_02_24__15_02_18___1___13	VoUS8cXJCdI
+unc-4 (gk705)II on food R_2011_09_13__12_39___3___5	M9wQIPGWS_g
+unc-115 (mn481)X on food R_2010_08_19__16_05_03___6___11	1jAkwzjg4Ew
+nhr-95 (gk836) on food R_2011_08_19__13_03_35___8___8	j9J-P98p83I
+N2 male on food R_2012_02_22__10_42_08___7___2	RfVsBBRV0Rg
+gpa-5 (pk376)X on food R_2010_03_11__12_08_45___7___7	bks09Kf3b3c
+ser-1 (ok345) on food L_2009_12_14__10_42_39___8___2	kXbp_3jDKaE
+unc-4 (e120)II on food L_2011_10_21__11_57_42___6___6	xVulmYc_iR0
+sma-3 (e491)III on food R_2011_10_13__11_36_06___7___1	wsMGDNOwLDo
+flp-33 (gk1038) on food L_2010_01_21__17_04_31___8___13	IZI5h97NWLg
+T07D4.1 (ok2575)II on food R_2011_09_06__16_07_02___1___8	GNe3rtwZrwg
+ins-13 (tm4856) on food L_2012_10_25__12_48_01___6___6	nwLsq1SGFhc
+egl-6 (n592)X on food L_2010_05_13__15_47_43___6___13	mfgI6pfJm84
+N2 on food L_2010_10_15__12_27_37___8___5	gv5xOHwZtr0
+N2 on food R_2012_11_09__16_31_32___1___5	tGqZzmJKRJs
+N2 on food R_2010_03_31__10_53_03___1___1	lf8Orx7Vxkw
+nlp-12 (ok335)IV on food L_2010_03_17__13_16_03___8___10	3oKoFvKFeMI
+npr-2 (ok419) on food L_2010_01_22__13_14_21___7___9	1CB4QZ2myoU
+pkc-1 (nj3) on food L_2010_07_29__12_34_10___2___6	pmeuSR27qcc
+flp-7 (ok2625)X on food R_2010_01_11__11_58_33__1	R1rxPPBSmgc
+nlp-3 (ok2688)X on food L_2009_06_05__16_11__23	E3w5JTWDz-U
+RB557 on food L_2015_10_15__14_00_58___5___7	dc0q5yz51eo
+ins-30 (ok2343)I on food L_2011_05_12__12_03_17__5	ZugqZqhG4bs
+ocr-4 (tm2173) on food R_2015_07_02__18_07_03___5___7	PwQDgKqyClo
+bas-1 (ad446) on food L_2009_12_14__13_03_09___8___8	_Myzx300HBg
+mec-12 (u76) on food L_2010_11_11__13_04_13___1___7	GCaFfumXw-M
+egl-10 (md176)V on food L_2010_12_14__11_20___3___1	4mGgFB9xYXE
+rab-3 (cy250) on food R_2011_08_25__15_39___3___9	YwRH6JgsZmM
+npr-8 (tm1553) on food L_2010_01_22__12_34_45__8	4nrUCohe8gw
+nca-2 (gk5)III on food R_2011_06_14__10_49___3___1	CrmPzx-2Shs
+sng-1 (ok234)X on food R_2011_09_06__12_32_51__3	LUaO7knPMEk
+N2 on food_2010_04_13__10_24_23___4___1	Y6T5Sj2HXwo
+C38D9.2 (ok1853)V on food L_2011_09_22__11_54_20___8___3	6Eeza0uJlXs
+N2 no wait on food L_2012_03_30__11_25_12___6___1	rFXmfhngDK8
+unc-108 (n777)I on food L_2009_12_10__14_41_53___1___12	_x14k4K6N4A
+unc-115 (mn481)X on food L_2010_08_19__16_07_14__11	akUBkKQ4Mg8
+daf-7 (m62)III on food R_2010_07_22__12_26_18___8___5	YqbHT-18CwY
+T28138.5 (ok1014) on food L_2010_04_08__13_06_23__6	zZ3j-Ifzq_0
+gpa-13 (pk1270)V on food R_2009_07_15__13_02__11	68fxnTkMBYU
+mec-14 (v55) on food L_2010_11_04__11_16_36___6___3	YCcza1_HcC8
+egl-32 (n155)I on food L_2010_05_11__16_48_16___6___14	wzFskz4NrGs
+N2 on food R_2012_03_15__11_39_42___7___7	r6zt8RKTdfQ
+N2 on food R_2009_12_09__10_31_25___2___1	Ri6-TCJCj6g
+srp-8 (ok291)V on food R_2011_09_20__13_29_30___6___7	KLFoc3Xl07o
+C24G7.1 (ok1822) on food _2010_03_30__12_06___3___3	bLJTkPZCIvM
+N2 male on food L_2012_03_02__15_21_03___2___1	JUETm8QqRlU
+ins-28 (ok2722)I on food L_2011_05_17__10_53_29___7___1	4i4vt3T7FA8
+N2 on food R_2015_09_04__13_12_52___4___5	hHVGtqej4NQ
+nca-2 (gk5)III on food R_2011_06_14__10_47_18___1___1	-Hpx63RqEWQ
+ins-34 (tm3095) on food R_2012_11_09__16_39_38___7___5	k4BhRyYipaY
+mod-5 (n822)I on food R_2009_11_19__13_10___3___8	B58hGY2XMCY
+nca-2 (gk5) nRHO-1 QT309 on food R_2011_11_09__10_43_58__2	S0KlPb394qw
+unc-26 (m2)IV on food L_2010_04_16__15_11_39___8___11	cUcai4PFLLk
+N2 on food R_2012_09_21__13_32_18___7___4	QFSypBvRUjY
+M05B5.6 (ok3189) off food R_2010_04_27__14_17_04___4___6	LR1cUjCT-uY
+N2 on food R_2011_06_09__11_52_41___8___5	9lMhbX6sP1Q
+flp-12 (ok2409)X on food R_2010_01_11__12_16_50__2	qj5joIYHZO0
+unc-101 (e1265) on food L_2010_09_23__12_38_02__6	uUI-FHC5WFw
+ins-18 (ok1672)I on food R_2011_05_24__11_45_44___7___2	HdVnL46MapQ
+N2 on food L_2010_05_20__11_16_09__1	aRquJWR15a8
+unc-7 (cb5) on food R_2010_08_19__11_18___3___3	AJktVASj5R4
+acr-10 (ok3064) on food L_2010_02_24__11_43_54___6___8	hSJbZJahQXk
+N2 on food L_2009_09_04__13_13_29___4___12	RD_GUOXrt-w
+pdr-1(gk448) on food L_2012_08_30__13_01_46___5___5	zpFTIcy318Q
+N2 on food L_2010_03_05__09_38_41___4___1	UOdrHkelA4Y
+trp-1 (sy691) off food_2010_04_30__12_13_09___4___5	4kDrPpXqz34
+unc-7 (cb5) on food R_2010_09_10__15_37_49___7___10	Ncn6dFJDgBc
+N2 on food L_2010_10_15__11_06___3___1	IVoBkxx9A6U
+ins-7 (tm2001) on food R_2012_08_01__12_50_19___4___7	OfMpohz8fnk
+acr-19 (ad1674) on food R_2010_12_14__15_54_49___1___7	ujrh1J6cKhc
+tyra-2 (tm1846)X on food R_2010_01_28__12_58_39___6___8	AGnqKEFTDGw
+unc-7 (cb5) on food R_2010_09_10__15_13_45___1___9	pnvMWHrRrjo
+C1B2.6 (ok2353) on food L_2010_03_30__15_49_27___1___9	zdCc11KTYDs
+M05B5.6 (tm3092) on food R_2010_03_26__14_34_29___4___9	vcMveSwgL2U
+gpa-4 (pk381)V on food L_2010_02_25__10_24_44___6___3	REztbewAjxY
+N2 on food R_2010_10_21__11_45___3___3	a9j7O0SX880
+T28138.5 (ok1014) on food L_2010_03_30__15_08_31__7	sDEztvNP2T4
+ocr-3 (ok1557) on food R_2010_04_21__10_49_15___4___2	pD80C-cvsCM
+N2 on food R_2016_02_05__12_50_05___4___4	QTvro9kXBv8
+egl-42 (n995sd) on food R_2009_12_09__14_27_12___8___10	qblcyx89OPQ
+N2 off food  L_2010_04_28__10_29___3___1	0mSEMgTgQks
+C1B2.6 (ok2353) on food L_2010_03_26__12_13___3___7	Naz3W8Jk_Uc
+egl-5 (n486)III on food R_2010_05_14__15_15___3___13	TiQpsIQpIQQ
+unc-77 (e265)IV on food R_2011_09_06__16_53_11___7___10	xs1-KfPnbus
+egl-5 (n486)III on food R_2010_05_11__16_11_45__11	Qf40mXtOqYo
+ins-23 (tm1875)) on food R_2012_10_04__11_04_32___8___6	bkV2SkHFcVI
+acr-18 (ok1285) on food R_2010_02_19__15_05_38__13	khjiP50m9qM
+mec-12 (u76) on food R_2010_09_30__13_07_11___8___9	YjQCb1ZPePE
+flp-17 (ok3587)IV on food R_2010_01_19__11_04___3___3	6q4mB_34HRA
+gpa-3 (pk35)IV on food L_2010_02_26__10_43_27___6___7	gkbmlGq_tAk
+tyra-2 (tm1846)X on food L_2010_01_26__11_05_30___2___2	UnAa0X4mQrU
+npr-2 (ok419)IV on food L_2010_01_22__13_12_03___1___10	R3PyI3A0cn8
+N2 on food R_2010_03_26__10_13_11___6___1	LDqYBBKVjec
+flp-11 (tm2706)X on food L_2010_01_14__13_12_25___4___9	HFVXr-l_ps4
+N2 on food R_2012_08_03__12_01_14___3___6	xfz4jLj_MrA
+ocr-3 (ok1557) off food_2010_04_30__15_07_41___2___9	-EAfBPGNeIc
+ins-6 (tm2416) on food R_2012_08_01__12_12_58___6___5	pS3HxDWSgjk
+egl-9 (n586)V on food R_2010_07_15__14_56_06___2___10	Qn8YOXQeXJ0
+N2 on food R_2012_10_04__11_01_08___6___6	TCbXpc0NE2U
+unc-76 (e911)V on food R_2010_04_14__11_21_30___4___5	GpzykY_d46M
+ins-31 (ok3543) on food L_2012_09_27__13_25_15___3___8	BbaKBldOvKs
+ins-29 (tm1922) on food R_2012_09_27__12_06_59___6___4	c9hVkn-XcJE
+unc-38 (e264)I on food R_2010_09_17__11_57_24___7___3	wiUIchqS0d0
+unc-103 (e1597)II on food L_2010_09_16__12_08_32___7___3	Vgqc5TbGGIY
+nlp-3 (ok2688)X on food R_2010_03_18__12_34___3___8	sLAiKvDdtVk
+N2 on food R_2016_01_15__17_01_29___5___3	Are5nloQyx4
+unc-43 (e755)IV on food R_2010_09_16__12_28_15___7___4	nhnEDj_J-Cs
+M05B5.6 (ok3189) on food R_2010_04_23__11_01_50___7___4	shxjuEavo_Q
+nRHO-1 (QT309) on food L_2011_10_18__12_29_47__4	J7Iw_Ui0nW4
+unc-2 (ox106) on food R_2010_04_14__15_57_53___8___15	Zc1vzISg_tI
+snf-6 (eg28)III on food R_2010_10_28__11_54_33___1___4	SeGDsfXAeLk
+gpa-12 (pk322)X on food L_2009_07_07__14_55__5	Os6ANu8HlSM
+egl-5 (n486)III on food R_2010_05_11__16_09_32___6___12	-24auR9RJmQ
+N2 on food L_2010_04_08__11_23_50___2___1	HJ_09SExiSk
+egl-14 (n549)X on food L_2010_07_15__16_20_33___6___14	Y4kswy80V_c
+ins-31 (ok3543)III on food L_2011_05_17__11_52_32___6___4	ixfGZTyTrcU
+ins-30 (ok2343) on food R_2012_10_04__11_20_54___6___7	2Qg9YICLdIs
+N2 on food R_2013_03_21__12_32_20___5___6	552pTV8F0OM
+unc-1 (e94)X on food R_2011_10_04__12_15_34___6___1	cRNBU24-xD0
+unc-98 (su130)X on food R_2010_08_05__12_46_38___6___7	6pHZ684rYoE
+egl-13 (n483)X on food L_2010_07_13__12_05_17___4___7	_tKjO9TwRz8
+gpa-13 (pk1270)V on food L_2010_03_04__10_03_58___4___4	C6tD0187s-M
+unc-103 (e1597)V on food L_2010_08_20__13_14_59___6___10	n0678uukDsQ
+tph-1 superoutcrossed on food R_2009_12_15__11_42_59___4___5	0D7Je-E3Li4
+ins-16 (ok2919) on food R_2012_10_23__12_03_18___3___9	Xsq0aF-YTgo
+ins-11 (tm1053)II on food L_2011_05_12__13_01___3___9	lI7hg9j_INo
+npr-2 (ok419)IV on food R_2010_01_26__13_04_58___7___8	l_sRFaVGg0w
+unc-105 (ok1432) on food R_2010_07_06__11_46_49___7___6	SMxbMy08Fbo
+C3809.2 (ok1853)V on food R_2012_03_08__12_50_05___1___4	HNZlzGFTR7s
+883 RC301 on food L_2011_03_10__16_31_31___8___11	Z6l2046tTQE
+osm-9 (ky10) on food R_2010_07_08__11_26_19___8___4	-K6ofgJ8534
+unc-60 (e273)V on food L_2010_04_14__12_40_09__9	axWLImQKTQs
+f-3 (e1376)X on food L_2010_07_29__14_59_32___8___8	E2ol-5OqZIw
+N2 on food L_2011_03_08__15_53___3___9	xy4TVZ9YffA
+flp-21 (ok889)V on food L_2010_01_14__10_55_04___8___2	h--txYY7HbQ
+N2 on food L_2011_08_09__11_12_43___6___3	ev-rWDlRKkw
+egl-49 (n1107) on food L_2010_05_13__11_33_39___2___4	mjFeTnfcgOE
+N2 on food R_2012_04_17__15_38_48___4___2	TrdQmfbLB4c
+unc-86 (e1416)III on food L_2010_09_17__15_27_14__5	R-9AX6TncWo
+npr-13 (tm1504)V on food R_2010_12_16__17_37_40__10	IEC65KD6FoU
+ocr-4 (vs317); ocr-2 (9447); ocr-1 (ok134) on food L_2010_03_25__15_23_47___4___8	2IXuwEHubYI
+odr-3 (n2150)V on food L_2009_06_29__12_55__2	uRi1bB-St6Y
+ins-16 (ok2919)III on food L_2011_06_07__10_39___3___1	Zv-CL2e6N8I
+lin-39 on food R_2010_07_27__11_44_23___2___5	CYff-KLwR3E
+F23B2.2 (ok1226) on food L_2010_03_25__12_34_18___1___6	vhkFjv8Iykg
+tyra-2 (tm1846)X on food L_2010_01_28__12_58_39___2___8	wWkuiAT8dZU
+unc-14 (e57)I on food R_2009_12_09__16_17_19___1___14	0dGY-yMlkQI
+N2 on food R_2011_02_08__12_19_19__5	nlheLRVTc0Q
+cat-4 (e1141)I on food L_2010_07_23__10_37_38__2	9ojKiqSkBR4
+N2 on food L_2009_08_19__11_26___3___3	4LkxY0ceP9c
+N2 on food R_2010_10_15__13_05_51___8___7	rZj6O4lgDW0
+flp-33 (gk1038) on food_2010_01_21__17_04_50__1	S53imSRAaT0
+T07D4.1 (ok2575)II on food R_2011_09_13__12_23_03___8___4	J4rkoxYjTtQ
+gar-2 (ok520)III on food L_2010_07_27__11_23_12___1___3	kaQDy9ZEO6Q
+mo5b5.6 (tm3092) on food R_2010_06_15__11_49_48___6___4	9-cSWR6hjeI
+N2 on food L_2010_05_18__15_24_12___2___4	28aibrx2Q2U
+gpa-7 (pk610)IV on food R_2010_03_05__10_33_56___6___4	2PuYg3CJypk
+unc-7 (cb5) on food R_2010_09_09__11_45___3___6	rD8l6TxJ0oI
+unc-2 (ox106) on food L_2010_04_13__15_18_27___4___13	qvkKqsZsM58
+gon-2 (9362) on food R_2010_04_29__11_49_39___2___4	FEAgDUJRmq0
+M05B5.6 (ok3189) on food R_2010_04_23__11_01_27___8___4	sc0CB8dttQ0
+N2 male on food R_2012_02_23__12_01_51___6___2	5oUx_5B3TV0
+N2 on food R_2010_02_23__09_15_16___7___1	snjJFjNUTLo
+unc-37 (e2126)I on food L_2010_04_13__15_00_57__12	kZhdnkQz0Hw
+osm-9 (ky10) on food L_2010_07_08__11_24___3___4	L8L_s-8DJrk
+gpa-15 (pk477)I on food R_2010_03_05__11_54_26___4___8	4CsSdSVts_4
+unc-122 (e2520)I on food L_2010_04_15__12_09_07___6___7	zoJPs8I7x1Q
+trpa-1 (ok999) on food R_2010_04_23__14_58___3___11	bOSzybyNi0E
+trpa-1 (ok999) on food L_2010_04_21__12_27_34___6___7	oPEmpa-TI7M
+ins-27 (ok2474) on food R_2012_10_26__15_20_47___8___5	DzaPDy5S4As
+unc-98 (su130)X on food L_2010_08_05__12_48_47___7___6	X-s1aLMKSj0
+N2 on food L_2011_08_09__11_34_40___7___4	Frbnyacti68
+135 CB4852 on food L_2011_02_24__12_20_33___8___1	jZ88XUCq9yI
+egl-50 (n1086) on food L_2009_12_09__12_14_45___4___6	nQapM2sHhOU
+acr-18 (ok1285) on food R_2010_02_24__12_05_02__8	WDeiJb1h5dw
+unc-9 (e101) on food R_2011_08_19__12_43_51__7	SxG-HU5IgNs
+egl-17 (e1313)X on food R_2010_07_09__11_45_03___8___4	7N37xJVHMU8
+nca-2 (gk5) nRHO-1 QT309 on food L_2011_11_11__12_38_51___7___2	CvzIAUYfewQ
+flp-11 (tm2706)X on food R_2010_01_13__11_36_00___1___4	2Y7E78Z2anE
+Lite-1 on food R_2010_01_11__13_14_58___4___6	1QhZ794WdOU
+ins-22 (ok3616) on food L_2011_05_19__12_20_37___6___5	Dp1YXNNtuwU
+snf-7 (ok482)III on food R_2009_11_19__11_50_39___6___5	C4vOK_uM290
+nRHO (QT309) on food L_2011_10_13__12_10_29___1___3	-LylwvY9wSM
+spe-42 (sy693); hin-5 (e1490) on food R_2010_07_06__14_44_41___4___9	eXPFEk3KmBo
+gpb-2 (sa603) on food L_2010_03_11__12_46_36___7___9	khtP9UfH5rg
+ins-9 (tm3618) on food R_2012_10_04__12_00_54___6___9	yNorFRoUC0w
+N2 on food L_2016_02_03__11_30_03___5___2	pK2MpiFZVMo
+N2 on food R_2011_05_12__13_04_33___8___8	FYu81KySz4I
+unc-63 (ok1075) on food R_2010_04_16__12_56_12___4___8	PNmm3_eAB-Y
+snf-10 (hc194)V on food L_2009_11_18__11_12___3___3	4SBckQqct2Y
+ins-27 (ok2474)I on food L_2011_06_07__12_44_38___8___7	bBocDSkTU78
+lev-1 (x247)IV on food R_2011_09_22__12_48___3___6	V1waXIUoPyI
+snf-6 (eg28)III on food L_2010_11_11__13_05___3___7	YuFCy6vx_94
+flp-3 (ok3265)X on food L_2010_01_19__12_24_05___7___7	dPEiSNmLHfs
+T28138.5 (ok1014) on food L_2010_03_30__15_08_08___7___9	6aftgvGIE1k
+f-5 (e1386) on food R_2010_07_22__14_45_57___8___8	Il_Fo9QuTsw
+N2 8 on food R_2011_06_08__11_31_10___8___1	YCqVkfJgNB8
+unc-31 (e169) on food R_2009_12_09__11_34_32___4___4	JgmfeVHoDTU
+ins-9 (tm3618) on food L_2012_10_31__13_23_09___8___11	5jcjr9QxEgE
+unc-26 (m2)IV on food L_2010_04_16__11_00_22__3	gYyOpyl1Yt4
+ins-10 (tm3498) on food R_2012_08_03__11_21_31___6___4	xzguWP1UcWM
+egl-23 (n601)IV on food L_2010_07_15__15_15___3___11	WMTC4DOsO-k
+acr-6 (ok3117) on food L_2010_02_24__10_27_04___7___4	JVeXaOc6bic
+snf-1 (ok790)I on food L_2009_11_19__10_23_47___7___1	YOkrFnmQKJY
+unc-7 (cb5) on food L_2010_09_10__16_14_00___1___12	Du3IrbnVlCw
+npr-3 (tm1583)IV on food L_2010_12_14__11_41_40___6___2	6VPfWtWZEFo
+spe-41 (sy693); him-5 (e1490) on food R_2010_04_09__10_46_02___1___2	kY_DF1wQtcU
+lin-39 on food L_2010_07_22__12_03_56___2___5	AHvCCPReqHs
+snf-9 (ok957)IV on food L_2009_11_18__12_12_55___2___6	YRnGWZPPTdc
+gpa-11 (pk349)II on food L_2010_03_04__13_02_59___4___13	TnJRxZ-YvHg
+tag-24 (ok371)X on food R_2010_01_28__13_19___3___9	CHI_-_FaHfM
+unc-37 (e2126)I on food L_2010_04_13__14_58_40___6___12	tM0ebNMK_Bg
+lon-2 (e678)X on food R_2011_08_04__15_21___3___10	sZrfOLHn-7s
+npr-5 (ok1358) on food L_2010_01_28__11_56_37___4___6	b65nPJujliI
+snf-11 (ok156)V on food L_2009_11_17__16_12_33__10	X_JwRwyJltc
+gpa-1 (pk15) on food L_2010_02_26__10_03_33___4___5	jhYiVe2W0h4
+rab-3 (cy250) on food L_2011_08_09__10_29___3___1	lL9x13XL0yA
+unc-10 (ad1117) on food L_2009_12_10__12_05_33___8___6	Qqj1Xg9h0wg
+unc-4 (e120)II on food R_2011_10_21__11_17___4___4	3RMe1isnvHA
+snf-8 (ok349)IV on food R_2009_11_17__14_53_39___2___6	WwY_3Eta1pw
+N2 on food R_2011_02_04__12_50_20___2___7	xWMyI6yL1Xg
+ins-19 (tm5155) on food R_2012_09_27__15_45_11___7___11	lzZm_JsRSdI
+ins-30 (ok2343)I on food L_2011_05_12__11_00___3___2	H6RAmLYze5E
+gpa-3 (pk35)IV on food L_2010_03_04__11_45_50__9	SyqSQYMiZBc
+snf-7 (ok482)III on food L_2009_11_19__11_52_32__5	zts0mHArcX0
+dnc-1 (or404ts) on food L_2009_12_09__12_37_34__4	k8Af3zUBhYQ
+egl-9 (n586)V on food L_2010_07_15__14_55_01___1___10	3RzwRKD_KXA
+tyra-3 (ok325)X on food R_2010_01_28__14_44_24___4___11	uhbgwF0bkkE
+N2 on food L_2014_12_05__13_10_17___5___3	Obj5v8zIMzA
+unc-10 (e102)X on food R_2011_09_22__12_49___4___6	YxqP3boWLYc
+ins-38 (tm2632) on food R_2012_10_04__11_40_01___4___8	LlgqmzVzLrQ
+egl-18 (ok290)IV on food R_2010_07_20__11_27_01___7___3	De2pJkTDXak
+ins-6 (tm2416) on food R_2012_09_27__13_25_32___6___7	kBJnQowC6K8
+snf-6 (eg28)III on food R_2010_10_01__13_03_40___6___5	SC4ZeCXTe0I
+nlp-12 (ok335)IV on food L_2010_03_17__13_16_25___7___10	yJNn6scMiFk
+pkc-1 (nj3) on food R_2010_07_22__12_46_55___8___6	LTOGmiMeSwo
+trpa-1 (ok999)IV on food R_2015_07_10__15_29_51___5___3	2BIIHBPoxrk
+unc-108 (n501gf)I on food L_2009_12_11__15_53_57___2___9	NNbEUw7Mkv0
+unc-34 on food L_2010_08_06__13_14___3___8	MZD1By_AQ5s
+N2 on food L_2010_09_16__11_28_09__1	moYoFBVZw50
+unc-43 (e755)IV on food R_2010_08_19__15_48_09___8___11	tyVDQ2P4ZnA
+flp-19 (ok2460) on food L_2010_01_20__11_15_53___2___5	XqI4EVYHvDA
+ins-35 (ok3297)V on food R_2011_06_07__12_42_04___6___7	eCL_J6rOgXk
+N2 on food L_2010_04_15__10_08___3___1	XT5VLanlx54
+ins-20 (tm1947) on food R_2012_10_31__11_00_58___3___4	9MzzYEOLDx0
+trpa-1 (ok999); osm-9 (ky10) on food L_2010_04_22__11_10_17___7___6	vyLBSHyWaVY
+N2 on food R_2010_02_19__09_22_57___4___1	1H7Q6EFriKM
+N2 off food R_2010_04_27__11_27_58___4___3	j7y2Pof3c7w
+mec-10 (tm1552) on food L_2010_10_28__15_30_25__9	G6PZDmbkc7w
+ins-11 (tm1053)II on food R_2011_05_12__11_17_53___1___3	tescM5yr-aY
+ins-12 (tm2918) on food L_2012_10_04__11_57_06___1___9	Uc0PvPHF9e4
+N2 on food L_2010_07_22__11_06_30___8___1	ZiLwp8iRwEU
+ins-1 (nr2091) on food R_2012_10_25__12_47_04___4___6	ZRLuDSj0G-c
+egl-33 (n151)I on food R_2010_05_11__15_08_43___6___9	3YhwxRun2Bw
+npr-10 (tm1568) on food L_2010_01_26__16_16_06___6___13	D0a-aEaBnqk
+egl-2 (n693)V on food R_2010_09_17__15_45___3___6	Qell2qxjJRM
+del-1 (ok150) on food L_2010_06_15__14_36_26___4___7	C6VWAumCVA0
+flp-28 (gk1075)X on food_2010_01_21__16_44_25___4___9	wsKIBG8wCC4
+unc-1 (e1598)X on food R_2010_04_13__16_19_53__16	XZMPfO5fqY4
+ins-25 (ok2773)I on food L_2011_05_24__13_17_00___1___7	fXgHG4MYTLQ
+unc-79 (e1068)III on food L_2011_10_06__12_16_11___7___5	EGmaF9uOcIo
+nca-1 (gk9) nca-2 (gk5) on food R_2011_10_18__12_05_53___2___3	_QbXKWmLOik
+ins-23 (tm1875) on food L_2012_10_04__09_40_02___4___2	sGeZT-0Q7K8
+unc-79 (e1068)III on food L_2010_04_13__15_37_57___6___14	HS7LOfOw3HM
+egl-46 (n1127)V on food R_2010_08_19__11_39_44__4	yJPAJAvFfDM
+mec-14 (v55) on food L_2010_09_30__12_05___3___6	9YzshJf0CWM
+N2 on food L_2011_10_04__16_29_03___7___7	VwVIwAr6Mow
+575 JU440 on food L_2011_03_15__12_02___3___3	mQmbqsLhfGc
+ocr-4 (vs137); ocr-2 (9447); ocr-1 (ok134) on food L_2010_06_15__10_48_35__2	HAYNv-80uIQ
+egl-40 (n606)IV on food R_2010_08_20__10_57_46___7___3	feR0ZheMAY4
+unc-18 (e81)X on food R_2011_08_24__10_24_18__2	7W69P1G0ciw
+unc-34 (e566)V on food L_2010_08_20__11_35_34___6___5	0yngICFXePs
+acr-15 (ok1214) on food L_2011_06_14__12_08_45___2___5	YwMfVQV6w-o
+N2 on food L_2009_07_31__12_27___3___2	DFaNsDgoT8E
+flp-33 (gk1038)IV on food L_2010_01_19__12_03_58___8___6	5mANBUFMteo
+pgn-66 (ok1507) on food R_2010_04_22__09_48_53___2___2	WxaYBiIEOFg
+egl-31 (n472)I on food L_2010_08_03__12_17_59___6___7	G890ds0KnZ4
+mec-7 (v448) on food R_2010_10_01__12_05___3___2	HDJdWuJXgk4
+gpa-6 (ph480)X on food L_2009_06_16__16_40__17	AaIFLmeeNgA
+acr-15 (ok1214)V on food L_2010_02_23__09_32___3___2	56n78DI2yAk
+egl-11 (n587)V on food L_2010_05_11__15_27_50___1___10	buSB88_CKNI
+pink-1(tm1779) on food R_2012_08_30__13_52_04___6___7	x2jtHNhRqXY
+trp-2 (ok298) on food R_2010_04_21__11_07_41___2___3	l9NLOBFbabQ
+nlp-18 (ok1557)II on food R_2010_03_18__11_16_34__4	UIYMBDKfMRI
+unc-4 (e120)II  on food R_2011_11_04__10_23_17___1___3	9DkIL7yNJNk
+nlp-15 (ok1512) on food L_2010_03_18__10_33_28___2___2	z9mbgvsk4Qc
+unc-69 (e587) on food L_2010_04_14__14_39_02___4___10	NVwxIpOWoV4
+ins-10 (tm3498) on food R_2012_10_04__10_00_59___6___3	_T7iAk2Co2g
+lon-2 (e678)X on food L_2011_08_24__11_43_29___6___6	xWvUiBkm_GE
+egl-36 (n728)X on food R_2010_07_23__12_56_20___8___9	_HJGViQn57E
+egl-2 (n693)V on food L_2010_09_17__15_43_49___1___7	rn2ajZp6yNg
+trp-2 (sy691) on food L_2010_03_19__11_33_58___4___8	MZs3DUl9axo
+ocr-4 (vs137); ocr-2 (9447); ocr-1 (ok134) on food L_2010_03_26__12_35_50___1___8	O3KTpS_LFy4
+unc-98 (su130)X on food R_2011_02_04__11_27___3___3	JC5deBAZYRk
+zyg-9 (b244)II on food R_2012_03_15__09_54_14___6___2	yUplyZo2HG8
+gpa-2 (pk16)X on food R_2010_02_25__14_35_28___7___12	DANr1nz2C24
+gld-1 (op236)I on food R_2012_03_08__12_09_22___1___2	IVXiP96XReg
+spe-41 (sy693); him-5 (e1490) on food L_2010_04_09__12_26_49__6	zBi9DSvDqVc
+npr-3 (tm1583)IV on food R_2010_01_26__14_56_09___7___9	x4xOqbkF4OA
+N2 on food L_2010_08_19__10_56_56___8___1	5gYLq2B70SQ
+egl-20 (mu39)IV on food L_2010_07_13__15_36_27__13	A5vgtWxGGh8
+unc-55 (e402)I on food R_2011_10_21__11_20_41___8___4	7oOAzXn1TFE
+trpa-1 (ok999) on food R_2010_04_23__14_58_56___4___11	44YyS4ngWB4
+flp-28 (gk1075)III on food R_2010_01_19__15_23_56___4___10	BBOX1EgDUx4
+egl-6 (n592)X on food L_2010_05_13__15_48_09___4___13	9vVWk_FbiGQ
+nlp-18 (ok1557)II on food L_2009_06_05__12_33__10	OKXX05cPtN4
+gpa-11 (pk349)II on food R_2009_07_08__15_00__8	BHieOrHiYZk
+npr-2 (ok419)IV on food L_2010_01_25__15_28_33___6___9	x4Tvg2On33k
+M05B5.6 (tm3092) on food R_2010_03_19__10_14_43___2___5	up2V_ewuJe0
+ins-35 (ok3297) on food L_2011_06_07__12_23_56___7___6	cqOoicVNF9w
+unc-8 (e15)I on food R_2011_10_18__12_30_28___7___4	KThTxPAkFGU
+acr-15 (ok1214) on food R_2011_06_30__11_59___3___6	RhiBbQhTRAc
+npr-7 (ok527)X on food L_2010_01_28__11_34_15___6___4	6qLczZZdjOc
+gpa-5 (pk376)X on food L_2010_03_09__12_05_07___6___5	tBfyoBxEE7k
+trp-4 (sy695) on food L_2010_04_22__10_30_23__4	6AdDstJlBqg
+ser-1 (ok345) on food R_2009_12_17__11_30_29___7___4	XUYgM5JNzeQ
+flp-17 (ok3587)IV on food L_2010_01_21__12_24_45___4___5	tFiDdIrFVmQ
+mec-10 (tm1552) on food R_2010_11_11__11_46_17___1___3	hCpvdfo1r7U
+egl-15 (n484)X on food R_2010_05_11__11_46_41___7___3	XeyCn38eDQw
+gpa-7 (pk610)IV on food R_2010_03_09__11_43_28___6___4	Si7quA7NW5k
+N2 on food R_2010_09_30__10_28_21___7___1	ZaLEcQDhcqw
+trp-2 (ok298) on food L_2010_04_22__12_08___3___9	H_8_e7Ud7Qk
+pdr-1(gk448) on food L_2012_08_31__12_59_21___4___8	jA7fMic0aCY
+acr-19 (ad1674) on food L_2010_02_23__11_32_56___2___8	ckm_kG1P6jA
+655 JU394 on food R_2011_06_14__15_13___3___11	qdzUkEfyVCc
+nlp-18 (ok1557)II on food R_2010_03_12__12_03_35___1___7	EPSSnPtbXFw
+399 CB4856 on food R_2011_03_07__11_44_56___8___3	TxtDj07JyEo
+N2 on food L_2012_03_02__15_43_41___3___2	j1lOS_g0zQo
+unc-1 (e94)X on food R_2011_10_18__12_09_34__3	Rs9Mh-bqg9g
+N2 on food R_2009_09_04__12_48_51___4___10	Hg75SPWP5Z4
+mec-12 (u76) on food R_2010_10_12__15_39_54___2___7	rJVHrDOFi50
+RB557 on food L_2015_03_12__11_40_09___4___2	iFTEngjl-Jc
+flp-19 (ok2460) on food L_2010_01_19__15_05_01___7___9	ViZ29o3ue58
+gpc-1 (pk298) on food L_2010_03_05__09_54_39___4___2	keO6n2ZOh8M
+gpa-4 (pk381)IV on food L_2009_06_12__11_23_56__4	dMSGgm0XlX4
+N2 on food R_2011_02_04__10_46___3___1	Kg8BNs48TV4
+egl-11 (n587)V on food L_2010_12_16__15_43_36___1___7	UIeYPV6Ql5s
+ins-5 (tm2560) on food R_2012_10_04__12_39_55___6___11	OkU94o7qsX4
+egl-13 (n483)X on food R_2010_07_16__11_05_13___4___3	8znppcUDGb8
+N2 on food R_2012_08_30__12_35_33__4	WOHaJSJQEMw
+N2 on food R_2016_02_09__14_59_14___3___2	42MYHG9qLM8
+unc-2 (gk3206)X on food R_2012_03_15__11_56_50___6___8	QsHpmTakqoc
+ins-35 (ok3297) on food R_2012_08_03__12_25_30___7___7	fxdNnAGEjwc
+unc-79 (e1068)III on food R_2010_04_14__15_38___3___14	ABK90LkkaMA
+N2 on food R_2009_06_02__10_21__1	pthUi-VtAOk
+egl-44 (n1080)II on food R_2010_08_05__11_27_48__3	_ZPuhGqLqqg
+egl-18 (e290)IV on food R_2010_07_15__11_31_11___8___3	K_mLcpy1Agg
+trp-2 (sy691) on food R_2010_03_25__16_45_19___1___12	j2kEJBH4TKM
+unc-104 (e1265)III on food L_2011_10_18__13_23_55___1___7	voHGuztYc84
+unc-7 (cb5) on food L_2010_09_09__13_05_55___7___10	obW-fi1YvLw
+nlp-12 (ok335)IV on food L_2009_06_17__15_24__21	ZZsJSvw02BI
+ins-7 (tm2001) on food L_2012_10_04__09_44_59___7___2	bsB6krEAxv0
+egl-37 (n742)II on food L_2010_08_03__10_35___3___2	rpKxL4hq4u8
+N2 on food L_2015_09_11__13_27_35___4___8	wnWKoLY0Mrg
+npr-12 (tm1498)IV on food L_2010_12_14__16_17___3___9	jfI8FuA1qig
+flr-1 (ut11) on food L_2010_03_31__11_57_23__3	1PJHPaavZys
+npr-7 (ok527)X on food R_2010_01_28__15_04_41__3	WmScoa2-Ctk
+acr-13 or lev-8 (x15)X on food L_2010_02_24__10_02_58___2___3	_M4kwmEDHnI
+unc-16 (e109) on food R_2009_12_09__11_55_21___6___5	N-Go-klwQ2E
+655 JU394 on food L_2011_06_14__15_13_11___2___12	fjVfRsrjqmI
+ins-35 (ok3297) on food R_2012_10_04__15_11_08___3___14	SMhjaHw9uyU
+egl-32 (n155)I on food R_2010_05_14__11_30_55___8___5	mKkdvYvUy3M
+N2 on food L_2011_10_04__12_54___3___3	AO7o7OtJEN4
+sma-3 (e491)III on food R_2011_09_22__13_32___4___8	uoFkX8pchCk
+spe-41 (sy693); him-5 (e1490) on food R_2010_04_09__10_47___3___1	BGIo6ZFEFiM
+egl-28 (n570)II on food L_2010_07_16__11_47_22___7___5	26DRz2b_ggg
+unc-75 (e950)I on food L_2010_08_20__12_36___3___8	IcjdZOb8ArU
+N2 on food R_2010_03_17__09_55_10___7___1	yaymdlOaoaw
+N2 on food L_2016_01_14__16_16_58___4___4	kqak8uN4ilg
+hcf-1 (ok559)IV on food L_2011_08_11__12_01_21___6___7	orcII4k4iFo
+N2 male on food L_2012_02_23__11_36_59___3___1	j72BhqWvMR4
+goa-1 (sa734)I on food R_2009_06_29__16_40__11	5SfSmpPbFIo
+pgn-66 (ok1507) on food R_2010_04_29__11_28_31___2___3	Ptn_ch1gB7w
+gpa-5 (pk376)X on food L_2010_02_26__11_05_03___8___8	yCf0H_rJmGc
+gpa-1 (pk15) on food R_2010_02_25__12_04_14___4___8	VIO2L7_ndZk
+RB2005 on food L_2015_10_23__11_56_39___5___3	k0pAg8RpoXA
+mec-14 (v55) on food R_2010_11_04__11_41_17__4	xc8GBMCX4lA
+unc-7 (cb5) on food R_2010_08_19__11_14_18___4___2	UV0JiudI6Kc
+nca-1 (gk9) on food L_2011_10_06__12_09_55___1___5	hz7y5TWcLKQ
+unc-108 (n501)Ion food R_2009_12_11__15_35_04___2___8	HDi5XPr-j2E
+N2 on food R_2010_08_06__10_55_07___6___1	tsOX8lBTbIM
+pdr-17(gk448) on food L_2012_08_31__13_46_48___6___10	4v8JkHREc3o
+hcf-1 (ok559)IV on food L_2011_09_06__13_29___3___6	-B5oSBBgZhA
+gpa-5 (pk376)X on food R_2010_03_11__12_07_02___6___6	xy4SYGj3YU0
+flp-20 (ok2964)X on food L_2010_01_21__11_27_40___8___2	laAKYLhrzzw
+C52B9.11 (gk569)V on food R_2011_08_11__10_59___4___4	DsuZrZ3gHy0
+flp-21 (ok889)V on food L_2010_01_13__12_34_03___4___7	MO988WB6IfE
+egl-13 (n483)X on food R_2010_07_16__11_04_35___2___3	QXAIXAUDb50
+gpa-15 (pk477)I on food L_2010_03_11__10_44_52___2___3	SfGoZKqIjNI
+M124 on food L_2010_05_14__16_53_20___4___18	dxQe3d4Tum0
+C11D2.6 (gk9)IV on food L_2011_08_31__11_49_06___2___2	QDijSVbFufk
+gpa-16 (ok2349) on food L_2010_12_16__12_57_55___7___2	YBvstDfC-Nw
+N2 male on food  R_2012_02_22__10_41_32___5___2	MIH6TJbZVY4
+C24G7.1 (ok1822) on food L_2010_03_30__12_07_16___4___3	XWsi3dx7cdg
+gpa-14 (pk347)I on food R_2010_03_04__11_04_20___8___7	UUiT2mkCCcw
+nca-1 (gk9) on food L_2011_10_06__16_02_31__9	EYh-ACiHh7E
+nlp-8 (ok1799)I on food L_2010_03_18__10_55_07___2___3	h1yeUzgp3ZY
+egl-20 (mu39)IV on food L_2010_07_16__11_24___3___4	YyEuurLZGDI
+lig-4 (ok716)II on food R_2011_08_31__16_10___4___10	_Nxjv1sZk4g
+C3809.2 (ok1853)V on food L_2012_03_08__12_15_52___7___2	ukdRw_kWd9E
+N2 male on food L_2012_03_02__15_42_53___4___2	4QEVWToltsY

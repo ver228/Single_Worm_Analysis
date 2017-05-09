@@ -79,25 +79,38 @@ if __name__ == '__main__':
         files2move = get_files_old(original_video) 
         
         if exit_flag != 'END':
-            dir_root = os.path.join(dir_root_r, 'unfinished')
+            dst_root = os.path.join(dir_root_r, 'unfinished')
         else:
-            
-            dir_root = os.path.join(dir_root_r, 'finished')
-        
+            dst_root = os.path.join(dir_root_r, 'finished')
         
         dpart = get_dir_from_base(base_name)
-        dname = os.path.join(dir_root, dpart)
-        if not os.path.exists(dname):
-            os.makedirs(dname)
+        
+        dst_dir = os.path.join(dst_root, dpart)
+        
+        if not os.path.exists(dst_dir):
+            os.makedirs(dst_dir)
+        
+        def _get_files2move(dname):
+            files2move = [os.path.join(dname, base_name + rext) for rext in  valid_ext]
+            files2move = [x for x in files2move if os.path.exists(x)]
+            return files2move
+            
         
         if len(files2move) == 0:
-            files2move = [os.path.join(results_dir, base_name + rext) for rext in  valid_ext]
+            files2move = _get_files2move(results_dir)
+            if not 'unfinished' in results_dir:
+                d = os.path.sep
+                old_dir = results_dir.replace(d + 'finished' + d, d + 'unfinished' + d)
+                files2move += _get_files2move(old_dir)
+                
+                
         
         files_moved = 0
-        if os.path.abspath(dname) != os.path.abspath(results_dir):
-            for fname in files2move:
-                if os.path.exists(fname):
-                    shutil.move(fname, dname)
+        for fname in files2move:
+            if os.path.exists(fname):
+                dst_file = os.path.abspath(os.path.join(dst_dir, os.path.basename(fname)))
+                if dst_file != fname:
+                    shutil.move(fname, dst_dir)
                     files_moved += 1
         
         if files_moved > 0:
@@ -105,10 +118,10 @@ if __name__ == '__main__':
             UPDATE experiments
             SET results_dir="{}"
             WHERE id = {}
-            '''.format(dname, exp_id)
+            '''.format(dst_dir, exp_id)
             cur.execute(sql)
             conn.commit()
         
-        print('{} of {} : {} "{}"'.format(ii+1, tot, files_moved, base_name))
-        
+        print('{} of {}: {} "{}"'.format(ii+1, tot, files_moved, base_name))
+
         

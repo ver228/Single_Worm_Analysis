@@ -11,7 +11,7 @@ import multiprocessing as mp
 
 from tierpsy.processing.AnalysisPoints import AnalysisPoints
 from tierpsy.analysis.stage_aligment.alignStageMotion import isGoodStageAligment
-from tierpsy.analysis.contour_orient.correctVentralDorsal import isBadVentralOrient
+from tierpsy.analysis.contour_orient.correctVentralDorsal import isBadVentralOrient, switchCntSingleWorm
 from tierpsy.analysis.compress.processVideo import isGoodVideo
 from tierpsy.analysis.compress_add_data.getAdditionalData import hasAdditionalFiles
 
@@ -23,9 +23,8 @@ ON_FOOD_JSON = os.path.join(DFLT_PARAMS_PATH, 'single_worm_on_food.json')
 from helper.db_info import add_extra_info
 
 def get_points2check():
-    conn = pymysql.connect(host='localhost')
+    conn = pymysql.connect(host='localhost', database='single_worm_db')
     cur = conn.cursor()
-    cur.execute('USE `single_worm_db`;')
     cur.execute('''
     SELECT id, name
     FROM exit_flags
@@ -60,6 +59,8 @@ def get_last_finished(ap_obj, cur, points2check):
                     return 'FAIL_STAGE_ALIGMENT'
             
             if not 'CONTOUR_ORIENT' in unfinished:
+                #i try to switch here. I don't want to deal with this problem in checkpoints
+                switchCntSingleWorm(_ap_obj.file_names['skeletons'])
                 if isBadVentralOrient(_ap_obj.file_names['skeletons']):
                     return 'UNKNOWN_CONTOUR_ORIENT'
             
@@ -96,10 +97,8 @@ def get_results_files(row):
 
 
 def get_rows(last_valid='', skip_bad_flags=False):
-    conn = pymysql.connect(host='localhost')
+    conn = pymysql.connect(host='localhost', database='single_worm_db')
     cur = conn.cursor(pymysql.cursors.DictCursor)
-    
-    cur.execute('USE `single_worm_db`;')
     
     sql = '''
     SELECT e.id, e.original_video, e.base_name, e.results_dir
@@ -119,9 +118,9 @@ def get_rows(last_valid='', skip_bad_flags=False):
     return conn, all_rows
 
 if __name__ == '__main__':
-    UPDATE_INFO = True
+    UPDATE_INFO = False
     CHECK_FLAG = True
-    last_valid = 'END'#'FEAT_CREATE' #'WCON_EXPORT'#''# 
+    last_valid = ''#'FEAT_CREATE' #'WCON_EXPORT'#''# 
     
     conn, all_rows = get_rows(last_valid)
     cur = conn.cursor(pymysql.cursors.DictCursor)
@@ -131,8 +130,11 @@ if __name__ == '__main__':
         output = None
         
         if UPDATE_INFO:
-            add_extra_info(cur, row['base_name'], results_dir)
-            print('ID:{} info added.'.format(row['id']))
+            try:
+                add_extra_info(cur, row['base_name'], results_dir)
+                print('ID:{} info added.'.format(row['id']))
+            except:
+                pass
             
         if CHECK_FLAG:
             ap_obj = AnalysisPoints(main_file, masks_dir, results_dir, ON_FOOD_JSON)
@@ -166,9 +168,14 @@ if __name__ == '__main__':
         for x in p.map(_process_row, dat):
             if x is not None:
                 _add_row(x)
+                if x[1] == 101:
+                    break
+                
         conn.commit()
         print('{} of {}. Total time: {}'.format(ii + n_batch, 
                   tot, progress_timer.get_time_str()))
+        
+        
     
     cur.close()
     conn.close()

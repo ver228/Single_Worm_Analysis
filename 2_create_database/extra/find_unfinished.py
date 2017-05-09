@@ -12,6 +12,7 @@ import pymysql
 import os
 
 
+
 def get_all(is_swimming = False):
     conn = pymysql.connect(host='localhost', database='single_worm_db')
     cur = conn.cursor()
@@ -138,7 +139,7 @@ if __name__ == '__main__':
     ignore_fields = ['INVALID_VIDEO', 'FAIL_STAGE_ALIGMENT', 'END', 'UNKNOWN_CONTOUR_ORIENT']
     points2save = [x for x in files_progress.keys() if not x in ignore_fields]
     
-    #['INT_PROFILE', 'FEAT_CREATE', 'STAGE_ALIGMENT']
     files2save = sum([files_progress[x] for x in points2save], [])
-    divide_and_save(files2save, 1, 'unfinished')
+    
+    divide_and_save(files2save, 2, 'unfinished')
     

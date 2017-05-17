@@ -10,17 +10,22 @@ import shutil
 import pymysql
 from helper.build_dir import get_dir_from_base
 import glob
-from tierpsy.helper.misc import RESERVED_EXT
 
-valid_ext = RESERVED_EXT.copy()
-valid_ext.append('.hdf5')
+valid_ext = ['_skeletons.hdf5', 
+             '_features.hdf5', 
+             '_intensities.hdf5',
+             '_subsample.avi', 
+             '.wcon.zip', 
+             '.hdf5']
 
 def get_files_old(original_video):
     
-    mask_file = original_video.replace('thecus', 'MaskedVideos').replace('.avi', '.hdf5')
+    mask_file = original_video.replace('original_videos', 'MaskedVideos').replace('.avi', '.hdf5')
     subvid_file = mask_file.replace('.hdf5', '_subsample.avi')
     
-    skel_file = original_video.replace('thecus', 'Results').replace('.avi', '_skeletons.hdf5')
+    print(mask_file)
+    
+    skel_file = original_video.replace('original_videos', 'Results').replace('.avi', '_skeletons.hdf5')
     feat_file = skel_file.replace('_skeletons.hdf5', '_features.hdf5')
     int_file = skel_file.replace('_skeletons.hdf5', '_intensities.hdf5')
 
@@ -40,7 +45,7 @@ def correct_wrong_path(dir_root):
     #I NEED TO ADD SOMETHING TO DEAL WITH FINISH UNFINISHED HERE
     
     exiting_files = glob.glob(os.path.join(dir_root, '**', '*.hdf5'), recursive=True)
-    exiting_files = [x for x in exiting_files if not any(x.endswith(rext) for rext in RESERVED_EXT)]
+    exiting_files = [x for x in exiting_files if not any(x.endswith(rext) for rext in valid_ext)]
     for fullname in exiting_files:
         dname, fname = os.path.split(fullname)
         base_name = fname.replace('.hdf5', '')
@@ -67,6 +72,7 @@ if __name__ == '__main__':
     SELECT e.id, results_dir, base_name, original_video, f.name
     FROM experiments AS e
     JOIN exit_flags AS f ON f.id = exit_flag_id
+    WHERE original_video like '%bkp11%'
     '''
     cur.execute(sql)
     results = cur.fetchall()
@@ -78,13 +84,18 @@ if __name__ == '__main__':
         original_video = _correct_from_old(original_video)
         files2move = get_files_old(original_video) 
         
-        if exit_flag != 'END':
-            dst_root = os.path.join(dir_root_r, 'unfinished')
+        
+        
+        
+        if exit_flag == 'END':
+            dst_new, dst_old = 'finished', 'unfinished'
         else:
-            dst_root = os.path.join(dir_root_r, 'finished')
+            #it didn't finished check if there was a previous analysis that was finished
+            dst_new, dst_old = 'unfinished', 'finished'
+            
         
+        dst_root = os.path.join(dir_root_r, dst_new)
         dpart = get_dir_from_base(base_name)
-        
         dst_dir = os.path.join(dst_root, dpart)
         
         if not os.path.exists(dst_dir):
@@ -98,9 +109,10 @@ if __name__ == '__main__':
         
         if len(files2move) == 0:
             files2move = _get_files2move(results_dir)
-            if not 'unfinished' in results_dir:
+            if not dst_old in results_dir:
+                #for some reason results_dir could have been renamed previously without copying all the files
                 d = os.path.sep
-                old_dir = results_dir.replace(d + 'finished' + d, d + 'unfinished' + d)
+                old_dir = results_dir.replace(d + dst_new + d, d + dst_old + d)
                 files2move += _get_files2move(old_dir)
                 
                 
@@ -112,6 +124,11 @@ if __name__ == '__main__':
                 if dst_file != fname:
                     shutil.move(fname, dst_dir)
                     files_moved += 1
+        
+        if exit_flag == 'END':
+            #assert all the expected files are in the destination directory
+            assert len(_get_files2move(dst_dir)) == len(valid_ext)
+        
         
         if files_moved > 0:
             sql = '''

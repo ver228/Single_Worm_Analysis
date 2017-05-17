@@ -101,9 +101,6 @@ def update_row(cur, row_input):
     cur.execute(sql)
     
 if __name__ == '__main__':
-    CHECK_ONLY_UNFINISHED = False
-    
-    
     conn = pymysql.connect(host='localhost', db='single_worm_db')
     cur = conn.cursor(pymysql.cursors.DictCursor)
     
@@ -136,7 +133,7 @@ if __name__ == '__main__':
             if x is not None:
                 update_row(cur, x)
         conn.commit()
-        print('{} of {}. Total time: {}'.format(ii + n_batch, 
+        print('{} of {}. Total time: {}'.format(min(tot, ii + n_batch), 
                   tot, progress_timer.get_time_str()))
     cur.close()
     conn.close()

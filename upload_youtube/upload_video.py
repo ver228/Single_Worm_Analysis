@@ -27,7 +27,9 @@ def resample_and_upload(base_name,
     WEBPAGE_INFO="For more information and the complete collection of experiments visit the C.elegans behavioural database - http://movement.openworm.org\n"
     LOCAL_ROOT_DIR = "/Volumes/behavgenom_archive$/single_worm/thecus/"
     TMP_DIR =  os.path.realpath(os.path.expanduser(os.path.join('~', 'Tmp')))
-    
+    if not os.path.exists(TMP_DIR):
+        os.makedirs(TMP_DIR)
+
     metadata_dict = getWCONMetaData(masked_video, provenance_step='COMPRESS')
     
     if not "original_video_name" in metadata_dict:

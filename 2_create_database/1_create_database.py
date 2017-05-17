@@ -56,7 +56,7 @@ def init_database(DROP_PREV_DB = False):
     (
     `id` int NOT NULL AUTO_INCREMENT,
     `name` VARCHAR(100) UNIQUE NOT NULL,
-    genotype VARCHAR(200),
+    description VARCHAR(200),
     gene_id INT NOT NULL,
     allele_id INT NOT NULL,
     chromosome_id INT NOT NULL,
@@ -240,7 +240,7 @@ def init_database(DROP_PREV_DB = False):
     e.original_video_sizeMB as original_video_sizeMB,
     e.results_dir  as results_dir,
     s.name AS strain,
-    s.genotype AS genotype,
+    s.description AS strain_description,
     a.name AS allele, 
     g.name AS gene, 
     c.name AS chromosome, 
@@ -251,7 +251,8 @@ def init_database(DROP_PREV_DB = False):
     f.name AS food, 
     h.name AS habituation, 
     experimenters.name AS experimenter,
-    arenas.name AS arena
+    arenas.name AS arena,
+    exit_flags.name AS exit_flag
     
     FROM experiments AS e 
     LEFT JOIN strains AS s ON e.strain_id = s.id

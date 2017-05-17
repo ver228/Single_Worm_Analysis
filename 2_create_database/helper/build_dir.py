@@ -18,7 +18,7 @@ def _build_dir(row):
     if row['gene'] == NONE_STR:
             d_part1 = os.path.join('WT', row['strain'])
     else:
-        dd = '{}@{}'.format(row['genotype'].replace(' ', ''), row['strain'])
+        dd = '{}@{}'.format(row['strain_description'].replace(' ', ''), row['strain'])
         d_part1 = os.path.join('mutants', dd)
     
     if 'liquid' in row['arena'].lower():

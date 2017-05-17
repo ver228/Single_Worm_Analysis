@@ -14,8 +14,7 @@ import multiprocessing as mp
 from tierpsy.helper.misc import TimeCounter
 
 if __name__ == '__main__':
-    REPLACE_PREVIOUS = False
-    
+    REPLACE_PREVIOUS = True
     
     conn = pymysql.connect(host='localhost')
     cur = conn.cursor(pymysql.cursors.DictCursor)
@@ -62,6 +61,7 @@ if __name__ == '__main__':
                 features_means.insert(0, 'experiment_id', row['id'])
                 
                 return features_means
+            
         
     
     print('*******', len(all_rows))
@@ -77,7 +77,7 @@ if __name__ == '__main__':
             features_means = pd.concat(features_means)
             _add_to_db(features_means)
             
-        print('{} of {}. Total time: {}'.format(ii + n_batch, 
+        print('{} of {}. Total time: {}'.format(min(tot, ii + n_batch),
                   tot, progress_timer.get_time_str()))
         
     #%%
@@ -89,20 +89,36 @@ if __name__ == '__main__':
     cur.execute(sql)
     #%% REMOVE ANY DUPLICATED KEYS
     sql = '''
+    DROP TABLE IF EXISTS tmp;
     CREATE TABLE tmp LIKE `features_means`;
-    ALTER TABLE tmp ADD UNIQUE(`experiment_id`);
+    '''
+    cur.execute(sql)
+    
+    #add constraint if it doesn't exists
+    n = cur.execute("SHOW KEYS FROM tmp WHERE Key_name='u_experiment_id';")
+    if n == 0:
+        cur.execute("ALTER TABLE tmp ADD CONSTRAINT `u_experiment_id` UNIQUE(`experiment_id`);")
+
+    
+    sql = '''
     INSERT IGNORE INTO tmp SELECT * FROM `features_means`;
     RENAME TABLE `features_means` TO deleteme, tmp TO `features_means`;
     DROP TABLE deleteme;
     '''
+    cur.execute(sql)
+    
     
     #%%
+
     #ADD FOREING KEY CONSTRAIN
-    sql = '''
-    ALTER TABLE features_means
-    ADD CONSTRAIN FOREIGN KEY (`experiment_id`) REFERENCES `experiments`(`id`);
-    '''
-    cur.execute(sql)
+    n = cur.execute("SELECT * FROM INFORMATION_SCHEMA.REFERENTIAL_CONSTRAINTS WHERE CONSTRAINT_NAME = 'features_means_ibfk_1';")
+    if n == 0:
+        sql = '''
+        ALTER TABLE features_means
+        ADD CONSTRAINT `features_means_ibfk_1` 
+        FOREIGN KEY (`experiment_id`) REFERENCES `experiments`(`id`);
+        '''
+        cur.execute(sql)
     #%%
     cur.close()
     conn.commit()

@@ -11,9 +11,9 @@ import multiprocessing as mp
 
 from tierpsy.processing.AnalysisPoints import AnalysisPoints
 from tierpsy.analysis.stage_aligment.alignStageMotion import isGoodStageAligment
-from tierpsy.analysis.contour_orient.correctVentralDorsal import isBadVentralOrient, switchCntSingleWorm
-from tierpsy.analysis.compress.processVideo import isGoodVideo
+from tierpsy.analysis.contour_orient.correctVentralDorsal import isBadVentralOrient, switchCntSingleWorm, read_ventral_side
 from tierpsy.analysis.compress_add_data.getAdditionalData import hasAdditionalFiles
+from tierpsy.analysis.compress.processVideo import isGoodVideo
 
 from tierpsy.helper.misc import TimeCounter
 
@@ -42,6 +42,7 @@ def get_points2check():
 
 
 POINTS2CHECK, NAME2INDEX = get_points2check()
+INDEX2NAME = {y:x for x,y in NAME2INDEX.items()}
 POINTS2CHECK_M =  [x for x in POINTS2CHECK if x not in ['COMPRESS', 'COMPRESS_ADD_DATA']]
     
 #%%
@@ -61,7 +62,8 @@ def get_last_finished(ap_obj, cur, points2check):
             if not 'CONTOUR_ORIENT' in unfinished:
                 #i try to switch here. I don't want to deal with this problem in checkpoints
                 switchCntSingleWorm(_ap_obj.file_names['skeletons'])
-                if isBadVentralOrient(_ap_obj.file_names['skeletons']):
+                if read_ventral_side(_ap_obj.file_names['skeletons']) not in ['clockwise', 'anticlockwise'] \
+                    or isBadVentralOrient(_ap_obj.file_names['skeletons']):
                     return 'UNKNOWN_CONTOUR_ORIENT'
             
             if 'COMPRESS' in unfinished:
@@ -118,9 +120,9 @@ def get_rows(last_valid='', skip_bad_flags=False):
     return conn, all_rows
 
 if __name__ == '__main__':
-    UPDATE_INFO = False
+    UPDATE_INFO = True
     CHECK_FLAG = True
-    last_valid = ''#'FEAT_CREATE' #'WCON_EXPORT'#''# 
+    last_valid = 'END'#'FEAT_CREATE' #'WCON_EXPORT'#''# 
     
     conn, all_rows = get_rows(last_valid)
     cur = conn.cursor(pymysql.cursors.DictCursor)
@@ -139,9 +141,7 @@ if __name__ == '__main__':
         if CHECK_FLAG:
             ap_obj = AnalysisPoints(main_file, masks_dir, results_dir, ON_FOOD_JSON)
             exit_flag_id, last_point = get_last_finished(ap_obj, cur, points2check)
-            print('ID:{} -> {}'.format(row['id'], last_point))      
-            
-            output = row['id'], exit_flag_id
+            output = (row['id'], exit_flag_id)
             
         
         
@@ -155,6 +155,7 @@ if __name__ == '__main__':
             SET exit_flag_id={} 
             WHERE id={}'''.format(exit_flag_id, exp_id)
         cur.execute(sql)
+        print('ID:{} -> {}'.format(exp_id, INDEX2NAME[exit_flag_id])) 
             
     
     print('*******', len(all_rows))
@@ -163,16 +164,19 @@ if __name__ == '__main__':
     n_batch = mp.cpu_count()
     p = mp.Pool(n_batch)
     tot = len(all_rows)
+    
     for ii in range(0, tot, n_batch):
         dat = all_rows[ii:ii + n_batch]
-        for x in p.map(_process_row, dat):
-            if x is not None:
+        
+        outputs = list(p.map(_process_row, dat))
+        
+        assert len(outputs) == len(dat)
+        if CHECK_FLAG:
+            for x in outputs:
                 _add_row(x)
-                if x[1] == 101:
-                    break
                 
         conn.commit()
-        print('{} of {}. Total time: {}'.format(ii + n_batch, 
+        print('{} of {}. Total time: {}'.format(min(tot, ii + n_batch), 
                   tot, progress_timer.get_time_str()))
         
         

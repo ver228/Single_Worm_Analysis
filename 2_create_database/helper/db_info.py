@@ -52,7 +52,7 @@ def db_row2dict(row):
     experiment_info['gene'] = row['gene']
     experiment_info['allele'] = row['allele']
     experiment_info['chromosome'] = row['chromosome']
-    experiment_info['genotype'] = row['genotype']
+    experiment_info['strain_description'] = row['strain_description']
     
     
     experiment_info['sex'] = row['sex']

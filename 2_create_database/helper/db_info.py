@@ -79,7 +79,7 @@ def db_row2dict(row):
     return experiment_info
 
 
-def _get_exp_info(cur, base_name):
+def get_exp_info_str(cur, base_name):
     cur.execute("SELECT * FROM experiments_full WHERE base_name='{}';".format(base_name))
     row = cur.fetchone()
     experiment_info = db_row2dict(row)
@@ -105,7 +105,7 @@ def add_extra_info(cur, base_name, results_dir):
             fid.create_array('/', 'experiment_info', obj = experiment_info_str)
     
     
-    experiment_info_str = _get_exp_info(cur, base_name)
+    experiment_info_str = get_exp_info_str(cur, base_name)
     
     fnames = [mask_file, skeletons_file, features_file]
     for fname, field in zip(fnames, valid_fields):

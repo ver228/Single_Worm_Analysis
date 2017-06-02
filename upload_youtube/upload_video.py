@@ -37,13 +37,15 @@ def resample_and_upload(base_name,
             return None
         else:
             raise(KeyError('Wrong /experiment_info .'))
-    
+    print(metadata_dict)
+
     #i do not want to specify the full path
     metadata_dict["original_video_name"] = metadata_dict["original_video_name"].replace(LOCAL_ROOT_DIR, '.')
     metadata_str = json.dumps(metadata_dict, allow_nan=False, indent=0)
     
     description = WEBPAGE_INFO + '\n\nExperiment metadata:\n'+ metadata_str
-    title_str = '{} {} | {}'.format(metadata_dict['strain'], metadata_dict['genotype'], metadata_dict['timestamp'])
+    title_str = '{} {} | {}'.format(metadata_dict['strain'], metadata_dict['strain_description'], metadata_dict['timestamp'])
+    
     tmp_file = os.path.join(TMP_DIR, base_name + '.avi')
     if speed_up != 1:
         title_str = title_str + ' (speed up {}x)'.format(speed_up)

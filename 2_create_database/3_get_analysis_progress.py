@@ -122,7 +122,7 @@ def get_rows(last_valid='', skip_bad_flags=False):
 if __name__ == '__main__':
     UPDATE_INFO = True
     CHECK_FLAG = True
-    last_valid = 'END'#'FEAT_CREATE' #'WCON_EXPORT'#''# 
+    last_valid = ''#'FEAT_CREATE' #'WCON_EXPORT'#''# 
     
     conn, all_rows = get_rows(last_valid)
     cur = conn.cursor(pymysql.cursors.DictCursor)
@@ -168,7 +168,7 @@ if __name__ == '__main__':
     for ii in range(0, tot, n_batch):
         dat = all_rows[ii:ii + n_batch]
         
-        outputs = list(p.map(_process_row, dat))
+        outputs = list(map(_process_row, dat))
         
         assert len(outputs) == len(dat)
         if CHECK_FLAG:

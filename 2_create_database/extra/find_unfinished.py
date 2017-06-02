@@ -141,5 +141,5 @@ if __name__ == '__main__':
     points2save = ['CONTOUR_ORIENT']
     files2save = sum([files_progress[x] for x in points2save], [])
     
-    divide_and_save(files2save, 1, 'cnt_orient')
+    #divide_and_save(files2save, 1, 'cnt_orient')
     

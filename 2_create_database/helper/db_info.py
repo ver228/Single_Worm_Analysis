@@ -10,12 +10,15 @@ import json
 import tables
 import numpy as np
 import pymysql.cursors
+import pytz
 from collections import OrderedDict
 
 from tierpsy.helper.params import copy_unit_conversions, read_microns_per_pixel
 from tierpsy.analysis.stage_aligment.alignStageMotion import isGoodStageAligment, _h_get_stage_inv
 
 def db_row2dict(row):
+
+
     
     experiment_info = OrderedDict()
     experiment_info['base_name'] = row['base_name']
@@ -32,8 +35,11 @@ def db_row2dict(row):
         'address':'MRC Laboratory of Molecular Biology, Hills Road, Cambridge, CB2 0QH, UK'}
     else:
         experiment_info['lab'] = row['lab']
-        
-    experiment_info['timestamp'] = row['date'].isoformat()
+    
+    #add timestamp with timezone
+    local = pytz.timezone ('Europe/London') 
+    local_dt = local.localize(row['date'], is_dst=True)
+    experiment_info['timestamp'] = local_dt.isoformat()
     
     experiment_info['arena'] = {
             "kind":'petri',

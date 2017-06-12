@@ -121,7 +121,7 @@ def get_rows(last_valid='', skip_bad_flags=False):
 
 if __name__ == '__main__':
     UPDATE_INFO = True
-    CHECK_FLAG = True
+    CHECK_FLAG = False
     last_valid = ''#'FEAT_CREATE' #'WCON_EXPORT'#''# 
     
     conn, all_rows = get_rows(last_valid)

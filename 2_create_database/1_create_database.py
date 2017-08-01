@@ -272,6 +272,15 @@ def init_database(DROP_PREV_DB = False):
     
     cur.execute(create_full_view_sql)
     
+    '''
+    CREATE OR REPLACE VIEW experiments_valid AS
+    SELECT *
+    FROM experiments_full
+    WHERE strain != '-N/A-'
+    AND exit_flag = 'END'
+    '''
+    
+    
     cur.execute('SHOW TABLES')
     print(cur.fetchall())
     

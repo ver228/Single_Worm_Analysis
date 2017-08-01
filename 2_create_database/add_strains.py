@@ -104,13 +104,18 @@ if False:
         print(sql)
     
 
+#sql = '''
+#select id, base_name 
+#from experiments_full 
+#where strain="-N/A-"
+#and base_name like "%flp%";
+#'''
+
 sql = '''
 select id, base_name 
 from experiments_full 
-where strain="-N/A-"
-and base_name like "%flp%";
+where base_name like "%flp-16%";
 '''
-
 
 cur.execute(sql)
 results = cur.fetchall()
@@ -133,6 +138,7 @@ str2replace = [
 extra_str2replace = [
 ('flp-15(ko1963)', 'flp-15(gk1186)'),
 ('flp-18(ko1694)', 'flp-18(gk3063)'),
+('flp-16(ok3985)', 'flp-16(ok3085)'),
 ('flp-20(pk1956)', 'flp-20(pk1596)'),
 ('flp-25(ko1646)', 'flp-25(gk1016)'),
 ('flp-25(ko1696)', 'flp-25(gk1016)'),
@@ -197,12 +203,17 @@ for id_row, base_name, strain_name in assigned_strains:
     strain_id, = cur.fetchone()
     
     
+    
     sql = '''
     UPDATE experiments
     SET strain_id={}
     WHERE id={}
     '''.format(strain_id, id_row)
     
+    cur.execute(sql)
+    print(base_name)
     print(sql)
+
+conn.commit()
 
 conn.close()

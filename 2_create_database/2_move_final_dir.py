@@ -23,8 +23,6 @@ def get_files_old(original_video):
     mask_file = original_video.replace('original_videos', 'MaskedVideos').replace('.avi', '.hdf5')
     subvid_file = mask_file.replace('.hdf5', '_subsample.avi')
     
-    print(mask_file)
-    
     skel_file = original_video.replace('original_videos', 'Results').replace('.avi', '_skeletons.hdf5')
     feat_file = skel_file.replace('_skeletons.hdf5', '_features.hdf5')
     int_file = skel_file.replace('_skeletons.hdf5', '_intensities.hdf5')
@@ -72,7 +70,6 @@ if __name__ == '__main__':
     SELECT e.id, results_dir, base_name, original_video, f.name
     FROM experiments AS e
     JOIN exit_flags AS f ON f.id = exit_flag_id
-    WHERE original_video like '%bkp11%'
     '''
     cur.execute(sql)
     results = cur.fetchall()

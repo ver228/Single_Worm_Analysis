@@ -58,6 +58,6 @@ def get_dir_from_base(base_name, cur=None):
 
     cur.execute(sql)
     results = cur.fetchall()
-
+    
     assert len(results) == 1
     return _build_dir(results[0])

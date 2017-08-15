@@ -8,12 +8,13 @@ Created on Mon Feb 20 18:35:13 2017
 import tables
 import numpy as np
 import pandas as pd
-from tierpsy.analysis.stage_aligment.alignStageMotion import _h_get_stage_inv
-
+import os
 from scipy.io import loadmat
 
+from tierpsy.analysis.stage_aligment.alignStageMotion import _h_get_stage_inv
 
-feats_conv = pd.read_csv('conversion_table.csv').dropna()
+tab_path = os.path.join(os.path.dirname(__file__), 'conversion_table.csv')
+feats_conv = pd.read_csv(tab_path).dropna()
 FEATS_MAT_MAP = {row['feat_name_tierpsy']:row['feat_name_segworm'] for ii, row in feats_conv.iterrows()}
 FEATS_OW_MAP = {row['feat_name_tierpsy']:row['feat_name_openworm'] for ii, row in feats_conv.iterrows()}
 
@@ -264,6 +265,6 @@ class FeatsReaderComp(FeatsReader):
             return self._stage_movement
         except:
             timestamp = np.arange(self._skeletons.shape[0])
-            self._stage_movement = _h_get_stage_inv(self.skel_file, timestamp)
+            self._stage_movement, _ = _h_get_stage_inv(self.skel_file, timestamp)
             return self._stage_movement
 

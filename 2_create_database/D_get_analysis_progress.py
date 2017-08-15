@@ -10,8 +10,6 @@ import pymysql.cursors
 import multiprocessing as mp
 
 from tierpsy.processing.AnalysisPoints import AnalysisPoints
-from tierpsy.analysis.stage_aligment.alignStageMotion import isGoodStageAligment
-from tierpsy.analysis.contour_orient.correctVentralDorsal import isBadVentralOrient, switchCntSingleWorm, read_ventral_side
 from tierpsy.analysis.compress_add_data.getAdditionalData import hasAdditionalFiles
 from tierpsy.analysis.compress.processVideo import isGoodVideo
 
@@ -34,8 +32,6 @@ def get_points2check():
     
     cur.close()
     conn.close()
-
-
     points2check = [x[1] for x in result if x[0]<100]
     name2index = {x[1]:x[0] for x in result}
     return points2check, name2index
@@ -55,17 +51,6 @@ def get_last_finished(ap_obj, cur, points2check):
         if not unfinished:
             return 'END'
         else:
-            if not 'STAGE_ALIGMENT' in unfinished:
-                if not isGoodStageAligment(_ap_obj.file_names['skeletons']):
-                    return 'FAIL_STAGE_ALIGMENT'
-            
-            if not 'CONTOUR_ORIENT' in unfinished:
-                #i try to switch here. I don't want to deal with this problem in checkpoints
-                switchCntSingleWorm(_ap_obj.file_names['skeletons'])
-                if read_ventral_side(_ap_obj.file_names['skeletons']) not in ['clockwise', 'anticlockwise'] \
-                    or isBadVentralOrient(_ap_obj.file_names['skeletons']):
-                    return 'UNKNOWN_CONTOUR_ORIENT'
-            
             if 'COMPRESS' in unfinished:
                 if not isGoodVideo(_ap_obj.file_names['original_video']):
                     return 'INVALID_VIDEO'
@@ -121,7 +106,7 @@ def get_rows(last_valid='', skip_bad_flags=False):
 
 if __name__ == '__main__':
     UPDATE_INFO = True
-    CHECK_FLAG = True
+    CHECK_FLAG = False
     last_valid = ''#'FEAT_CREATE' #'WCON_EXPORT'#''# 
     
     conn, all_rows = get_rows(last_valid)

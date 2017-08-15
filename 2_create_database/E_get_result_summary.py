@@ -21,9 +21,16 @@ from tierpsy.helper.params import read_fps
 PROGRESS_TAB_FIELD = ['experiment_id', 'n_valid_frames', 'n_missing_frames', 
     'n_segmented_skeletons', 'n_filtered_skeletons', 'n_valid_skeletons', 
     'n_timestamps', 'first_skel_frame', 'last_skel_frame', 'fps', 'total_time',
-    'mask_file_sizeMB']
+    'mask_file_sizeMB', 'upload_sizeMB']
 
-def get_progress_data(experiment_id, mask_file, skeletons_file, features_file):
+def get_progress_data(experiment_id, results_dir, base_name):
+    
+    mask_file = os.path.join(results_dir, base_name + '.hdf5')
+    skeletons_file = os.path.join(results_dir, base_name + '_skeletons.hdf5')
+    features_file = os.path.join(results_dir, base_name + '_features.hdf5')
+    wcon_file = os.path.join(results_dir, base_name + '.wcon.zip')
+    subsample_file = os.path.join(results_dir, base_name + '_subsample.avi')
+        
     out = OrderedDict()
     for x in PROGRESS_TAB_FIELD:
         out[x] = None
@@ -71,10 +78,15 @@ def get_progress_data(experiment_id, mask_file, skeletons_file, features_file):
                 else:
                     out['n_valid_skeletons'] = 0
                     out['n_timestamps'] = 0
+    
+    files2upload = [mask_file, features_file, wcon_file, subsample_file]
+    if all(os.path.exists(x) for x in files2upload):
+        upload_size = sum(os.path.getsize(x) for x in files2upload)/(1024*1024.0)
+        out['upload_sizeMB'] = upload_size
+        
     return out
 
-def update_row(cur, row_input):
-    #%%
+def update_row(row_input, table_name = 'results_summary'):
     names, values = zip(*list(row_input.items()))
     
     vals_str = []
@@ -91,14 +103,14 @@ def update_row(cur, row_input):
     names_str = ", ".join("`{}`".format(x) for x in names)
     update_str = ", ".join('{}={}'.format(x, y) for x,y in zip(names,vals_str))
     
-    
     sql = '''
-    INSERT INTO `results_summary` ({}) 
+    INSERT INTO `{}` ({}) 
     VALUES ({})    
     ON DUPLICATE KEY UPDATE {}
-    '''.format(names_str, values_str, update_str)
+    '''.format(table_name, names_str, values_str, update_str)
     
-    cur.execute(sql)
+    return sql
+    
     
 if __name__ == '__main__':
     conn = pymysql.connect(host='localhost', db='single_worm_db')
@@ -112,12 +124,9 @@ if __name__ == '__main__':
         results_dir = row['results_dir']
         base_name = row['base_name']
         
-        mask_file = os.path.join(results_dir, base_name + '.hdf5')
-        skeletons_file = os.path.join(results_dir, base_name + '_skeletons.hdf5')
-        features_file = os.path.join(results_dir, base_name + '_features.hdf5')
         
         
-        row_progress = get_progress_data(row['id'], mask_file, skeletons_file, features_file)
+        row_progress = get_progress_data(row['id'], results_dir, base_name)
         return row_progress
     
     
@@ -131,7 +140,8 @@ if __name__ == '__main__':
         dat = all_rows[ii:ii + n_batch]
         for x in p.map(_process_row, dat):
             if x is not None:
-                update_row(cur, x)
+                sql = update_row(x)
+                cur.execute(sql)
         conn.commit()
         print('{} of {}. Total time: {}'.format(min(tot, ii + n_batch), 
                   tot, progress_timer.get_time_str()))

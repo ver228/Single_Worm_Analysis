@@ -122,9 +122,10 @@ def add_extra_info(cur, base_name, results_dir):
     if os.path.exists(mask_file) and isGoodStageAligment(skeletons_file):
         microns_per_pixel = read_microns_per_pixel(mask_file)
         with tables.File(mask_file, 'r+') as fid:
-            n_frames = fid.get_node('/mask').shape[0]
-            stage_vec_inv = _h_get_stage_inv(skeletons_file, np.arange(n_frames))
-            stage_vec_pix = stage_vec_inv/microns_per_pixel
+            timestamp_c = fid.get_node('/timestamp/raw')[:]
+            timestamp = np.arange(np.min(timestamp_c), np.max(timestamp_c)+1)
+            stage_vec_inv, ind_ff = _h_get_stage_inv(skeletons_file, timestamp)
+            stage_vec_pix = stage_vec_inv[ind_ff]/microns_per_pixel
             if '/stage_position_pix' in fid: 
                 fid.remove_node('/', 'stage_position_pix')
             fid.create_array('/', 'stage_position_pix', obj=stage_vec_pix)

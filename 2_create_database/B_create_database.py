@@ -114,7 +114,7 @@ def init_database(DROP_PREV_DB = False):
     PRIMARY KEY (id)
     );
     '''
-    
+    #%%
     exit_flags_vals = [
     ('COMPRESS' , 'Create masked video.'), 
     ('COMPRESS_ADD_DATA', 'Add additional data to the video (stage and pixel size).'), 
@@ -127,7 +127,6 @@ def init_database(DROP_PREV_DB = False):
     ('SKE_FILT', 'Filter skeletons.'), 
     ('SKE_ORIENT', 'Orient skeletons by movement.'),  
     ('STAGE_ALIGMENT', 'Stage aligment.'),  
-    ('CONTOUR_ORIENT', 'Orient ventral side.'), 
     ('INT_PROFILE', 'Intensity profile.'),  
     ('INT_SKE_ORIENT', 'Orient skeletons by intensity.'),  
     ('FEAT_CREATE', 'Obtain features.'),
@@ -136,8 +135,6 @@ def init_database(DROP_PREV_DB = False):
     ]
     
     exit_flags_vals_failed = [
-    (101, 'UNKNOWN_CONTOUR_ORIENT', "Failed. Invalid or unknown ventral side label."),
-    (102, 'FAIL_STAGE_ALIGMENT' , "Failed. Wrong stage aligment."),
     (103, 'INVALID_VIDEO', 'Video cannot be read.'),
     (104, 'MISSING_ADD_FILES', 'The extra files log.csv and/or info.xml are missing.')
     ]
@@ -148,7 +145,7 @@ def init_database(DROP_PREV_DB = False):
     exit_flags_init_f = ('INSERT INTO exit_flags (id, name, description) VALUES (%s, %s, %s)',
                        exit_flags_vals_failed)
     
-    
+    #%%
     
     
     progress_analysis_tab_sql = \
@@ -167,6 +164,7 @@ def init_database(DROP_PREV_DB = False):
     `fps` FLOAT,
     `total_time` FLOAT,
     `mask_file_sizeMB` FLOAT,
+    `upload_size_MB` FLOAT,
     PRIMARY KEY (experiment_id),
     FOREIGN KEY (experiment_id) REFERENCES experiments(id)
     );
@@ -192,16 +190,16 @@ def init_database(DROP_PREV_DB = False):
     '''
     CREATE TABLE IF NOT EXISTS `segworm_comparisons`
     (
-    `id` INT NOT NULL AUTO_INCREMENT,
     `experiment_id` INT NOT NULL,
-    `segworm_feature_id` INT NOT NULL,
+    `segworm_info_id` INT NOT NULL,
     `n_mutual_skeletons` INT,
+    `n_switched_head_tail` INT,
     `error_05th` FLOAT,
     `error_50th` FLOAT,
     `error_95th` FLOAT,
-    PRIMARY KEY (id),
+    PRIMARY KEY (experiment_id),
     FOREIGN KEY (experiment_id) REFERENCES experiments(id),
-    FOREIGN KEY (segworm_feature_id) REFERENCES segworm_info(id)
+    FOREIGN KEY (segworm_info_id) REFERENCES segworm_info(id)
     )
     '''
     
@@ -276,8 +274,11 @@ def init_database(DROP_PREV_DB = False):
     CREATE OR REPLACE VIEW experiments_valid AS
     SELECT *
     FROM experiments_full
+    JOIN results_summary ON id = experiment_id
     WHERE strain != '-N/A-'
     AND exit_flag = 'END'
+    AND n_valid_skeletons>100 
+    AND total_time < 100000
     '''
     
     

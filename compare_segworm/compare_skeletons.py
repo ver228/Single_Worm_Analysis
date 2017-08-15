@@ -53,13 +53,11 @@ def plot_skel_diff(skeletons, skel_segworm):
     plt.axis('equal') 
     
     
-    
-    
-    
 if __name__ == '__main__':
     #main_dir = '/Users/ajaver/OneDrive - Imperial College London/Local_Videos/single_worm/global_sample_v3/'
     #feat_files = glob.glob(os.path.join(main_dir, '*_features.hdf5'))
-    main_dir = '/Users/ajaver/OneDrive - Imperial College London/Ev_L4 worms/Results_anticlockwise'
+    #main_dir = '/Users/ajaver/OneDrive - Imperial College London/Ev_L4 worms/Results_anticlockwise'
+    main_dir = '/Users/ajaver/OneDrive - Imperial College London/Ev_videos/N2_L4/Results/'
     feat_files = glob.glob(os.path.join(main_dir, '**', '*_features.hdf5'), recursive=True)
     
     save_plot_dir = os.path.join('.', 'plots')
@@ -81,5 +79,5 @@ if __name__ == '__main__':
             plt.suptitle(fname.replace('_features.hdf5', ''))
             
             pdf_id.savefig()
-            plt.close()
+            #plt.close()
         

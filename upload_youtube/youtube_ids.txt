@@ -7716,3 +7716,4 @@ flp-3 (OK3265)X on food L_2010_01_19__12_21_49___1___7	vwRbKsgw5jU
 egl-49 (n1107) on food L_2010_05_11__11_24_32___4___2	tBbJxoplSqE
 ins-34 (tm3095) on food L_2012_10_04__09_44_19___8___2	uzHtfCYM2IE
 acr-7 (tm863)II on food R_2010_02_23__11_55_00___7___9	4hiV9K-YwA0
+egl-21 (n611)IV on food R_2010_05_14__15_54_37___4___15	7acqmEi510s

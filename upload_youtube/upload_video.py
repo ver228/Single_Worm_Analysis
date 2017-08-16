@@ -138,16 +138,12 @@ if __name__ == '__main__':
     cur = conn.cursor()
     
     
-    min_valid = 'FEAT_CREATE'
     ori_vid_sql = '''
-    SELECT e.id, base_name, results_dir
-    FROM experiments AS e
-    JOIN strains AS s ON s.id = strain_id 
-    WHERE exit_flag_id >= (SELECT f.id FROM exit_flags as f WHERE f.name="{}")
-    AND exit_flag_id < 100
-    AND youtube_id IS NULL
-    AND s.name!="-N/A-"
-    ORDER BY id'''.format(min_valid)
+    SELECT e.id, e.base_name, e.results_dir
+    FROM experiments_valid AS ev
+    JOIN experiments AS e ON e.id = ev.id
+    WHERE youtube_id IS NULL
+    ORDER BY id'''
     
     
     cur.execute(ori_vid_sql)

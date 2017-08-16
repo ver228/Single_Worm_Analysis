@@ -14,7 +14,7 @@ import pytz
 from collections import OrderedDict
 
 from tierpsy.helper.params import copy_unit_conversions, read_microns_per_pixel
-from tierpsy.analysis.stage_aligment.alignStageMotion import isGoodStageAligment, _h_get_stage_inv
+from tierpsy.analysis.stage_aligment.alignStageMotion import _h_add_stage_position_pix, isGoodStageAligment
 
 def db_row2dict(row):
 
@@ -120,15 +120,7 @@ def add_extra_info(cur, base_name, results_dir):
     
     #finally if the stage was aligned correctly add the information into the mask file    
     if os.path.exists(mask_file) and isGoodStageAligment(skeletons_file):
-        microns_per_pixel = read_microns_per_pixel(mask_file)
-        with tables.File(mask_file, 'r+') as fid:
-            timestamp_c = fid.get_node('/timestamp/raw')[:]
-            timestamp = np.arange(np.min(timestamp_c), np.max(timestamp_c)+1)
-            stage_vec_inv, ind_ff = _h_get_stage_inv(skeletons_file, timestamp)
-            stage_vec_pix = stage_vec_inv[ind_ff]/microns_per_pixel
-            if '/stage_position_pix' in fid: 
-                fid.remove_node('/', 'stage_position_pix')
-            fid.create_array('/', 'stage_position_pix', obj=stage_vec_pix)
+        _h_add_stage_position_pix(mask_file, skeletons_file)
             
         
     

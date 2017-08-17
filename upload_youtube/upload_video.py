@@ -8,7 +8,7 @@ from apiclient.http import MediaFileUpload
 
 
 from tierpsy.analysis.vid_subsample.createSampleVideo import createSampleVideo
-from tierpsy.analysis.wcon_export.exportWCON import getWCONMetaData
+from tierpsy.analysis.wcon_export.exportWCON import readMetaData
 
 from googleapiclient.errors import ResumableUploadError
 
@@ -30,7 +30,7 @@ def resample_and_upload(base_name,
     if not os.path.exists(TMP_DIR):
         os.makedirs(TMP_DIR)
 
-    metadata_dict = getWCONMetaData(masked_video, provenance_step='COMPRESS')
+    metadata_dict = readMetaData(masked_video, provenance_step='COMPRESS')
     
     if not "original_video_name" in metadata_dict:
         if skip_invalid:

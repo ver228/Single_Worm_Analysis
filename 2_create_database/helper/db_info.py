@@ -17,9 +17,6 @@ from tierpsy.helper.params import copy_unit_conversions, read_microns_per_pixel
 from tierpsy.analysis.stage_aligment.alignStageMotion import _h_add_stage_position_pix, isGoodStageAligment
 
 def db_row2dict(row):
-
-
-    
     experiment_info = OrderedDict()
     experiment_info['base_name'] = row['base_name']
     
@@ -42,8 +39,8 @@ def db_row2dict(row):
     experiment_info['timestamp'] = local_dt.isoformat()
     
     experiment_info['arena'] = {
-            "kind":'petri',
-            "diameter":35,
+            "style":'petri',
+            "size":35,
             "orient":"imaged through plate"
             }
     

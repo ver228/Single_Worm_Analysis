@@ -86,8 +86,9 @@ def init_database(DROP_PREV_DB = False):
     `exit_flag_id` INT NOT NULL DEFAULT 0,
     `results_dir` VARCHAR(200),
     `youtube_id` VARCHAR(40),
-    `zenodo_id` VARCHAR(40),
+    `zenodo_id` INT,
     
+    INDEX (zenodo_id),
     PRIMARY KEY (id),
     FOREIGN KEY (strain_id) REFERENCES strains(id),
     FOREIGN KEY (tracker_id) REFERENCES trackers(id),
@@ -203,12 +204,61 @@ def init_database(DROP_PREV_DB = False):
     )
     '''
     
+    
+    #%%
+    file_types_tab_sql = \
+    '''
+    CREATE TABLE IF NOT EXISTS `file_types`
+    (
+    `id` INT NOT NULL AUTO_INCREMENT,
+    `name` VARCHAR(20),
+    `extension` VARCHAR(20),
+    `description` VARCHAR(700),
+    PRIMARY KEY (id),
+    UNIQUE KEY (name),
+    UNIQUE KEY (extension)
+    )
+    '''
+    
+    file_types_vals = [
+    ('masked_video', '.hdf5' , 'Video data stored in hdf5 with the background zeroed'), 
+    ('features', '_features.hdf5', 'Worm skeletons and features.'), 
+    ('wcon', '.wcon.zip', 'Metadata and skeletons saved in the tracker commons format (https://github.com/openworm/tracker-commons)'), 
+    ('preview', '_subsample.avi', 'Subsampled video file used as a preview of the hdf5 video data.')
+    ]
+    
+    file_types_init = ('INSERT INTO file_types (name, extension, description) VALUES (%s, %s, %s)',
+                       file_types_vals)
+    
+    #%%
+    file_types_tab_sql = \
+    '''
+    CREATE TABLE IF NOT EXISTS `zenodo_files`
+    (
+    `id`  VARCHAR(120),
+    `zenodo_id` INT,
+    `filename` VARCHAR(250),
+    `filesize` BIGINT,
+    `checksum` CHAR(32),
+    `download_link` VARCHAR(2083),
+    `file_type_id` INT,
+    PRIMARY KEY (id),
+    FOREIGN KEY (zenodo_id) REFERENCES experiments(zenodo_id) 
+    ON DELETE CASCADE ON UPDATE CASCADE
+    
+    FOREIGN KEY  (file_type_id) REFERENCES file_types(id);
+    );
+    '''
+    
+    #%%
+    
     all_tabs_sql = [strains_tab_sql,
     exit_flags_tab_sql,
     experiment_tab_sql,
     progress_analysis_tab_sql,
     segworm_features_tab_sql, 
-    segworm_comparisons_tab_sql
+    segworm_comparisons_tab_sql,
+    file_types_tab_sql
     ]
     
     for s_tab in SIMPLE_TABLES:
@@ -226,7 +276,7 @@ def init_database(DROP_PREV_DB = False):
     print('Creating database')
     cur.executemany(*exit_flags_init)
     cur.executemany(*exit_flags_init_f)
-    
+    cur.executemany(*file_types_init)
     
     create_full_view_sql = '''
     CREATE OR REPLACE VIEW experiments_full AS

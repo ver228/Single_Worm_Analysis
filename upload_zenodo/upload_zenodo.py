@@ -218,6 +218,8 @@ if __name__ == '__main__':
         FROM experiments
         WHERE NOT zenodo_id IS NULL
         '''
+        
+        keywords = ''
         cur.execute(sql)
         zenodo_ids = cur.fetchall()
     

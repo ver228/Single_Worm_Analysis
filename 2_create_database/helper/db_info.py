@@ -29,7 +29,7 @@ def db_row2dict(row):
         #I hard code the lab for the moment since all this data base is for the single worm case, and all the data was taken from the schafer lab.
         #if at certain point we add another lab we need to add an extra table in the main database
         experiment_info['lab'] = {'name' : 'William R Schafer', 
-        'address':'MRC Laboratory of Molecular Biology, Hills Road, Cambridge, CB2 0QH, UK'}
+        'location':'MRC Laboratory of Molecular Biology, Hills Road, Cambridge, CB2 0QH, UK'}
     else:
         experiment_info['lab'] = row['lab']
     
@@ -41,7 +41,7 @@ def db_row2dict(row):
     experiment_info['arena'] = {
             "style":'petri',
             "size":35,
-            "orient":"imaged through plate"
+            "orientation":"toward"
             }
     
     if 'NGM liquid drop' in row['arena']:

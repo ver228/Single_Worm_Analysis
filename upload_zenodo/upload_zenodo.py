@@ -201,7 +201,8 @@ if __name__ == '__main__':
                 '''.format(q['id'], deposition_id, q['filename'], q['filesize'], q['checksum'], q['links']['download'], ft['id'])
                 cur.execute(sql)
                 conn.commit()
-            
+        
+        
         
     
     conn.close()

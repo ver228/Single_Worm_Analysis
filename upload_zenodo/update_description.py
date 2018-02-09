@@ -93,26 +93,14 @@ if __name__ == '__main__':
     JOIN experiments AS e ON ev.id = e.id
     LEFT JOIN zenodo_files AS z ON z.experiment_id = e.id
     WHERE youtube_id IS NOT NULL
+    AND file_type_id = 1
     ORDER BY ev.mask_file_sizeMB DESC
     '''
     
     cur.execute(sql)
-    missing_depositions = cur.fetchall()
-    missing_depositions = [x for x in missing_depositions if x['zenodo_id'] is None]
-    #%%
-    sql = '''
-    SELECT ev.*, youtube_id, zenodo_id 
-    FROM (
-    SELECT experiment_id, zenodo_id, count(*) as z_counts 
-    FROM zenodo_files 
-    GROUP BY experiment_id, zenodo_id
-    ) as Z 
-    JOIN experiments_valid as ev ON Z.experiment_id = ev.id
-    JOIN experiments AS e ON ev.id = e.id
-    WHERE z_counts < 3;
-    '''
-    cur.execute(sql)
-    incomplete_depositions = cur.fetchall()
+    all_depositions = cur.fetchall()
+    #all_depositions = [x for x in all_depositions if x['zenodo_id'] is None]
+    
     
     #%%
     with open(CLIENT_SECRETS_FILE, 'r') as fid:
@@ -130,12 +118,12 @@ if __name__ == '__main__':
         raise ValueError('{}: {}'.format(msg['status'], msg['message']))
     
     
-    f_data_l = missing_depositions
+    f_data_l = all_depositions
     #import random
     #f_data_l = random.sample(f_data, 1)
     
     for irow, row in enumerate(f_data_l):
-        print(irow+1, len(f_data_l))
+        print(irow+1, len(f_data_l), row['zenodo_id'])
         metadata = db_row2dict(row)
      
         features_file = os.path.join(row['results_dir'], row['base_name'] + '_features.hdf5')
@@ -164,8 +152,6 @@ if __name__ == '__main__':
         
         title_str = '{} {} | {}'.format(metadata_dict['strain'], metadata_dict['strain_description'], metadata_dict['timestamp'])
         description_str = WEBPAGE_INFO + printItems(metadata_dict)
-        
-        
         
         while True:  
             try:
@@ -225,65 +211,7 @@ if __name__ == '__main__':
                 print('Error. Trying again in a minute')
                 time.sleep(1)
                 
-        #%%
 
-        while True:
-            try:
-                r = requests.get('https://zenodo.org/api/deposit/depositions/{}'.format(deposition_id),
-                         params={'access_token': ACCESS_TOKEN}, json={}, headers=headers)
-                bucket_url = r.json()['links']['bucket']
-                break
-            except:
-                print('Error. Trying again in a minute')
-                time.sleep(1)
-                
-
-        for ft in remaining_ext:
-            while True:
-                try:
-                    fname = row['base_name'] + ft['extension']
-                    print(fname)
-                    fullpath = os.path.join(row['results_dir'], fname)
-                    
-                    if 'wcon' in ft['extension']:
-                        with zipfile.ZipFile(fullpath) as zf:
-                            ret = zf.testzip()
-                        if not ret is None:
-                            print('corrupt file')
-                            raise
-                    
-                    with open(fullpath, 'rb') as fp:
-                         file_r = requests.put(bucket_url + '/' + fname,
-                         params = {'access_token': ACCESS_TOKEN}, 
-                                     headers=headers,
-                                     data=fp
-                                     )
-                    break
-                except:
-                    print('Error. Trying again in a minute')
-                    time.sleep(1)
-            #OLD REST API               
-            #data = {'filename': fname}
-            #files = {'file': open(fullpath, 'rb')}
-            #r = requests.post(ZENODO_URL + '/%s/files' % deposition_id,
-            #               params={'access_token': ACCESS_TOKEN}, data=data,
-            #               files=files)
-
-
-            if r.status_code  >= 400:
-                print_errors(file_r, row['base_name'])
-            else:
-                try:
-                    #%%
-                    q = file_r.json()
-                    sql = '''
-                    INSERT INTO zenodo_files (experiment_id, file_id, zenodo_id, filename, filesize, checksum, file_type_id) 
-                    VALUES({}, "{}", {}, "{}", {}, "{}", {});
-                    '''.format(int(row['id']), q['version_id'], deposition_id, q['key'], q['size'], q['checksum'], ft['id'])
-                    cur.execute(sql)
-                    conn.commit()
-                except:
-                    continue
                 #%%
     conn.close()
 

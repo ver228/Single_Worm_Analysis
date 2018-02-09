@@ -85,10 +85,8 @@ def init_database(DROP_PREV_DB = False):
     `original_video_sizeMB` FLOAT,
     `exit_flag_id` INT NOT NULL DEFAULT 0,
     `results_dir` VARCHAR(200),
-    `youtube_id` VARCHAR(40),
-    `zenodo_id` INT,
+    `youtube_id` VARCHAR(40)
     
-    INDEX (zenodo_id),
     PRIMARY KEY (id),
     FOREIGN KEY (strain_id) REFERENCES strains(id),
     FOREIGN KEY (tracker_id) REFERENCES trackers(id),
@@ -164,8 +162,8 @@ def init_database(DROP_PREV_DB = False):
     `last_skel_frame` INT,
     `fps` FLOAT,
     `total_time` FLOAT,
+    `microns_per_pixel` FLOAT,
     `mask_file_sizeMB` FLOAT,
-    `upload_size_MB` FLOAT,
     PRIMARY KEY (experiment_id),
     FOREIGN KEY (experiment_id) REFERENCES experiments(id)
     );
@@ -235,18 +233,16 @@ def init_database(DROP_PREV_DB = False):
     '''
     CREATE TABLE IF NOT EXISTS `zenodo_files`
     (
-    `id`  VARCHAR(120),
+    `file_id`  VARCHAR(120),
+    `experiment_id` INT,
     `zenodo_id` INT,
     `filename` VARCHAR(250),
     `filesize` BIGINT,
-    `checksum` CHAR(32),
-    `download_link` VARCHAR(2083),
+    `checksum` CHAR(36),
     `file_type_id` INT,
-    PRIMARY KEY (id),
-    FOREIGN KEY (zenodo_id) REFERENCES experiments(zenodo_id) 
-    ON DELETE CASCADE ON UPDATE CASCADE
-    
-    FOREIGN KEY  (file_type_id) REFERENCES file_types(id);
+    PRIMARY KEY (file_id),
+    FOREIGN KEY (experiment_id) REFERENCES experiments(id),
+    FOREIGN KEY  (file_type_id) REFERENCES file_types(id)
     );
     '''
     
@@ -284,8 +280,6 @@ def init_database(DROP_PREV_DB = False):
     e.id AS id, 
     e.base_name AS base_name,
     e.date AS date, 
-    e.original_video as original_video,
-    e.original_video_sizeMB as original_video_sizeMB,
     e.results_dir  as results_dir,
     s.name AS strain,
     s.description AS strain_description,
@@ -300,8 +294,14 @@ def init_database(DROP_PREV_DB = False):
     h.name AS habituation, 
     experimenters.name AS experimenter,
     arenas.name AS arena,
-    exit_flags.name AS exit_flag
-    
+    exit_flags.name AS exit_flag,
+    rs.n_valid_frames AS n_valid_frames,
+    rs.n_missing_frames AS n_missing_frames,
+    rs.n_valid_skeletons AS n_valid_skeletons,
+    rs.fps AS fps,
+    rs.total_time AS total_time,
+    rs.microns_per_pixel AS microns_per_pixel
+
     FROM experiments AS e 
     LEFT JOIN strains AS s ON e.strain_id = s.id
     LEFT JOIN alleles AS a ON s.allele_id = a.id
@@ -316,6 +316,7 @@ def init_database(DROP_PREV_DB = False):
     LEFT JOIN experimenters ON e.experimenter_id = experimenters.id
     LEFT JOIN arenas ON e.arena_id = arenas.id
     LEFT JOIN exit_flags ON e.exit_flag_id = exit_flags.id
+    LEFT JOIN results_summary AS rs ON e.id = rs.experiment_id
     '''
     
     cur.execute(create_full_view_sql)
@@ -327,6 +328,8 @@ def init_database(DROP_PREV_DB = False):
     JOIN results_summary ON id = experiment_id
     WHERE strain != '-N/A-'
     AND exit_flag = 'END'
+    AND fps IS NOT NULL
+    AND microns_per_pixel IS NOT NULL
     AND n_valid_skeletons>100 
     AND total_time < 100000
     '''

@@ -2,6 +2,7 @@ import pymysql
 import os
 import json
 import time
+import datetime
 from random import shuffle
 from upload_video_helper import get_authenticated_service, resumable_upload
 from apiclient.http import MediaFileUpload
@@ -15,6 +16,8 @@ from googleapiclient.errors import ResumableUploadError
 DATABASE_NAME = 'single_worm_db'
 INSERT_SQL = '''UPDATE experiments SET youtube_id="{1}" WHERE base_name="{0}";'''
 youtube_client = get_authenticated_service()    
+
+snippet_tags = ['c.elegans', 'c.elegans behavior', 'c.elegans behaviour', 'computer vision', 'molecular biology', 'neuroscience', 'science', 'worm behavior', 'worm behaviour']
 
 def resample_and_upload(base_name, 
                         results_dir,
@@ -45,14 +48,24 @@ def resample_and_upload(base_name,
     
     description = WEBPAGE_INFO + '\n\nExperiment metadata:\n'+ metadata_str
     title_str = '{} {} | {}'.format(metadata_dict['strain'], metadata_dict['strain_description'], metadata_dict['timestamp'])
-    
+    if len(title_str) > 87:
+        #Likely to excede the title limit. I try to use a shorter name.
+        d = metadata_dict['strain_description'].replace(' ', '')
+        t = metadata_dict['timestamp'][:10] #I am assuming the date is in the format YYYY-MM-DD
+        title_str = '{} {} | {}'.format(metadata_dict['strain'], d, t)
+
     tmp_file = os.path.join(TMP_DIR, base_name + '.avi')
     if speed_up != 1:
         title_str = title_str + ' (speed up {}x)'.format(speed_up)
         tmp_file = tmp_file.replace('.avi', '_{}x.avi'.format(speed_up))
         description = 'This video is {}x speed up version of the original.'.format(speed_up) + description
     
-    print(title_str)
+    if len(title_str) > 100:
+        #Likely to excede the title limit. I try to use a shorter name.
+        title_str = title_str.replace('speed up ', '')
+
+
+    print(title_str, len(title_str))
     createSampleVideo(masked_video, 
                       tmp_file, 
                       time_factor = speed_up, 
@@ -62,10 +75,16 @@ def resample_and_upload(base_name,
     #%%
     
     body=dict(
-    snippet = dict(title=title_str, description=description, categoryId=28),
+    snippet = dict(title=title_str, 
+                   description=description, 
+                   categoryId=28,
+                   tags = snippet_tags
+                   ),
     status=dict(privacyStatus=youtube_privacy_status)
     )
     
+    print(body)
+
     insert_request = youtube_client.videos().insert(
     part=",".join(body.keys()),
     body=body,
@@ -143,7 +162,8 @@ if __name__ == '__main__':
     FROM experiments_valid AS ev
     JOIN experiments AS e ON e.id = ev.id
     WHERE youtube_id IS NULL
-    ORDER BY id'''
+    ORDER BY ev.mask_file_sizeMB DESC
+    '''
     
     
     cur.execute(ori_vid_sql)
@@ -155,7 +175,7 @@ if __name__ == '__main__':
     shuffle(results)
 
     for ii, (experiment_id, base_name, results_dir) in enumerate(results):
-        print('{} of {} %%%%%%%%%%%%%%%%%%%%%%%%%%%'.format(ii+1, len(results)))
+        print('{} of {} %%%%%% {}'.format(ii+1, len(results), datetime.datetime.now()))
         youtube_id = resample_and_upload(base_name, results_dir, speed_up, skip_invalid)
         
     

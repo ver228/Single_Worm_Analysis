@@ -41,7 +41,7 @@ def db_row2dict(row):
     experiment_info['arena'] = {
             "style":'petri',
             "size":35,
-            "orientation":"toward"
+            "orientation":"away"
             }
     
     if 'NGM liquid drop' in row['arena']:

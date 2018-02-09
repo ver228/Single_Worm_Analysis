@@ -14,22 +14,20 @@ import multiprocessing as mp
 
 from collections import OrderedDict
 from tierpsy.helper.misc import TimeCounter
-from tierpsy.helper.params import read_fps
+from tierpsy.helper.params import read_unit_conversions
 
 
 
 PROGRESS_TAB_FIELD = ['experiment_id', 'n_valid_frames', 'n_missing_frames', 
     'n_segmented_skeletons', 'n_filtered_skeletons', 'n_valid_skeletons', 
     'n_timestamps', 'first_skel_frame', 'last_skel_frame', 'fps', 'total_time',
-    'mask_file_sizeMB', 'upload_sizeMB']
+    'mask_file_sizeMB', 'microns_per_pixel']
 
 def get_progress_data(experiment_id, results_dir, base_name):
     
     mask_file = os.path.join(results_dir, base_name + '.hdf5')
     skeletons_file = os.path.join(results_dir, base_name + '_skeletons.hdf5')
     features_file = os.path.join(results_dir, base_name + '_features.hdf5')
-    wcon_file = os.path.join(results_dir, base_name + '.wcon.zip')
-    subsample_file = os.path.join(results_dir, base_name + '_subsample.avi')
         
     out = OrderedDict()
     for x in PROGRESS_TAB_FIELD:
@@ -41,7 +39,17 @@ def get_progress_data(experiment_id, results_dir, base_name):
         with tables.File(mask_file, 'r') as fid:
             out['n_valid_frames'] = int(fid.get_node('/mask').shape[0])
         
-        fps = read_fps(mask_file, None)
+        fps_out, microns_per_pixel_out, _ = read_unit_conversions(mask_file, None)
+        microns_per_pixel, xy_units = microns_per_pixel_out
+
+        if xy_units != 'micrometers':
+            microns_per_pixel = None
+        
+        out['microns_per_pixel'] = microns_per_pixel
+        fps, _, time_units = fps_out        
+        if time_units != 'seconds':
+            fps = None
+        
         if not fps is None:
             out['fps'] = float(fps)
             with tables.File(mask_file, 'r') as fid:
@@ -79,11 +87,6 @@ def get_progress_data(experiment_id, results_dir, base_name):
                     out['n_valid_skeletons'] = 0
                     out['n_timestamps'] = 0
     
-    files2upload = [mask_file, features_file, wcon_file, subsample_file]
-    if all(os.path.exists(x) for x in files2upload):
-        upload_size = sum(os.path.getsize(x) for x in files2upload)/(1024*1024.0)
-        out['upload_sizeMB'] = upload_size
-        
     return out
 
 def update_row(row_input, table_name = 'results_summary'):

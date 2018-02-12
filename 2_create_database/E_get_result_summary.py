@@ -34,7 +34,7 @@ def get_progress_data(experiment_id, results_dir, base_name):
         out[x] = None
     out['experiment_id'] = experiment_id
     
-    if os.path.exists(mask_file):
+    try:
         out['mask_file_sizeMB'] =  os.path.getsize(mask_file)/(1024*1024.0)
         with tables.File(mask_file, 'r') as fid:
             out['n_valid_frames'] = int(fid.get_node('/mask').shape[0])
@@ -64,9 +64,10 @@ def get_progress_data(experiment_id, results_dir, base_name):
                 if timestamp_ind.size > 0:
                     out['n_missing_frames'] = int(timestamp_ind[-1] - out['n_valid_frames'] + 1)
                     out['total_time'] = float(timestamp_time[-1])
-                
+    except:
+        pass
         
-    if os.path.exists(skeletons_file):
+    try:
         with pd.HDFStore(skeletons_file, 'r') as fid:
             trajectories_data = fid['/trajectories_data']
             if len(trajectories_data) > 0:
@@ -75,8 +76,10 @@ def get_progress_data(experiment_id, results_dir, base_name):
                 out['last_skel_frame'] = int(trajectories_data['frame_number'].max())
                 if 'is_good_skel' in trajectories_data:
                     out['n_filtered_skeletons'] = int(trajectories_data['is_good_skel'].sum())
+    except:
+        pass
     
-    if os.path.exists(features_file):
+    try:
         with tables.File(features_file, 'r') as fid:
             if '/coordinates/skeletons' in fid:
                 skel = fid.get_node('/coordinates/skeletons')[:,0,0] #use it as a proxy of valid skeletons
@@ -86,6 +89,8 @@ def get_progress_data(experiment_id, results_dir, base_name):
                 else:
                     out['n_valid_skeletons'] = 0
                     out['n_timestamps'] = 0
+    except:
+        pass
     
     return out
 
@@ -119,7 +124,8 @@ if __name__ == '__main__':
     conn = pymysql.connect(host='localhost', db='single_worm_db')
     cur = conn.cursor(pymysql.cursors.DictCursor)
     
-    sql = "SELECT id, results_dir, base_name FROM experiments"
+    #sql = "SELECT id, results_dir, base_name FROM experiments"
+    sql = "select id, results_dir, base_name from experiments where id not in (select experiment_id from results_summary);"
     cur.execute(sql)
     all_rows = cur.fetchall()
     
@@ -142,6 +148,7 @@ if __name__ == '__main__':
     for ii in range(0, tot, n_batch):
         dat = all_rows[ii:ii + n_batch]
         for x in p.map(_process_row, dat):
+            #x = _process_row(x)
             if x is not None:
                 sql = update_row(x)
                 cur.execute(sql)

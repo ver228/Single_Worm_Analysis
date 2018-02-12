@@ -32,14 +32,10 @@ if __name__ == '__main__':
         conn.commit()
     else:
         sql += ' AND id NOT IN (SELECT experiment_id FROM features_means)' 
-        
     
     cur.execute(sql)
     
     all_rows = cur.fetchall()
-    
-    
-    
     
     disk_engine = create_engine('mysql+pymysql:///single_worm_db')
     #%%

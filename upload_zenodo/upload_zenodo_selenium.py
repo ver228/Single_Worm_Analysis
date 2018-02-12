@@ -11,7 +11,7 @@ from selenium.webdriver.support import expected_conditions as EC
 
 #%%
 tmp_dir = '/Users/ajaver/Tmp'
-use_sandbox = True
+use_sandbox = False
 #%%
 CLIENT_SECRETS_FILE = "client_secrets.txt"
 with open(CLIENT_SECRETS_FILE, 'r') as fid:
@@ -38,7 +38,9 @@ AND z.experiment_id NOT IN (SELECT z1.experiment_id FROM zenodo_files AS z1 WHER
 cur.execute(sql)
 zenodo_files = cur.fetchall()
 #%%
-browser = webdriver.Firefox(executable_path = '/Users/ajaver/Documents/GitHub/single-worm-analysis/upload_zenodo/geckodriver 3')
+e_path = os.path.join(os.environ['HOME'], 'Github/single-worm-analysis/upload_zenodo/geckodriver')
+browser = webdriver.Firefox(executable_path = e_path)
+
 browser.get(ZENODO_URL + 'oauth/login/github/')
 
 
@@ -48,6 +50,7 @@ username.send_keys("ver228@gmail.com")
 
 input("Press Enter to continue...")
 
+len(zenodo_files)
 #%%
 for irow, row in enumerate(zenodo_files):
     print(irow+1, len(zenodo_files))

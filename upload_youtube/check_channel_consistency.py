@@ -107,7 +107,7 @@ if credentials is None or credentials.invalid:
 service_w =  build(YOUTUBE_API_SERVICE_NAME, YOUTUBE_API_VERSION, http=credentials.authorize(httplib2.Http()))
 #%%
 
-if True:
+if False:
     gg = old_df.sort_values(by='published_timestamp').iterrows()
     
     for ii, (_, row) in enumerate(gg):

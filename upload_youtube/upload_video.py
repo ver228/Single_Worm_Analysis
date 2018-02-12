@@ -11,7 +11,6 @@ from apiclient.http import MediaFileUpload
 from tierpsy.analysis.vid_subsample.createSampleVideo import createSampleVideo
 from tierpsy.analysis.wcon_export.exportWCON import readMetaData
 
-from googleapiclient.errors import ResumableUploadError
 
 DATABASE_NAME = 'single_worm_db'
 INSERT_SQL = '''UPDATE experiments SET youtube_id="{1}" WHERE base_name="{0}";'''
@@ -35,43 +34,55 @@ def resample_and_upload(base_name,
 
     metadata_dict = readMetaData(masked_video, provenance_step='COMPRESS')
     
-    if not "original_video_name" in metadata_dict:
-        if skip_invalid:
-            return None
-        else:
-            raise(KeyError('Wrong /experiment_info .'))
+    #if not "original_video_name" in metadata_dict:
+    #    if skip_invalid:
+    #        return None
+    #    else:
+    #        raise(KeyError('Wrong /experiment_info .'))
     print(metadata_dict)
 
     #i do not want to specify the full path
-    metadata_dict["original_video_name"] = metadata_dict["original_video_name"].replace(LOCAL_ROOT_DIR, '.')
+    if "original_video_name" in metadata_dict:
+        metadata_dict["original_video_name"] = metadata_dict["original_video_name"].replace(LOCAL_ROOT_DIR, '.')
     metadata_str = json.dumps(metadata_dict, allow_nan=False, indent=0)
     
     description = WEBPAGE_INFO + '\n\nExperiment metadata:\n'+ metadata_str
-    title_str = '{} {} | {}'.format(metadata_dict['strain'], metadata_dict['strain_description'], metadata_dict['timestamp'])
+    
+    postfix = ''
+    if 'days_of_adulthood' in metadata_dict:
+        if metadata_dict["stage"] == 'adult':
+            postfix = ' | {} days'.format(metadata_dict['days_of_adulthood'])
+        else:
+            postfix = ' | {}'.format(metadata_dict["stage"])
+    
+    title_str = '{} {}{} | {}'.format(metadata_dict['strain'], metadata_dict['strain_description'], postfix, metadata_dict['timestamp'])
+    
     if len(title_str) > 87:
         #Likely to excede the title limit. I try to use a shorter name.
         d = metadata_dict['strain_description'].replace(' ', '')
         t = metadata_dict['timestamp'][:10] #I am assuming the date is in the format YYYY-MM-DD
-        title_str = '{} {} | {}'.format(metadata_dict['strain'], d, t)
+        p = postfix.replace(' ', '')
+        title_str = '{} {}{} | {}'.format(metadata_dict['strain'], d,  p, t)
 
     tmp_file = os.path.join(TMP_DIR, base_name + '.avi')
+    
+    
+    
+    
     if speed_up != 1:
         title_str = title_str + ' (speed up {}x)'.format(speed_up)
         tmp_file = tmp_file.replace('.avi', '_{}x.avi'.format(speed_up))
         description = 'This video is {}x speed up version of the original.'.format(speed_up) + description
     
-    if len(title_str) > 100:
-        #Likely to excede the title limit. I try to use a shorter name.
-        title_str = title_str.replace('speed up ', '')
-
-
-    print(title_str, len(title_str))
+    print(title_str)
+    
     createSampleVideo(masked_video, 
                       tmp_file, 
                       time_factor = speed_up, 
                       skip_factor=0.75,
                       size_factor = 1, 
-                      codec='MPEG')
+                      codec='MPEG',
+                      shift_bgnd = True)
     #%%
     
     body=dict(
@@ -114,6 +125,7 @@ def resample_and_upload(base_name,
 
     with open(backup_file, 'a') as file:
         file.write('{}\t{}\n'.format(base_name, youtube_id))
+    
     conn = pymysql.connect(host='localhost', database=DATABASE_NAME)
     cur = conn.cursor()
     sql = INSERT_SQL.format(base_name, youtube_id)       
@@ -173,9 +185,11 @@ if __name__ == '__main__':
 
     results = list(results)
     shuffle(results)
-
+    
+    print(len(results))
+    
     for ii, (experiment_id, base_name, results_dir) in enumerate(results):
         print('{} of {} %%%%%% {}'.format(ii+1, len(results), datetime.datetime.now()))
         youtube_id = resample_and_upload(base_name, results_dir, speed_up, skip_invalid)
-        
+    
     

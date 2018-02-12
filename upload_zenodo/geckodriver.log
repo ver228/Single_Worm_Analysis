@@ -9228,3 +9228,44 @@ See /usr/include/servers/bootstrap_defs.h for the error codes.
 See /usr/include/servers/bootstrap_defs.h for the error codes.
 2017-09-26 17:22:24.558 plugin-container[57075:25358789] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0xdd03, name = 'com.apple.CFPasteboardClient'
 See /usr/include/servers/bootstrap_defs.h for the error codes.
+1518195513626	geckodriver	INFO	geckodriver 0.19.1
+1518195513630	geckodriver	INFO	Listening on 127.0.0.1:57342
+1518195515105	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.PwO14cMkMybu"
+1518195515927	Marionette	INFO	Listening on port 2828
+1518195525867	geckodriver	INFO	geckodriver 0.19.1
+1518195525870	geckodriver	INFO	Listening on 127.0.0.1:39551
+1518195526983	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.ZcvaikwuzODs"
+1518195527763	Marionette	INFO	Listening on port 2828
+1518195572146	geckodriver	INFO	geckodriver 0.19.1
+1518195572151	geckodriver	INFO	Listening on 127.0.0.1:57176
+1518195573405	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.IN0vUrZQHOKP"
+1518195574213	Marionette	INFO	Listening on port 2828
+1518195595582	geckodriver	INFO	geckodriver 0.19.1
+1518195595585	geckodriver	INFO	Listening on 127.0.0.1:48150
+1518195596797	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.DZJ5dRE6RQED"
+1518195597560	Marionette	INFO	Listening on port 2828
+[Child 100115] ###!!! ABORT: Aborting on channel error.: file /builddir/build/BUILD/firefox-52.5.1/firefox-52.5.1esr/ipc/glue/MessageChannel.cpp, line 2152
+[Child 100115] ###!!! ABORT: Aborting on channel error.: file /builddir/build/BUILD/firefox-52.5.1/firefox-52.5.1esr/ipc/glue/MessageChannel.cpp, line 2152
+1518195620810	geckodriver	INFO	geckodriver 0.19.1
+1518195620815	geckodriver	INFO	Listening on 127.0.0.1:45584
+1518195621991	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.NUdTIWPfRunc"
+1518195622733	Marionette	INFO	Listening on port 2828
+*************************
+A coding exception was thrown and uncaught in a Task.
+
+Full message: TypeError: NetworkError when attempting to fetch resource.
+Full stack: 
+*************************
+1518198160357	geckodriver	INFO	geckodriver 0.19.1
+1518198160361	geckodriver	INFO	Listening on 127.0.0.1:53203
+1518198161536	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.ez2DZqr6meqw"
+1518198162428	Marionette	ERROR	Error on starting server: [Exception... "Component returned failure code: 0x804b0036 (NS_ERROR_SOCKET_ADDRESS_IN_USE) [nsIServerSocket.initSpecialConnection]"  nsresult: "0x804b0036 (NS_ERROR_SOCKET_ADDRESS_IN_USE)"  location: "JS frame :: chrome://marionette/content/server.js :: MarionetteServer.prototype.start :: line 95"  data: no]
+[Exception... "Component returned failure code: 0x804b0036 (NS_ERROR_SOCKET_ADDRESS_IN_USE) [nsIServerSocket.initSpecialConnection]"  nsresult: "0x804b0036 (NS_ERROR_SOCKET_ADDRESS_IN_USE)"  location: "JS frame :: chrome://marionette/content/server.js :: MarionetteServer.prototype.start :: line 95"  data: no]
+MarionetteServer.prototype.start@chrome://marionette/content/server.js:95:19
+MarionetteComponent.prototype.init@resource://gre/components/marionette.js:217:5
+MarionetteComponent.prototype.handle@resource://gre/components/marionette.js:112:5
+
+[Child 100566] ###!!! ABORT: Aborting on channel error.: file /builddir/build/BUILD/firefox-52.5.1/firefox-52.5.1esr/ipc/glue/MessageChannel.cpp, line 2152
+[Child 100566] ###!!! ABORT: Aborting on channel error.: file /builddir/build/BUILD/firefox-52.5.1/firefox-52.5.1esr/ipc/glue/MessageChannel.cpp, line 2152
+[Child 104376] ###!!! ABORT: Aborting on channel error.: file /builddir/build/BUILD/firefox-52.5.1/firefox-52.5.1esr/ipc/glue/MessageChannel.cpp, line 2152
+[Child 104376] ###!!! ABORT: Aborting on channel error.: file /builddir/build/BUILD/firefox-52.5.1/firefox-52.5.1esr/ipc/glue/MessageChannel.cpp, line 2152

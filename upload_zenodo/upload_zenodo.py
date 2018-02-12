@@ -8,14 +8,11 @@ Created on Fri Feb 10 13:46:03 2017
 import time
 import pymysql
 import os
-import sys
 import requests
 import json
 import zipfile
 from tierpsy.analysis.wcon_export.exportWCON import readMetaData
 
-sys.path.append('../2_create_database')
-from helper.db_info import db_row2dict
 
 
 WEBPAGE_INFO= '''<blockquote>
@@ -60,7 +57,8 @@ if __name__ == '__main__':
     
     skip_masks = False
     
-    creators_str = \
+    #creators???
+    creators_dlft = \
     [{'name': 'Javer, Avelino'},
      {'name': 'Currie, Michael'},
      {'name': 'Hokanson, Jim'},
@@ -73,6 +71,14 @@ if __name__ == '__main__':
      {'name': 'Schafer, William R'},
      {'name': 'Kerr, Rex'},
      {'name': 'Brown, André EX'}]
+    
+    creators_available = {
+            "Celine N. Martineau, Bora Baskaner" :
+            [{'name': 'Martineau, Celine N.'},
+              {'name' : 'Nollen, Ellen A. A.'}
+             ]
+            }
+    
     
     headers = {"Content-Type": "application/json"}
     #%%
@@ -136,13 +142,14 @@ if __name__ == '__main__':
     
     for irow, row in enumerate(f_data_l):
         print(irow+1, len(f_data_l))
-        metadata = db_row2dict(row)
-     
+        
         features_file = os.path.join(row['results_dir'], row['base_name'] + '_features.hdf5')
         metadata_dict = readMetaData(features_file)
         
-        del metadata_dict['original_video_name']
-        del metadata_dict['tracker']
+        #remove unnessesary fields if they are present
+        for ss in ['original_video_name', 'tracker']:
+            if ss in metadata_dict:
+                del metadata_dict[ss]
         
         #convert the protocol field into a string
         metadata_dict['protocol'] = '. '.join([x[0].upper() + x[1:] for x in metadata_dict['protocol']])
@@ -164,8 +171,6 @@ if __name__ == '__main__':
         
         title_str = '{} {} | {}'.format(metadata_dict['strain'], metadata_dict['strain_description'], metadata_dict['timestamp'])
         description_str = WEBPAGE_INFO + printItems(metadata_dict)
-        
-        
         
         while True:  
             try:
@@ -198,6 +203,13 @@ if __name__ == '__main__':
                     else:
                         with open(backup_file, 'a') as file:
                             file.write('{}\t{}\n'.format(row['id'], row['base_name'], deposition_id))
+        
+        
+                if row['experimenter'] in creators_available:
+                    creators_str = creators_available[row['experimenter']]
+                else:
+                    creators_str = creators_dlft
+                    
         
                 #add header
                 data = {
@@ -237,7 +249,7 @@ if __name__ == '__main__':
                 print('Error. Trying again in a minute')
                 time.sleep(1)
                 
-
+        #%%
         for ft in remaining_ext:
             while True:
                 try:
@@ -251,13 +263,22 @@ if __name__ == '__main__':
                         if not ret is None:
                             print('corrupt file')
                             raise
-                    
+                    #import pdb
+                    #pdb.set_trace()
+                    #%%
                     with open(fullpath, 'rb') as fp:
-                         file_r = requests.put(bucket_url + '/' + fname,
-                         params = {'access_token': ACCESS_TOKEN}, 
-                                     headers=headers,
-                                     data=fp
-                                     )
+                        url = 'https://zenodo.org/api/deposit/depositions/{}/files?access_token={}'.format(deposition_id, ACCESS_TOKEN)
+                        data = {'filename': os.path.basename(fullpath)}
+                        files = {'file': fp}
+                        file_r = requests.post(url, data=data, files=files)
+                    #%%
+                    #with open(fullpath, 'rb') as fp:
+                    #     file_r = requests.put(bucket_url + '/' + fname,
+                    #     params = {'access_token': ACCESS_TOKEN}, 
+                    #                 headers=headers,
+                    #                 data=fp
+                    #                 )
+                    #%%
                     break
                 except:
                     print('Error. Trying again in a minute')
@@ -284,6 +305,7 @@ if __name__ == '__main__':
                     conn.commit()
                 except:
                     continue
+            #%%
                 #%%
     conn.close()
 

@@ -61,6 +61,9 @@ if __name__ == '__main__':
     feat_files = glob.glob(os.path.join(main_dir, '**', '*_features.hdf5'), recursive=True)
     
     save_plot_dir = os.path.join('.', 'plots')
+    if not os.path.exists(save_plot_dir):
+        os.makedirs(save_plot_dir)
+    
     pdf_file = os.path.join(save_plot_dir, 'skeletons_comparison.pdf')
     
     with PdfPages(pdf_file) as pdf_id:

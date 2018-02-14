@@ -41,27 +41,37 @@ if __name__ == '__main__':
     
     
     
-    
+    plt.figure(figsize=(12,7))
     for ss in strains:
-        
+        tot = 0
         exp_df = exp_df_l[exp_df_l['strain'] == ss]
         
         # Just for debugging, if i do not find pulses it will show some graphs
         problem_files = exp_df.loc[~exp_df['has_valid_light'], 'mask_file'].values
         
-        dat = exp_df.sort_values(by=['exp_type', 'day'])
+        gg = exp_df.groupby('day')
+        
+        #select a specific day
+        dat = gg.get_group('day10') 
+        
+        #exp_df.sort_values(by=['day', 'exp_type'])
         for _, row in dat.iterrows():
             mask_file = row['mask_file']
             with tables.File(mask_file) as fid:
                 mean_intensity = fid.get_node('/mean_intensity')[:]
             
             
-            feat_file = mask_file.replace('.hdf5', '_featuresN.hdf5').replace('MaskedVideos', 'Results')
-            with pd.HDFStore(feat_file) as fid:
-                timeseries_data = fid['/timeseries_data']
+            #feat_file = mask_file.replace('.hdf5', '_featuresN.hdf5').replace('MaskedVideos', 'Results')
+            feat_file = mask_file.replace('.hdf5', '_features.hdf5').replace('MaskedVideos', 'Results')
             
-            curv_feats = [x for x in timeseries_data.columns if 'curvature' in x]
-            timeseries_data[curv_feats] = timeseries_data[curv_feats].abs()
+            with pd.HDFStore(feat_file) as fid:
+                timeseries_data = fid['/features_timeseries']
+            
+                #timeseries_data = fid['/timeseries_data']
+            
+            #curv_feats = [x for x in timeseries_data.columns if 'curvature' in x]
+            bend_feats = [x for x in timeseries_data.columns if 'bend' in x]
+            timeseries_data[bend_feats] = timeseries_data[bend_feats].abs()
             
             del_T = 25*5
             tt = timeseries_data['timestamp']/del_T
@@ -77,13 +87,22 @@ if __name__ == '__main__':
             #feat_name = 'curvature_head'
             #feat_name = 'speed'
             
+            #ylim_d = {
+            #        'curvature_tail': (0, 9e-3), 
+            #        'speed': (-250, 250), 
+            #        'turn': (0, 0.8)
+            #        }
+            
             ylim_d = {
-                    'curvature_tail': (0, 9e-3), 
-                    'speed': (-250, 250), 
-                    'turn': (0, 0.8)
+                    'midbody_speed': [(-320, 320), 'Mibody Speed [$\mu$m/s]'],
+                    'tail_bend_mean' : [(0, 50), 'Tail Bend Mean [deg]']
                     }
             
-            for feat_name, y_ll in ylim_d.items():
+            
+            for i_feat, (feat_name, (y_ll, lab_s)) in enumerate(ylim_d.items()):
+                
+                i_exp = int(row['exp_type'] == 'ATR')
+                plt.subplot(2,2, i_feat*2 + i_exp + 1)
                 
                 y = timeseries_data[feat_name]
                 y_f = feat_binned[feat_name]
@@ -93,17 +112,24 @@ if __name__ == '__main__':
                 
                 y_ind = y_ind*(y_ll[1] - y_ll[0]) + y_ll[0]
                 
-                fig = plt.figure(figsize=(12,5))
-                plt.plot(feat_binned.index*del_T, y_f, 'o-')
-                plt.plot(y_ind)
+                #fig = plt.figure(figsize=(12,5))
+                
+                
+                xx = np.arange(y_ind.size)/25
+                plt.plot(xx, y_ind, 'r', lw=0.75)
+                plt.plot(feat_binned.index*del_T/25, y_f, '.-', lw=2)
+                
                 plt.ylim(*y_ll)
+                plt.xlim(0, 900)
+                #3s_t = '{} {} {} {}'.format(row['exp_type'], feat_name, row['strain'],  row['day'])
+                if i_feat == 0:
+                    plt.title(row['exp_type'])
                 
-                s_t = '{} {} {} {}'.format(row['exp_type'], feat_name, row['strain'],  row['day'])
-                plt.title(s_t)
-                
-                fig.savefig(s_t + '.pdf')
+                plt.ylabel(lab_s)
+                plt.xlabel('Time [s]')
+                #fig.savefig(s_t + '.pdf')
             
-            
+        plt.suptitle(ss)
     
-    
+    plt.savefig('{}_{}.pdf'.format(row['exp_type'], row['day']), bbox_inches='tight')
     

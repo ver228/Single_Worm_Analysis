@@ -23,7 +23,7 @@ with pd.HDFStore(fname, 'r') as fid:
 
 #%%
 
-
+feat = 'midbody_speed'
 del_T = 25*60
 tt = features_timeseries['timestamp']/del_T
 
@@ -34,15 +34,16 @@ features_timeseries['timestamp_min'] = tt
 features_timeseries_r = features_timeseries[features_timeseries['tt_ind']<=120]
 
 feat_binned = features_timeseries_r.groupby('tt_ind').agg(np.median)
-
+feat_binned_abs = features_timeseries_r.abs().groupby('tt_ind').agg(np.median)
 #%%
 
 #%%
-feat = 'midbody_speed'
+
 #feat = 'speed'
 
-fig = plt.figure(figsize = (12, 5))
+fig = plt.figure(figsize = (12, 10))
 
+plt.subplot(2,1,1)
 for _, dat in features_timeseries_r.groupby('worm_index'):
     x = dat['timestamp_min']
     y = dat[feat]
@@ -50,8 +51,23 @@ for _, dat in features_timeseries_r.groupby('worm_index'):
     ii = random.random()*0.5 + 0.25
     plt.plot(x,y, color = str(ii))
 
-tt_b = feat_binned.index*del_T + del_T/2
 plt.plot(feat_binned.index, feat_binned[feat], 'r')
 plt.xlabel('Time [minutes]')
 plt.ylabel('Midbody Speed [$\mu$m/s]')
-fig.savefig('Decreasing Worm Speed.')
+plt.xlim([0, 120])
+
+#fig = plt.figure(figsize = (12, 5))
+plt.subplot(2,1,2)
+for _, dat in features_timeseries_r.groupby('worm_index'):
+    x = dat['timestamp_min']
+    y = dat[feat].abs()
+    
+    ii = random.random()*0.5 + 0.25
+    plt.plot(x,y, color = str(ii))
+
+plt.plot(feat_binned_abs.index, feat_binned_abs[feat], 'r')
+plt.xlabel('Time [minutes]')
+plt.ylabel('Abs Midbody Speed [$\mu$m/s]')
+plt.xlim([0, 120])
+
+fig.savefig('Decreasing Worm Speed.pdf', bbox_inches='tight')

@@ -127,7 +127,7 @@ for col in cols:
     plt.xlim([4000, 8000])
     plt.suptitle(col)
     plt.savefig('{}_ts.pdf'.format(col))
-    
+    plt.tight_layout()
     #%%
     top = max(tab[col].max() for tab in feats.values())
     bot = min(tab[col].min() for tab in feats.values())
@@ -153,5 +153,6 @@ for col in cols:
     plt.legend()
     
     plt.savefig('{}_hist.pdf'.format(col))
+    plt.tight_layout()
     #%%
     

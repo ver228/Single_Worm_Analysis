@@ -29,7 +29,7 @@ dat_reduced = pd.concat(dat_reduced)
 import seaborn as sns
 import matplotlib.pylab as plt
 
-for feat in ['speed_10th', 'speed_90th', 'curvature_head_norm_abs_50th', 'eigen_projection_1_abs_50th']:
+for feat in ['length_50th', 'speed_10th', 'speed_90th', 'curvature_head_norm_abs_50th', 'eigen_projection_1_abs_50th']:
     #['length_50th', 'midbody_speed_90th', 'midbody_speed_10th', 'eigen_projection_1_50th', 'midbody_bend_mean_90th', 'foraging_amplitude_90th']:
     fig, ax = plt.subplots(figsize = (12, 5))
     #sns.swarmplot('strain', feat, hue='set', data=dat_reduced, ax=ax)

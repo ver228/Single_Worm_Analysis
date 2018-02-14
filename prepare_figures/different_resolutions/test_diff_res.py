@@ -39,6 +39,7 @@ bn_k = {'N2_45':'45x34',
         'N2_640':'640x480'
         }
 
+scale_k = {}
 
 for fname in fnames:
     bn = os.path.basename(fname)
@@ -81,7 +82,9 @@ for i_k, k in enumerate(ll):
     x_cc = 500*n_scale
     y_cc = 450*n_scale
     
-    strT = '{:.2f} $\mu$m/pix {}'.format(microns_per_pixel, k)
+    
+    sc_t = '{:.1f} $\mu$m/pix'.format(microns_per_pixel)
+    strT = '{} {}'.format(sc_t, k)
     
     img_c = img.copy()
     img_c[img_c==0] = bgnd_pix
@@ -96,63 +99,99 @@ for i_k, k in enumerate(ll):
     plt.axis('off')
     plt.title(strT)
     
+    scale_k[k] = sc_t
+    
 plt.savefig('scales.pdf')
 
         
 
 #%%
 #cols = feats['640x480'].columns[4:]
-cols = ['foraging_speed', 'midbody_speed', 
-        'eigen_projection_1', 'eigen_projection_6', 'length',
+cols = ['length', 'foraging_speed', 'midbody_speed', 
         'head_bend_mean']
+
+units = ['Length [$\mu$m]',
+         'Foraging Speed [deg/s]', 
+         'Midbody Speed [$\mu$m/s]', 
+         'Mean Head Bend [deg]'
+         #'Eigen Worm 1',
+         #'Eigen Worm 6'
+         ]
+
+
 #cols = feats[bn].columns[2:-12]
 
 #34x45
 
 valid_keys = ['91x68', '213x160', '640x480']
+#%%
 
-for col in cols:  
-    #%%
-    #plt.figure(figsize=(10, 8))
-    f, axs = plt.subplots(3, 1, figsize=(10, 6), sharey=True, sharex=True)
+tot_feats = len(cols)
+#plt.figure(figsize=(10, 3))
+f, axs = plt.subplots(tot_feats, 1, figsize=(10, 11), sharex=True)
+for icol, col in enumerate(cols):  
+    
     
     valid_keys = ['91x68', '213x160', '640x480']
     for ii, bn in enumerate(valid_keys):
         #plt.subplot(3,1, ii + 1)
-        x = feats[bn]['timestamp'].values
+        x = feats[bn]['timestamp'].values/25
         y = feats[bn][col].values
-        axs[ii].plot(x, y)
-        axs[ii].set_title(bn)
+        axs[icol].plot(x, y)
+        #axs[0].set_title(scale_k[bn], loc='left')
+    #axs[icol].set_title(col, loc='left')
+    axs[icol].set_ylabel(units[icol])
+    axs[icol].get_yaxis().set_label_coords(-0.08,0.5)
     
     plt.xlim([4000, 8000])
     plt.suptitle(col)
     plt.savefig('{}_ts.pdf'.format(col))
     plt.tight_layout()
     #%%
+
+plt.tight_layout()
+plt.subplots_adjust(wspace=0, hspace=0)
+plt.xlim([200, 250])
+plt.xlabel('Time [s]')
+#plt.suptitle(col)
+plt.savefig('ts.pdf'.format(col))
+#%%
+
+f, axs = plt.subplots(tot_feats, 1, figsize=(4, 11))#, sharex=False, sharey=True)
+for icol, col in enumerate(cols):  
     top = max(tab[col].max() for tab in feats.values())
     bot = min(tab[col].min() for tab in feats.values())
-    plt.figure(figsize=(10, 4))
-    plt.subplot(1,2,1)
+    #plt.figure(figsize=(3, 3))
+    
+    #plt.subplot(tot_feats, 1, icol+1)
     for bn in valid_keys[::-1]:
         cc, bin_edges = np.histogram(feats[bn][col], bins=100, range =(bot, top))
-        plt.plot(cc, label=bn)
-    #plt.title(col)
-    plt.legend()
-    plt.ylabel('Counts')
+        axs[icol].plot(bin_edges[1:], cc, label=scale_k[bn])
+    axs[icol].set_xlabel(units[icol])
     
-    
+#plt.legend(loc='upper left', bbox_to_anchor=(1, 1))
+axs[0].legend()
+
+
+plt.subplots_adjust(wspace=0, hspace=0.3)
+
+plt.tight_layout()
+plt.savefig('hist.pdf'.format(col))
+#plt.ylabel('Counts')
+
+#%%
+if False:
     #f, axs = plt.subplots(1, 2, figsize=(10, 4), sharey=True, sharex=True)
-    plt.subplot(1,2,2)
+    #plt.subplot(1,2,2)
     xx = feats['640x480'][col]
     for ii, bn in enumerate(['91x68', '213x160']):
-        plt.plot(xx, feats[bn][col], '.', label=bn)
+        plt.plot(xx, feats[bn][col], '.', label=scale_k[bn])
         plt.xlabel('640x480')
         #plt.ylabel(bn)
     
     plt.suptitle(col)
     plt.legend()
     
-    plt.savefig('{}_hist.pdf'.format(col))
     plt.tight_layout()
+    plt.savefig('{}_hist.pdf'.format(col))
     #%%
-    

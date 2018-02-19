@@ -131,5 +131,5 @@ if __name__ == '__main__':
             
         plt.suptitle(ss)
     
-    plt.savefig('{}_{}.pdf'.format(row['exp_type'], row['day']), bbox_inches='tight')
+    plt.savefig('{}_{}.pdf'.format(row['strain'], row['day']), bbox_inches='tight')
     

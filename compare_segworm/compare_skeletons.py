@@ -14,43 +14,68 @@ from matplotlib.backends.backend_pdf import PdfPages
 from read_feats import FeatsReaderComp
 
 def plot_skel_diff(skeletons, skel_segworm):
+    #%%
     max_n_skel = min(skel_segworm.shape[0], skeletons.shape[0])
     delS = skeletons[:max_n_skel]-skel_segworm[:max_n_skel]
     R_error = delS[:,:,0]**2 + delS[:,:,1]**2
     skel_error = np.sqrt(np.mean(R_error, axis=1))
-        
+    #%%   
         
     w_xlim = w_ylim = (-10, skel_error.size+10)
-    plt.figure(figsize=(12, 6))
-    plt.subplot(3,2,1)
+    plt.figure(figsize=(15, 5))
+    plt.subplot(3,3,1)
+    
     plt.plot(skel_error, '.')
     plt.ylim((0, np.nanmax(skel_error)))
     plt.xlim(w_xlim)
     plt.title('')
-    plt.ylabel('Error')
+    plt.ylabel('RMSE [mm]')
     
-    plt.subplot(3,2,3)
-    plt.plot(skeletons[:,1, 0], 'b')
-    plt.plot(skel_segworm[:,1, 0], 'r')
+    plt.subplot(3,3,4)
+    plt.plot(skeletons[:,1, 0], color='darkolivegreen', lw=3)
+    plt.plot(skel_segworm[:,1, 0], color='tomato')
     plt.xlim(w_ylim)
-    plt.ylabel('Y coord')
+    plt.ylabel('Y coord [mm]')
     
-    plt.subplot(3,2,5)
-    plt.plot(skeletons[:,1, 1], 'b')
-    plt.plot(skel_segworm[:,1, 1], 'r')
+    plt.subplot(3,3,7)
+    plt.plot(skeletons[:,1, 1], color='darkolivegreen', lw=3)
+    plt.plot(skel_segworm[:,1, 1], color='tomato')
     plt.xlim(w_xlim)
-    plt.ylabel('X coord')
+    plt.ylabel('X coord [mm]')
     plt.xlabel('Frame Number')
     
     #plt.figure()
     delT = 1
-    plt.subplot(1,2,2)
-    plt.plot(skeletons[::delT, 25, 0].T, skeletons[::delT, 25, 1].T, 'b')
+    plt.subplot(1,3,2)
+    plt.plot(skeletons[::delT, 25, 0].T, skeletons[::delT, 25, 1].T, color='darkolivegreen', lw=3)
     #plt.axis('equal')    
     
     #plt.subplot(1,2,2)
-    plt.plot(skel_segworm[::delT, 25, 0].T, skel_segworm[::delT, 25, 1].T, 'r')
+    plt.plot(skel_segworm[::delT, 25, 0].T, skel_segworm[::delT, 25, 1].T, color='tomato')
+    
+    tt = 2500
+    plt.plot(skel_segworm[tt, 25, 0].T, skel_segworm[tt, 25, 1].T, 'ok', 
+             markersize = 12, markerfacecolor=None, alpha=0.3, markeredgecolor='black', markeredgewidth=3)
+    
+    
     plt.axis('equal') 
+    #%%
+    plt.subplot(1,3,3)
+    plt.plot(skeletons[tt, :, 0].T, skeletons[tt, :, 1].T, 'o', color='darkolivegreen', markersize=6)
+    plt.plot(skeletons[tt, 0, 0].T, skeletons[tt, 0, 1].T, '^', color='darkolivegreen', markersize=10)
+    plt.plot(skel_segworm[tt, :, 0].T, skel_segworm[tt, :, 1].T, 'o', color='tomato', markersize=4)
+    plt.plot(skel_segworm[tt, 0, 0].T, skel_segworm[tt, 0, 1].T, 'v', color='tomato', markersize=8)
+
+    #ax.set_ylim((-29.2, -28.2))
+    #ax.set_xlim((-28.2, -27.2))
+    
+    plt.axis('equal') 
+    #%%
+    
+    
+    
+    
+    
     
     
 if __name__ == '__main__':
@@ -66,21 +91,22 @@ if __name__ == '__main__':
     
     pdf_file = os.path.join(save_plot_dir, 'skeletons_comparison.pdf')
     
-    with PdfPages(pdf_file) as pdf_id:
-        for feat_file in feat_files:
-            fname = os.path.basename(feat_file)
-            print(fname)
-            
-            #dd = fname.rpartition('.')[0] + '.mat'
-            #segworm_feat_file = os.path.join(main_dir, '_segworm_files', dd)
-            
-            segworm_feat_file = feat_file.replace('.hdf5', '.mat').replace('Results','RawVideos')
-            feats_reader = FeatsReaderComp(feat_file, segworm_feat_file)
-            
-            skeletons, skel_segworm = feats_reader.read_skeletons()
-            plot_skel_diff(skeletons, skel_segworm)
-            plt.suptitle(fname.replace('_features.hdf5', ''))
-            
-            pdf_id.savefig()
-            #plt.close()
+    #with PdfPages(pdf_file) as pdf_id:
+    for feat_file in feat_files:
+        fname = os.path.basename(feat_file)
+        print(fname)
         
+        #dd = fname.rpartition('.')[0] + '.mat'
+        #segworm_feat_file = os.path.join(main_dir, '_segworm_files', dd)
+        
+        segworm_feat_file = feat_file.replace('.hdf5', '.mat').replace('Results','RawVideos')
+        feats_reader = FeatsReaderComp(feat_file, segworm_feat_file)
+        
+        skeletons, skel_segworm = feats_reader.read_skeletons()
+        plot_skel_diff(-skeletons/1000, -skel_segworm/1000)
+        #plt.suptitle(fname.replace('_features.hdf5', ''))
+        
+        plt.tight_layout()
+        plt.savefig(fname.replace('_features.hdf5', '.pdf'))
+        #plt.close()
+        break

@@ -11,6 +11,7 @@ import pandas as pd
 import numpy as np
 from scipy.stats import ranksums
 if __name__ == '__main__':
+    #%%
     conn = pymysql.connect(host='localhost', database='single_worm_db')
             
     sql = '''
@@ -21,7 +22,14 @@ if __name__ == '__main__':
     JOIN genes AS g ON s.gene_id = g.id
     '''
     df = pd.read_sql(sql, con=conn)
+    conn.close()
     #%%
+    with open('strain_list.txt', 'r') as fid:
+        paper_strains = [x for x in fid.read().split('\n')]
+    genes_paper = [x.partition('(')[0] for x in paper_strains]
+    
+    assert not (set(genes_paper) - set(df['gene'].unique()))
+    
     paper_feats = ['eccentricity', 'bend_count', 'midbody_width', 'primary_wavelength', 'length',
                    'backward_frequency', 'backward_time_ratio', 'omega_turns_frequency', 
                    'forward_time_ratio', 'midbody_speed_forward', 'path_range',
@@ -31,10 +39,23 @@ if __name__ == '__main__':
                    'foraging_amplitude_abs', 'foraging_amplitude_paused_abs',
                    'foraging_amplitude_backward_abs', 'max_amplitude', 
                    'midbody_bend_mean_abs', 'tail_bend_mean_abs']
+    #%%
+    ['backward_frequency',
+ 'backward_time_ratio',
+ 'omega_turns_frequency',
+ 'forward_time_ratio',
+ 'midbody_speed_forward',
+ 'midbody_crawling_frequency_abs',
+ 'midbody_crawling_amplitude_forward_abs',
+ 'midbody_crawling_amplitude_backward_abs',
+ 'midbody_crawling_amplitude_abs',
+ 'foraging_amplitude_backward_abs']
+    #%%
     
-    good = df['gene'].str.contains('unc') | df['gene'].str.contains('egl') | (df['strain'] == 'N2')
-    good = good & ~df['strain_description'].str.contains('GFP') 
+    good = df['gene'].isin(genes_paper)| (df['strain'] == 'N2')
     df_g = df[good].groupby('strain')
+    #%%
+    
     N2_data = df_g.get_group('N2')
     
     time_offset_allowed = 10
@@ -93,13 +114,20 @@ if __name__ == '__main__':
     import seaborn as sns
     import statsmodels.stats.multitest as smm
     #%%
+    
+    
+    
+    
+    #%%
     df_s = df_pvalues.pivot('strain_description', 'feature', 'pvalue')
-    rej, pval_corr = smm.multipletests(df_pvalues['pvalue'], method = 'fdr_tsbky' )[:2]
+    rej, pval_corr = smm.multipletests(df_pvalues['pvalue'], method = 'fdr_bh' )[:2]
     df_pvalues['pval_corr'] = pval_corr
     
     pval_ind = np.zeros_like(df_pvalues['pval_corr'])
     for kk, pp in enumerate([0.05, 0.01, 0.001, 0.0001]):
         pval_ind[df_pvalues['pval_corr'] < pp] = kk + 1
+    
+    
     pval_ind[df_pvalues['strain_avg'] < df_pvalues['ctr_avg']] *= -1
     df_pvalues['pval_ind'] = pval_ind.astype(np.int)
     
@@ -114,6 +142,6 @@ if __name__ == '__main__':
             "ticks":[-4, -3, -2, -1, 0, 1, 2, 3, 4],
             #"label" : ['<0.0001', '<0.001', '<0.01', '<0.05', '>0.05', '<0.05', '<0.01', '<0.001', '<0.0001']
     }
-    ff = sns.clustermap(df_s, figsize=(5,12), cmap="RdBu_r", method='average', cbar_kws=cbar_kws)
+    ff = sns.clustermap(df_s, figsize=(8,20), cmap="RdBu_r", method='average', cbar_kws=cbar_kws)
     plt.savefig('clustermap.pdf', bbox_inches='tight')
     plt.savefig('clustermap.png', bbox_inches='tight')

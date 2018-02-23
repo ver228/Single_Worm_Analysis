@@ -12,6 +12,10 @@ from torch.autograd import Variable
 import pandas as pd
 from sklearn.model_selection import StratifiedShuffleSplit
 
+divergent_set = sorted(['CB4856', 'N2', 'DL238', 'CX11314', 'JU258', 'JT11398', 'LKC34',
+       'EG4725', 'MY23', 'MY16', 'ED3017', 'JU775'])
+    
+
 def softmax_clf(data_in):
     
     fold_id, fold_data, fold_param = data_in
@@ -48,10 +52,7 @@ def softmax_clf(data_in):
 if __name__ == '__main__':
     fname = './data/ow_features_full_CeNDR.csv'
     
-    divergent_set = ['CB4856', 'N2', 'DL238', 'CX11314', 'JU258', 'JT11398', 'LKC34',
-       'EG4725', 'MY23', 'MY16', 'ED3017', 'JU775']
-    
-    strain_dict = {ss:ii+1 for ii, ss in enumerate(sorted(divergent_set))}
+    strain_dict = {ss:ii+1 for ii, ss in enumerate(divergent_set)}
     
     
     df = pd.read_csv(fname)
@@ -180,6 +181,6 @@ if __name__ == '__main__':
             
             dd = '{} : {:.2f} {:.2f}'.format(set_type, np.mean(dat[n]), np.std(dat[n]))
             print(dd)
-        
+    #%%
     
     

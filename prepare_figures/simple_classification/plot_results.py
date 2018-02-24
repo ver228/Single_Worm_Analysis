@@ -79,7 +79,12 @@ if __name__ == '__main__':
         cm = confusion_matrix(y_true, y_pred)
         
         plt.subplot(1,2,ii+1)
-        plot_confusion_matrix(cm, divergent_set, normalize=True)
+        plot_confusion_matrix(cm, divergent_set, 
+                              normalize = True, 
+                              #cmap = plt.cm.inferno_r)
+                              #cmap = plt.cm.plasma_r)
+                              #cmap = plt.cm.viridis_r)
+                              cmap = plt.cm.magma_r)
         
         str_t = '{} Features'.format(set_type.title())
         plt.title(str_t)

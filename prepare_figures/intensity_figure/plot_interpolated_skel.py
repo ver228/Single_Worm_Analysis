@@ -66,7 +66,7 @@ if __name__ == '__main__':
     plt.imshow(straighten_worm.T, cmap='gray', interpolation='none')
     
     w_half = width_resampling/2
-    plt.plot((w_half, w_half), (0, length_resampling), '--', color='tomato')
+    plt.plot((w_half, w_half), (0, length_resampling), '--', color='tomato', lw=3)
     plt.axis('off')
     
     plt.savefig('straigten_worm.pdf')

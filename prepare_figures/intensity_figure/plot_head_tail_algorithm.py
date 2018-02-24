@@ -9,6 +9,7 @@ import tables
 import pandas as pd
 import numpy as np
 import matplotlib.pylab as plt
+import matplotlib.patches as patches
 from scipy.ndimage.filters import median_filter,  minimum_filter, maximum_filter
 
 def getDampFactor(length_resampling):
@@ -110,15 +111,21 @@ if __name__ == '__main__':
         worm_int_profile, diff_ori_med,  diff_inv_med, bad_orientationM = \
         correctHeadTailIntWorm(trajectories_worm, skel_file, int_file)
         
+        
+        
         if bad_orientationM.sum() > 0:
             #%%
+            profile_ts = (5050, 5300, 5950)
+            profile_cc = ('orange', 'orangered',  'salmon')
+            wrong_ts = (5240, 5357)
+            
             y_lim_d = (0, 131)
             x_lim_d = (5000, 6000)
             
             print(w_ind, bad_orientationM.sum(), worm_int_profile.shape[0])
             plt.figure(figsize=(12, 12))
             
-            plt.subplot(3,1,1)
+            plt.subplot(3,1,2)
             plt.imshow(worm_int_profile.astype(np.float32).T, 
                        aspect = 'auto', 
                        interpolation='none', 
@@ -126,39 +133,74 @@ if __name__ == '__main__':
             plt.xlim(*x_lim_d)
             plt.ylim(*y_lim_d)
             
-            plt.plot((5240,5240), y_lim_d, '--r')
-            plt.plot((5357,5357), y_lim_d, '--r')
+            
+            for rr, cc in zip(profile_ts, profile_cc):
+                plt.plot((rr,rr), y_lim_d, '-', color=cc, lw=4)
             
             plt.yticks([])
             plt.xticks([])
             
-            plt.ylabel('Tail $\Longrightarrow$ Head', fontsize=15)
+            plt.ylabel('Tail $\Longrightarrow$ Head', fontsize=20)
             
             plt.ylim(y_lim_d)
             
             
-            plt.subplot(3,1,2)
-            plt.plot(diff_ori_med, label='Original')
-            plt.plot(diff_inv_med, label='Inverted')
-            plt.xlim(*x_lim_d)
+            ax_ = plt.subplot(3,1,3)
             
-            plt.xlabel('Frame Number', fontsize=14)
-            plt.ylabel(r'$\frac{1}{n}\sum{|I - I_{mean}|}$', fontsize=14)
-            plt.legend(fontsize=14)
+            y_lim_s3 = (3, 17)
+            #for ll in wrong_ts:
+            #    plt.plot((ll,ll), y_lim_s3, '--', color='sandybrown', lw=4)
+            
+            p = patches.Rectangle( (wrong_ts[0], y_lim_s3[0]), 
+                                  wrong_ts[1]-wrong_ts[0], 
+                                  y_lim_s3[1] - y_lim_s3[0],
+                                  alpha=0.1, 
+                                  color = 'r')
+            ax_.add_patch(p)
+            
+            plt.plot(diff_ori_med, label='Original', lw=3)
+            plt.plot(diff_inv_med, label='Inverted', lw=3)
+            plt.xlim(*x_lim_d)
+            plt.ylim(*y_lim_s3)
+            
+            plt.xlabel('Frame Number', fontsize = 18)
+            plt.ylabel(r'$\frac{1}{n}\sum{|I - I_{mean}|}$', fontsize = 22)
+            plt.legend(fontsize=18)
             plt.tight_layout()
             
-            straighten_worm = np.median(worm_int_profile, axis=0)
-            for ii, tt in enumerate([5200, 5300, 5800]):
-                ax = plt.subplot(3, 3, 6 + ii + 1)
-                plt.plot(straighten_worm, color='navy', label='Frame Intensity')
-                plt.plot(worm_int_profile[tt], color='seagreen', label='Movie Median Intensity')
-                plt.axis('off')
-                
-                if ii == 0:
-                    plt.legend(fontsize=14,  bbox_to_anchor=(0.5, 0.2))
-                ax.text(0.45, .9, tt, transform=ax.transAxes)
+            plt.tick_params(axis='both', which='major', labelsize=14)
             
+            straighten_worm = np.median(worm_int_profile, axis=0)
+            
+            axs = []
+            
+            for ii, (tt,cc) in enumerate(zip(profile_ts, profile_cc)):
+                ax = plt.subplot(3, 3,  ii + 1)
+                axs.append(ax)
+                plt.plot(worm_int_profile[tt], lw=3, color=cc, label='Frame Intensity')
+                plt.plot(straighten_worm, lw=3, color='dodgerblue', label='Median Intensity')
+                #plt.axis('off')
+                
+                plt.yticks([])
+                plt.xticks([])
+                
+                # Hide the right and top spines
+                ax.spines['right'].set_visible(False)
+                ax.spines['top'].set_visible(False)
+                plt.xlabel('Tail $\Longrightarrow$ Head', fontsize=16)
+                plt.ylabel('Intensity', fontsize=16)
+                
+                plt.ylim(-38, 35)
+                tt_s = 'frame: {}'.format(tt)
+                ax.text(0.35, .9, tt_s, transform=ax.transAxes,fontsize=14)
+                
+                
+                
+            axs[0].set_zorder(1)
+            axs[0].legend(fontsize=18,  bbox_to_anchor=(0.35, 0.3))
+            
+            #plt.subplots_adjust(wspace=None)
             plt.savefig('intensity_ht_correct.pdf')
-            #%%
-        break
+            
+        
         

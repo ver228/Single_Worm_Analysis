@@ -8,3 +8,15 @@
 *oauth2.json
 
 compare_segworm/plots
+
+prepare_figures/simple_classification/classifiers/
+
+prepare_figures/SWDB_vs_CeNDR/F_ow_features_CeNDR\.csv
+
+prepare_figures/SWDB_vs_CeNDR/F_ow_features_SWDB\.csv
+
+prepare_figures/SWDB_vs_CeNDR/F_tierpsy_features_CeNDR\.csv
+
+prepare_figures/SWDB_vs_CeNDR/F_tierpsy_features_SWDB\.csv
+
+prepare_figures/simple_classification/data/

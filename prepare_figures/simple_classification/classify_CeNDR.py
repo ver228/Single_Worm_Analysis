@@ -7,14 +7,22 @@ Created on Thu Feb 22 12:07:50 2018
 """
 from trainer import TrainerSimpleNet
 
+import os
 import torch
 from torch.autograd import Variable
 import pandas as pd
-from sklearn.model_selection import StratifiedShuffleSplit
+from sklearn.model_selection import StratifiedKFold, StratifiedShuffleSplit
 
 divergent_set = sorted(['CB4856', 'N2', 'DL238', 'CX11314', 'JU258', 'JT11398', 'LKC34',
        'EG4725', 'MY23', 'MY16', 'ED3017', 'JU775'])
     
+
+save_clf_dir = './classifiers'
+_is_save_models = True
+_is_val = False
+
+if not os.path.exists(save_clf_dir):
+    os.makedirs(save_clf_dir)
 
 def softmax_clf(data_in):
     
@@ -45,6 +53,10 @@ def softmax_clf(data_in):
     trainer.fit(input_train, target_train)
     fold_res = trainer.evaluate(input_v, target_v)
     
+    if _is_save_models:
+        save_name = os.path.join(save_clf_dir, '{}_{}.pth.tar'.format(*fold_id))
+        torch.save(trainer.model, save_name)
+        
     print('Test: loss={:.4}, acc={:.2f}%, f1={:.4}'.format(*fold_res))
     
     return (fold_id, fold_res)
@@ -98,7 +110,7 @@ if __name__ == '__main__':
     for m_part in motion_str:
         motion_cols += [x for x in all_feats_cols if m_part in x]
     #%%
-    MAX_FRAC_NAN = 0.05
+    MAX_FRAC_NAN = 0#.05
     MIN_N_VIDEOS = 3
     
     frac_bad = df[all_feats_cols].isnull().mean()
@@ -123,7 +135,7 @@ if __name__ == '__main__':
     df_filt[feats_cols_filt] = z
     
     #%%
-    
+    random_state = 777
     n_folds = 10
     batch_size =  100
     
@@ -140,20 +152,34 @@ if __name__ == '__main__':
     
     cols_types = {'all' : feats_cols_filt, 'motion' : motion_cols_filt}
     
+    val_data = {}
     for set_type, cols in cols_types.items():
-    
         X = df_filt[cols].values
         y = df_filt['strain_id'].values
         
-        s_g = StratifiedShuffleSplit(n_splits = n_folds, test_size = 0.2, random_state=777)
-        for i_fold, (train_index, test_index) in enumerate(s_g.split(X, y)):
-            x_train, y_train  = X[train_index], y[train_index]
-            x_test, y_test  = X[test_index], y[test_index]
+        if _is_val:
+            s_g = StratifiedKFold(n_splits = 5,  random_state=random_state)
+            ind_d, ind_val = next(s_g.split(X, y))
+            (Xd, yd) = (X[ind_d].copy(), y[ind_d].copy())
+            x_val, y_val = (X[ind_val].copy(), y[ind_val].copy())
+            val_data[set_type] = (x_val, y_val)
+        else:
+            Xd, yd = X, y
+        
+        del X
+        del y
+        
+        s_g = StratifiedShuffleSplit(n_splits = n_folds, test_size = 0.2, random_state=random_state)
+        for i_fold, (train_index, test_index) in enumerate(s_g.split(Xd, yd)):
+            x_train, y_train  = Xd[train_index].copy(), yd[train_index].copy()
+            x_test, y_test  = Xd[test_index].copy(), yd[test_index].copy()
             
             fold_data = (x_train, y_train), (x_test, y_test)
             fold_id = (set_type, i_fold)
             
             all_data_in.append((fold_id, fold_data, fold_param))
+    
+        
     #%%
     import numpy as np
     import multiprocessing as mp
@@ -175,12 +201,37 @@ if __name__ == '__main__':
         res_db[set_type] = list(zip(*dat))
         
     for n, m_type in enumerate(['loss', 'acc', 'f1']):
-        print(m_type)
+        print(m_type, '**************')
         for set_type, dat in res_db.items():
             vv = dat[n]
             
             dd = '{} : {:.2f} {:.2f}'.format(set_type, np.mean(dat[n]), np.std(dat[n]))
             print(dd)
     #%%
-    
-    
+    results = {}
+    print('VAL acc:')
+    for set_type, (x_val, y_val) in val_data.items():
+        
+        results[set_type] = []
+        n_features = x_val.shape[1]
+        n_classes = int(y_val.max() + 1)
+        
+        x_val = torch.from_numpy(x_val).float()
+        y_val = torch.from_numpy(y_val).long() 
+        
+        input_v = Variable(x_val.cuda(cuda_id), requires_grad=False)
+        target_v = Variable(y_val.cuda(cuda_id), requires_grad=False)
+        
+        trainer = TrainerSimpleNet(n_classes, n_features, n_epochs, batch_size, cuda_id, lr, momentum)
+        for i_fold in range(n_folds):
+            save_name = os.path.join(save_clf_dir, '{}_{}.pth.tar'.format(set_type, i_fold))
+            dd = torch.load(save_name)
+            trainer.model.load_state_dict(dd.state_dict())
+            fold_res = trainer.evaluate(input_v, target_v)
+            
+            results[set_type].append(fold_res)
+            
+        dat = [x[1] for x in results[set_type]]
+        dd = '{} : {:.2f} {:.2f}'.format(set_type, np.mean(dat), np.std(dat))
+        print(dd)
+        

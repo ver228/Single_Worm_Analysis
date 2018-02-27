@@ -84,11 +84,22 @@ class FeatsReader():
         good_rows = self.features_timeseries['worm_index'] == worm_index
         rows_indexes = good_rows.index.values[good_rows.values]
     
-        
         with tables.File(self.feat_file, 'r') as fid:
             skeletons = fid.get_node('/coordinates/' + field_name)[rows_indexes, : , :]
-        return skeletons
-    
+        
+        #shift to correct using the timestamp
+        inds = self.features_timeseries.loc[rows_indexes, 'timestamp'].astype(np.int)
+        tot = inds.max() + 1
+        
+        #import pdb
+        #pdb.set_trace()
+        
+        if tot != skeletons.shape[0]:
+            skeletons_ts = np.full((tot, *skeletons.shape[1:]), np.nan)
+            skeletons_ts[inds] = skeletons
+            return skeletons_ts
+        else:
+            return skeletons
    
     
     

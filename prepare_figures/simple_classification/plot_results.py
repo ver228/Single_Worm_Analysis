@@ -37,8 +37,8 @@ def plot_confusion_matrix(cm, classes,
                  color="white" if cm[i, j] > thresh else "black")
 
     plt.tight_layout()
-    plt.ylabel('True label')
-    plt.xlabel('Predicted label')
+    plt.ylabel('True label', fontsize=14)
+    plt.xlabel('Predicted label', fontsize=14)
 
 if __name__ == '__main__':
     with open('model_results.pkl', "rb" ) as fid:
@@ -72,6 +72,8 @@ if __name__ == '__main__':
     #%%
     plt.figure(figsize=(12,6))
     
+    
+    ss_titles = {'all': 'All Features', 'motion':'Coarse-Grain Segmentation Features'}
     for ii, set_type in enumerate(['motion', 'all']):
         y_pred = np.concatenate(res_db[set_type][-1])
         y_true = np.concatenate(res_db[set_type][-2])
@@ -86,7 +88,8 @@ if __name__ == '__main__':
                               #cmap = plt.cm.viridis_r)
                               cmap = plt.cm.magma_r)
         
-        str_t = '{} Features'.format(set_type.title())
-        plt.title(str_t)
+        
+        plt.title(ss_titles[set_type], fontsize=16)
+    plt.tight_layout()
     plt.savefig('confusion_matrix.pdf')
         

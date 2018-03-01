@@ -106,11 +106,14 @@ if __name__ == '__main__':
      'backward_distance_ratio'
      ]
     
-    motion_str = ['midbody_speed', 'midbody_motion_direction', 'path_', 'turn']
+    motion_str = ['midbody_speed', 'midbody_motion_direction', 'midbody_crawling_', 'path_', 'turn']
+    #motion_str = ['_speed', '_motion_direction', 'path_', 'turn']
     for m_part in motion_str:
         motion_cols += [x for x in all_feats_cols if m_part in x]
+    
+    #motion_cols = [x for x in motion_cols if 'foraging_speed' not in x]
     #%%
-    MAX_FRAC_NAN = 0#.05
+    MAX_FRAC_NAN = 0.05
     MIN_N_VIDEOS = 3
     
     frac_bad = df[all_feats_cols].isnull().mean()
@@ -136,8 +139,8 @@ if __name__ == '__main__':
     
     #%%
     random_state = 777
-    n_folds = 10
-    batch_size =  100
+    n_folds = 6
+    batch_size =  50
     
     n_epochs = 500
     
@@ -145,41 +148,31 @@ if __name__ == '__main__':
     lr = 0.001
     momentum = 0.9
     
-    fold_param = (cuda_id, n_epochs, batch_size, lr, momentum)
-    
     all_data_in = []
     
-    
     cols_types = {'all' : feats_cols_filt, 'motion' : motion_cols_filt}
+    #, 'no_motion': list(set(feats_cols_filt)-set(motion_cols_filt))}
+    
+    s_g = StratifiedKFold(n_splits = n_folds,  random_state=random_state)
+    folds_indexes = list(s_g.split(df_filt[cols_types['all']].values, df_filt['strain_id'].values))
     
     val_data = {}
     for set_type, cols in cols_types.items():
-        X = df_filt[cols].values
-        y = df_filt['strain_id'].values
-        
-        if _is_val:
-            s_g = StratifiedKFold(n_splits = 5,  random_state=random_state)
-            ind_d, ind_val = next(s_g.split(X, y))
-            (Xd, yd) = (X[ind_d].copy(), y[ind_d].copy())
-            x_val, y_val = (X[ind_val].copy(), y[ind_val].copy())
-            val_data[set_type] = (x_val, y_val)
-        else:
-            Xd, yd = X, y
-        
-        del X
-        del y
-        
-        s_g = StratifiedShuffleSplit(n_splits = n_folds, test_size = 0.2, random_state=random_state)
-        for i_fold, (train_index, test_index) in enumerate(s_g.split(Xd, yd)):
+        Xd = df_filt[cols].values
+        yd = df_filt['strain_id'].values
+        #s_g = StratifiedShuffleSplit(n_splits = n_folds, test_size = 0.2, random_state=random_state)
+       
+        for i_fold, (train_index, test_index) in enumerate(folds_indexes):
+            
+            fold_param = (cuda_id, n_epochs, batch_size, lr, momentum)
+            
             x_train, y_train  = Xd[train_index].copy(), yd[train_index].copy()
             x_test, y_test  = Xd[test_index].copy(), yd[test_index].copy()
             
             fold_data = (x_train, y_train), (x_test, y_test)
             fold_id = (set_type, i_fold)
             
-            all_data_in.append((fold_id, fold_data, fold_param))
-    
-        
+            all_data_in.append((fold_id, fold_data, fold_param))    
     #%%
     import numpy as np
     import multiprocessing as mp
@@ -201,6 +194,9 @@ if __name__ == '__main__':
         res_db[set_type] = list(zip(*dat))
         
     for n, m_type in enumerate(['loss', 'acc', 'f1']):
+        if m_type == 'loss':
+            continue
+        
         print(m_type, '**************')
         for set_type, dat in res_db.items():
             vv = dat[n]

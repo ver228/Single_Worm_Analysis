@@ -33,13 +33,13 @@ def plot_skel_diff(skeletons, skel_segworm):
     
     plt.subplot(3,3,4)
     plt.plot(skeletons[:,1, 0], color='darkolivegreen', lw=3)
-    plt.plot(skel_segworm[:,1, 0], color='tomato')
+    plt.plot(skel_segworm[:,1, 0], color='coral')
     plt.xlim(w_ylim)
     plt.ylabel('Y coord [mm]')
     
     plt.subplot(3,3,7)
     plt.plot(skeletons[:,1, 1], color='darkolivegreen', lw=3)
-    plt.plot(skel_segworm[:,1, 1], color='tomato')
+    plt.plot(skel_segworm[:,1, 1], color='coral')
     plt.xlim(w_xlim)
     plt.ylabel('X coord [mm]')
     plt.xlabel('Frame Number')
@@ -47,29 +47,38 @@ def plot_skel_diff(skeletons, skel_segworm):
     #plt.figure()
     delT = 1
     plt.subplot(1,3,2)
-    plt.plot(skeletons[::delT, 25, 0].T, skeletons[::delT, 25, 1].T, color='darkolivegreen', lw=3)
-    #plt.axis('equal')    
+    plt.plot(skeletons[::delT, 25, 0].T, skeletons[::delT, 25, 1].T, 
+             color='darkolivegreen', lw=3, label= 'WormTracker2.0')
     
-    #plt.subplot(1,2,2)
-    plt.plot(skel_segworm[::delT, 25, 0].T, skel_segworm[::delT, 25, 1].T, color='tomato')
+    plt.plot(skel_segworm[::delT, 25, 0].T, skel_segworm[::delT, 25, 1].T, 
+             color='coral', label='Tierpsy Tracker')
     
+    plt.ylabel('Y coord [mm]')
+    plt.xlabel('X coord [mm]')
+    plt.legend(fontsize=12, loc='lower left')
     tt = 2500
-    plt.plot(skel_segworm[tt, 25, 0].T, skel_segworm[tt, 25, 1].T, 'ok', 
+    plt.plot(skel_segworm[tt, 25, 0].T, skel_segworm[tt, 25, 1].T, 'sk', 
              markersize = 12, markerfacecolor=None, alpha=0.3, markeredgecolor='black', markeredgewidth=3)
-    
-    
     plt.axis('equal') 
     #%%
     plt.subplot(1,3,3)
-    plt.plot(skeletons[tt, :, 0].T, skeletons[tt, :, 1].T, 'o', color='darkolivegreen', markersize=6)
+    plt.plot(skeletons[tt, :, 0].T, skeletons[tt, :, 1].T, 'o', color='darkolivegreen', markersize=8)
     plt.plot(skeletons[tt, 0, 0].T, skeletons[tt, 0, 1].T, '^', color='darkolivegreen', markersize=10)
-    plt.plot(skel_segworm[tt, :, 0].T, skel_segworm[tt, :, 1].T, 'o', color='tomato', markersize=4)
-    plt.plot(skel_segworm[tt, 0, 0].T, skel_segworm[tt, 0, 1].T, 'v', color='tomato', markersize=8)
-
+    plt.plot(skel_segworm[tt, :, 0].T, skel_segworm[tt, :, 1].T, 'o', color='tomato', markersize=6)
+    plt.plot(skel_segworm[tt, 0, 0].T, skel_segworm[tt, 0, 1].T, 'v', color='tomato', markersize=10)
+    
+    
+    plt.text(23.785, 32.21, '100$\mu$m', fontsize=20)
+    plt.plot((23.8, 23.9), (32.2, 32.2), lw=3.5, color='k')
+    
     #ax.set_ylim((-29.2, -28.2))
     #ax.set_xlim((-28.2, -27.2))
     
     plt.axis('equal') 
+    plt.xticks([])
+    plt.yticks([])
+    
+    #plt.axis('off')
     #%%
     
 def main():

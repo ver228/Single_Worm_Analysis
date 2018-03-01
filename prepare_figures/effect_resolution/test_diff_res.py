@@ -29,6 +29,7 @@ ext_s = '_features.hdf5'
 field_n = '/features_timeseries'
 
 fnames = glob.glob(os.path.join(main_dir, '*' + ext_s))
+
 #%%
 plt.figure()
 feats = {}
@@ -96,7 +97,9 @@ for i_k, k in enumerate(ll):
     if skel is not None:
         axs[i_k].plot(skel[:, 0], skel[:, 1], 'r', lw=2)
     
-    axs[i_k].text(0, 0, strT, fontsize=12, verticalalignment='top')
+    
+    
+    axs[i_k].text(0, 350*n_scale, strT, fontsize=12, verticalalignment='top')
     
     axs[i_k].axis('off')
     
@@ -105,14 +108,12 @@ for i_k, k in enumerate(ll):
 plt.subplots_adjust(wspace=0.01)
 plt.savefig('scales.pdf', bbox_inches='tight')
 
-        
-
 #%%
 cols = ['length', 'foraging_speed', 'midbody_speed', 
         'head_bend_mean']
 
 units = ['Length\n[$\mu$m]',
-         'Foraging Speed\n[deg/s]', 
+         'Foraging\nSpeed[deg/s]', 
          'Midbody Speed\n[$\mu$m/s]', 
          'Mean Head\nBend [deg]'
          ]
@@ -164,7 +165,7 @@ for icol, col in enumerate(cols):
     #axs_h[icol].set_xlabel(u_s)
     
 #plt.legend(loc='upper left', bbox_to_anchor=(1, 1))
-axs_h[-1].set_xlabel('Counts', fontsize=14)
+axs_h[-1].set_xlabel('Counts', fontsize=13)
 axs_h[-1].set_xlim(0, 800)
 axs_h[-1].legend(fontsize=13)
 

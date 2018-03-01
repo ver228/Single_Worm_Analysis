@@ -9,50 +9,53 @@ import numpy as np
 import pandas as pd
 import matplotlib.pylab as plt
 
-import pymysql
+
 
 if __name__ == '__main__':
-    conn = pymysql.connect(host='localhost', db='single_worm_db')
-    cur = conn.cursor()
-    
-    
-    sql = '''
-    select id from experiments_valid;
-    '''
-    cur.execute(sql)
-    valid_exps = cur.fetchall()
-    valid_exps, = zip(*valid_exps)
-    
     #%%
     #data_file = '../../compare_segworm/all_skeletons_comparisons.hdf5'
-    data_file = './all_skeletons_comparisons.hdf5'
+    #data_file = './all_skeletons_comparisons.hdf5'
+    
+    data_file = '/Users/ajaver/OneDrive - Imperial College London/paper_tierpsy_tracker/figures/skeleton_comparison/all_skeletons_comparisons.hdf5'
     #this is large, maybe i cannot load it in memory in as small machine
     with pd.HDFStore(data_file, 'r') as fid:
         errors_data = fid['/data']
     #%%
-    errors_data = errors_data[errors_data['experiment_id'].isin(valid_exps)]
+    if False:
+        import pymysql
+        conn = pymysql.connect(host='localhost', db='single_worm_db')
+        cur = conn.cursor()
+        
+        
+        sql = '''
+        select id from experiments_valid;
+        '''
+        cur.execute(sql)
+        valid_exps = cur.fetchall()
+        valid_exps, = zip(*valid_exps)
+        errors_data = errors_data[errors_data['experiment_id'].isin(valid_exps)]
     
+    #%%
     errors_data['RMSE_N'] = errors_data['RMSE']/errors_data['length_tierpsy']
     errors_data['RMSE_BEST_N'] = errors_data[['RMSE', 'RMSE_switched']].min(axis=1)/errors_data['length_tierpsy']
     
     #%%
-    experiment_ids = errors_data['experiment_id'].unique()
     #%%
-    err_n = errors_data['RMSE_N'].dropna()
-    err_min_n =  errors_data['RMSE_BEST_N'].dropna()
+    if True:
+        ll = errors_data['RMSE'].dropna()
+        rr = errors_data['RMSE_switched'].dropna()
+        frac_th_switched = np.mean(ll>rr)
+        print(frac_th_switched)
+        del ll
+        del rr
     #%%
-    ll = errors_data['RMSE'].dropna()
-    rr = errors_data['RMSE_switched'].dropna()
-    frac_th_switched = np.mean(ll>rr)
-    print(frac_th_switched)
+    #tot = err_n.size
+    counts, bins = np.histogram(errors_data['RMSE_N'].dropna(), bins=1000, range = (0, 1))
     
-    #%%
-    tot = err_n.size
-    counts, bins = np.histogram(err_n, bins=1000, range = (0, 1))
-    counts = counts/tot
+    counts = counts/np.sum(counts)
     
-    counts_min, bins = np.histogram(err_min_n, bins=1000, range = (0, 1))
-    counts_min = counts_min/tot
+    counts_min, bins = np.histogram(errors_data['RMSE_BEST_N'].dropna(), bins=1000, range = (0, 1))
+    counts_min = counts_min/np.sum(counts_min)
     
     #%%
     def _get_switch_error(dat):
@@ -81,17 +84,47 @@ if __name__ == '__main__':
     
     #%%
     seg_size = 2/48
-    
-    
+    experiment_ids = errors_data['experiment_id'].unique()
     
     #%%
-    err_g = errors_data.dropna().groupby('experiment_id')
+#    movie_fractions_d = np.zeros((np.max(experiment_ids),3), np.int32)
+#    import tqdm
+#    #dat = np.zeros(np.)
+#    for ii in  tqdm.tqdm(range(errors_data.shape[0])):
+#        row = errors_data.iloc[ii]
+#        if ~np.isnan(row['RMSE_N']):
+#            
+#            exp_id = int(row['experiment_id'])
+#            movie_fractions_d[exp_id, 0] += 1
+#            if row['RMSE_N'] <= seg_size:
+#                movie_fractions_d[exp_id, 1] += 1
+#            if row['RMSE_BEST_N'] <= seg_size:
+#                movie_fractions_d[exp_id, 2] += 1
+#            
+ 
     #%%
+    import tqdm
+    switch_th = 0.6
+    
+    
+    def slow_iterator():
+        #i can run out of memory if i use groupby. Slow but sure
+        for exp_id in tqdm.tqdm(experiment_ids):
+            dat = errors_data[errors_data['experiment_id'] == exp_id].dropna()
+            yield exp_id, dat
+    
+    #if True:
+    
     movie_fractions = []
     
-    switch_th = 0.6
+    #err_g = errors_data.dropna().groupby('experiment_id')
+    err_g = slow_iterator()
     for exp_id, dat in err_g:
+    
+        print(exp_id)
         #print(exp_id)
+        
+        
         frac_good = (dat['RMSE_N'] <= seg_size).mean()
         frac_good_switched = (dat['RMSE_BEST_N'] <= seg_size).mean()
         
@@ -99,13 +132,17 @@ if __name__ == '__main__':
         frac_terrible = (dat['RMSE_BEST_N'] > switch_th).mean()
         
         movie_fractions.append((exp_id, frac_good, frac_good_switched, frac_terrible))
+        
+        
+    #%%
     
     exp_id, frac_good, frac_good_switched, frac_terrible = zip(*movie_fractions)
     dd = {'frac_good':frac_good, 'frac_good_switched':frac_good_switched, 'frac_terrible':frac_terrible}
     
     movie_fractions_df = pd.DataFrame(dd, index=exp_id)
+    movie_fractions_df.to_csv('movie_good_fractions.csv', index=False)
     #%%
-    plt.figure(figsize = (12, 5))
+    plt.figure(figsize=(10, 3.5))
     
     plt.subplot(1,2,1)
     xx = bins[:-1] + (bins[1]-bins[0])/2
@@ -113,28 +150,32 @@ if __name__ == '__main__':
     yy_m = np.cumsum(counts_min)
     
     #plt.figure(figsize=(8, 6))
-    plt.plot(xx, yy, lw=3)
-    plt.plot(xx, yy_m, lw=2)
+    plt.plot(xx, yy, lw=2, label = '$RMSE$')
+    plt.plot(xx, yy_m, '--', lw=2, label = '$min\{ RMSE, RMSE_{switch}\}$')
     
-    plt.plot((seg_size, seg_size), (-0.1, 1.1), ':r')
+    #plt.plot((seg_size, seg_size), (-0.1, 1.1), ':r')
     #plt.plot((switch_error_lin, switch_error_lin), (-0.1, 1.1), ':r')
     #plt.plot((switch_error_circ, switch_error_circ), (-0.1, 1.1), ':r')
     
     plt.xlabel('RMSE / L')
-    plt.ylabel('Cumulative P')
+    plt.ylabel('Cumulative Distribution Fraction')
     plt.ylim((-0.025, 1.05))
+    plt.legend(fontsize=12)
+    
     
     plt.subplot(1,2,2)
     vv = movie_fractions_df['frac_good'].sort_values()
     #plt.plot(np.linspace(0,1, vv.size), vv.values)
-    plt.plot(vv.values)
+    plt.plot(vv.values, lw=2)
     vv = movie_fractions_df['frac_good_switched'].sort_values()
     #plt.plot(np.linspace(0,1, vv.size), vv.values)
-    plt.plot(vv.values)
+    plt.plot(vv.values, '--', lw=2)
     plt.xlabel('Movie Number')
-    plt.ylabel('Fraction of (RMSE/L < 1/24)')
+    plt.ylabel('Fraction of Skeletons (RMSE/L < 1/24)')
     
     dd = (movie_fractions_df[['frac_good', 'frac_good_switched']]>0.99).sum()
+    
+    plt.tight_layout()
     plt.savefig('db_skel_comparison.pdf')
     
     

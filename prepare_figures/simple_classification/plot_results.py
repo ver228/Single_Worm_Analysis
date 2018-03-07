@@ -73,7 +73,7 @@ if __name__ == '__main__':
     plt.figure(figsize=(12,6))
     
     
-    ss_titles = {'all': 'All Features', 'motion':'Coarse-Grain Segmentation Features'}
+    ss_titles = {'all': 'All Features', 'motion':'Coarse-Grain Features'}
     for ii, set_type in enumerate(['motion', 'all']):
         y_pred = np.concatenate(res_db[set_type][-1])
         y_true = np.concatenate(res_db[set_type][-2])

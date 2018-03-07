@@ -74,13 +74,15 @@ fig, axs = plt.subplots(1, 4, figsize = (12, 4))
 
 bgnd_pix = 187
 ll = ['45x34', '91x68', '213x160', '640x480'][::-1]
+
+l_scale_mu = 500
 for i_k, k in enumerate(ll):
     (microns_per_pixel, img, skel) = masks[k]
     pix = int(k.split('x')[0])
-    l_scale = 300/microns_per_pixel
+    l_scale = l_scale_mu/microns_per_pixel
     
     n_scale = pix/640
-    x_cc = 500*n_scale
+    x_cc = 450*n_scale
     y_cc = 450*n_scale
     
     
@@ -92,7 +94,12 @@ for i_k, k in enumerate(ll):
     
     #plt.subplot(1, 4, i_k+1)
     axs[i_k].imshow(img_c, interpolation=None, cmap='gray', vmin=0, vmax=img_c.max())
-    axs[i_k].plot((x_cc, x_cc+l_scale), (y_cc,y_cc), 'k', linewidth=  3)
+    
+    
+    
+    if i_k == 3:
+        axs[i_k].text(x_cc, y_cc, str(l_scale_mu) + '$\mu$m', fontsize=11, va='bottom', ha='left')
+        axs[i_k].plot((x_cc, x_cc+l_scale), (y_cc,y_cc), 'k', linewidth=  3)
     
     if skel is not None:
         axs[i_k].plot(skel[:, 0], skel[:, 1], 'r', lw=2)

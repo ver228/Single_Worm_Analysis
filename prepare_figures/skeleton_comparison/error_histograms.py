@@ -144,23 +144,29 @@ if __name__ == '__main__':
     plt.plot(xx, yy, lw=2, label = '$RMSE$')
     plt.plot(xx, yy_m, '--', lw=2, label = '$min\{ RMSE, RMSE_{switch}\}$')
     
-    ini_x = ax_.get_xlim()[0]
+    
+    ini_x, fin_x = ax_.get_xlim()
+    ini_x = -0.1
     ini_y, fin_y = ax_.get_ylim()
+    
+    fin_y = 1.12
     p = patches.Rectangle( (ini_x, ini_y), 
                                   seg_size- ini_x, 
                                   fin_y - ini_y,
                                   alpha=0.2, 
                                   color = 'steelblue')
     ax_.add_patch(p)
-    
+    #plt.rc('text', usetex=True)
+    plt.text(-0.09, 1.05, r'99.2% of the frames', fontsize=10)
+    #plt.rc('text', usetex=False)
     #plt.plot((seg_size, seg_size), (-0.1, 1.1), ':r')
     #plt.plot((switch_error_lin, switch_error_lin), (-0.1, 1.1), ':r')
     #plt.plot((switch_error_circ, switch_error_circ), (-0.1, 1.1), ':r')
     
     plt.xlabel('RMSE / L')
     plt.ylabel('Cumulative Distribution Fraction')
-    plt.ylim((-0.025, 1.05))
-    #%%
+    plt.ylim((ini_y, fin_y))
+    plt.xlim((ini_x, fin_x))
     
     
     plt.subplot(1,2,2)

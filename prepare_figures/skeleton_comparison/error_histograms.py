@@ -131,9 +131,11 @@ if __name__ == '__main__':
     movie_fractions_df = pd.DataFrame(dd, index=exp_id)
     movie_fractions_df.to_csv('movie_good_fractions.csv', index=False)
     #%%
+    import matplotlib.patches as patches
+    
     plt.figure(figsize=(10, 3.5))
     
-    plt.subplot(1,2,1)
+    ax_ = plt.subplot(1,2,1)
     xx = bins[:-1] + (bins[1]-bins[0])/2
     yy = np.cumsum(counts)
     yy_m = np.cumsum(counts_min)
@@ -142,6 +144,15 @@ if __name__ == '__main__':
     plt.plot(xx, yy, lw=2, label = '$RMSE$')
     plt.plot(xx, yy_m, '--', lw=2, label = '$min\{ RMSE, RMSE_{switch}\}$')
     
+    ini_x = ax_.get_xlim()[0]
+    ini_y, fin_y = ax_.get_ylim()
+    p = patches.Rectangle( (ini_x, ini_y), 
+                                  seg_size- ini_x, 
+                                  fin_y - ini_y,
+                                  alpha=0.2, 
+                                  color = 'steelblue')
+    ax_.add_patch(p)
+    
     #plt.plot((seg_size, seg_size), (-0.1, 1.1), ':r')
     #plt.plot((switch_error_lin, switch_error_lin), (-0.1, 1.1), ':r')
     #plt.plot((switch_error_circ, switch_error_circ), (-0.1, 1.1), ':r')
@@ -149,7 +160,7 @@ if __name__ == '__main__':
     plt.xlabel('RMSE / L')
     plt.ylabel('Cumulative Distribution Fraction')
     plt.ylim((-0.025, 1.05))
-    
+    #%%
     
     
     plt.subplot(1,2,2)

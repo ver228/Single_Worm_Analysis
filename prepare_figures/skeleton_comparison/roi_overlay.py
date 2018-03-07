@@ -67,13 +67,13 @@ if __name__ == '__main__':
     skeletons_c = (skeletons[:max_n_skel] - feats_reader.stage_movement[:max_n_skel, None, :])/microns_per_pixel
     skel_segworm_c = (skel_segworm[:max_n_skel] - feats_reader.stage_movement[:max_n_skel, None, :])/microns_per_pixel
     
-    plt.figure(figsize=(6,6))
+    plt.figure(figsize=(2,2))
     plt.imshow(img, cmap='gray', interpolation='None')
     
-    plt.plot(skeletons_c[tt, :, 0].T, skeletons_c[tt, :, 1].T, 'o', color='lightgreen', markersize=8)
-    plt.plot(skeletons_c[tt, 0, 0].T, skeletons_c[tt, 0, 1].T, '^', color='lightgreen', markersize=13)
-    plt.plot(skel_segworm_c[tt, :, 0].T, skel_segworm_c[tt, :, 1].T, 'o', color='tomato', markersize=6)
-    plt.plot(skel_segworm_c[tt, 0, 0].T, skel_segworm_c[tt, 0, 1].T, 'v', color='tomato', markersize=10)
+    plt.plot(skeletons_c[tt, :, 0].T, skeletons_c[tt, :, 1].T, 'x', color='mediumaquamarine', markersize=2)
+    plt.plot(skeletons_c[tt, 0, 0].T, skeletons_c[tt, 0, 1].T, '^', color='mediumaquamarine', markersize=4)
+    plt.plot(skel_segworm_c[tt, :, 0].T, skel_segworm_c[tt, :, 1].T, 'o', color='tomato', markersize=1)
+    plt.plot(skel_segworm_c[tt, 0, 0].T, skel_segworm_c[tt, 0, 1].T, 'v', color='tomato', markersize=3)
     
     plt.xlim((250, 410))
     plt.ylim((190, 360))
@@ -85,11 +85,11 @@ if __name__ == '__main__':
     
     scale_v = 150
     scale_l = scale_v/microns_per_pixel
-    plt.text(253, 200, '{}$\mu$m'.format(scale_v), fontsize=25, color='w')
-    plt.plot((255, 255 + scale_l), (195, 195), lw=5, color='w')
+    plt.text(253, 200, '{}$\mu$m'.format(scale_v), fontsize=10, color='w')
+    plt.plot((255, 255 + scale_l), (195, 195), lw=2, color='w')
     
     
-    plt.text(320, 345, 'RMSE/L:{:.3f}'.format(skel_error[tt]), fontsize=25, color='w')
+    plt.text(309, 345, 'RMSE/L:{:.3f}'.format(skel_error[tt]), fontsize=10, color='w')
     
     plt.tight_layout()
     plt.savefig('ROI_RMSE.pdf')

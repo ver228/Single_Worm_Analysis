@@ -266,18 +266,28 @@ if __name__ == '__main__':
                     #import pdb
                     #pdb.set_trace()
                     #%%
-                    with open(fullpath, 'rb') as fp:
-                        url = 'https://zenodo.org/api/deposit/depositions/{}/files?access_token={}'.format(deposition_id, ACCESS_TOKEN)
-                        data = {'filename': os.path.basename(fullpath)}
-                        files = {'file': fp}
-                        file_r = requests.post(url, data=data, files=files)
+#                    with open(fullpath, 'rb') as fp:
+#                        url = 'https://zenodo.org/api/deposit/depositions/{}/files?access_token={}'.format(deposition_id, ACCESS_TOKEN)
+#                        data = {'filename': os.path.basename(fullpath)}
+#                        files = {'file': fp}
+#                        file_r = requests.post(url, data=data, files=files)
                     #%%
-                    #with open(fullpath, 'rb') as fp:
-                    #     file_r = requests.put(bucket_url + '/' + fname,
-                    #     params = {'access_token': ACCESS_TOKEN}, 
-                    #                 headers=headers,
-                    #                 data=fp
-                    #                 )
+                    
+                    headers_upload = {"Accept":"application/json",
+                                    "Authorization":"Bearer %s" % ACCESS_TOKEN,
+                                    "Content-Type":"application/octet-stream"
+                                    }
+                    
+                    ff = fname.replace('#', '_')
+                    
+                    with open(fullpath, 'rb') as fp:
+                         file_r = requests.put(bucket_url + '/' + ff,
+                                     data = fp,
+                                     headers = headers_upload
+                                     )
+                         
+                         
+                         
                     #%%
                     break
                 except:
@@ -305,7 +315,7 @@ if __name__ == '__main__':
                     conn.commit()
                 except:
                     continue
-            #%%
+        
                 #%%
     conn.close()
 

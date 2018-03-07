@@ -12,28 +12,14 @@ import matplotlib.pylab as plt
 
 
 if __name__ == '__main__':
-    #%%
-    #data_file = '../../compare_segworm/all_skeletons_comparisons.hdf5'
-    #data_file = './all_skeletons_comparisons.hdf5'
     
-    data_file = '/Users/ajaver/OneDrive - Imperial College London/paper_tierpsy_tracker/figures/skeleton_comparison/all_skeletons_comparisons.hdf5'
+    #data_file = '../../compare_segworm/all_skeletons_comparisons.hdf5'
+    data_file = './all_skeletons_comparisons.hdf5'
+    #data_file = '/Users/ajaver/OneDrive - Imperial College London/paper_tierpsy_tracker/figures/skeleton_comparison/all_skeletons_comparisons.hdf5'
+    
     #this is large, maybe i cannot load it in memory in as small machine
     with pd.HDFStore(data_file, 'r') as fid:
         errors_data = fid['/data']
-    #%%
-    if False:
-        import pymysql
-        conn = pymysql.connect(host='localhost', db='single_worm_db')
-        cur = conn.cursor()
-        
-        
-        sql = '''
-        select id from experiments_valid;
-        '''
-        cur.execute(sql)
-        valid_exps = cur.fetchall()
-        valid_exps, = zip(*valid_exps)
-        errors_data = errors_data[errors_data['experiment_id'].isin(valid_exps)]
     
     #%%
     errors_data['RMSE_N'] = errors_data['RMSE']/errors_data['length_tierpsy']
@@ -83,7 +69,7 @@ if __name__ == '__main__':
     
     
     #%%
-    seg_size = 2/48
+    seg_size = 1/48
     experiment_ids = errors_data['experiment_id'].unique()
     
     #%%
@@ -117,24 +103,27 @@ if __name__ == '__main__':
     
     movie_fractions = []
     
-    #err_g = errors_data.dropna().groupby('experiment_id')
-    err_g = slow_iterator()
+    err_g = errors_data.dropna().groupby('experiment_id')
+    #err_g = slow_iterator()
     for exp_id, dat in err_g:
     
         print(exp_id)
         #print(exp_id)
         
+        #using mean with nan present might give the wrong result... not really sure...
         
-        frac_good = (dat['RMSE_N'] <= seg_size).mean()
-        frac_good_switched = (dat['RMSE_BEST_N'] <= seg_size).mean()
+        tot_f = (~np.isnan(dat['RMSE_N'])).sum()
+        
+        frac_good = (dat['RMSE_N'] <= seg_size).sum()/tot_f
+        frac_good_switched = (dat['RMSE_BEST_N'] <= seg_size).sum()/tot_f
         
         #frac_switched = ((rmse_n > seg_size) & (rmse_n <= switch_th)).mean()
-        frac_terrible = (dat['RMSE_BEST_N'] > switch_th).mean()
+        frac_terrible = (dat['RMSE_BEST_N'] > switch_th).sum()/tot_f
         
         movie_fractions.append((exp_id, frac_good, frac_good_switched, frac_terrible))
         
         
-    #%%
+    
     
     exp_id, frac_good, frac_good_switched, frac_terrible = zip(*movie_fractions)
     dd = {'frac_good':frac_good, 'frac_good_switched':frac_good_switched, 'frac_terrible':frac_terrible}
@@ -160,60 +149,47 @@ if __name__ == '__main__':
     plt.xlabel('RMSE / L')
     plt.ylabel('Cumulative Distribution Fraction')
     plt.ylim((-0.025, 1.05))
-    plt.legend(fontsize=12)
+    
     
     
     plt.subplot(1,2,2)
     vv = movie_fractions_df['frac_good'].sort_values()
     #plt.plot(np.linspace(0,1, vv.size), vv.values)
-    plt.plot(vv.values, lw=2)
+    plt.plot(vv.values, lw=2, label = '$RMSE$')
     vv = movie_fractions_df['frac_good_switched'].sort_values()
     #plt.plot(np.linspace(0,1, vv.size), vv.values)
-    plt.plot(vv.values, '--', lw=2)
-    plt.xlabel('Movie Number')
-    plt.ylabel('Fraction of Skeletons (RMSE/L < 1/24)')
+    plt.plot(vv.values, '--', lw=2, label = '$min\{ RMSE, RMSE_{switch}\}$')
     
-    dd = (movie_fractions_df[['frac_good', 'frac_good_switched']]>0.99).sum()
+    
+    plt.legend(fontsize=12)
+    
+    plt.xlabel('Movie Number')
+    plt.ylabel('Fraction of Skeletons (RMSE/L < 1/48)')
+    dd = (movie_fractions_df[['frac_good', 'frac_good_switched']]>0.90).sum()
     
     plt.tight_layout()
     plt.savefig('db_skel_comparison.pdf')
     
     
-    #'95'
+    #at least 90% of the frames are (RMSE/L < 1/48)
+    #8410 of 9343
+    #9208 of 9343
+    
+    #RMSE_BEST_N %99.2008 of frames have less than 1/48  182646477/184117924
+    #RMSE_N 96.193 of frames less than 1/48 177109279/184117924
+    
+    
+    #at least 99% of the frames are (RMSE/L < 1/24)
     #'8313 of 9343'
     #'#9299 of 9343'
     
-    #%99.874 of frames have less than 1/24 
-    #96.809 of frames less than 1/24
+    #RMSE_BEST_N %99.874 of frames have less than 1/24 
+    #RMSE_N %96.809 of frames less than 1/24
     #%3.08 frames switched
     #total skeletons 184117924
     
     
-    #%%
-    vv = movie_fractions_df['frac_terrible'].sort_values()
-    #inds = (329, 3555,3556, 4231, 5124, 5991, 8759, 10407, 11260)
-    conn = pymysql.connect(host='localhost', db='single_worm_db')
-    cur = conn.cursor()
     
-    
-    ss = ','.join(['"{}"'.format(x) for x in inds])
-    sql = '''
-    select e.id, CONCAT(results_dir, '/', base_name, '.hdf5'), segworm_file
-    from experiments as e 
-    join segworm_info as s on e.id = s.experiment_id
-    where e.id in ({});
-    '''.format(ss)
-    cur.execute(sql)
-    bad_exps = cur.fetchall()
-    
-    for exp_id, fname, segname in bad_exps:
-        print(exp_id)
-        print(fname)
-        print(segname)
-    
-    #[4787, 5247, 8881, 9107, 9117, 11307, 11600]
-    
-    # (329, 3555, 3556, 4231, 5124, 5991, 8759, 10407, 11260) , 647, 11109
     #%%
     #%%
     if False:
@@ -246,4 +222,37 @@ if __name__ == '__main__':
         
         dd = {'frac_bad_only_tierpsy':frac_bad_only_tierpsy, 'frac_bad_only_segworm':frac_bad_only_segworm}
         bad_frac_df = pd.DataFrame(dd, index = exp_id)
-     
+    #%%
+    #0.018500000000000003 %99 in min
+    #0.53 %min
+    
+    ind = errors_data[errors_data['RMSE_BEST_N']>0.5]['experiment_id'].unique()#0.018500000000000003)
+    #%%
+    row  = errors_data.iloc[ind]
+    #%%
+    #%%
+    import pymysql
+    
+    inds = (6, 1117,  4787,  5247,  8881,  9107,  9117,  9120, 10165, 11307, 11600)
+    conn = pymysql.connect(host='localhost', db='single_worm_db')
+    cur = conn.cursor()
+    
+    
+    ss = ','.join(['"{}"'.format(x) for x in inds])
+    sql = '''
+    select e.id, CONCAT(results_dir, '/', base_name, '.hdf5'), segworm_file
+    from experiments as e 
+    join segworm_info as s on e.id = s.experiment_id
+    where e.id in ({});
+    '''.format(ss)
+    cur.execute(sql)
+    bad_exps = cur.fetchall()
+    
+    for exp_id, fname, segname in bad_exps:
+        print(exp_id)
+        print(fname)
+        print(segname)
+    
+    #[4787, 5247, 8881, 9107, 9117, 11307, 11600]
+    
+    # (329, 3555, 3556, 4231, 5124, 5991, 8759, 10407, 11260) , 647, 11109

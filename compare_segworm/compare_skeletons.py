@@ -19,14 +19,18 @@ def _get_length(skels):
     ll = np.sum(dr, axis=1)
     return ll
 
-def plot_skel_diff(skeletons, skel_segworm):
+def plot_skel_diff(skeletons, skel_segworm, tt=None, is_norm=False):
     #%%
     max_n_skel = min(skel_segworm.shape[0], skeletons.shape[0])
     delS = skeletons[:max_n_skel]-skel_segworm[:max_n_skel]
     R_error = delS[:,:,0]**2 + delS[:,:,1]**2
     skel_error = np.sqrt(np.mean(R_error, axis=1))
     
-    L = _get_length(skeletons[:max_n_skel])
+    if is_norm:
+        L = _get_length(skeletons[:max_n_skel])
+        skel_error = skel_error/L
+    
+    
     #%%   
         
     w_xlim = w_ylim = (-10, skel_error.size+10)
@@ -37,7 +41,11 @@ def plot_skel_diff(skeletons, skel_segworm):
     plt.ylim((0, np.nanmax(skel_error)))
     plt.xlim(w_xlim)
     plt.title('')
-    plt.ylabel('RMSE [mm]')
+    
+    if not is_norm:
+        plt.ylabel('RMSE [mm]')
+    else:
+        plt.ylabel('RMSE/L')
     
     plt.subplot(3,3,4)
     plt.plot(skeletons[:,1, 0], color='darkolivegreen', lw=3)
@@ -64,24 +72,31 @@ def plot_skel_diff(skeletons, skel_segworm):
     plt.ylabel('Y coord [mm]')
     plt.xlabel('X coord [mm]')
     plt.legend(fontsize=12, loc='lower left')
-    tt = 2500
+    
+    if tt is None:
+        tt = 2500
+        is_dflt = True
+    else:
+        is_dflt = False
+    
     plt.plot(skel_segworm[tt, 25, 0].T, skel_segworm[tt, 25, 1].T, 'sk', 
              markersize = 12, markerfacecolor=None, alpha=0.3, markeredgecolor='black', markeredgewidth=3)
     plt.axis('equal') 
-    #%%
+    
     plt.subplot(1,3,3)
     plt.plot(skeletons[tt, :, 0].T, skeletons[tt, :, 1].T, 'o', color='darkolivegreen', markersize=8)
     plt.plot(skeletons[tt, 0, 0].T, skeletons[tt, 0, 1].T, '^', color='darkolivegreen', markersize=10)
     plt.plot(skel_segworm[tt, :, 0].T, skel_segworm[tt, :, 1].T, 'o', color='tomato', markersize=6)
     plt.plot(skel_segworm[tt, 0, 0].T, skel_segworm[tt, 0, 1].T, 'v', color='tomato', markersize=10)
     
-    
-    #rsme_l = skel_error[tt]/L[tt]
-    #plt.text(23.785, 32.21, 'RSME/L={}'.format(rsme_l), fontsize=20)
-    
+    if is_dflt:
+        plt.text(23.785, 32.21, '100$\mu$m', fontsize=20)
+        plt.plot((23.8, 23.9), (32.2, 32.2), lw=3.5, color='k')
     
     plt.text(23.785, 32.21, '100$\mu$m', fontsize=20)
     plt.plot((23.8, 23.9), (32.2, 32.2), lw=3.5, color='k')
+    
+    
     
     #ax.set_ylim((-29.2, -28.2))
     #ax.set_xlim((-28.2, -27.2))
@@ -126,8 +141,10 @@ def main():
         #plt.close()
         break
 #%%
-def main_single():    
-    
+def main_single():
+    #%%
+    dd = '''/Volumes/behavgenom_archive$/single_worm/finished/WT/AQ2947/food_OP50/XX/30m_wait/anticlockwise/483 AQ2947 on food R_2012_03_08__15_42_48___1___8.hdf5
+/Volumes/behavgenom$/Andre/Laura Grundy/gene_NA/allele_NA/AQ2947/on_food/XX/30m_wait/L/tracker_1/2012-03-08___15_42_48/483 AQ2947 on food R_2012_03_08__15_42_48___1___8_features.mat'''
     feat_file, segworm_feat_file = dd.split('\n')
     feat_file = feat_file.replace('.hdf5', '_features.hdf5')
     
@@ -138,12 +155,12 @@ def main_single():
     
     
     #%%
-    plot_skel_diff(-skeletons, -skel_segworm)
+    plot_skel_diff(-skeletons, -skel_segworm, is_norm=True)
     #%%
     
     
     #%%
 if __name__ == '__main__':
-    main()
-    #main_single()
+    #main()
+    main_single()
     pass

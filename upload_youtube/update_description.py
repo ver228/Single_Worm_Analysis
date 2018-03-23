@@ -5,11 +5,15 @@ Created on Fri Oct  6 12:26:16 2017
 
 @author: ajaver
 """
+
+from tierpsy.analysis.wcon_export.exportWCON import readMetaData
+
 import pandas as pd
 import pymysql
 import numpy as np
 import json
 import sys
+import os
 import httplib2
 from apiclient.discovery import build
 from oauth2client.client import flow_from_clientsecrets
@@ -58,8 +62,7 @@ if credentials is None or credentials.invalid:
 service =  build(YOUTUBE_API_SERVICE_NAME, YOUTUBE_API_VERSION, http=credentials.authorize(httplib2.Http()))
 channel_id = 'UCx36wu_Hh0sGvPaCkAMHrMg'
 
-sys.path.append('../2_create_database')
-from helper.db_info import db_row2dict
+
 
 if __name__ == '__main__':
     #_correct_from_list()
@@ -77,13 +80,13 @@ if __name__ == '__main__':
     RIGHT JOIN zenodo_files AS z ON z.experiment_id = e.id
     WHERE youtube_id IS NOT NULL
     AND z.file_type_id = 1
-    ORDER BY ev.mask_file_sizeMB DESC
+    AND experimenter = "Celine N. Martineau, Bora Baskaner"
     '''
     
     cur.execute(ori_vid_sql)
     all_rows = cur.fetchall()
     conn.close()
-    
+    print(all_rows)
     
     #%%
     for irow, row in enumerate(all_rows):
@@ -91,20 +94,34 @@ if __name__ == '__main__':
         old_snipped = res['items'][0]['snippet']
         d_bn = old_snipped['description'].partition('base_name : ')[-1].partition('\n')[0]
         
-        if not d_bn == row['base_name']:
+        if not d_bn:
+            d_bn = old_snipped['description'].partition('"base_name": "')[-1].partition('",\n')[0]
+        
+        
+        #this is because some of the Celine original videos include the #
+        d_bn = d_bn.replace('#', '_')
+        
+        if d_bn != row['base_name']:
+            import pdb
+            pdb.set_trace()
             print('ERROR', row['id'], row['youtube_id'], row['base_name'], d_bn)
             #continue
         #%%
-        metadata_dict = db_row2dict(row)
-        del metadata_dict['original_video_name']
-        del metadata_dict['tracker']
+        #metadata_dict = db_row2dict(row)
+        
+        fname = os.path.join(row['results_dir'], row['base_name'] + '_features.hdf5')
+        metadata_dict = readMetaData(fname)
+        
+        #del metadata_dict['original_video_name']
+        #del metadata_dict['tracker']
         
         #convert the protocol field into a string
+        metadata_dict['base_name'] = row['base_name']
+        metadata_dict['days_of_adulthood'] = row["days_of_adulthood"]
         metadata_dict['protocol'] = '. '.join([x[0].upper() + x[1:] for x in metadata_dict['protocol']])
         metadata_dict['total time (s)'] = row['total_time']
         metadata_dict['frames per second'] = row['fps']
         metadata_dict['video micrometers per pixel'] = row['microns_per_pixel']
-        metadata_dict['number of segmented skeletons'] = row['n_segmented_skeletons']
         metadata_dict['zenodo link'] = 'https://zenodo.org/record/{}'.format(row['zenodo_id'])
         metadata_dict.move_to_end('zenodo link', last=False)
         #%%
@@ -120,9 +137,11 @@ if __name__ == '__main__':
                        }
                }
         
-
-        res = service.videos().update(body=body, part ="snippet").execute()
-        
+        try:
+            res = service.videos().update(body=body, part ="snippet").execute()
+        except Exception as e:
+            
+            print('PROBLEM : ', row['youtube_id'])
         
         print(irow+1, len(all_rows), row['youtube_id'])
         

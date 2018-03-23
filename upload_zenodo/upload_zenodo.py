@@ -13,8 +13,6 @@ import json
 import zipfile
 from tierpsy.analysis.wcon_export.exportWCON import readMetaData
 
-
-
 WEBPAGE_INFO= '''<blockquote>
 <p>This experiment is part of the&nbsp;<em>C.elegans behavioural database</em>. For more information and the complete collection of experiments visit&nbsp;http://movement.openworm.org</p>
 </blockquote>\n
@@ -79,7 +77,6 @@ if __name__ == '__main__':
              ]
             }
     
-    
     headers = {"Content-Type": "application/json"}
     #%%
     conn = pymysql.connect(host='localhost', database='single_worm_db')
@@ -99,7 +96,6 @@ if __name__ == '__main__':
     JOIN experiments AS e ON ev.id = e.id
     LEFT JOIN zenodo_files AS z ON z.experiment_id = e.id
     WHERE youtube_id IS NOT NULL
-    ORDER BY ev.mask_file_sizeMB DESC
     '''
     
     cur.execute(sql)

@@ -31,6 +31,14 @@ if __name__ == '__main__':
     ORDER BY experiment_id
     '''
     
+    sql = '''
+    SELECT z.*
+    FROM experiments_valid as ev
+    JOIN experiments AS e ON ev.id = e.id
+    RIGHT JOIN zenodo_files AS z ON z.experiment_id = e.id
+    WHERE experimenter = "Celine N. Martineau, Bora Baskaner"
+    '''
+    
     zenodo_files = pd.read_sql(sql, conn)
     
     for experiment_id, dat in zenodo_files.groupby('experiment_id'):

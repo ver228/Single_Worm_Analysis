@@ -289,6 +289,7 @@ def init_database(DROP_PREV_DB = False):
     t.name AS tracker, 
     sex.name AS sex, 
     ds.name AS developmental_stage, 
+    e.days_of_adulthood AS days_of_adulthood, 
     vs.name AS ventral_side, 
     f.name AS food, 
     h.name AS habituation, 
@@ -325,7 +326,6 @@ def init_database(DROP_PREV_DB = False):
     CREATE OR REPLACE VIEW experiments_valid AS
     SELECT *
     FROM experiments_full
-    JOIN results_summary ON id = experiment_id
     WHERE strain != '-N/A-'
     AND exit_flag = 'END'
     AND fps IS NOT NULL

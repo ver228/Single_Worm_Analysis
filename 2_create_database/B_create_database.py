@@ -278,6 +278,7 @@ def init_database(DROP_PREV_DB = False):
     CREATE OR REPLACE VIEW experiments_full AS
     SELECT 
     e.id AS id, 
+    e.worm_id AS worm_id,
     e.base_name AS base_name,
     e.date AS date, 
     e.results_dir  as results_dir,

@@ -1,0 +1,48 @@
+
+
+QTL
+
+dist_from_food_edge_50th 
+food_region_inside_fraction 
+
+alter table zenodo_files add foreign key (experiment_id) references experiments(id);
+
+mysql -u ajaver_mysql -p mrc_db4
+
+conda install django
+pip install mysqlclient
+
+ssh -v -i ~/.ssh/aws_openworm -Y  -L 3307:movement.openworm.org:3306 ajaver@movement.openworm.org
+
+ssh -v -i ~/.ssh/aws_openworm -Y ajaver@movement.openworm.org
+
+scp  -i ~/.ssh/aws_openworm ajaver@movement.openworm.org:~/schema_worm_db.sql /Users/ajaver/Documents/GitHub/movement_cloud
+
+scp -i ~/.ssh/aws_openworm ~/merge_170817_worm_db.sql ajaver@movement.openworm.org:~/
+
+mysqldump single_worm_db --replace --no-create-db  > schema_worm_db.sql;
+
+
+#if you do not want to create the tables
+mysqldump single_worm_db --replace --no-create-db  --no-create-info > merge_170817._worm_db.sql;
+
+
+mysqldump single_worm_db --replace --no-create-db  --no-create-info | grep -vwE ajaver > merge_260917_worm_db.sql
+
+mysqldump single_worm_db --replace --no-create-db | grep -vwE ajaver > merge_260917_worm_db.sql
+
+
+mysql -u ajaver_mysql -p mrc_db4 < merge_280318_worm_db.sql 
+
+mysqldump -u ajaver_mysql -p  mrc_db4 > bkp_170817.sql
+
+ffmpeg -i mwtracker.mov -vf fps=25,scale=640:-1:flags=lanczos,palettegen palette.png
+
+ffmpeg -i mwtracker.mov -i palette.png -filter_complex "fps=25,scale=320:-1:flags=lanczos[x];[x][1:v]paletteuse"  mwtracker.gif
+
+
+
+
+python processMultipleFiles.py --video_dir_root /Volumes/behavgenom_archive\$/Celine/raw --mask_dir_root /Volumes/behavgenom_archive\$/Celine/results --results_dir_root /Volumes/behavgenom_archive\$/Celine/results --only_summary --pattern_exclude *_seg.avi --pattern_include *.avi
+
+find . -name "*.tar" -maxdepth 1 -exec tar -xvf  {} "*log.csv" "*.info.xml" "*.avi" \;
